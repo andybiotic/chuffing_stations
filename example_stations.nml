@@ -1,0 +1,434 @@
+grf {
+    grfid: "XXX\01";
+    name: string(STR_GRF_NAME);
+    desc: string(STR_GRF_DESCRIPTION);
+    version: 1;
+    min_compatible_version: 1;
+}
+
+if (version_openttd(1,2,0,22723) > openttd_version) {
+    error(FATAL, REQUIRES_OPENTTD, string(STR_VERSION_22723));
+}
+
+cargotable {
+    LVST
+}
+
+/***** EXAMPLE STATION *****/
+
+/***** PLATFORM LEFT *****/
+
+spriteset (example_platform_left, "stations_example.png") {
+    [  10, 10, 64, 64, -32, -34 ]
+    [  80, 10, 64, 64, -32, -34 ]
+}
+
+spritelayout platform_left_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout platform_left_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, example_left) {
+    property {
+        class:                  "XMPL";
+        classname:              string(STR_NAME_STATCLASS_SINGLE_PLATFORMS);
+        name:                   string(STR_NAME_STATION_EXAMPLE_PLATFORM);
+        cargo_threshold:        160;
+        non_traversable_tiles:  bitmask(1);
+        draw_pylon_tiles:       STAT_ALL_TILES;
+    }
+    graphics {
+        sprite_layouts: [platform_left_sw_ne(0), platform_left_se_nw(0)];
+        select_tile_type: 2;
+        purchase: example_platform_left;
+        example_platform_left;
+    }
+}
+
+/***** PLATFORM RIGHT *****/
+
+spriteset (example_platform_right, "stations_example.png") {
+    [  150, 10, 64, 64, -32, -34 ]
+    [  220, 10, 64, 64, -32, -34 ]
+}
+
+spritelayout platform_right_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        12;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout platform_right_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, example_right) {
+    property {
+        class:                  "XMPL";
+        classname:              string(STR_NAME_STATCLASS_SINGLE_PLATFORMS);
+        name:                   string(STR_NAME_STATION_EXAMPLE_PLATFORM);
+        cargo_threshold:        160;
+        non_traversable_tiles:  bitmask(1);
+        draw_pylon_tiles:       STAT_ALL_TILES;
+    }
+    graphics {
+        sprite_layouts: [platform_right_sw_ne(0), platform_right_se_nw(0)];
+        select_tile_type: 2;
+        purchase: example_platform_right;
+        example_platform_right;
+    }
+}
+
+
+/***** PLATFORM SOUTH END LEFT *****/
+
+spriteset (example_platform_south_end_left, "stations_example.png") {
+    [  290, 10, 64, 64, -32, -34 ]
+    [  360, 10, 64, 64, -32, -34 ]
+}
+
+spritelayout platform_south_end_left_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout platform_south_end_left_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, example_south_end_left) {
+    property {
+        class:                  "XMPL";
+        classname:              string(STR_NAME_STATCLASS_SINGLE_PLATFORMS);
+        name:                   string(STR_NAME_STATION_EXAMPLE_PLATFORM_END);
+        cargo_threshold:        160;
+        non_traversable_tiles:  bitmask(1);
+        draw_pylon_tiles:       STAT_ALL_TILES;
+    }
+    graphics {
+        sprite_layouts: [platform_south_end_left_sw_ne(0), platform_south_end_left_se_nw(0)];
+        select_tile_type: 2;
+        purchase: example_platform_south_end_left;
+        example_platform_south_end_left;
+    }
+}
+
+
+/***** PLATFORM SOUTH END RIGHT *****/
+
+spriteset (example_platform_south_end_right, "stations_example.png") {
+    [  430, 10, 64, 64, -32, -34 ]
+    [  500, 10, 64, 64, -32, -34 ]
+}
+
+spritelayout platform_south_end_right_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        12;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout platform_south_end_right_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, example_south_end_right) {
+    property {
+        class:                  "XMPL";
+        classname:              string(STR_NAME_STATCLASS_SINGLE_PLATFORMS);
+        name:                   string(STR_NAME_STATION_EXAMPLE_PLATFORM_END);
+        cargo_threshold:        160;
+        non_traversable_tiles:  bitmask(1);
+        draw_pylon_tiles:       STAT_ALL_TILES;
+    }
+    graphics {
+        sprite_layouts: [platform_south_end_right_sw_ne(0), platform_south_end_right_se_nw(0)];
+        select_tile_type: 2;
+        purchase: example_platform_south_end_right;
+        example_platform_south_end_right;
+    }
+}
+
+
+/***** PLATFORM NORTH END LEFT *****/
+
+spriteset (example_platform_north_end_left, "stations_example.png") {
+    [  570, 10, 64, 64, -32, -34 ]
+    [  640, 10, 64, 64, -32, -34 ]
+}
+
+spritelayout platform_north_end_left_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout platform_north_end_left_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, example_north_end_left) {
+    property {
+        class:                  "XMPL";
+        classname:              string(STR_NAME_STATCLASS_SINGLE_PLATFORMS);
+        name:                   string(STR_NAME_STATION_EXAMPLE_PLATFORM_END);
+        cargo_threshold:        160;
+        non_traversable_tiles:  bitmask(1);
+        draw_pylon_tiles:       STAT_ALL_TILES;
+    }
+    graphics {
+        sprite_layouts: [platform_north_end_left_sw_ne(0), platform_north_end_left_se_nw(0)];
+        select_tile_type: 2;
+        purchase: example_platform_north_end_left;
+        example_platform_north_end_left;
+    }
+}
+
+
+/***** PLATFORM NORTH END RIGHT *****/
+
+spriteset (example_platform_north_end_right, "stations_example.png") {
+    [  710, 10, 64, 64, -32, -34 ]
+    [  780, 10, 64, 64, -32, -34 ]
+}
+
+spritelayout platform_north_end_right_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        12;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout platform_north_end_right_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, example_north_end_right) {
+    property {
+        class:                  "XMPL";
+        classname:              string(STR_NAME_STATCLASS_SINGLE_PLATFORMS);
+        name:                   string(STR_NAME_STATION_EXAMPLE_PLATFORM_END);
+        cargo_threshold:        160;
+        non_traversable_tiles:  bitmask(1);
+        draw_pylon_tiles:       STAT_ALL_TILES;
+    }
+    graphics {
+        sprite_layouts: [platform_north_end_right_sw_ne(0), platform_north_end_right_se_nw(0)];
+        select_tile_type: 2;
+        purchase: example_platform_north_end_right;
+        example_platform_north_end_right;
+    }
+}
+
+
+
+/***** BULDING EXAMPLE *****/
+
+spriteset (building_1, "stations_example.png") {
+    [ 10, 80, 64, 64, -32, -32 ]
+    [ 80, 80, 64, 64, -32, -32 ]
+}
+
+spritelayout example_building_green() {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout example_building_red() {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+switch(FEAT_STATIONS, SELF, multi_tile_switch, rail_present) {
+    default: return example_building_green();
+}
+
+item(FEAT_STATIONS, example_building_1) {
+    property {
+        class:                  "BULD";
+        classname:              string(STR_NAME_STATCLASS_EXAMPLE_BUILDING);
+        name:                   string(STR_NAME_STATION_EXAMPLE_BUILDING);
+        cargo_threshold:        160;
+        non_traversable_tiles:  bitmask(1);
+        draw_pylon_tiles:       STAT_ALL_TILES;
+        disabled_platforms:     bitmask(1,3,4,5,6,7,8);
+        disabled_length:        bitmask(2,3,4,5,6,7,8);
+    }
+    graphics {
+        sprite_layouts:         [example_building_green(), example_building_red()];
+        select_tile_type:       0;
+        purchase:               building_1;
+    }
+}

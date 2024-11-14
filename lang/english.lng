@@ -1,13 +1,16 @@
 ##grflangid 0x01
-STR_GRF_NAME                                                    :Chuffing Stations Set v0.1
-STR_GRF_DESCRIPTION                                             :{ORANGE}Chuffing Stations Set{}{BLACK}This is a simple set based on some historic british platforms and buildings.{}Designed to work with CHIPS and other popular sets.
+STR_GRF_NAME                                                    :Example Stations v0.1
+STR_GRF_DESCRIPTION                                             :{ORANGE}Example Stations{}{BLACK}This is a simple example GRF with some templated station platforms.
 
 STR_VERSION_22723                                               :1.2.0 (r22723)
 
-STR_NAME_STATCLASS                                              :Chuffing Platforms
+STR_NAME_STATCLASS                                              :Example Platforms
 
-STR_NAME_STATCLASS_SINGLE_PLATFORMS_LEFT                        :Chuffing Single Platforms
-STR_NAME_STATCLASS_SINGLE_PLATFORMS_RIGHT                       :Chuffing Single Platforms
+STR_NAME_STATCLASS_SINGLE_PLATFORMS                             :Single Platforms
 
-STR_NAME_STATION_TEST_PLATFORM                                  :Test Platform
-STR_NAME_STATION_TEST_PLATFORM_END                              :Test End
+STR_NAME_STATCLASS_EXAMPLE_BUILDING                             :Example Buildings
+
+STR_NAME_STATION_EXAMPLE_PLATFORM                               :Example Platform
+STR_NAME_STATION_EXAMPLE_PLATFORM_END                           :Example End
+
+STR_NAME_STATION_EXAMPLE_BUILDING                               :Example Building 
