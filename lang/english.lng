@@ -1,16 +1,16 @@
 ##grflangid 0x01
-STR_GRF_NAME                                                    :Example Stations v0.1
-STR_GRF_DESCRIPTION                                             :{ORANGE}Example Stations{}{BLACK}This is a simple example GRF with some templated station platforms.
+STR_GRF_NAME                                                    :Chuffing Stations v0.1
+STR_GRF_DESCRIPTION                                             :{ORANGE}Chuffing Stations{}{BLACK}This station set is based on some common designs from around the UK.
 
 STR_VERSION_22723                                               :1.2.0 (r22723)
 
-STR_NAME_STATCLASS                                              :Example Platforms
+STR_NAME_STATCLASS                                              :Platforms
 
-STR_NAME_STATCLASS_SINGLE_PLATFORMS                             :Single Platforms
+STR_NAME_STATCLASS_DARKBRICK_PLATFORMS                          :Dark Brick Platforms
+STR_NAME_STATCLASS_DARKBRICK_BUILDINGS                          :Dark Brick Buildings
 
-STR_NAME_STATCLASS_EXAMPLE_BUILDING                             :Example Buildings
+STR_NAME_STATION_PLATFORM                                       :Platform
+STR_NAME_STATION_PLATFORM_END                                   :Platform End
+STR_NAME_STATION_OVERBRIDGE                                     :Overbridge
 
-STR_NAME_STATION_EXAMPLE_PLATFORM                               :Example Platform
-STR_NAME_STATION_EXAMPLE_PLATFORM_END                           :Example End
-
-STR_NAME_STATION_EXAMPLE_BUILDING                               :Example Building 
+STR_NAME_STATION_BUILDING                                       :Chuffing Building 

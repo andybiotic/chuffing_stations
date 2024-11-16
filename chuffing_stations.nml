@@ -1,0 +1,585 @@
+grf {
+    grfid: "NDY\05";
+    name: string(STR_GRF_NAME);
+    desc: string(STR_GRF_DESCRIPTION);
+    version: 1;
+    min_compatible_version: 1;
+}
+
+if (version_openttd(1,2,0,22723) > openttd_version) {
+    error(FATAL, REQUIRES_OPENTTD, string(STR_VERSION_22723));
+}
+
+cargotable {
+    LVST
+}
+
+/***** BASIC PLATFORMS *****/
+
+/***** PLATFORM LEFT *****/
+
+spriteset (darkbrick_plain_platform_left, "stations_dark_brick.png") {
+    [  10, 10, 64, 64, -32, -34 ]
+    [  80, 10, 64, 64, -32, -34 ]
+}
+
+spritelayout darkbrick_plain_platform_left_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout darkbrick_plain_platform_left_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, darkbrick_plain_platform_left_station) {
+    property {
+        class:                  "DARK";
+        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM);
+        cargo_threshold:        160;
+    }
+    graphics {
+        sprite_layouts: [darkbrick_plain_platform_left_sw_ne(0), darkbrick_plain_platform_left_se_nw(0)];
+        select_tile_type: 2;
+        purchase: darkbrick_plain_platform_left;
+        darkbrick_plain_platform_left;
+    }
+}
+
+/***** PLATFORM RIGHT *****/
+
+spriteset (darkbrick_plain_platform_right, "stations_dark_brick.png") {
+    [  150, 10, 64, 64, -32, -34 ]
+    [  220, 10, 64, 64, -32, -34 ]
+}
+
+spritelayout darkbrick_plain_platform_right_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        12;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout darkbrick_plain_platform_right_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, darkbrick_plain_platform_right_station) {
+    property {
+        class:                  "DARK";
+        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM);
+        cargo_threshold:        160;
+    }
+    graphics {
+        sprite_layouts: [darkbrick_plain_platform_right_sw_ne(0), darkbrick_plain_platform_right_se_nw(0)];
+        select_tile_type: 2;
+        purchase: darkbrick_plain_platform_right;
+        darkbrick_plain_platform_right;
+    }
+}
+
+
+/***** PLATFORM SOUTH END LEFT *****/
+
+spriteset (darkbrick_plain_south_end_left, "stations_dark_brick.png") {
+    [  290, 10, 64, 64, -32, -34 ]
+    [  360, 10, 64, 64, -32, -34 ]
+}
+
+spritelayout darkbrick_plain_south_end_left_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout darkbrick_plain_south_end_left_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, darkbrick_plain_south_end_left_station) {
+    property {
+        class:                  "DARK";
+        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_END);
+        cargo_threshold:        160;
+    }
+    graphics {
+        sprite_layouts: [darkbrick_plain_south_end_left_sw_ne(0), darkbrick_plain_south_end_left_se_nw(0)];
+        select_tile_type: 2;
+        purchase: darkbrick_plain_south_end_left;
+        darkbrick_plain_south_end_left;
+    }
+}
+
+
+/***** PLATFORM SOUTH END RIGHT *****/
+
+spriteset (darkbrick_plain_south_end_right, "stations_dark_brick.png") {
+    [  430, 10, 64, 64, -32, -34 ]
+    [  500, 10, 64, 64, -32, -34 ]
+}
+
+spritelayout darkbrick_plain_south_end_right_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        12;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout darkbrick_plain_south_end_right_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, darkbrick_plain_south_end_right_station) {
+    property {
+        class:                  "DARK";
+        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_END);
+        cargo_threshold:        160;
+    }
+    graphics {
+        sprite_layouts: [darkbrick_plain_south_end_right_sw_ne(0), darkbrick_plain_south_end_right_se_nw(0)];
+        select_tile_type: 2;
+        purchase: darkbrick_plain_south_end_right;
+        darkbrick_plain_south_end_right;
+    }
+}
+
+
+/***** PLATFORM NORTH END LEFT *****/
+
+spriteset (darkbrick_plain_north_end_left, "stations_dark_brick.png") {
+    [  570, 10, 64, 64, -32, -34 ]
+    [  640, 10, 64, 64, -32, -34 ]
+}
+
+spritelayout darkbrick_plain_north_end_left_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout darkbrick_plain_north_end_left_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, darkbrick_plain_north_end_left_station) {
+    property {
+        class:                  "DARK";
+        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_END);
+        cargo_threshold:        160;
+    }
+    graphics {
+        sprite_layouts: [darkbrick_plain_north_end_left_sw_ne(0), darkbrick_plain_north_end_left_se_nw(0)];
+        select_tile_type: 2;
+        purchase: darkbrick_plain_north_end_left;
+        darkbrick_plain_north_end_left;
+    }
+}
+
+
+/***** PLATFORM NORTH END RIGHT *****/
+
+spriteset (darkbrick_plain_north_end_right, "stations_dark_brick.png") {
+    [  710, 10, 64, 64, -32, -34 ]
+    [  780, 10, 64, 64, -32, -34 ]
+}
+
+spritelayout darkbrick_plain_north_end_right_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        12;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout darkbrick_plain_north_end_right_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, darkbrick_plain_north_end_right_station) {
+    property {
+        class:                  "DARK";
+        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_END);
+        cargo_threshold:        160;
+    }
+    graphics {
+        sprite_layouts: [darkbrick_plain_north_end_right_sw_ne(0), darkbrick_plain_north_end_right_se_nw(0)];
+        select_tile_type: 2;
+        purchase: darkbrick_plain_north_end_right;
+        darkbrick_plain_north_end_right;
+    }
+}
+
+
+/***** OVERBRIDGE *****/
+/***** OVERBRIDGE LEFT *****/
+
+spriteset (chuffing_overbridge_left, "stations_dark_brick.png") {
+    [  10, 150, 64, 64, -32, -34 ]
+    [  80, 150, 64, 64, -32, -34 ]
+    [  150, 150, 64, 64, -32, -34 ]
+    [  220, 150, 64, 64, -32, -34 ]
+}
+
+spritelayout overbridge_left_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        6;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout overbridge_left_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(2);
+        xoffset:        11;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        6;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, chuffing_left_overbridge) {
+    property {
+        class:                  "DARK";
+        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        name:                   string(STR_NAME_STATION_OVERBRIDGE);
+        cargo_threshold:        160;
+        hide_wire_tiles:        bitmask(2);
+
+    }
+    graphics {
+        sprite_layouts: [overbridge_left_sw_ne(0), overbridge_left_se_nw(0)];
+        select_tile_type: 2;
+        purchase: chuffing_overbridge_left;
+        chuffing_overbridge_left;
+    }
+}
+
+
+/***** OVERBRIDGE RIGHT *****/
+
+spriteset (chuffing_overbridge_right, "stations_dark_brick.png") {
+    [  290, 80, 64, 64, -32, -34 ]
+    [  360, 80, 64, 64, -32, -34 ]
+    [  430, 80, 64, 64, -32, -34 ]
+    [  500, 80, 64, 64, -32, -34 ]
+}
+
+spritelayout overbridge_right_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        6;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout overbridge_right_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        6;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, chuffing_right_overbridge) {
+    property {
+        class:                  "DARK";
+        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        name:                   string(STR_NAME_STATION_OVERBRIDGE);
+        cargo_threshold:        160;
+        hide_wire_tiles:        bitmask(2);
+
+    }
+    graphics {
+        sprite_layouts: [overbridge_right_sw_ne(0), overbridge_right_se_nw(0)];
+        select_tile_type: 2;
+        purchase: chuffing_overbridge_right;
+        chuffing_overbridge_right;
+    }
+}
+
+
+
+/***** BULDING *****/
+
+spriteset (building_1, "stations_dark_brick.png") {
+    [ 10, 220, 64, 64, -32, -32 ]
+    [ 80, 220, 64, 64, -32, -32 ]
+}
+
+spritelayout chuffing_building_green(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout chuffing_building_red(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, chuffing_building_1) {
+    property {
+        class:                  "BULD";
+        classname:              string(STR_NAME_STATCLASS_DARKBRICK_BUILDINGS);
+        name:                   string(STR_NAME_STATION_BUILDING);
+        cargo_threshold:        160;
+        non_traversable_tiles:  bitmask(1);
+        disabled_platforms:     bitmask(2,3,4,5,6,7,8);
+        disabled_length:        bitmask(2,3,4,5,6,7,8);
+    }
+    graphics {
+        sprite_layouts:         [chuffing_building_green(0), chuffing_building_red(0)];
+        select_tile_type:       0;
+        purchase:               building_1;
+        building_1;
+    }
+}
