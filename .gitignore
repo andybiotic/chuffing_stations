@@ -1,4 +1,4 @@
 .DS_Store
 *.cacheindex
 *.cache
-example_stations.grf
+*.grf

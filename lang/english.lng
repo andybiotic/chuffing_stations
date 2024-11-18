@@ -11,6 +11,18 @@ STR_NAME_STATCLASS_DARKBRICK_BUILDINGS                          :Dark Brick Buil
 
 STR_NAME_STATION_PLATFORM                                       :Platform
 STR_NAME_STATION_PLATFORM_END                                   :Platform End
+STR_NAME_STATION_PLATFORM_LAMPS                                 :Platform With Lamps
+STR_NAME_STATION_PLATFORM_SIGN                                  :Platform With Sign
+STR_NAME_STATION_PLATFORM_SHELTER                               :Shelter
+STR_NAME_STATION_PLATFORM_BENCH                                 :Platform With Bench
+STR_NAME_STATION_PLATFORM_ADVERT                                :Platform With Advertisement
+STR_NAME_STATION_PLATFORM_UNDERPASS                             :Underpass
+STR_NAME_STATION_PLATFORM_DISPLAYS                              :Platform With Digital Displays
+STR_NAME_STATION_PLATFORM_BUFFER                                :Buffer                
+
 STR_NAME_STATION_OVERBRIDGE                                     :Overbridge
 
 STR_NAME_STATION_BUILDING                                       :Chuffing Building 
+STR_NAME_STATION_TRENT                                          :Trent Ticket Office
+STR_NAME_STATION_ANKER                                          :Anker Ticket Office
+STR_NAME_STATION_RIBBLE                                         :Ribble Ticket Office
