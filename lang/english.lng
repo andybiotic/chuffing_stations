@@ -6,23 +6,44 @@ STR_VERSION_22723                                               :1.2.0 (r22723)
 
 STR_NAME_STATCLASS                                              :Platforms
 
+STR_NAME_STATCLASS_WOODEN_PLATFORMS                             :Wooden Platforms
+STR_NAME_STATCLASS_WOODEN_BUILDINGS                             :Wooden Buildings
+STR_NAME_STATCLASS_STONE_PLATFORMS                              :Stone Platforms
+STR_NAME_STATCLASS_STONE_BUILDINGS                              :Stone Buildings
+STR_NAME_STATCLASS_REDBRICK_PLATFORMS                           :Red Brick Platforms
+STR_NAME_STATCLASS_REDBRICK_BUILDINGS                           :Red Brick Buildings
+STR_NAME_STATCLASS_SUBURBAN_PLATFORMS                           :Suburban Platforms
+STR_NAME_STATCLASS_SUBURBAN_BUILDINGS                           :Suburban Buildings
 STR_NAME_STATCLASS_DARKBRICK_PLATFORMS                          :Dark Brick Platforms
 STR_NAME_STATCLASS_DARKBRICK_BUILDINGS                          :Dark Brick Buildings
+STR_NAME_STATCLASS_EXPRESS_PLATFORMS                            :Express Platforms
+STR_NAME_STATCLASS_EXPRESS_BUILDINGS                            :Express Buildings
+STR_NAME_STATCLASS_MODERN_PLATFORMS                             :Modern Platforms
+STR_NAME_STATCLASS_MODERN_BUILDINGS                             :Modern Buildings
 
 STR_NAME_STATION_PLATFORM                                       :Platform
 STR_NAME_STATION_PLATFORM_END                                   :Platform End
 STR_NAME_STATION_PLATFORM_LAMPS                                 :Platform With Lamps
 STR_NAME_STATION_PLATFORM_SIGN                                  :Platform With Sign
 STR_NAME_STATION_PLATFORM_SHELTER                               :Shelter
+STR_NAME_STATION_PLATFORM_SHELTERALT                            :Shelter (Alternative)
 STR_NAME_STATION_PLATFORM_BENCH                                 :Platform With Bench
 STR_NAME_STATION_PLATFORM_ADVERT                                :Platform With Advertisement
 STR_NAME_STATION_PLATFORM_UNDERPASS                             :Underpass
-STR_NAME_STATION_PLATFORM_DISPLAYS                              :Platform With Digital Displays
-STR_NAME_STATION_PLATFORM_BUFFER                                :Buffer                
-
 STR_NAME_STATION_OVERBRIDGE                                     :Overbridge
+STR_NAME_STATION_PLATFORM_FOOTBRIDGE                            :Footbridge
+STR_NAME_STATION_PLATFORM_DISPLAYS                              :Platform With Digital Displays
+STR_NAME_STATION_PLATFORM_BUFFER                                :Buffer 
+
+
 
 STR_NAME_STATION_BUILDING                                       :Chuffing Building 
+STR_NAME_STATION_AVON                                           :Avon Ticket Office
+STR_NAME_STATION_SEVERN                                         :Severn Ticket Office
+STR_NAME_STATION_TEIGN                                          :Teign Ticket Office
+STR_NAME_STATION_TAFF                                           :Taff Ticket Office
+STR_NAME_STATION_THESADDLETANK                                  :The Saddle Tank Tavern
+
 STR_NAME_STATION_TRENT                                          :Trent Ticket Office
 STR_NAME_STATION_ANKER                                          :Anker Ticket Office
 STR_NAME_STATION_RIBBLE                                         :Ribble Ticket Office
