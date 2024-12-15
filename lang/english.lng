@@ -33,7 +33,7 @@ STR_NAME_STATION_PLATFORM_SHELTERALT                            :Shelter (Altern
 STR_NAME_STATION_PLATFORM_BENCH                                 :Platform With Bench
 STR_NAME_STATION_PLATFORM_ADVERT                                :Platform With Advertisement
 STR_NAME_STATION_PLATFORM_UNDERPASS                             :Underpass
-STR_NAME_STATION_PLATFORM_OVERBRIDGE                                     :Overbridge
+STR_NAME_STATION_PLATFORM_OVERBRIDGE                            :Overbridge
 STR_NAME_STATION_PLATFORM_FOOTBRIDGE                            :Footbridge
 STR_NAME_STATION_PLATFORM_DISPLAYS                              :Platform With Digital Displays
 STR_NAME_STATION_PLATFORM_BUFFER                                :Buffer 
