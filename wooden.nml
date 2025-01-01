@@ -11,19 +11,26 @@ if (version_openttd(1,2,0,22723) > openttd_version) {
 }
 
 cargotable {
-    LVST
+    PASS
 }
+
+
+/***************************************************************************/
+/********************* WOODEN PLATFORMS ************************************/
+/***************************************************************************/
+
+
 
 
 /***************************************/
 /********** BASIC PLATFORMS ************/
 /***************************************/
 
-/***** PLATFORM LEFT *****/
-
 spriteset (wooden_plain_platform_left, "stations_wooden.png") {
     [  10, 10, 64, 64, -32, -34 ]
     [  80, 10, 64, 64, -32, -34 ]
+    [  10, 150, 64, 64, -32, -34 ]
+    [  80, 150, 64, 64, -32, -34 ]
 }
 
 spritelayout wooden_plain_platform_left_sw_ne(a) {
@@ -38,6 +45,17 @@ spritelayout wooden_plain_platform_left_sw_ne(a) {
         xextent:        16;
         yextent:        5;
         zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
@@ -58,11 +76,22 @@ spritelayout wooden_plain_platform_left_se_nw(a) {
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        11;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
 }
 
 item(FEAT_STATIONS, wooden_plain_platform_left_station) {
     property {
-        class:                  "WOOD";
+        class:                  "_WDD";
         classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM);
         cargo_threshold:        160;
@@ -80,6 +109,8 @@ item(FEAT_STATIONS, wooden_plain_platform_left_station) {
 spriteset (wooden_plain_platform_right, "stations_wooden.png") {
     [  150, 10, 64, 64, -32, -34 ]
     [  220, 10, 64, 64, -32, -34 ]
+    [  150, 150, 64, 64, -32, -34 ]
+    [  220, 150, 64, 64, -32, -34 ]
 }
 
 spritelayout wooden_plain_platform_right_sw_ne(a) {
@@ -94,6 +125,17 @@ spritelayout wooden_plain_platform_right_sw_ne(a) {
         xextent:        16;
         yextent:        5;
         zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        12;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
@@ -114,11 +156,22 @@ spritelayout wooden_plain_platform_right_se_nw(a) {
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
 }
 
 item(FEAT_STATIONS, wooden_plain_platform_right_station) {
     property {
-        class:                  "WOOD";
+        class:                  "_WDD";
         classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM);
         cargo_threshold:        160;
@@ -131,235 +184,6 @@ item(FEAT_STATIONS, wooden_plain_platform_right_station) {
     }
 }
 
-
-/***** PLATFORM SOUTH END LEFT *****/
-
-spriteset (wooden_plain_south_end_left, "stations_wooden.png") {
-    [  290, 10, 64, 64, -32, -34 ]
-    [  360, 10, 64, 64, -32, -34 ]
-}
-
-spritelayout wooden_plain_south_end_left_sw_ne(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_X;
-    }
-    building {
-        sprite:         DEFAULT(0);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        5;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-spritelayout wooden_plain_south_end_left_se_nw(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_Y;
-    }
-    building {
-        sprite:         DEFAULT(1);
-        xoffset:        11;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        5;
-        yextent:        16;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-item(FEAT_STATIONS, wooden_plain_south_end_left_station) {
-    property {
-        class:                  "WOOD";
-        classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
-        name:                   string(STR_NAME_STATION_PLATFORM_END);
-        cargo_threshold:        160;
-    }
-    graphics {
-        sprite_layouts: [wooden_plain_south_end_left_sw_ne(0), wooden_plain_south_end_left_se_nw(0)];
-        select_tile_type: 2;
-        purchase: wooden_plain_south_end_left;
-        wooden_plain_south_end_left;
-    }
-}
-
-
-/***** PLATFORM SOUTH END RIGHT *****/
-
-spriteset (wooden_plain_south_end_right, "stations_wooden.png") {
-    [  430, 10, 64, 64, -32, -34 ]
-    [  500, 10, 64, 64, -32, -34 ]
-}
-
-spritelayout wooden_plain_south_end_right_sw_ne(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_X;
-    }
-    building {
-        sprite:         DEFAULT(0);
-        xoffset:        0;
-        yoffset:        12;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        5;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-spritelayout wooden_plain_south_end_right_se_nw(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_Y;
-    }
-    building {
-        sprite:         DEFAULT(1);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        5;
-        yextent:        16;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-item(FEAT_STATIONS, wooden_plain_south_end_right_station) {
-    property {
-        class:                  "WOOD";
-        classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
-        name:                   string(STR_NAME_STATION_PLATFORM_END);
-        cargo_threshold:        160;
-    }
-    graphics {
-        sprite_layouts: [wooden_plain_south_end_right_sw_ne(0), wooden_plain_south_end_right_se_nw(0)];
-        select_tile_type: 2;
-        purchase: wooden_plain_south_end_right;
-        wooden_plain_south_end_right;
-    }
-}
-
-
-/***** PLATFORM NORTH END LEFT *****/
-
-spriteset (wooden_plain_north_end_left, "stations_wooden.png") {
-    [  570, 10, 64, 64, -32, -34 ]
-    [  640, 10, 64, 64, -32, -34 ]
-}
-
-spritelayout wooden_plain_north_end_left_sw_ne(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_X;
-    }
-    building {
-        sprite:         DEFAULT(0);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        5;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-spritelayout wooden_plain_north_end_left_se_nw(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_Y;
-    }
-    building {
-        sprite:         DEFAULT(1);
-        xoffset:        11;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        5;
-        yextent:        16;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-item(FEAT_STATIONS, wooden_plain_north_end_left_station) {
-    property {
-        class:                  "WOOD";
-        classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
-        name:                   string(STR_NAME_STATION_PLATFORM_END);
-        cargo_threshold:        160;
-    }
-    graphics {
-        sprite_layouts: [wooden_plain_north_end_left_sw_ne(0), wooden_plain_north_end_left_se_nw(0)];
-        select_tile_type: 2;
-        purchase: wooden_plain_north_end_left;
-        wooden_plain_north_end_left;
-    }
-}
-
-
-/***** PLATFORM NORTH END RIGHT *****/
-
-spriteset (wooden_plain_north_end_right, "stations_wooden.png") {
-    [  710, 10, 64, 64, -32, -34 ]
-    [  780, 10, 64, 64, -32, -34 ]
-}
-
-spritelayout wooden_plain_north_end_right_sw_ne(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_X;
-    }
-    building {
-        sprite:         DEFAULT(0);
-        xoffset:        0;
-        yoffset:        12;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        5;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-spritelayout wooden_plain_north_end_right_se_nw(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_Y;
-    }
-    building {
-        sprite:         DEFAULT(1);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        5;
-        yextent:        16;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-item(FEAT_STATIONS, wooden_plain_north_end_right_station) {
-    property {
-        class:                  "WOOD";
-        classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
-        name:                   string(STR_NAME_STATION_PLATFORM_END);
-        cargo_threshold:        160;
-    }
-    graphics {
-        sprite_layouts: [wooden_plain_north_end_right_sw_ne(0), wooden_plain_north_end_right_se_nw(0)];
-        select_tile_type: 2;
-        purchase: wooden_plain_north_end_right;
-        wooden_plain_north_end_right;
-    }
-}
-
-
 /***************************************/
 /***** BASIC PLATFORMS WITH FENCES *****/
 /***************************************/
@@ -369,6 +193,8 @@ item(FEAT_STATIONS, wooden_plain_north_end_right_station) {
 spriteset (wooden_fence_platform_left, "stations_wooden.png") {
     [  10, 80, 64, 64, -32, -34 ]
     [  80, 80, 64, 64, -32, -34 ]
+    [  10, 220, 64, 64, -32, -34 ]
+    [  80, 220, 64, 64, -32, -34 ]
 }
 
 spritelayout wooden_fence_platform_left_sw_ne(a) {
@@ -383,6 +209,17 @@ spritelayout wooden_fence_platform_left_sw_ne(a) {
         xextent:        16;
         yextent:        5;
         zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+        building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
@@ -403,11 +240,22 @@ spritelayout wooden_fence_platform_left_se_nw(a) {
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        11;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
 }
 
 item(FEAT_STATIONS, wooden_fence_platform_left_station) {
     property {
-        class:                  "WOOD";
+        class:                  "_WDD";
         classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM);
         cargo_threshold:        160;
@@ -425,6 +273,8 @@ item(FEAT_STATIONS, wooden_fence_platform_left_station) {
 spriteset (wooden_fence_platform_right, "stations_wooden.png") {
     [  150, 80, 64, 64, -32, -34 ]
     [  220, 80, 64, 64, -32, -34 ]
+    [  150, 220, 64, 64, -32, -34 ]
+    [  220, 220, 64, 64, -32, -34 ]
 }
 
 spritelayout wooden_fence_platform_right_sw_ne(a) {
@@ -439,6 +289,17 @@ spritelayout wooden_fence_platform_right_sw_ne(a) {
         xextent:        16;
         yextent:        5;
         zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        12;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
@@ -459,11 +320,22 @@ spritelayout wooden_fence_platform_right_se_nw(a) {
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
 }
 
 item(FEAT_STATIONS, wooden_fence_platform_right_station) {
     property {
-        class:                  "WOOD";
+        class:                  "_WDD";
         classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM);
         cargo_threshold:        160;
@@ -473,398 +345,6 @@ item(FEAT_STATIONS, wooden_fence_platform_right_station) {
         select_tile_type: 2;
         purchase: wooden_fence_platform_right;
         wooden_fence_platform_right;
-    }
-}
-
-
-/***** PLATFORM SOUTH END LEFT *****/
-
-spriteset (wooden_fence_south_end_left, "stations_wooden.png") {
-    [  290, 80, 64, 64, -32, -34 ]
-    [  360, 80, 64, 64, -32, -34 ]
-}
-
-spritelayout wooden_fence_south_end_left_sw_ne(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_X;
-    }
-    building {
-        sprite:         DEFAULT(0);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        5;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-spritelayout wooden_fence_south_end_left_se_nw(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_Y;
-    }
-    building {
-        sprite:         DEFAULT(1);
-        xoffset:        11;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        5;
-        yextent:        16;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-item(FEAT_STATIONS, wooden_fence_south_end_left_station) {
-    property {
-        class:                  "WOOD";
-        classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
-        name:                   string(STR_NAME_STATION_PLATFORM_END);
-        cargo_threshold:        160;
-    }
-    graphics {
-        sprite_layouts: [wooden_fence_south_end_left_sw_ne(0), wooden_fence_south_end_left_se_nw(0)];
-        select_tile_type: 2;
-        purchase: wooden_fence_south_end_left;
-        wooden_fence_south_end_left;
-    }
-}
-
-
-/***** PLATFORM SOUTH END RIGHT *****/
-
-spriteset (wooden_fence_south_end_right, "stations_wooden.png") {
-    [  430, 80, 64, 64, -32, -34 ]
-    [  500, 80, 64, 64, -32, -34 ]
-}
-
-spritelayout wooden_fence_south_end_right_sw_ne(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_X;
-    }
-    building {
-        sprite:         DEFAULT(0);
-        xoffset:        0;
-        yoffset:        12;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        5;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-spritelayout wooden_fence_south_end_right_se_nw(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_Y;
-    }
-    building {
-        sprite:         DEFAULT(1);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        5;
-        yextent:        16;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-item(FEAT_STATIONS, wooden_fence_south_end_right_station) {
-    property {
-        class:                  "WOOD";
-        classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
-        name:                   string(STR_NAME_STATION_PLATFORM_END);
-        cargo_threshold:        160;
-    }
-    graphics {
-        sprite_layouts: [wooden_fence_south_end_right_sw_ne(0), wooden_fence_south_end_right_se_nw(0)];
-        select_tile_type: 2;
-        purchase: wooden_fence_south_end_right;
-        wooden_fence_south_end_right;
-    }
-}
-
-
-/***** PLATFORM NORTH END LEFT *****/
-
-spriteset (wooden_fence_north_end_left, "stations_wooden.png") {
-    [  570, 80, 64, 64, -32, -34 ]
-    [  640, 80, 64, 64, -32, -34 ]
-}
-
-spritelayout wooden_fence_north_end_left_sw_ne(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_X;
-    }
-    building {
-        sprite:         DEFAULT(0);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        5;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-spritelayout wooden_fence_north_end_left_se_nw(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_Y;
-    }
-    building {
-        sprite:         DEFAULT(1);
-        xoffset:        11;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        5;
-        yextent:        16;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-item(FEAT_STATIONS, wooden_fence_north_end_left_station) {
-    property {
-        class:                  "WOOD";
-        classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
-        name:                   string(STR_NAME_STATION_PLATFORM_END);
-        cargo_threshold:        160;
-    }
-    graphics {
-        sprite_layouts: [wooden_fence_north_end_left_sw_ne(0), wooden_fence_north_end_left_se_nw(0)];
-        select_tile_type: 2;
-        purchase: wooden_fence_north_end_left;
-        wooden_fence_north_end_left;
-    }
-}
-
-
-/***** PLATFORM NORTH END RIGHT *****/
-
-spriteset (wooden_fence_north_end_right, "stations_wooden.png") {
-    [  710, 80, 64, 64, -32, -34 ]
-    [  780, 80, 64, 64, -32, -34 ]
-}
-
-spritelayout wooden_fence_north_end_right_sw_ne(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_X;
-    }
-    building {
-        sprite:         DEFAULT(0);
-        xoffset:        0;
-        yoffset:        12;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        5;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-spritelayout wooden_fence_north_end_right_se_nw(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_Y;
-    }
-    building {
-        sprite:         DEFAULT(1);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        5;
-        yextent:        16;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-item(FEAT_STATIONS, wooden_fence_north_end_right_station) {
-    property {
-        class:                  "WOOD";
-        classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
-        name:                   string(STR_NAME_STATION_PLATFORM_END);
-        cargo_threshold:        160;
-    }
-    graphics {
-        sprite_layouts: [wooden_fence_north_end_right_sw_ne(0), wooden_fence_north_end_right_se_nw(0)];
-        select_tile_type: 2;
-        purchase: wooden_fence_north_end_right;
-        wooden_fence_north_end_right;
-    }
-}
-
-/***************************************/
-/***** PLATFORMS WITH LIGHTS ***********/
-/***************************************/
-
-/***** PLATFORM LEFT *****/
-
-spriteset (wooden_lights_platform_left, "stations_wooden.png") {
-    [  10, 10, 64, 64, -32, -34 ]
-    [  80, 10, 64, 64, -32, -34 ]
-    [  10, 150, 64, 64, -32, -34 ]
-    [  80, 150, 64, 64, -32, -34 ]
-}
-
-spritelayout wooden_lights_platform_left_sw_ne(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_X;
-    }
-    building {
-        sprite:         DEFAULT(0);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        5;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-    building {
-        sprite:         DEFAULT(2);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        5;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-spritelayout wooden_lights_platform_left_se_nw(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_Y;
-    }
-    building {
-        sprite:         DEFAULT(1);
-        xoffset:        11;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        5;
-        yextent:        16;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-    building {
-        sprite:         DEFAULT(3);
-        xoffset:        11;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        5;
-        yextent:        16;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-item(FEAT_STATIONS, wooden_lights_platform_left_station) {
-    property {
-        class:                  "WOOD";
-        classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
-        name:                   string(STR_NAME_STATION_PLATFORM_LAMPS);
-        cargo_threshold:        160;
-    }
-    graphics {
-        sprite_layouts: [wooden_lights_platform_left_sw_ne(0), wooden_lights_platform_left_se_nw(0)];
-        select_tile_type: 2;
-        purchase: wooden_lights_platform_left;
-        wooden_lights_platform_left;
-    }
-}
-
-/***** PLATFORM RIGHT *****/
-
-spriteset (wooden_lights_platform_right, "stations_wooden.png") {
-    [  150, 10, 64, 64, -32, -34 ]
-    [  220, 10, 64, 64, -32, -34 ]
-    [  150, 150, 64, 64, -32, -34 ]
-    [  220, 150, 64, 64, -32, -34 ]
-}
-
-spritelayout wooden_lights_platform_right_sw_ne(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_X;
-    }
-    building {
-        sprite:         DEFAULT(0);
-        xoffset:        0;
-        yoffset:        12;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        5;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-        building {
-        sprite:         DEFAULT(2);
-        xoffset:        0;
-        yoffset:        12;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        5;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-spritelayout wooden_lights_platform_right_se_nw(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_Y;
-    }
-    building {
-        sprite:         DEFAULT(1);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        5;
-        yextent:        16;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-        building {
-        sprite:         DEFAULT(3);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        5;
-        yextent:        16;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-item(FEAT_STATIONS, wooden_lights_platform_right_station) {
-    property {
-        class:                  "WOOD";
-        classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
-        name:                   string(STR_NAME_STATION_PLATFORM_LAMPS);
-        cargo_threshold:        160;
-    }
-    graphics {
-        sprite_layouts: [wooden_lights_platform_right_sw_ne(0), wooden_lights_platform_right_se_nw(0)];
-        select_tile_type: 2;
-        purchase: wooden_lights_platform_right;
-        wooden_lights_platform_right;
     }
 }
 
@@ -928,7 +408,7 @@ spritelayout wooden_sign_platform_left_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        12;
+        zextent:        16;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
@@ -936,7 +416,7 @@ spritelayout wooden_sign_platform_left_se_nw(a) {
 
 item(FEAT_STATIONS, wooden_sign_platform_left_station) {
     property {
-        class:                  "WOOD";
+        class:                  "_WDD";
         classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SIGN);
         cargo_threshold:        160;
@@ -981,7 +461,7 @@ spritelayout wooden_sign_platform_right_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        12;
+        zextent:        16;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
@@ -1009,7 +489,7 @@ spritelayout wooden_sign_platform_right_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        12;
+        zextent:        16;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
@@ -1017,7 +497,7 @@ spritelayout wooden_sign_platform_right_se_nw(a) {
 
 item(FEAT_STATIONS, wooden_sign_platform_right_station) {
     property {
-        class:                  "WOOD";
+        class:                  "_WDD";
         classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SIGN);
         cargo_threshold:        160;
@@ -1027,6 +507,505 @@ item(FEAT_STATIONS, wooden_sign_platform_right_station) {
         select_tile_type: 2;
         purchase: wooden_sign_platform_right;
         wooden_sign_platform_right;
+    }
+}
+
+
+
+
+/***** PLATFORM WITH FENCES AND SIGN LEFT *****/
+
+spriteset (wooden_fenceandsign_platform_left, "stations_wooden.png") {
+    [  10, 80, 64, 64, -32, -34 ]
+    [  80, 80, 64, 64, -32, -34 ]
+    [  290, 220, 64, 64, -32, -34 ]
+    [  360, 220, 64, 64, -32, -34 ]
+}
+
+spritelayout wooden_fenceandsign_platform_left_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+        building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout wooden_fenceandsign_platform_left_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+        building {
+        sprite:         DEFAULT(3);
+        xoffset:        11;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, wooden_fenceandsign_platform_left_station) {
+    property {
+        class:                  "_WDD";
+        classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_SIGN);
+        cargo_threshold:        160;
+    }
+    graphics {
+        sprite_layouts: [wooden_fenceandsign_platform_left_sw_ne(0), wooden_fenceandsign_platform_left_se_nw(0)];
+        select_tile_type: 2;
+        purchase: wooden_fenceandsign_platform_left;
+        wooden_fenceandsign_platform_left;
+    }
+}
+
+
+/***** PLATFORM WITH FENCES AND SIGN RIGHT *****/
+
+spriteset (wooden_fenceandsign_platform_right, "stations_wooden.png") {
+    [  150, 80, 64, 64, -32, -34 ]
+    [  220, 80, 64, 64, -32, -34 ]
+    [  430, 220, 64, 64, -32, -34 ]
+    [  500, 220, 64, 64, -32, -34 ]
+}
+
+spritelayout wooden_fenceandsign_platform_right_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        12;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+        building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        12;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout wooden_fenceandsign_platform_right_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+        building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, wooden_fenceandsign_platform_right_station) {
+    property {
+        class:                  "_WDD";
+        classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_SIGN);
+        cargo_threshold:        160;
+    }
+    graphics {
+        sprite_layouts: [wooden_fenceandsign_platform_right_sw_ne(0), wooden_fenceandsign_platform_right_se_nw(0)];
+        select_tile_type: 2;
+        purchase: wooden_fenceandsign_platform_right;
+        wooden_fenceandsign_platform_right;
+    }
+}
+
+
+
+
+
+
+/***************************************/
+/** PLATFORMS WITH BENCH ***************/
+/***************************************/
+
+/***** PLATFORM LEFT *****/
+
+spriteset (wooden_bench_platform_left, "stations_wooden.png") {
+    [  10, 10, 64, 64, -32, -34 ]
+    [  80, 10, 64, 64, -32, -34 ]
+    [  10, 290, 64, 64, -32, -34 ]
+    [  80, 290, 64, 64, -32, -34 ]
+}
+
+spritelayout wooden_bench_platform_left_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+        building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout wooden_bench_platform_left_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+        building {
+        sprite:         DEFAULT(3);
+        xoffset:        11;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, wooden_bench_platform_left_station) {
+    property {
+        class:                  "_WDD";
+        classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_BENCH);
+        cargo_threshold:        160;
+    }
+    graphics {
+        sprite_layouts: [wooden_bench_platform_left_sw_ne(0), wooden_bench_platform_left_se_nw(0)];
+        select_tile_type: 2;
+        purchase: wooden_bench_platform_left;
+        wooden_bench_platform_left;
+    }
+}
+
+/***** PLATFORM RIGHT *****/
+
+spriteset (wooden_bench_platform_right, "stations_wooden.png") {
+    [  150, 10, 64, 64, -32, -34 ]
+    [  220, 10, 64, 64, -32, -34 ]
+    [  150, 290, 64, 64, -32, -34 ]
+    [  220, 290, 64, 64, -32, -34 ]
+}
+
+spritelayout wooden_bench_platform_right_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        12;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+        building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        12;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout wooden_bench_platform_right_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+        building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, wooden_bench_platform_right_station) {
+    property {
+        class:                  "_WDD";
+        classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_BENCH);
+        cargo_threshold:        160;
+    }
+    graphics {
+        sprite_layouts: [wooden_bench_platform_right_sw_ne(0), wooden_bench_platform_right_se_nw(0)];
+        select_tile_type: 2;
+        purchase: wooden_bench_platform_right;
+        wooden_bench_platform_right;
+    }
+}
+
+
+
+/***************************************/
+/** PLATFORMS WITH FENCE AND BENCH *****/
+/***************************************/
+
+/***** PLATFORM LEFT *****/
+
+spriteset (wooden_fenceandbench_platform_left, "stations_wooden.png") {
+    [  10, 80, 64, 64, -32, -34 ]
+    [  80, 80, 64, 64, -32, -34 ]
+    [  10, 360, 64, 64, -32, -34 ]
+    [  80, 360, 64, 64, -32, -34 ]
+}
+
+spritelayout wooden_fenceandbench_platform_left_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+        building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout wooden_fenceandbench_platform_left_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+        building {
+        sprite:         DEFAULT(3);
+        xoffset:        11;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, wooden_fenceandbench_platform_left_station) {
+    property {
+        class:                  "_WDD";
+        classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_BENCH);
+        cargo_threshold:        160;
+    }
+    graphics {
+        sprite_layouts: [wooden_fenceandbench_platform_left_sw_ne(0), wooden_fenceandbench_platform_left_se_nw(0)];
+        select_tile_type: 2;
+        purchase: wooden_fenceandbench_platform_left;
+        wooden_fenceandbench_platform_left;
+    }
+}
+
+/***** PLATFORM RIGHT *****/
+
+spriteset (wooden_fenceandbench_platform_right, "stations_wooden.png") {
+    [  150, 80, 64, 64, -32, -34 ]
+    [  220, 80, 64, 64, -32, -34 ]
+    [  150, 360, 64, 64, -32, -34 ]
+    [  220, 360, 64, 64, -32, -34 ]
+}
+
+spritelayout wooden_fenceandbench_platform_right_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        12;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+        building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        12;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout wooden_fenceandbench_platform_right_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        12;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }    
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, wooden_fenceandbench_platform_right_station) {
+    property {
+        class:                  "_WDD";
+        classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_BENCH);
+        cargo_threshold:        160;
+    }
+    graphics {
+        sprite_layouts: [wooden_fenceandbench_platform_right_sw_ne(0), wooden_fenceandbench_platform_right_se_nw(0)];
+        select_tile_type: 2;
+        purchase: wooden_fenceandbench_platform_right;
+        wooden_fenceandbench_platform_right;
     }
 }
 
@@ -1098,7 +1077,7 @@ spritelayout wooden_shelter_platform_left_se_nw(a) {
 
 item(FEAT_STATIONS, wooden_shelter_platform_left_station) {
     property {
-        class:                  "WOOD";
+        class:                  "_WDD";
         classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SHELTER);
         cargo_threshold:        160;
@@ -1179,7 +1158,7 @@ spritelayout wooden_shelter_platform_right_se_nw(a) {
 
 item(FEAT_STATIONS, wooden_shelter_platform_right_station) {
     property {
-        class:                  "WOOD";
+        class:                  "_WDD";
         classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SHELTER);
         cargo_threshold:        160;
@@ -1193,331 +1172,7 @@ item(FEAT_STATIONS, wooden_shelter_platform_right_station) {
 }
 
 
-/***************************************/
-/** PLATFORMS WITH FENCES AND LIGHTS ***/
-/***************************************/
 
-/***** PLATFORM LEFT *****/
-
-spriteset (wooden_fenceandlights_platform_left, "stations_wooden.png") {
-    [  10, 80, 64, 64, -32, -34 ]
-    [  80, 80, 64, 64, -32, -34 ]
-    [  10, 220, 64, 64, -32, -34 ]
-    [  80, 220, 64, 64, -32, -34 ]
-}
-
-spritelayout wooden_fenceandlights_platform_left_sw_ne(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_X;
-    }
-        building {
-        sprite:         DEFAULT(0);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        5;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-    building {
-        sprite:         DEFAULT(2);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        5;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-spritelayout wooden_fenceandlights_platform_left_se_nw(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_Y;
-    }
-        building {
-        sprite:         DEFAULT(1);
-        xoffset:        11;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        5;
-        yextent:        16;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-    building {
-        sprite:         DEFAULT(3);
-        xoffset:        11;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        5;
-        yextent:        16;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-item(FEAT_STATIONS, wooden_fenceandlights_platform_left_station) {
-    property {
-        class:                  "WOOD";
-        classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
-        name:                   string(STR_NAME_STATION_PLATFORM_LAMPS);
-        cargo_threshold:        160;
-    }
-    graphics {
-        sprite_layouts: [wooden_fenceandlights_platform_left_sw_ne(0), wooden_fenceandlights_platform_left_se_nw(0)];
-        select_tile_type: 2;
-        purchase: wooden_fenceandlights_platform_left;
-        wooden_fenceandlights_platform_left;
-    }
-}
-
-/***** PLATFORM RIGHT *****/
-
-spriteset (wooden_fenceandlights_platform_right, "stations_wooden.png") {
-    [  150, 80, 64, 64, -32, -34 ]
-    [  220, 80, 64, 64, -32, -34 ]
-    [  150, 220, 64, 64, -32, -34 ]
-    [  220, 220, 64, 64, -32, -34 ]
-}
-
-spritelayout wooden_fenceandlights_platform_right_sw_ne(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_X;
-    }
-    building {
-        sprite:         DEFAULT(0);
-        xoffset:        0;
-        yoffset:        12;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        5;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-        building {
-        sprite:         DEFAULT(2);
-        xoffset:        0;
-        yoffset:        12;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        5;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-spritelayout wooden_fenceandlights_platform_right_se_nw(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_Y;
-    }
-    building {
-        sprite:         DEFAULT(1);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        5;
-        yextent:        16;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-        building {
-        sprite:         DEFAULT(3);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        5;
-        yextent:        16;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-item(FEAT_STATIONS, wooden_fenceandlights_platform_right_station) {
-    property {
-        class:                  "WOOD";
-        classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
-        name:                   string(STR_NAME_STATION_PLATFORM_LAMPS);
-        cargo_threshold:        160;
-    }
-    graphics {
-        sprite_layouts: [wooden_fenceandlights_platform_right_sw_ne(0), wooden_fenceandlights_platform_right_se_nw(0)];
-        select_tile_type: 2;
-        purchase: wooden_fenceandlights_platform_right;
-        wooden_fenceandlights_platform_right;
-    }
-}
-
-
-/***** PLATFORM WITH FENCES AND SIGN LEFT *****/
-
-spriteset (wooden_fenceandsign_platform_left, "stations_wooden.png") {
-    [  10, 80, 64, 64, -32, -34 ]
-    [  80, 80, 64, 64, -32, -34 ]
-    [  290, 220, 64, 64, -32, -34 ]
-    [  360, 220, 64, 64, -32, -34 ]
-}
-
-spritelayout wooden_fenceandsign_platform_left_sw_ne(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_X;
-    }
-    building {
-        sprite:         DEFAULT(0);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        5;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-        building {
-        sprite:         DEFAULT(2);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        5;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-spritelayout wooden_fenceandsign_platform_left_se_nw(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_Y;
-    }
-    building {
-        sprite:         DEFAULT(1);
-        xoffset:        11;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        5;
-        yextent:        16;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-        building {
-        sprite:         DEFAULT(3);
-        xoffset:        11;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        5;
-        yextent:        16;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-item(FEAT_STATIONS, wooden_fenceandsign_platform_left_station) {
-    property {
-        class:                  "WOOD";
-        classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
-        name:                   string(STR_NAME_STATION_PLATFORM_SIGN);
-        cargo_threshold:        160;
-    }
-    graphics {
-        sprite_layouts: [wooden_fenceandsign_platform_left_sw_ne(0), wooden_fenceandsign_platform_left_se_nw(0)];
-        select_tile_type: 2;
-        purchase: wooden_fenceandsign_platform_left;
-        wooden_fenceandsign_platform_left;
-    }
-}
-
-
-/***** PLATFORM WITH FENCES AND SIGN RIGHT *****/
-
-spriteset (wooden_fenceandsign_platform_right, "stations_wooden.png") {
-    [  150, 80, 64, 64, -32, -34 ]
-    [  220, 80, 64, 64, -32, -34 ]
-    [  430, 220, 64, 64, -32, -34 ]
-    [  500, 220, 64, 64, -32, -34 ]
-}
-
-spritelayout wooden_fenceandsign_platform_right_sw_ne(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_X;
-    }
-    building {
-        sprite:         DEFAULT(0);
-        xoffset:        0;
-        yoffset:        12;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        5;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-        building {
-        sprite:         DEFAULT(2);
-        xoffset:        0;
-        yoffset:        12;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        5;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-spritelayout wooden_fenceandsign_platform_right_se_nw(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_Y;
-    }
-    building {
-        sprite:         DEFAULT(1);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        5;
-        yextent:        16;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-        building {
-        sprite:         DEFAULT(3);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        5;
-        yextent:        16;
-        zextent:        12;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-item(FEAT_STATIONS, wooden_fenceandsign_platform_right_station) {
-    property {
-        class:                  "WOOD";
-        classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
-        name:                   string(STR_NAME_STATION_PLATFORM_SIGN);
-        cargo_threshold:        160;
-    }
-    graphics {
-        sprite_layouts: [wooden_fenceandsign_platform_right_sw_ne(0), wooden_fenceandsign_platform_right_se_nw(0)];
-        select_tile_type: 2;
-        purchase: wooden_fenceandsign_platform_right;
-        wooden_fenceandsign_platform_right;
-    }
-}
 
 
 /***** PLATFORM FENCE AND SHELTER LEFT *****/
@@ -1587,7 +1242,7 @@ spritelayout wooden_fenceandshelter_platform_left_se_nw(a) {
 
 item(FEAT_STATIONS, wooden_fenceandshelter_platform_left_station) {
     property {
-        class:                  "WOOD";
+        class:                  "_WDD";
         classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SHELTER);
         cargo_threshold:        160;
@@ -1668,7 +1323,7 @@ spritelayout wooden_fenceandshelter_platform_right_se_nw(a) {
 
 item(FEAT_STATIONS, wooden_fenceandshelter_platform_right_station) {
     property {
-        class:                  "WOOD";
+        class:                  "_WDD";
         classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SHELTER);
         cargo_threshold:        160;
@@ -1682,20 +1337,23 @@ item(FEAT_STATIONS, wooden_fenceandshelter_platform_right_station) {
 }
 
 
-/***************************************/
-/** PLATFORMS WITH BENCH ***************/
-/***************************************/
 
-/***** PLATFORM LEFT *****/
 
-spriteset (wooden_bench_platform_left, "stations_wooden.png") {
-    [  10, 10, 64, 64, -32, -34 ]
-    [  80, 10, 64, 64, -32, -34 ]
-    [  10, 290, 64, 64, -32, -34 ]
-    [  80, 290, 64, 64, -32, -34 ]
+
+
+
+
+
+/***** PLATFORM SOUTH END LEFT *****/
+
+spriteset (wooden_plain_south_end_left, "stations_wooden.png") {
+    [  290, 10, 64, 64, -32, -34 ]
+    [  360, 10, 64, 64, -32, -34 ]
+    [  10, 150, 64, 64, -32, -34 ]
+    [  80, 150, 64, 64, -32, -34 ]
 }
 
-spritelayout wooden_bench_platform_left_sw_ne(a) {
+spritelayout wooden_plain_south_end_left_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -1710,20 +1368,20 @@ spritelayout wooden_bench_platform_left_sw_ne(a) {
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
-        building {
+    building {
         sprite:         DEFAULT(2);
         xoffset:        0;
         yoffset:        1;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        12;
+        zextent:        16;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout wooden_bench_platform_left_se_nw(a) {
+spritelayout wooden_plain_south_end_left_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -1738,44 +1396,45 @@ spritelayout wooden_bench_platform_left_se_nw(a) {
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
-        building {
+    building {
         sprite:         DEFAULT(3);
         xoffset:        11;
         yoffset:        1;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        12;
+        zextent:        16;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, wooden_bench_platform_left_station) {
+item(FEAT_STATIONS, wooden_plain_south_end_left_station) {
     property {
-        class:                  "WOOD";
+        class:                  "_WDD";
         classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
-        name:                   string(STR_NAME_STATION_PLATFORM_BENCH);
+        name:                   string(STR_NAME_STATION_PLATFORM_END);
         cargo_threshold:        160;
     }
     graphics {
-        sprite_layouts: [wooden_bench_platform_left_sw_ne(0), wooden_bench_platform_left_se_nw(0)];
+        sprite_layouts: [wooden_plain_south_end_left_sw_ne(0), wooden_plain_south_end_left_se_nw(0)];
         select_tile_type: 2;
-        purchase: wooden_bench_platform_left;
-        wooden_bench_platform_left;
+        purchase: wooden_plain_south_end_left;
+        wooden_plain_south_end_left;
     }
 }
 
-/***** PLATFORM RIGHT *****/
 
-spriteset (wooden_bench_platform_right, "stations_wooden.png") {
-    [  150, 10, 64, 64, -32, -34 ]
-    [  220, 10, 64, 64, -32, -34 ]
-    [  150, 290, 64, 64, -32, -34 ]
-    [  220, 290, 64, 64, -32, -34 ]
+/***** PLATFORM SOUTH END RIGHT *****/
+
+spriteset (wooden_plain_south_end_right, "stations_wooden.png") {
+    [  430, 10, 64, 64, -32, -34 ]
+    [  500, 10, 64, 64, -32, -34 ]
+    [  150, 150, 64, 64, -32, -34 ]
+    [  220, 150, 64, 64, -32, -34 ]
 }
 
-spritelayout wooden_bench_platform_right_sw_ne(a) {
+spritelayout wooden_plain_south_end_right_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -1790,20 +1449,20 @@ spritelayout wooden_bench_platform_right_sw_ne(a) {
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
-        building {
+    building {
         sprite:         DEFAULT(2);
         xoffset:        0;
         yoffset:        12;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        12;
+        zextent:        16;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout wooden_bench_platform_right_se_nw(a) {
+spritelayout wooden_plain_south_end_right_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -1818,45 +1477,46 @@ spritelayout wooden_bench_platform_right_se_nw(a) {
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
-        building {
+    building {
         sprite:         DEFAULT(3);
         xoffset:        0;
         yoffset:        1;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        12;
+        zextent:        16;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, wooden_bench_platform_right_station) {
+item(FEAT_STATIONS, wooden_plain_south_end_right_station) {
     property {
-        class:                  "WOOD";
+        class:                  "_WDD";
         classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
-        name:                   string(STR_NAME_STATION_PLATFORM_BENCH);
+        name:                   string(STR_NAME_STATION_PLATFORM_END);
         cargo_threshold:        160;
     }
     graphics {
-        sprite_layouts: [wooden_bench_platform_right_sw_ne(0), wooden_bench_platform_right_se_nw(0)];
+        sprite_layouts: [wooden_plain_south_end_right_sw_ne(0), wooden_plain_south_end_right_se_nw(0)];
         select_tile_type: 2;
-        purchase: wooden_bench_platform_right;
-        wooden_bench_platform_right;
+        purchase: wooden_plain_south_end_right;
+        wooden_plain_south_end_right;
     }
 }
 
 
-/***** PLATFORM WITH ADVERT LEFT *****/
+/***** PLATFORM NORTH END LEFT *****/
 
-spriteset (wooden_advert_platform_left, "stations_wooden.png") {
-    [  10, 10, 64, 64, -32, -34 ]
-    [  80, 10, 64, 64, -32, -34 ]
-    [  290, 290, 64, 64, -32, -34 ]
-    [  360, 290, 64, 64, -32, -34 ]
+spriteset (wooden_plain_north_end_left, "stations_wooden.png") {
+    [  570, 10, 64, 64, -32, -34 ]
+    [  640, 10, 64, 64, -32, -34 ]
+    [  10, 150, 64, 64, -32, -34 ]
+    [  80, 150, 64, 64, -32, -34 ]
+    
 }
 
-spritelayout wooden_advert_platform_left_sw_ne(a) {
+spritelayout wooden_plain_north_end_left_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -1871,20 +1531,20 @@ spritelayout wooden_advert_platform_left_sw_ne(a) {
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
-        building {
+    building {
         sprite:         DEFAULT(2);
         xoffset:        0;
         yoffset:        1;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        12;
+        zextent:        16;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout wooden_advert_platform_left_se_nw(a) {
+spritelayout wooden_plain_north_end_left_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -1899,45 +1559,45 @@ spritelayout wooden_advert_platform_left_se_nw(a) {
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
-        building {
+    building {
         sprite:         DEFAULT(3);
         xoffset:        11;
         yoffset:        1;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        12;
+        zextent:        16;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, wooden_advert_platform_left_station) {
+item(FEAT_STATIONS, wooden_plain_north_end_left_station) {
     property {
-        class:                  "WOOD";
+        class:                  "_WDD";
         classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
-        name:                   string(STR_NAME_STATION_PLATFORM_ADVERT);
+        name:                   string(STR_NAME_STATION_PLATFORM_END);
         cargo_threshold:        160;
     }
     graphics {
-        sprite_layouts: [wooden_advert_platform_left_sw_ne(0), wooden_advert_platform_left_se_nw(0)];
+        sprite_layouts: [wooden_plain_north_end_left_sw_ne(0), wooden_plain_north_end_left_se_nw(0)];
         select_tile_type: 2;
-        purchase: wooden_advert_platform_left;
-        wooden_advert_platform_left;
+        purchase: wooden_plain_north_end_left;
+        wooden_plain_north_end_left;
     }
 }
 
 
-/***** PLATFORM WITH ADVERT RIGHT *****/
+/***** PLATFORM NORTH END RIGHT *****/
 
-spriteset (wooden_advert_platform_right, "stations_wooden.png") {
-    [  150, 10, 64, 64, -32, -34 ]
-    [  220, 10, 64, 64, -32, -34 ]
-    [  430, 290, 64, 64, -32, -34 ]
-    [  500, 290, 64, 64, -32, -34 ]
+spriteset (wooden_plain_north_end_right, "stations_wooden.png") {
+    [  710, 10, 64, 64, -32, -34 ]
+    [  780, 10, 64, 64, -32, -34 ]
+    [  150, 150, 64, 64, -32, -34 ]
+    [  220, 150, 64, 64, -32, -34 ]
 }
 
-spritelayout wooden_advert_platform_right_sw_ne(a) {
+spritelayout wooden_plain_north_end_right_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -1952,20 +1612,20 @@ spritelayout wooden_advert_platform_right_sw_ne(a) {
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
-        building {
+    building {
         sprite:         DEFAULT(2);
         xoffset:        0;
         yoffset:        12;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        12;
+        zextent:        16;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout wooden_advert_platform_right_se_nw(a) {
+spritelayout wooden_plain_north_end_right_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -1980,45 +1640,45 @@ spritelayout wooden_advert_platform_right_se_nw(a) {
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
-        building {
+    building {
         sprite:         DEFAULT(3);
         xoffset:        0;
         yoffset:        1;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        12;
+        zextent:        16;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, wooden_advert_platform_right_station) {
+item(FEAT_STATIONS, wooden_plain_north_end_right_station) {
     property {
-        class:                  "WOOD";
+        class:                  "_WDD";
         classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
-        name:                   string(STR_NAME_STATION_PLATFORM_ADVERT);
+        name:                   string(STR_NAME_STATION_PLATFORM_END);
         cargo_threshold:        160;
     }
     graphics {
-        sprite_layouts: [wooden_advert_platform_right_sw_ne(0), wooden_advert_platform_right_se_nw(0)];
+        sprite_layouts: [wooden_plain_north_end_right_sw_ne(0), wooden_plain_north_end_right_se_nw(0)];
         select_tile_type: 2;
-        purchase: wooden_advert_platform_right;
-        wooden_advert_platform_right;
+        purchase: wooden_plain_north_end_right;
+        wooden_plain_north_end_right;
     }
 }
 
 
-/***** PLATFORM UNDERPASS LEFT *****/
+/***** PLATFORM SOUTH END LEFT *****/
 
-spriteset (wooden_underpass_platform_left, "stations_wooden.png") {
-    [  10, 10, 64, 64, -32, -34 ]
-    [  80, 10, 64, 64, -32, -34 ]
-    [  570, 290, 64, 64, -32, -34 ]
-    [  640, 290, 64, 64, -32, -34 ]
+spriteset (wooden_fence_south_end_left, "stations_wooden.png") {
+    [  290, 80, 64, 64, -32, -34 ]
+    [  360, 80, 64, 64, -32, -34 ]
+    [  10, 220, 64, 64, -32, -34 ]
+    [  80, 220, 64, 64, -32, -34 ]
 }
 
-spritelayout wooden_underpass_platform_left_sw_ne(a) {
+spritelayout wooden_fence_south_end_left_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -2033,20 +1693,20 @@ spritelayout wooden_underpass_platform_left_sw_ne(a) {
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
-        building {
+    building {
         sprite:         DEFAULT(2);
         xoffset:        0;
         yoffset:        1;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        12;
+        zextent:        16;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout wooden_underpass_platform_left_se_nw(a) {
+spritelayout wooden_fence_south_end_left_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -2061,45 +1721,45 @@ spritelayout wooden_underpass_platform_left_se_nw(a) {
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
-        building {
+    building {
         sprite:         DEFAULT(3);
         xoffset:        11;
         yoffset:        1;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        12;
+        zextent:        16;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, wooden_underpass_platform_left_station) {
+item(FEAT_STATIONS, wooden_fence_south_end_left_station) {
     property {
-        class:                  "WOOD";
+        class:                  "_WDD";
         classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
-        name:                   string(STR_NAME_STATION_PLATFORM_UNDERPASS);
+        name:                   string(STR_NAME_STATION_PLATFORM_END);
         cargo_threshold:        160;
     }
     graphics {
-        sprite_layouts: [wooden_underpass_platform_left_sw_ne(0), wooden_underpass_platform_left_se_nw(0)];
+        sprite_layouts: [wooden_fence_south_end_left_sw_ne(0), wooden_fence_south_end_left_se_nw(0)];
         select_tile_type: 2;
-        purchase: wooden_underpass_platform_left;
-        wooden_underpass_platform_left;
+        purchase: wooden_fence_south_end_left;
+        wooden_fence_south_end_left;
     }
 }
 
 
-/***** PLATFORM UNDERPASS RIGHT *****/
+/***** PLATFORM SOUTH END RIGHT *****/
 
-spriteset (wooden_underpass_platform_right, "stations_wooden.png") {
-    [  150, 10, 64, 64, -32, -34 ]
-    [  220, 10, 64, 64, -32, -34 ]
-    [  710, 290, 64, 64, -32, -34 ]
-    [  780, 290, 64, 64, -32, -34 ]
+spriteset (wooden_fence_south_end_right, "stations_wooden.png") {
+    [  430, 80, 64, 64, -32, -34 ]
+    [  500, 80, 64, 64, -32, -34 ]
+    [  150, 220, 64, 64, -32, -34 ]
+    [  220, 220, 64, 64, -32, -34 ]
 }
 
-spritelayout wooden_underpass_platform_right_sw_ne(a) {
+spritelayout wooden_fence_south_end_right_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -2114,20 +1774,20 @@ spritelayout wooden_underpass_platform_right_sw_ne(a) {
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
-        building {
+    building {
         sprite:         DEFAULT(2);
         xoffset:        0;
         yoffset:        12;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        12;
+        zextent:        16;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout wooden_underpass_platform_right_se_nw(a) {
+spritelayout wooden_fence_south_end_right_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -2142,49 +1802,46 @@ spritelayout wooden_underpass_platform_right_se_nw(a) {
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
-        building {
+    building {
         sprite:         DEFAULT(3);
         xoffset:        0;
         yoffset:        1;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        12;
+        zextent:        16;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, wooden_underpass_platform_right_station) {
+item(FEAT_STATIONS, wooden_fence_south_end_right_station) {
     property {
-        class:                  "WOOD";
+        class:                  "_WDD";
         classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
-        name:                   string(STR_NAME_STATION_PLATFORM_UNDERPASS);
+        name:                   string(STR_NAME_STATION_PLATFORM_END);
         cargo_threshold:        160;
     }
     graphics {
-        sprite_layouts: [wooden_underpass_platform_right_sw_ne(0), wooden_underpass_platform_right_se_nw(0)];
+        sprite_layouts: [wooden_fence_south_end_right_sw_ne(0), wooden_fence_south_end_right_se_nw(0)];
         select_tile_type: 2;
-        purchase: wooden_underpass_platform_right;
-        wooden_underpass_platform_right;
+        purchase: wooden_fence_south_end_right;
+        wooden_fence_south_end_right;
     }
 }
 
 
-/***************************************/
-/** PLATFORMS WITH FENCE AND BENCH *****/
-/***************************************/
+/***** PLATFORM NORTH END LEFT *****/
 
-/***** PLATFORM LEFT *****/
-
-spriteset (wooden_fenceandbench_platform_left, "stations_wooden.png") {
-    [  10, 80, 64, 64, -32, -34 ]
-    [  80, 80, 64, 64, -32, -34 ]
-    [  10, 360, 64, 64, -32, -34 ]
-    [  80, 360, 64, 64, -32, -34 ]
+spriteset (wooden_fence_north_end_left, "stations_wooden.png") {
+    [  570, 80, 64, 64, -32, -34 ]
+    [  640, 80, 64, 64, -32, -34 ]
+    [  10, 220, 64, 64, -32, -34 ]
+    [  80, 220, 64, 64, -32, -34 ]
+    
 }
 
-spritelayout wooden_fenceandbench_platform_left_sw_ne(a) {
+spritelayout wooden_fence_north_end_left_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -2199,20 +1856,20 @@ spritelayout wooden_fenceandbench_platform_left_sw_ne(a) {
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
-        building {
+    building {
         sprite:         DEFAULT(2);
         xoffset:        0;
         yoffset:        1;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        12;
+        zextent:        16;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout wooden_fenceandbench_platform_left_se_nw(a) {
+spritelayout wooden_fence_north_end_left_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -2227,44 +1884,46 @@ spritelayout wooden_fenceandbench_platform_left_se_nw(a) {
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
-        building {
+    building {
         sprite:         DEFAULT(3);
         xoffset:        11;
         yoffset:        1;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        12;
+        zextent:        16;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
+    
 }
 
-item(FEAT_STATIONS, wooden_fenceandbench_platform_left_station) {
+item(FEAT_STATIONS, wooden_fence_north_end_left_station) {
     property {
-        class:                  "WOOD";
+        class:                  "_WDD";
         classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
-        name:                   string(STR_NAME_STATION_PLATFORM_BENCH);
+        name:                   string(STR_NAME_STATION_PLATFORM_END);
         cargo_threshold:        160;
     }
     graphics {
-        sprite_layouts: [wooden_fenceandbench_platform_left_sw_ne(0), wooden_fenceandbench_platform_left_se_nw(0)];
+        sprite_layouts: [wooden_fence_north_end_left_sw_ne(0), wooden_fence_north_end_left_se_nw(0)];
         select_tile_type: 2;
-        purchase: wooden_fenceandbench_platform_left;
-        wooden_fenceandbench_platform_left;
+        purchase: wooden_fence_north_end_left;
+        wooden_fence_north_end_left;
     }
 }
 
-/***** PLATFORM RIGHT *****/
 
-spriteset (wooden_fenceandbench_platform_right, "stations_wooden.png") {
-    [  150, 80, 64, 64, -32, -34 ]
-    [  220, 80, 64, 64, -32, -34 ]
-    [  150, 360, 64, 64, -32, -34 ]
-    [  220, 360, 64, 64, -32, -34 ]
+/***** PLATFORM NORTH END RIGHT *****/
+
+spriteset (wooden_fence_north_end_right, "stations_wooden.png") {
+    [  710, 80, 64, 64, -32, -34 ]
+    [  780, 80, 64, 64, -32, -34 ]
+    [  150, 220, 64, 64, -32, -34 ]
+    [  220, 220, 64, 64, -32, -34 ]
 }
 
-spritelayout wooden_fenceandbench_platform_right_sw_ne(a) {
+spritelayout wooden_fence_north_end_right_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -2279,20 +1938,20 @@ spritelayout wooden_fenceandbench_platform_right_sw_ne(a) {
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
-        building {
+    building {
         sprite:         DEFAULT(2);
         xoffset:        0;
         yoffset:        12;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        12;
+        zextent:        16;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout wooden_fenceandbench_platform_right_se_nw(a) {
+spritelayout wooden_fence_north_end_right_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -2306,7 +1965,7 @@ spritelayout wooden_fenceandbench_platform_right_se_nw(a) {
         zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
-    }    
+    }
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
@@ -2314,26 +1973,29 @@ spritelayout wooden_fenceandbench_platform_right_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        12;
+        zextent:        16;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, wooden_fenceandbench_platform_right_station) {
+item(FEAT_STATIONS, wooden_fence_north_end_right_station) {
     property {
-        class:                  "WOOD";
+        class:                  "_WDD";
         classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
-        name:                   string(STR_NAME_STATION_PLATFORM_BENCH);
+        name:                   string(STR_NAME_STATION_PLATFORM_END);
         cargo_threshold:        160;
     }
     graphics {
-        sprite_layouts: [wooden_fenceandbench_platform_right_sw_ne(0), wooden_fenceandbench_platform_right_se_nw(0)];
+        sprite_layouts: [wooden_fence_north_end_right_sw_ne(0), wooden_fence_north_end_right_se_nw(0)];
         select_tile_type: 2;
-        purchase: wooden_fenceandbench_platform_right;
-        wooden_fenceandbench_platform_right;
+        purchase: wooden_fence_north_end_right;
+        wooden_fence_north_end_right;
     }
 }
+
+
+
 
 /***********************************************/
 /***** PLATFORM NORTH BUFFER BUILDING **********/
@@ -2380,7 +2042,7 @@ spritelayout wooden_buffer_north_building_left_se_nw(a) {
 
 item(FEAT_STATIONS, wooden_buffer_north_building_left_station) {
     property {
-        class:                  "WOOD";
+        class:                  "_WDD";
         classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_BUFFER);
         cargo_threshold:        160;
@@ -2436,7 +2098,7 @@ spritelayout wooden_buffer_north_building_right_se_nw(a) {
 
 item(FEAT_STATIONS, wooden_buffer_north_building_right_station) {
     property {
-        class:                  "WOOD";
+        class:                  "_WDD";
         classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_BUFFER);
         cargo_threshold:        160;
@@ -2496,7 +2158,7 @@ spritelayout wooden_buffer_south_building_left_se_nw(a) {
 
 item(FEAT_STATIONS, wooden_buffer_south_building_left_station) {
     property {
-        class:                  "WOOD";
+        class:                  "_WDD";
         classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_BUFFER);
         cargo_threshold:        160;
@@ -2551,7 +2213,7 @@ spritelayout wooden_buffer_south_building_right_se_nw(a) {
 
 item(FEAT_STATIONS, wooden_buffer_south_building_right_station) {
     property {
-        class:                  "WOOD";
+        class:                  "_WDD";
         classname:              string(STR_NAME_STATCLASS_WOODEN_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_BUFFER);
         cargo_threshold:        160;
@@ -2565,13 +2227,16 @@ item(FEAT_STATIONS, wooden_buffer_south_building_right_station) {
     }
 }
 
-spriteset (building_3a, "stations_wooden.png") {
-    [ 570, 640, 64, 64, -32, -32 ]
-    [ 640, 640, 64, 64, -32, -32 ]
+/***********************************************/
+/***** BUILDINGS *******************************/
+/***********************************************/
 
+spriteset (wood_building_1a, "stations_buildings_1.png") {
+    [ 10, 10, 64, 64, -32, -32 ]
+    [ 80, 10, 64, 64, -32, -32 ]
 }
 
-spritelayout wooden_building_3_ne(a) {
+spritelayout wood_building_1a_nw(a) {
     ground {
         sprite: GROUNDSPRITE_CONCRETE;
     }
@@ -2588,7 +2253,7 @@ spritelayout wooden_building_3_ne(a) {
     }
 }
 
-spritelayout wooden_building_3_nw(a) {
+spritelayout wood_building_1a_ne(a) {
     ground {
         sprite: GROUNDSPRITE_CONCRETE;
     }
@@ -2605,20 +2270,411 @@ spritelayout wooden_building_3_nw(a) {
     }
 }
 
-item(FEAT_STATIONS, wooden_building_3a) {
+item(FEAT_STATIONS, wood_station_building_1a) {
     property {
-        class:                  "BULD";
-        classname:              string(STR_NAME_STATCLASS_WOODEN_BUILDINGS);
-        name:                   string(STR_NAME_STATION_RIBBLE);
-        cargo_threshold:        160;
-        non_traversable_tiles:  bitmask(1);
+        class:                  "_BLD";
+        classname:              string(STR_NAME_STATION_BUILDING);
+        name:                   string(STR_NAME_STATION_MERSEY);
+        non_traversable_tiles:  bitmask(0,1);
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
     }
     graphics {
-        sprite_layouts:         [wooden_building_3_ne(0), wooden_building_3_nw(0)];
+        sprite_layouts:         [wood_building_1a_nw(0), wood_building_1a_ne(0)];
         select_tile_type:       0;
-        purchase:               building_3a;
-        building_3a;
+        purchase:               wood_building_1a;
+        wood_building_1a;
+    }
+}
+
+spriteset (wood_building_1b, "stations_buildings_1.png") {
+    [ 150, 10, 64, 64, -32, -32 ]
+    [ 220, 10, 64, 64, -32, -32 ]
+}
+
+spritelayout wood_building_1b_se(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout wood_building_1b_sw(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, wood_station_building_1b) {
+    property {
+        class:                  "_BLD";
+        classname:              string(STR_NAME_STATION_BUILDING);
+        name:                   string(STR_NAME_STATION_MERSEY);
+        non_traversable_tiles:  bitmask(0,1);
+        disabled_platforms:     bitmask(2,3,4,5,6,7,8);
+        disabled_length:        bitmask(2,3,4,5,6,7,8);
+    }
+    graphics {
+        sprite_layouts:         [wood_building_1b_se(0), wood_building_1b_sw(0)];
+        select_tile_type:       0;
+        purchase:               wood_building_1b;
+        wood_building_1b;
+    }
+}
+
+spriteset (wood_building_2a, "stations_buildings_1.png") {
+    [ 290, 10, 64, 64, -32, -32 ]
+    [ 360, 10, 64, 64, -32, -32 ]
+}
+
+spritelayout wood_building_2a_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout wood_building_2a_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, wood_station_building_2a) {
+    property {
+        class:                  "_BLD";
+        classname:              string(STR_NAME_STATION_BUILDING);
+        name:                   string(STR_NAME_STATION_NEWTON);
+        non_traversable_tiles:  bitmask(0,1);
+        disabled_platforms:     bitmask(2,3,4,5,6,7,8);
+        disabled_length:        bitmask(2,3,4,5,6,7,8);
+    }
+    graphics {
+        sprite_layouts:         [wood_building_2a_nw(0), wood_building_2a_ne(0)];
+        select_tile_type:       0;
+        purchase:               wood_building_2a;
+        wood_building_2a;
+    }
+}
+
+spriteset (wood_building_2b, "stations_buildings_1.png") {
+    [ 430, 10, 64, 64, -32, -32 ]
+    [ 500, 10, 64, 64, -32, -32 ]
+}
+
+spritelayout wood_building_2b_se(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout wood_building_2b_sw(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, wood_station_building_2b) {
+    property {
+        class:                  "_BLD";
+        classname:              string(STR_NAME_STATION_BUILDING);
+        name:                   string(STR_NAME_STATION_NEWTON);
+        non_traversable_tiles:  bitmask(0,1);
+        disabled_platforms:     bitmask(2,3,4,5,6,7,8);
+        disabled_length:        bitmask(2,3,4,5,6,7,8);
+    }
+    graphics {
+        sprite_layouts:         [wood_building_2b_se(0), wood_building_2b_sw(0)];
+        select_tile_type:       0;
+        purchase:               wood_building_2b;
+        wood_building_2b;
+    }
+}
+
+spriteset (wood_building_3a, "stations_buildings_1.png") {
+    [ 570, 10, 64, 64, -32, -32 ]
+    [ 640, 10, 64, 64, -32, -32 ]
+}
+
+spritelayout wood_building_3a_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout wood_building_3a_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, wood_station_building_3a) {
+    property {
+        class:                  "_BLD";
+        classname:              string(STR_NAME_STATION_BUILDING);
+        name:                   string(STR_NAME_STATION_SANKEY);
+        non_traversable_tiles:  bitmask(0,1);
+        disabled_platforms:     bitmask(2,3,4,5,6,7,8);
+        disabled_length:        bitmask(2,3,4,5,6,7,8);
+    }
+    graphics {
+        sprite_layouts:         [wood_building_3a_nw(0), wood_building_3a_ne(0)];
+        select_tile_type:       0;
+        purchase:               wood_building_3a;
+        wood_building_3a;
+    }
+}
+
+spriteset (wood_building_3b, "stations_buildings_1.png") {
+    [ 710, 10, 64, 64, -32, -32 ]
+    [ 780, 10, 64, 64, -32, -32 ]
+}
+
+spritelayout wood_building_3b_se(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout wood_building_3b_sw(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, wood_station_building_3b) {
+    property {
+        class:                  "_BLD";
+        classname:              string(STR_NAME_STATION_BUILDING);
+        name:                   string(STR_NAME_STATION_SANKEY);
+        non_traversable_tiles:  bitmask(0,1);
+        disabled_platforms:     bitmask(2,3,4,5,6,7,8);
+        disabled_length:        bitmask(2,3,4,5,6,7,8);
+    }
+    graphics {
+        sprite_layouts:         [wood_building_3b_se(0), wood_building_3b_sw(0)];
+        select_tile_type:       0;
+        purchase:               wood_building_3b;
+        wood_building_3b;
+    }
+}
+
+spriteset (wood_building_4a, "stations_buildings_1.png") {
+    [ 10, 80, 64, 64, -32, -32 ]
+    [ 80, 80, 64, 64, -32, -32 ]
+}
+
+spritelayout wood_building_4a_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout wood_building_4a_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, wood_station_building_4a) {
+    property {
+        class:                  "_BLD";
+        classname:              string(STR_NAME_STATION_BUILDING);
+        name:                   string(STR_NAME_STATION_DOUGLAS);
+        non_traversable_tiles:  bitmask(0,1);
+        disabled_platforms:     bitmask(2,3,4,5,6,7,8);
+        disabled_length:        bitmask(2,3,4,5,6,7,8);
+    }
+    graphics {
+        sprite_layouts:         [wood_building_4a_nw(0), wood_building_4a_ne(0)];
+        select_tile_type:       0;
+        purchase:               wood_building_4a;
+        wood_building_4a;
+    }
+}
+
+spriteset (wood_building_4b, "stations_buildings_1.png") {
+    [ 150, 80, 64, 64, -32, -32 ]
+    [ 220, 80, 64, 64, -32, -32 ]
+}
+
+spritelayout wood_building_4b_se(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout wood_building_4b_sw(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, wood_station_building_4b) {
+    property {
+        class:                  "_BLD";
+        classname:              string(STR_NAME_STATION_BUILDING);
+        name:                   string(STR_NAME_STATION_DOUGLAS);
+        non_traversable_tiles:  bitmask(0,1);
+        disabled_platforms:     bitmask(2,3,4,5,6,7,8);
+        disabled_length:        bitmask(2,3,4,5,6,7,8);
+    }
+    graphics {
+        sprite_layouts:         [wood_building_4b_se(0), wood_building_4b_sw(0)];
+        select_tile_type:       0;
+        purchase:               wood_building_4b;
+        wood_building_4b;
     }
 }

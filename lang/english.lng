@@ -7,9 +7,7 @@ STR_VERSION_22723                                               :1.2.0 (r22723)
 STR_NAME_STATCLASS                                              :Platforms
 
 STR_NAME_STATCLASS_WOODEN_PLATFORMS                             :Wooden Platforms
-STR_NAME_STATCLASS_WOODEN_BUILDINGS                             :Wooden Buildings
 STR_NAME_STATCLASS_STONE_PLATFORMS                              :Stone Platforms
-STR_NAME_STATCLASS_STONE_BUILDINGS                              :Stone Buildings
 STR_NAME_STATCLASS_REDBRICK_PLATFORMS                           :Red Brick Platforms
 STR_NAME_STATCLASS_REDBRICK_BUILDINGS                           :Red Brick Buildings
 STR_NAME_STATCLASS_SUBURBAN_PLATFORMS                           :Suburban Platforms
@@ -20,8 +18,8 @@ STR_NAME_STATCLASS_MODERN_PLATFORMS                             :Modernist Platf
 STR_NAME_STATCLASS_MODERN_BUILDINGS                             :Modernist Buildings
 STR_NAME_STATCLASS_EXPRESS_PLATFORMS                            :Express Platforms
 STR_NAME_STATCLASS_EXPRESS_BUILDINGS                            :Express Buildings
-STR_NAME_STATCLASS_MILLENNIAL_PLATFORMS                         :Millenial Platforms
-STR_NAME_STATCLASS_MILLENNIAL_BUILDINGS                         :Millennial Buildings
+STR_NAME_STATCLASS_CITY_PLATFORMS                               :City Platforms
+STR_NAME_STATCLASS_CITY_BUILDINGS                               :City Buildings
 
 
 STR_NAME_STATION_PLATFORM                                       :Platform
@@ -37,20 +35,27 @@ STR_NAME_STATION_PLATFORM_OVERBRIDGE                            :Overbridge
 STR_NAME_STATION_PLATFORM_FOOTBRIDGE                            :Footbridge
 STR_NAME_STATION_PLATFORM_DISPLAYS                              :Platform With Digital Displays
 STR_NAME_STATION_PLATFORM_BUFFER                                :Buffer 
+STR_NAME_STATION_PLATFORM_STAIRS                                :Shelter with Stairs
 
-STR_NAME_STATION_BUILDING                                       :Chuffing Building 
+STR_NAME_STATION_BUILDING                                       :Chuffing Buildings 
+
+STR_NAME_STATION_MERSEY                                         :Mersey Ticket Office
+STR_NAME_STATION_NEWTON                                         :Newton Ticket Office
+STR_NAME_STATION_SANKEY                                         :Sankey Ticket Office
+STR_NAME_STATION_DOUGLAS                                        :Douglas Ticket Office
+
 
 STR_NAME_STATION_AVON                                           :Avon Ticket Office
+STR_NAME_STATION_TAFF                                           :Taff Ticket Office
 STR_NAME_STATION_SEVERN                                         :Severn Ticket Office
 STR_NAME_STATION_TEIGN                                          :Teign Ticket Office
-STR_NAME_STATION_TAFF                                           :Taff Ticket Office
 STR_NAME_STATION_THESADDLETANK                                  :The Saddle Tank Tavern
 STR_NAME_STATION_ENGINESHED                                     :Engine Shed
 
 STR_NAME_STATION_WEAVER                                         :Weaver Ticket Office
 STR_NAME_STATION_CHURNET                                        :Churnet Ticket Office
-STR_NAME_STATION_CHESS                                          :Chess Ticket Office
 STR_NAME_STATION_WELLAND                                        :Welland Ticket Office
+STR_NAME_STATION_CHESS                                          :Chess Ticket Office
 
 STR_NAME_STATION_WANDLE                                         :Wandle Ticket Office
 STR_NAME_STATION_EMBER                                          :Ember Ticket Office
@@ -65,9 +70,14 @@ STR_NAME_STATION_SOAR                                           :Soar Ticket Off
 STR_NAME_STATION_DERWENT                                        :Derwent Ticket Office
 STR_NAME_STATION_AIRE                                           :Aire Ticket Office
 STR_NAME_STATION_CALDER                                         :Calder Ticket Office
-STR_NAME_STATION_TYNE                                           :Tyne Ticket Office
+STR_NAME_STATION_LAVANT                                         :Lavant Ticket Office
 
 STR_NAME_STATION_COLNE                                          :Colne Ticket Office
 STR_NAME_STATION_IRWELL                                         :Irwell Ticket Office
 STR_NAME_STATION_LUNE                                           :Lune Ticket Office
 STR_NAME_STATION_LEA                                            :Lea Ticket Office
+
+STR_NAME_STATION_WANSBECK                                       :Wansbeck Ticket Office
+STR_NAME_STATION_BLYTH                                          :Blyth Ticket Office
+STR_NAME_STATION_TAME                                           :Tame Ticket Office
+STR_NAME_STATION_USK                                            :Usk Ticket Office
