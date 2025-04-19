@@ -28,9 +28,12 @@ To play with Chuffing Stations, you can download the latest version using the Op
 ### Thanks
 Many thanks to everyone who has contributed to maintaining and developing OpenTTD over the years. Thank you to the various artists, coders and contributors of the many newGRFs that keep me playing. Special thanks to **andythenorth** and **Chris Sawyer**.
 
+### Credits
+Chuffing Stations contains some elements from [FIRS](https://github.com/andythenorth/firs) and [CHIPS](https://github.com/andythenorth/chips). 
+
 ## The Stations
 **Wooden**
-These basic platforms are typical of early railways and smaller branch lines. A few items of platform furniture are included, along with some simple structures.
+These basic platforms are typical of early railways and smaller branch lines. A few items of platform furniture are included, as well as some simple structures.
 
 **Stone**
 More sophisticated stations are often found on busier lines. Many of these stone buildings are inspired by the early buildings in the Great Western region. 
