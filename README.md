@@ -1,5 +1,7 @@
 # Chuffing Stations Set
 
+![Image showing a selection of the available station tiles](/banner.png)
+
 Inspired by the diverse history of rail transport across the United Kingdom, **Chuffing Stations** is intended to be a provide players with a wide range of modular station tiles. It features platform and building designs from the pioneering days of the Industrial Revolution through to the cutting-edge technology of modern high-speed trains.
 
 Chuffing Stations is designed to be highly flexible while also matching the charm and character of the classic OpenTTD graphics. 
