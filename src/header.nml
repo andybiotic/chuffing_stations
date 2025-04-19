@@ -1,0 +1,52 @@
+grf {
+    grfid: "NDY\05";
+    name: string(STR_GRF_NAME);
+    desc: string(STR_GRF_DESCRIPTION);
+    version: 10;
+    min_compatible_version: 10;
+}
+
+if (version_openttd(1,2,0,22723) > openttd_version) {
+    error(FATAL, REQUIRES_OPENTTD, string(STR_VERSION_22723));
+}
+
+cargotable {
+    PASS
+}
+
+switch (FEAT_STATIONS, SELF, switch_intro_year_redbrick, current_year) {
+  0..1884: 0;
+  default: 1;
+}
+
+switch (FEAT_STATIONS, SELF, switch_intro_year_stone_extra, current_year) {
+  0..1924: 0;
+  default: 1;
+}
+
+switch (FEAT_STATIONS, SELF, switch_intro_year_suburban, current_year) {
+  0..1924: 0;
+  default: 1;
+}
+
+switch (FEAT_STATIONS, SELF, switch_intro_year_darkbrick, current_year) {
+  0..1954: 0;
+  default: 1;
+}
+
+switch (FEAT_STATIONS, SELF, switch_intro_year_modern, current_year) {
+  0..1964: 0;
+  default: 1;
+}
+
+switch (FEAT_STATIONS, SELF, switch_intro_year_express, current_year) {
+  0..1979: 0;
+  default: 1;
+}
+
+switch (FEAT_STATIONS, SELF, switch_intro_year_city, current_year) {
+  0..2004: 0;
+  default: 1;
+}
+
+/* END OF SETUP */

@@ -1,27 +1,3 @@
-grf {
-    grfid: "NDY\05";
-    name: string(STR_GRF_NAME);
-    desc: string(STR_GRF_DESCRIPTION);
-    version: 1;
-    min_compatible_version: 1;
-}
-
-if (version_openttd(1,2,0,22723) > openttd_version) {
-    error(FATAL, REQUIRES_OPENTTD, string(STR_VERSION_22723));
-}
-
-cargotable {
-    PASS
-}
-
-
-switch (FEAT_STATIONS, SELF, switch_intro_year_stone_extra, current_year) {
-  0..1924: 0;
-  default: 1;
-}
-
-
-
 /***************************************************************************/
 /********************* STONE EXTRA PLATFORMS *******************************/
 /***************************************************************************/
@@ -33,7 +9,7 @@ switch (FEAT_STATIONS, SELF, switch_intro_year_stone_extra, current_year) {
 
 /***** COVERED PLATFORMS LEFT *****/
 
-spriteset (stone_extra_covered_platforms_left, "stations_stone_extra.png") {
+spriteset (stone_extra_covered_platforms_left, "src/stations_stone_extra.png") {
     [  10, 710, 64, 64, -32, -34 ]
     [  10, 780, 64, 64, -32, -34 ]
 
@@ -120,7 +96,7 @@ item(FEAT_STATIONS, left_stone_extra_covered_platforms) {
 
 /***** COVERED PLATFORMS RIGHT *****/
 
-spriteset (stone_extra_covered_platforms_right, "stations_stone_extra.png") {
+spriteset (stone_extra_covered_platforms_right, "src/stations_stone_extra.png") {
     [  150, 710, 64, 64, -32, -34 ]
     [  150, 780, 64, 64, -32, -34 ]
 
@@ -212,7 +188,7 @@ item(FEAT_STATIONS, right_stone_extra_covered_platforms) {
 /****************************************/
 
 
-spriteset (stone_extra_arched_end_left, "stations_stone_extra.png") {
+spriteset (stone_extra_arched_end_left, "src/stations_stone_extra.png") {
     [  10, 850, 64, 64, -32, -34 ]
     [  80, 850, 64, 64, -32, -34 ]
    
@@ -220,7 +196,7 @@ spriteset (stone_extra_arched_end_left, "stations_stone_extra.png") {
     [  290, 850, 64, 64, -32, -34 ]
 }
 
-spriteset (stone_extra_arched_end_right, "stations_stone_extra.png") {
+spriteset (stone_extra_arched_end_right, "src/stations_stone_extra.png") {
     [  80, 920, 64, 64, -32, -34 ]
     [  10, 920, 64, 96, -32, -66 ]
 
@@ -311,7 +287,7 @@ item(FEAT_STATIONS, stone_extra_arched_end) {
     }
 }
 
-spriteset (stone_extra_arched_middle_left, "stations_stone_extra.png") {
+spriteset (stone_extra_arched_middle_left, "src/stations_stone_extra.png") {
     [  10, 850, 64, 64, -32, -34 ]
     [  150, 850, 64, 64, -32, -34 ]
    
@@ -319,7 +295,7 @@ spriteset (stone_extra_arched_middle_left, "stations_stone_extra.png") {
     [  360, 850, 64, 64, -32, -34 ]
 }
 
-spriteset (stone_extra_arched_middle_right, "stations_stone_extra.png") {
+spriteset (stone_extra_arched_middle_right, "src/stations_stone_extra.png") {
     [  80, 920, 64, 64, -32, -34 ]
     [  150, 920, 64, 96, -32, -66 ]
 
