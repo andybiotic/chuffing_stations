@@ -1,5 +1,5 @@
 ##grflangid 0x01
-STR_GRF_NAME                                                    :Chuffing Stations v0.1
+STR_GRF_NAME                                                    :Chuffing Stations v1.0
 STR_GRF_DESCRIPTION                                             :{ORANGE}Chuffing Stations{}{BLACK}This station set is based on some common designs from around the UK.
 
 STR_VERSION_22723                                               :1.2.0 (r22723)
@@ -14,13 +14,14 @@ STR_NAME_STATCLASS_SUBURBAN_PLATFORMS                           :Suburban Platfo
 STR_NAME_STATCLASS_SUBURBAN_BUILDINGS                           :Suburban Buildings
 STR_NAME_STATCLASS_DARKBRICK_PLATFORMS                          :Dark Brick Platforms
 STR_NAME_STATCLASS_DARKBRICK_BUILDINGS                          :Dark Brick Buildings
-STR_NAME_STATCLASS_MODERN_PLATFORMS                             :Modernist Platforms
-STR_NAME_STATCLASS_MODERN_BUILDINGS                             :Modernist Buildings
+STR_NAME_STATCLASS_MODERN_PLATFORMS                             :Modern Platforms
+STR_NAME_STATCLASS_MODERN_BUILDINGS                             :Modern Buildings
 STR_NAME_STATCLASS_EXPRESS_PLATFORMS                            :Express Platforms
 STR_NAME_STATCLASS_EXPRESS_BUILDINGS                            :Express Buildings
 STR_NAME_STATCLASS_CITY_PLATFORMS                               :City Platforms
 STR_NAME_STATCLASS_CITY_BUILDINGS                               :City Buildings
 
+STR_NAME_STATCLASS_STATION_SQUARES                              :Station Squares
 
 STR_NAME_STATION_PLATFORM                                       :Platform
 STR_NAME_STATION_PLATFORM_END                                   :Platform End
@@ -36,6 +37,19 @@ STR_NAME_STATION_PLATFORM_FOOTBRIDGE                            :Footbridge
 STR_NAME_STATION_PLATFORM_DISPLAYS                              :Platform With Digital Displays
 STR_NAME_STATION_PLATFORM_BUFFER                                :Buffer 
 STR_NAME_STATION_PLATFORM_STAIRS                                :Shelter with Stairs
+STR_NAME_STATION_PLATFORM_COVERED                               :Covered platforms
+STR_NAME_STATION_PLATFORM_ARCHED                                :Arched platforms
+
+STR_NAME_STATION_PLATFORM_WAYPOINT_SIGN                         :Track Sign
+STR_NAME_STATION_PLATFORM_SIGNALBOX                             :Signal Box
+STR_NAME_STATION_PLATFORM_SUBSTATION                            :Electrical Substation
+STR_NAME_STATION_PLATFORM_HOTEL                                 :Station Hotel
+STR_NAME_STATION_SQUARE_BASIC                                   :Basic Station Square
+STR_NAME_STATION_SQUARE_BUILDING                                :Square with Building
+STR_NAME_STATION_SQUARE_SHELTER                                 :Square with Shelter
+STR_NAME_STATION_SQUARE_FLOWERS                                 :Square with Flowers
+STR_NAME_STATION_SQUARE_BUSH                                    :Square with Bushes
+STR_NAME_STATION_SQUARE_WATER                                   :Square with Water Feature
 
 STR_NAME_STATION_BUILDING                                       :Chuffing Buildings 
 
@@ -44,13 +58,14 @@ STR_NAME_STATION_NEWTON                                         :Newton Ticket O
 STR_NAME_STATION_SANKEY                                         :Sankey Ticket Office
 STR_NAME_STATION_DOUGLAS                                        :Douglas Ticket Office
 
-
 STR_NAME_STATION_AVON                                           :Avon Ticket Office
 STR_NAME_STATION_TAFF                                           :Taff Ticket Office
 STR_NAME_STATION_SEVERN                                         :Severn Ticket Office
 STR_NAME_STATION_TEIGN                                          :Teign Ticket Office
 STR_NAME_STATION_THESADDLETANK                                  :The Saddle Tank Tavern
 STR_NAME_STATION_ENGINESHED                                     :Engine Shed
+STR_NAME_STATION_HOTEL                                          :Station Hotel
+STR_NAME_STATION_GOODS_SHED                                     :Goods Shed
 
 STR_NAME_STATION_WEAVER                                         :Weaver Ticket Office
 STR_NAME_STATION_CHURNET                                        :Churnet Ticket Office
@@ -62,15 +77,16 @@ STR_NAME_STATION_EMBER                                          :Ember Ticket Of
 STR_NAME_STATION_BEVERLEY                                       :Beveley Ticket Office
 STR_NAME_STATION_RODING                                         :Roding Ticket Office
 
-STR_NAME_STATION_TRENT                                          :Trent Ticket Office
+STR_NAME_STATION_MEASE                                          :Mease Ticket Office
 STR_NAME_STATION_ANKER                                          :Anker Ticket Office
 STR_NAME_STATION_RIBBLE                                         :Ribble Ticket Office
-STR_NAME_STATION_SOAR                                           :Soar Ticket Office
+STR_NAME_STATION_SOAR                                           :Soar Parcels Office
 
 STR_NAME_STATION_DERWENT                                        :Derwent Ticket Office
 STR_NAME_STATION_AIRE                                           :Aire Ticket Office
 STR_NAME_STATION_CALDER                                         :Calder Ticket Office
 STR_NAME_STATION_LAVANT                                         :Lavant Ticket Office
+STR_NAME_STATION_MOLE                                           :Mole Station Offices
 
 STR_NAME_STATION_COLNE                                          :Colne Ticket Office
 STR_NAME_STATION_IRWELL                                         :Irwell Ticket Office
@@ -81,3 +97,17 @@ STR_NAME_STATION_WANSBECK                                       :Wansbeck Ticket
 STR_NAME_STATION_BLYTH                                          :Blyth Ticket Office
 STR_NAME_STATION_TAME                                           :Tame Ticket Office
 STR_NAME_STATION_USK                                            :Usk Ticket Office
+
+STR_NAME_STATION_KENSINGTON_FRONT                               :Kensington Station Hall (Front)
+STR_NAME_STATION_KENSINGTON_REAR                                :Kensington Station Hall (Rear)
+STR_NAME_STATION_ISLINGTON_FRONT                                :Islington Station Hall (Front)
+STR_NAME_STATION_ISLINGTON_REAR                                 :Islington Station Hall (Rear)
+STR_NAME_STATION_SOUTHWARK_FRONT                                :Southwark Station Hall (Front)
+STR_NAME_STATION_SOUTHWARK_REAR                                 :Southwark Station Hall (Rear)
+STR_NAME_STATION_CAMDEN_FRONT                                   :Camden Station Hall (Front)
+STR_NAME_STATION_CAMDEN_REAR                                    :Camden Station Hall (Rear)
+STR_NAME_STATION_ITCHEN                                         :Itchen Station Building
+STR_NAME_STATION_TRENT                                          :Trent Station Hall
+
+STR_NAME_STATION_PLACEHOLDER                                    :PLACEHOLDER
+

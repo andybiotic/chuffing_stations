@@ -15,11 +15,11 @@ cargotable {
 }
 
 
+
+
 /***************************************************************************/
 /********************* STONE PLATFORMS *************************************/
 /***************************************************************************/
-
-
 
 
 /***************************************/
@@ -2901,7 +2901,10 @@ item(FEAT_STATIONS, stone_buffer_north_building_left_station) {
         class:                  "_STN";
         classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_BUFFER);
-        non_traversable_tiles:  STAT_ALL_TILES;
+        tile_flags: [
+            bitmask(STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_BLOCKED)
+        ];
     }
     graphics {
         sprite_layouts: [stone_buffer_north_building_left_sw_ne(0), stone_buffer_north_building_left_se_nw(0)];
@@ -2956,7 +2959,10 @@ item(FEAT_STATIONS, stone_buffer_north_building_right_station) {
         class:                  "_STN";
         classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_BUFFER);
-        non_traversable_tiles:  STAT_ALL_TILES;
+        tile_flags: [
+            bitmask(STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_BLOCKED)
+        ];
     }
     graphics {
         sprite_layouts: [stone_buffer_north_building_right_sw_ne(0), stone_buffer_north_building_right_se_nw(0)];
@@ -3015,7 +3021,10 @@ item(FEAT_STATIONS, stone_buffer_south_building_left_station) {
         class:                  "_STN";
         classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_BUFFER);
-        non_traversable_tiles:  STAT_ALL_TILES;
+        tile_flags: [
+            bitmask(STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_BLOCKED)
+        ];
     }
     graphics {
         sprite_layouts: [stone_buffer_south_building_left_sw_ne(0), stone_buffer_south_building_left_se_nw(0)];
@@ -3069,7 +3078,10 @@ item(FEAT_STATIONS, stone_buffer_south_building_right_station) {
         class:                  "_STN";
         classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_BUFFER);
-        non_traversable_tiles:  STAT_ALL_TILES;
+        tile_flags: [
+            bitmask(STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_BLOCKED)
+        ];
     }
     graphics {
         sprite_layouts: [stone_buffer_south_building_right_sw_ne(0), stone_buffer_south_building_right_se_nw(0)];
@@ -3129,7 +3141,7 @@ spritelayout overbridge_left_sw_ne(a) {
         xoffset:        0;
         yoffset:        1;
         zoffset:        0;
-        xextent:        8;
+        xextent:        16;
         yextent:        16;
         zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
@@ -3203,8 +3215,6 @@ item(FEAT_STATIONS, stone_left_overbridge) {
         class:                  "_STN";
         classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
-        hide_wire_tiles:        bitmask(2);
-
     }
     graphics {
         sprite_layouts: [overbridge_left_sw_ne(0), overbridge_left_se_nw(0)];
@@ -3324,8 +3334,6 @@ item(FEAT_STATIONS, stone_right_overbridge) {
         class:                  "_STN";
         classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
-        hide_wire_tiles:        bitmask(2);
-
     }
     graphics {
         sprite_layouts: [overbridge_right_sw_ne(0), overbridge_right_se_nw(0)];
@@ -3386,7 +3394,7 @@ spritelayout overbridgefences_left_sw_ne(a) {
         xoffset:        0;
         yoffset:        1;
         zoffset:        0;
-        xextent:        8;
+        xextent:        16;
         yextent:        16;
         zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
@@ -3460,8 +3468,6 @@ item(FEAT_STATIONS, stone_left_overbridgefences) {
         class:                  "_STN";
         classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
-        hide_wire_tiles:        bitmask(2);
-
     }
     graphics {
         sprite_layouts: [overbridgefences_left_sw_ne(0), overbridgefences_left_se_nw(0)];
@@ -3581,8 +3587,6 @@ item(FEAT_STATIONS, stone_right_overbridgefences) {
         class:                  "_STN";
         classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
-        hide_wire_tiles:        bitmask(2);
-
     }
     graphics {
         sprite_layouts: [overbridgefences_right_sw_ne(0), overbridgefences_right_se_nw(0)];
@@ -3591,6 +3595,386 @@ item(FEAT_STATIONS, stone_right_overbridgefences) {
         stone_overbridgefences_right;
     }
 }
+
+/***********************************/
+/***** COVERED PLATFORMS ***********/
+/***********************************/
+
+/***** COVERED PLATFORMS LEFT *****/
+
+spriteset (stone_covered_platforms_left, "stations_stone.png") {
+    [  10, 710, 64, 64, -32, -34 ]
+    [  10, 780, 64, 64, -32, -34 ]
+
+    [  80, 710, 64, 64, -32, -34 ]
+    [  80, 780, 64, 64, -32, -34 ]
+}
+
+spritelayout stone_covered_platforms_left_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        2;
+        zextent:        40;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        40;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_covered_platforms_left_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        40;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        2;
+        yextent:        16;
+        zextent:        40;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }    
+}
+
+item(FEAT_STATIONS, left_stone_covered_platforms) {
+    property {
+        class:                  "_STN";
+        classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_COVERED);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE)
+        ];
+    }
+    graphics {
+        sprite_layouts: [stone_covered_platforms_left_sw_ne(0), stone_covered_platforms_left_se_nw(0)];
+        select_tile_type: 2;
+        purchase: stone_covered_platforms_left;
+        stone_covered_platforms_left;
+    }
+}
+
+/***** COVERED PLATFORMS RIGHT *****/
+
+spriteset (stone_covered_platforms_right, "stations_stone.png") {
+    [  150, 710, 64, 64, -32, -34 ]
+    [  150, 780, 64, 64, -32, -34 ]
+
+    [  220, 710, 64, 64, -32, -34 ]
+    [  220, 780, 64, 64, -32, -34 ]
+}
+
+spritelayout stone_covered_platforms_right_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        2;
+        zextent:        40;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        40;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_covered_platforms_right_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        40;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        40;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+
+}
+
+item(FEAT_STATIONS, right_stone_covered_platforms) {
+    property {
+        class:                  "_STN";
+        classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_COVERED);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE)
+        ];
+    }
+    graphics {
+        sprite_layouts: [stone_covered_platforms_right_sw_ne(0), stone_covered_platforms_right_se_nw(0)];
+        select_tile_type: 2;
+        purchase: stone_covered_platforms_right;
+        stone_covered_platforms_right;
+    }
+}
+
+
+/****************************************/
+/***** ARCHED PLATFORMS *****************/
+/****************************************/
+
+
+spriteset (stone_arched_end_left, "stations_stone.png") {
+    [  10, 850, 64, 64, -32, -34 ]
+    [  80, 850, 64, 64, -32, -34 ]
+   
+    [  220, 850, 64, 64, -32, -34 ]
+    [  290, 850, 64, 64, -32, -34 ]
+}
+
+spriteset (stone_arched_end_right, "stations_stone.png") {
+    [  80, 920, 64, 64, -32, -34 ]
+    [  10, 920, 64, 96, -32, -66 ]
+
+    [  220, 920, 64, 64, -32, -34 ]
+    [  290, 920, 64, 96, -32, -66 ]
+}
+
+spritelayout stone_arched_end_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_arched_end_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+switch (FEAT_STATIONS, SELF, switch_stone_arched_end, platform_number_from_start(PLATFORM_SAME_SECTION)) {
+    0: return stone_arched_end_left;
+    1: return stone_arched_end_right;
+}
+
+item(FEAT_STATIONS, stone_arched_end) {
+    property {
+        class:                  "_STN";
+        classname:              string(STR_NAME_STATCLASS_REDBRICK_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_ARCHED);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE)
+        ];
+        disabled_platforms:     bitmask(1,3,4,5,6,7,8);
+    }
+    graphics {
+        sprite_layouts: [stone_arched_end_sw_ne(0), stone_arched_end_se_nw(0)];
+        select_tile_type: 2;
+        purchase: stone_arched_end_right;
+        switch_stone_arched_end;
+    }
+}
+
+spriteset (stone_arched_middle_left, "stations_stone.png") {
+    [  10, 850, 64, 64, -32, -34 ]
+    [  150, 850, 64, 64, -32, -34 ]
+   
+    [  220, 850, 64, 64, -32, -34 ]
+    [  360, 850, 64, 64, -32, -34 ]
+}
+
+spriteset (stone_arched_middle_right, "stations_stone.png") {
+    [  80, 920, 64, 64, -32, -34 ]
+    [  150, 920, 64, 96, -32, -66 ]
+
+    [  220, 920, 64, 64, -32, -34 ]
+    [  360, 920, 64, 96, -32, -66 ]
+}
+
+spritelayout stone_arched_middle_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_arched_middle_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+switch (FEAT_STATIONS, SELF, switch_stone_arched_middle, platform_number_from_start(PLATFORM_SAME_SECTION)) {
+    0: return stone_arched_middle_left;
+    1: return stone_arched_middle_right;
+}
+
+item(FEAT_STATIONS, stone_arched_middle) {
+    property {
+        class:                  "_STN";
+        classname:              string(STR_NAME_STATCLASS_REDBRICK_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_ARCHED);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE)
+        ];
+        disabled_platforms:     bitmask(1,3,4,5,6,7,8);
+    }
+    graphics {
+        sprite_layouts: [stone_arched_middle_sw_ne(0), stone_arched_middle_se_nw(0)];
+        select_tile_type: 2;
+        purchase: stone_arched_middle_right;
+        switch_stone_arched_middle;
+    }
+}
+
 
 /******************************/
 /***** BULDINGS ***************/
@@ -3640,7 +4024,10 @@ item(FEAT_STATIONS, stone_station_building_1a) {
         class:                  "_BLD";
         classname:              string(STR_NAME_STATION_BUILDING);
         name:                   string(STR_NAME_STATION_AVON);
-        non_traversable_tiles:  bitmask(0,1);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
     }
@@ -3696,7 +4083,10 @@ item(FEAT_STATIONS, stone_station_building_1b) {
         class:                  "_BLD";
         classname:              string(STR_NAME_STATION_BUILDING);
         name:                   string(STR_NAME_STATION_AVON);
-        non_traversable_tiles:  bitmask(0,1);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
     }
@@ -3752,7 +4142,10 @@ item(FEAT_STATIONS, stone_station_building_2a) {
         class:                  "_BLD";
         classname:              string(STR_NAME_STATION_BUILDING);
         name:                   string(STR_NAME_STATION_TAFF);
-        non_traversable_tiles:  bitmask(0,1);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
     }
@@ -3808,7 +4201,10 @@ item(FEAT_STATIONS, stone_station_building_2b) {
         class:                  "_BLD";
         classname:              string(STR_NAME_STATION_BUILDING);
         name:                   string(STR_NAME_STATION_TAFF);
-        non_traversable_tiles:  bitmask(0,1);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
     }
@@ -3865,7 +4261,10 @@ item(FEAT_STATIONS, stone_station_building_3a) {
         class:                  "_BLD";
         classname:              string(STR_NAME_STATION_BUILDING);
         name:                   string(STR_NAME_STATION_SEVERN);
-        non_traversable_tiles:  bitmask(0,1);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
     }
@@ -3921,7 +4320,10 @@ item(FEAT_STATIONS, stone_station_building_3b) {
         class:                  "_BLD";
         classname:              string(STR_NAME_STATION_BUILDING);
         name:                   string(STR_NAME_STATION_SEVERN);
-        non_traversable_tiles:  bitmask(0,1);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
     }
@@ -3978,7 +4380,10 @@ item(FEAT_STATIONS, stone_station_building_4a) {
         class:                  "_BLD";
         classname:              string(STR_NAME_STATION_BUILDING);
         name:                   string(STR_NAME_STATION_TEIGN);
-        non_traversable_tiles:  bitmask(0,1);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
     }
@@ -4034,7 +4439,10 @@ item(FEAT_STATIONS, stone_station_building_4b) {
         class:                  "_BLD";
         classname:              string(STR_NAME_STATION_BUILDING);
         name:                   string(STR_NAME_STATION_TEIGN);
-        non_traversable_tiles:  bitmask(0,1);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
     }
@@ -4092,7 +4500,10 @@ item(FEAT_STATIONS, stone_station_building_5a) {
         class:                  "_BLD";
         classname:              string(STR_NAME_STATION_BUILDING);
         name:                   string(STR_NAME_STATION_THESADDLETANK);
-        non_traversable_tiles:  bitmask(0,1);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
     }
@@ -4111,7 +4522,7 @@ spriteset (stone_building_5b, "stations_buildings_1.png") {
 
 spritelayout stone_building_5b_se(a) {
     ground {
-        sprite: GROUNDSPRITE_RAIL_X;
+        sprite: GROUNDSPRITE_CONCRETE;
     }
     building {
         sprite:         DEFAULT(0);
@@ -4148,7 +4559,10 @@ item(FEAT_STATIONS, stone_station_building_5b) {
         class:                  "_BLD";
         classname:              string(STR_NAME_STATION_BUILDING);
         name:                   string(STR_NAME_STATION_ENGINESHED);
-        non_traversable_tiles:  bitmask(0,1);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
     }
@@ -4159,6 +4573,489 @@ item(FEAT_STATIONS, stone_station_building_5b) {
         stone_building_5b;
     }
 }
+
+
+/****************************************/
+/***** FEATURE BUILDING FRONT ***********/
+/****************************************/
+
+
+spriteset (stone_feature_building_tile_0, "stations_buildings_2.png") {
+    [  10, 360, 64, 96, -32, -66 ]
+    [  290, 360, 64, 96, -32, -66 ]
+}
+
+spriteset (stone_feature_building_tile_1, "stations_buildings_2.png") {
+    [  80, 360, 64, 96, -32, -66 ]
+    [  360, 360, 64, 96, -32, -66 ]
+}
+
+spriteset (stone_feature_building_tile_2, "stations_buildings_2.png") {
+    [  150, 360, 64, 96, -32, -66 ]
+    [  430, 360, 64, 96, -32, -66 ]
+}
+
+spriteset (stone_feature_building_tile_3, "stations_buildings_2.png") {
+    [  220, 360, 64, 96, -32, -66 ]
+    [  500, 360, 64, 96, -32, -66 ]
+}
+
+spritelayout stone_feature_building_0(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        -1;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        64;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_feature_building_1(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        -1;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        64;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_feature_building_2(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(2);
+        xoffset:        -1;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        64;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_feature_building_3(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        -1;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        64;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+switch (FEAT_STATIONS, SELF, switch_stone_feature_building, platform_number_from_start(PLATFORM_SAME_SECTION)) {
+    0: return stone_feature_building_tile_0;
+    1: return stone_feature_building_tile_1;
+    2: return stone_feature_building_tile_2;
+    3: return stone_feature_building_tile_3;
+    
+}
+
+item(FEAT_STATIONS, stone_feature_building) {
+    property {
+        class:                  "_BLD";
+        classname:              string(STR_NAME_STATION_BUILDING);
+        name:                   string(STR_NAME_STATION_ISLINGTON_FRONT);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
+        disabled_platforms:     bitmask(0,1,2,3,5,6,7,8);
+        disabled_length:        bitmask(2,3,4,5,6,7,8);
+
+    }
+    graphics {
+        sprite_layouts: [stone_feature_building_0(0), stone_feature_building_1(0), stone_feature_building_2(0), stone_feature_building_3(0)];
+        select_tile_type: 0;
+        purchase: stone_feature_building_tile_0;
+        switch_stone_feature_building;
+    }
+}
+
+/****************************************/
+/***** FEATURE BUILDING REAR ************/
+/****************************************/
+
+
+spriteset (stone_feature_building_rear_tile_0, "stations_buildings_2.png") {
+    [  10, 470, 64, 96, -32, -66 ]
+    [  290, 470, 64, 96, -32, -66 ]
+}
+
+spriteset (stone_feature_building_rear_tile_1, "stations_buildings_2.png") {
+    [  80, 470, 64, 96, -32, -66 ]
+    [  360, 470, 64, 96, -32, -66 ]
+}
+
+spriteset (stone_feature_building_rear_tile_2, "stations_buildings_2.png") {
+    [  150, 470, 64, 96, -32, -66 ]
+    [  430, 470, 64, 96, -32, -66 ]
+}
+
+spriteset (stone_feature_building_rear_tile_3, "stations_buildings_2.png") {
+    [  220, 470, 64, 96, -32, -66 ]
+    [  500, 470, 64, 96, -32, -66 ]
+}
+
+spritelayout stone_feature_building_rear_0(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        64;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_feature_building_rear_1(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        64;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_feature_building_rear_2(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        64;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_feature_building_rear_3(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        64;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+switch (FEAT_STATIONS, SELF, switch_stone_feature_building_rear, platform_number_from_start(PLATFORM_SAME_SECTION)) {
+    0: return stone_feature_building_rear_tile_0;
+    1: return stone_feature_building_rear_tile_1;
+    2: return stone_feature_building_rear_tile_2;
+    3: return stone_feature_building_rear_tile_3;
+    
+}
+
+item(FEAT_STATIONS, stone_feature_building_rear) {
+    property {
+        class:                  "_BLD";
+        classname:              string(STR_NAME_STATION_BUILDING);
+        name:                   string(STR_NAME_STATION_ISLINGTON_REAR);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
+        disabled_platforms:     bitmask(0,1,2,3,5,6,7,8);
+        disabled_length:        bitmask(2,3,4,5,6,7,8);
+
+    }
+    graphics {
+        sprite_layouts: [stone_feature_building_rear_0(0), stone_feature_building_rear_1(0), stone_feature_building_rear_2(0), stone_feature_building_rear_3(0)];
+        select_tile_type: 0;
+        purchase: stone_feature_building_rear_tile_0;
+        switch_stone_feature_building_rear;
+    }
+}
+
+/****************************************/
+/***** FEATURE HOTEL ********************/
+/****************************************/
+
+spriteset (stone_addon_tile_0, "stations_buildings_2.png") {
+    [ 710, 360, 64, 96, -32, -66 ]
+    [ 780, 360, 64, 96, -32, -66 ]
+}
+
+spriteset (stone_addon_tile_1, "stations_buildings_2.png") {
+    [ 570, 360, 64, 96, -32, -66 ]
+    [ 640, 360, 64, 96, -32, -66 ]
+}
+
+spritelayout stone_addon_1a_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        56;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_addon_1a_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        56;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_addon_1b_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        56;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_addon_1b_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        56;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+switch (FEAT_STATIONS, SELF, switch_stone_hotel_building, platform_position_from_start(PLATFORM_SAME_SECTION)) {
+    0: return stone_addon_tile_0;
+    1: return stone_addon_tile_1;
+    
+}
+
+item(FEAT_STATIONS, stone_station_addon_1a) {
+    property {
+        class:                  "_BLD";
+        classname:              string(STR_NAME_STATION_BUILDING);
+        name:                   string(STR_NAME_STATION_HOTEL);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
+        disabled_platforms:     bitmask(2,3,4,5,6,7,8);
+        disabled_length:        bitmask(1,3,4,5,6,7,8);
+    }
+    graphics {
+        sprite_layouts:         [stone_addon_1a_nw(0), stone_addon_1a_ne(0), stone_addon_1b_nw(0), stone_addon_1b_ne(0)];
+        select_tile_type:       0;
+        purchase:               stone_addon_tile_0;
+        switch_stone_hotel_building;
+    }
+}
+
+/****************************************/
+/***** FEATURE GOODS SHED ***************/
+/****************************************/
+
+spriteset (stone_addon_tile_2, "stations_buildings_2.png") {
+    [ 710, 470, 64, 96, -32, -66 ]
+    [ 780, 470, 64, 96, -32, -66 ]
+}
+
+spritelayout stone_addon_2a_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_addon_2a_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, stone_station_addon_2a) {
+    property {
+        class:                  "_BLD";
+        classname:              string(STR_NAME_STATION_BUILDING);
+        name:                   string(STR_NAME_STATION_GOODS_SHED);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
+        disabled_platforms:     bitmask(2,3,4,5,6,7,8);
+        disabled_length:        bitmask(2,3,4,5,6,7,8);
+    }
+    graphics {
+        sprite_layouts:         [stone_addon_2a_nw(0), stone_addon_2a_ne(0)];
+        select_tile_type:       0;
+        purchase:               stone_addon_tile_2;
+        stone_addon_tile_2;
+    }
+}
+
+
+spriteset (stone_addon_tile_3, "stations_buildings_2.png") {
+    [ 570, 470, 64, 96, -32, -66 ]
+    [ 640, 470, 64, 96, -32, -66 ]
+}
+
+spritelayout stone_addon_2b_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_addon_2b_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, stone_station_addon_2b) {
+    property {
+        class:                  "_BLD";
+        classname:              string(STR_NAME_STATION_BUILDING);
+        name:                   string(STR_NAME_STATION_GOODS_SHED);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
+        disabled_platforms:     bitmask(2,3,4,5,6,7,8);
+        disabled_length:        bitmask(2,3,4,5,6,7,8);
+    }
+    graphics {
+        sprite_layouts:         [stone_addon_2b_nw(0), stone_addon_2b_ne(0)];
+        select_tile_type:       0;
+        purchase:               stone_addon_tile_3;
+        stone_addon_tile_3;
+    }
+}
+
+
+
 
 
 /***********************************/
@@ -4223,7 +5120,7 @@ item(FEAT_STATIONS, stone_left_overbridge_waypoint) {
         class:                  "WAYP";
         classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
-        hide_wire_tiles:        bitmask(2);
+        
 
     }
     graphics {
@@ -4293,7 +5190,7 @@ item(FEAT_STATIONS, stone_right_overbridge_waypoint) {
         class:                  "WAYP";
         classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
-        hide_wire_tiles:        bitmask(2);
+        
 
     }
     graphics {
@@ -4304,32 +5201,90 @@ item(FEAT_STATIONS, stone_right_overbridge_waypoint) {
     }
 }
 
-/***** SIGNALBOX WAYPOINT A *****/
+/***** SIGNALBOX WAYPOINT 1A *****/
 
-spriteset (stone_signalbox_waypoint_a, "stations_waypoints.png") {
+spriteset (stone_signalbox_waypoint_1a, "stations_waypoints.png") {
     [  10, 150, 64, 64, -32, -34 ]
     [  80, 150, 64, 64, -32, -34 ]
 
 }
 
-spritelayout stone_signalbox_waypoint_a_sw_ne(a) {
+spritelayout stone_signalbox_waypoint_1a_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
-        building {
+    building {
         sprite:         DEFAULT(0);
         xoffset:        0;
         yoffset:        1;
         zoffset:        0;
         xextent:        16;
-        yextent:        4;
+        yextent:        5;
         zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout stone_signalbox_waypoint_a_se_nw(a) {
+spritelayout stone_signalbox_waypoint_1a_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, stone_signalbox_1a_waypoint) {
+    property {
+        class:                  "WAYP";
+        classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_SIGNALBOX);
+        
+
+    }
+    graphics {
+        sprite_layouts: [stone_signalbox_waypoint_1a_sw_ne(0), stone_signalbox_waypoint_1a_se_nw(0)];
+        select_tile_type: 2;
+        purchase: stone_signalbox_waypoint_1a;
+        stone_signalbox_waypoint_1a;
+    }
+}
+
+/***** SIGNALBOX WAYPOINT 1B *****/
+
+spriteset (stone_signalbox_waypoint_1b, "stations_waypoints.png") {
+    [  150, 150, 64, 64, -32, -34 ]
+    [  220, 150, 64, 64, -32, -34 ]
+
+}
+
+spritelayout stone_signalbox_waypoint_1b_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        12;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_signalbox_waypoint_1b_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -4338,7 +5293,7 @@ spritelayout stone_signalbox_waypoint_a_se_nw(a) {
         xoffset:        0;
         yoffset:        1;
         zoffset:        0;
-        xextent:        4;
+        xextent:        5;
         yextent:        16;
         zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
@@ -4346,18 +5301,132 @@ spritelayout stone_signalbox_waypoint_a_se_nw(a) {
     }
 }
 
-item(FEAT_STATIONS, stone_signalbox_a_waypoint) {
+item(FEAT_STATIONS, stone_signalbox_1b_waypoint) {
     property {
         class:                  "WAYP";
         classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
-        name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
-        hide_wire_tiles:        bitmask(2);
+        name:                   string(STR_NAME_STATION_PLATFORM_SIGNALBOX);
 
     }
     graphics {
-        sprite_layouts: [stone_signalbox_waypoint_a_sw_ne(0), stone_signalbox_waypoint_a_se_nw(0)];
+        sprite_layouts: [stone_signalbox_waypoint_1b_sw_ne(0), stone_signalbox_waypoint_1b_se_nw(0)];
         select_tile_type: 2;
-        purchase: stone_signalbox_waypoint_a;
-        stone_signalbox_waypoint_a;
+        purchase: stone_signalbox_waypoint_1b;
+        stone_signalbox_waypoint_1b;
+    }
+}
+
+/***** SIGNALBOX WAYPOINT 2A *****/
+
+spriteset (stone_signalbox_waypoint_2a, "stations_waypoints.png") {
+    [  290, 150, 64, 64, -32, -34 ]
+    [  360, 150, 64, 64, -32, -34 ]
+
+}
+
+spritelayout stone_signalbox_waypoint_2a_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_signalbox_waypoint_2a_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, stone_signalbox_2a_waypoint) {
+    property {
+        class:                  "WAYP";
+        classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_SIGNALBOX);
+        
+
+    }
+    graphics {
+        sprite_layouts: [stone_signalbox_waypoint_2a_sw_ne(0), stone_signalbox_waypoint_2a_se_nw(0)];
+        select_tile_type: 2;
+        purchase: stone_signalbox_waypoint_2a;
+        stone_signalbox_waypoint_2a;
+    }
+}
+
+/***** SIGNALBOX WAYPOINT 2B *****/
+
+spriteset (stone_signalbox_waypoint_2b, "stations_waypoints.png") {
+    [  430, 150, 64, 64, -32, -34 ]
+    [  500, 150, 64, 64, -32, -34 ]
+
+}
+
+spritelayout stone_signalbox_waypoint_2b_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        12;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_signalbox_waypoint_2b_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, stone_signalbox_2b_waypoint) {
+    property {
+        class:                  "WAYP";
+        classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_SIGNALBOX);
+
+    }
+    graphics {
+        sprite_layouts: [stone_signalbox_waypoint_2b_sw_ne(0), stone_signalbox_waypoint_2b_se_nw(0)];
+        select_tile_type: 2;
+        purchase: stone_signalbox_waypoint_2b;
+        stone_signalbox_waypoint_2b;
     }
 }

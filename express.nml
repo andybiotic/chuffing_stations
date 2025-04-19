@@ -14,9 +14,16 @@ cargotable {
     PASS
 }
 
-/***************************************/
-/***** PLATFORM WITH LIGHTS ************/
-/***************************************/
+switch (FEAT_STATIONS, SELF, switch_intro_year_express, current_year) {
+  0..1979: 0;
+  default: 1;
+}
+
+
+
+/***************************************************************************/
+/********************* EXPRESS PLATFORMS ***********************************/
+/***************************************************************************/
 
 /** PLATFORM LEFT **/
 
@@ -119,6 +126,7 @@ item(FEAT_STATIONS, express_lights_platform_left_station) {
     graphics {
         sprite_layouts: [express_lights_platform_left_sw_ne(0), express_lights_platform_left_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         PASS: express_lights_passengers_left;
         purchase: express_lights_platform_left;
         express_lights_platform_left;
@@ -226,6 +234,7 @@ item(FEAT_STATIONS, express_lights_platform_right_station) {
     graphics {
         sprite_layouts: [express_lights_platform_right_sw_ne(0), express_lights_platform_right_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         PASS: express_lights_passengers_right;
         purchase: express_lights_platform_right;
         express_lights_platform_right;
@@ -337,6 +346,7 @@ item(FEAT_STATIONS, express_fenceandlights_platform_left_station) {
     graphics {
         sprite_layouts: [express_fenceandlights_platform_left_sw_ne(0), express_fenceandlights_platform_left_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         PASS: express_fenceandlights_passengers_left;
         purchase: express_fenceandlights_platform_left;
         express_fenceandlights_platform_left;
@@ -444,6 +454,7 @@ item(FEAT_STATIONS, express_fenceandlights_platform_right_station) {
     graphics {
         sprite_layouts: [express_fenceandlights_platform_right_sw_ne(0), express_fenceandlights_platform_right_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         PASS: express_fenceandlights_passengers_right;
         purchase: express_fenceandlights_platform_right;
         express_fenceandlights_platform_right;
@@ -555,6 +566,7 @@ item(FEAT_STATIONS, express_sign_platform_left_station) {
     graphics {
         sprite_layouts: [express_sign_platform_left_sw_ne(0), express_sign_platform_left_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         PASS: express_sign_passengers_left;
         purchase: express_sign_platform_left;
         express_sign_platform_left;
@@ -663,6 +675,7 @@ item(FEAT_STATIONS, express_sign_platform_right_station) {
     graphics {
         sprite_layouts: [express_sign_platform_right_sw_ne(0), express_sign_platform_right_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         PASS: express_sign_passengers_right;
         purchase: express_sign_platform_right;
         express_sign_platform_right;
@@ -774,6 +787,7 @@ item(FEAT_STATIONS, express_fenceandsign_platform_left_station) {
     graphics {
         sprite_layouts: [express_fenceandsign_platform_left_sw_ne(0), express_fenceandsign_platform_left_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         PASS: express_fenceandsign_passengers_left;
         purchase: express_fenceandsign_platform_left;
         express_fenceandsign_platform_left;
@@ -881,6 +895,7 @@ item(FEAT_STATIONS, express_fenceandsign_platform_right_station) {
     graphics {
         sprite_layouts: [express_fenceandsign_platform_right_sw_ne(0), express_fenceandsign_platform_right_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         PASS: express_fenceandsign_passengers_right;
         purchase: express_fenceandsign_platform_right;
         express_fenceandsign_platform_right;
@@ -992,6 +1007,7 @@ item(FEAT_STATIONS, express_advert_platform_left_station) {
     graphics {
         sprite_layouts: [express_advert_platform_left_sw_ne(0), express_advert_platform_left_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         PASS: express_advert_passengers_left;
         purchase: express_advert_platform_left;
         express_advert_platform_left;
@@ -1099,6 +1115,7 @@ item(FEAT_STATIONS, express_advert_platform_right_station) {
     graphics {
         sprite_layouts: [express_advert_platform_right_sw_ne(0), express_advert_platform_right_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         PASS: express_advert_passengers_right;
         purchase: express_advert_platform_right;
         express_advert_platform_right;
@@ -1210,6 +1227,7 @@ item(FEAT_STATIONS, express_fenceandadvert_platform_left_station) {
     graphics {
         sprite_layouts: [express_fenceandadvert_platform_left_sw_ne(0), express_fenceandadvert_platform_left_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         PASS: express_fenceandadvert_passengers_left;
         purchase: express_fenceandadvert_platform_left;
         express_fenceandadvert_platform_left;
@@ -1317,6 +1335,7 @@ item(FEAT_STATIONS, express_fenceandadvert_platform_right_station) {
     graphics {
         sprite_layouts: [express_fenceandadvert_platform_right_sw_ne(0), express_fenceandadvert_platform_right_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         PASS: express_fenceandadvert_passengers_right;
         purchase: express_fenceandadvert_platform_right;
         express_fenceandadvert_platform_right;
@@ -1402,6 +1421,7 @@ item(FEAT_STATIONS, express_underpass_platform_left_station) {
     graphics {
         sprite_layouts: [express_underpass_platform_left_sw_ne(0), express_underpass_platform_left_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         purchase: express_underpass_platform_left;
         express_underpass_platform_left;
     }
@@ -1482,6 +1502,7 @@ item(FEAT_STATIONS, express_underpass_platform_right_station) {
     graphics {
         sprite_layouts: [express_underpass_platform_right_sw_ne(0), express_underpass_platform_right_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         purchase: express_underpass_platform_right;
         express_underpass_platform_right;
     }
@@ -1566,6 +1587,7 @@ item(FEAT_STATIONS, express_fenceandunderpass_platform_left_station) {
     graphics {
         sprite_layouts: [express_fenceandunderpass_platform_left_sw_ne(0), express_fenceandunderpass_platform_left_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         purchase: express_fenceandunderpass_platform_left;
         express_fenceandunderpass_platform_left;
     }
@@ -1646,6 +1668,7 @@ item(FEAT_STATIONS, express_fenceandunderpass_platform_right_station) {
     graphics {
         sprite_layouts: [express_fenceandunderpass_platform_right_sw_ne(0), express_fenceandunderpass_platform_right_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         purchase: express_fenceandunderpass_platform_right;
         express_fenceandunderpass_platform_right;
     }
@@ -1756,6 +1779,7 @@ item(FEAT_STATIONS, express_shelter_platform_left_station) {
     graphics {
         sprite_layouts: [express_shelter_platform_left_sw_ne(0), express_shelter_platform_left_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         PASS: express_shelter_passengers_left;
         purchase: express_shelter_platform_left;
         express_shelter_platform_left;
@@ -1864,6 +1888,7 @@ item(FEAT_STATIONS, express_shelter_platform_right_station) {
     graphics {
         sprite_layouts: [express_shelter_platform_right_sw_ne(0), express_shelter_platform_right_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         PASS: express_shelter_passengers_right;
         purchase: express_shelter_platform_right;
         express_shelter_platform_right;
@@ -1976,6 +2001,7 @@ item(FEAT_STATIONS, express_fenceandshelter_platform_left_station) {
     graphics {
         sprite_layouts: [express_fenceandshelter_platform_left_sw_ne(0), express_fenceandshelter_platform_left_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         PASS: express_fenceandshelter_passengers_left;
         purchase: express_fenceandshelter_platform_left;
         express_fenceandshelter_platform_left;
@@ -2084,6 +2110,7 @@ item(FEAT_STATIONS, express_fenceandshelter_platform_right_station) {
     graphics {
         sprite_layouts: [express_fenceandshelter_platform_right_sw_ne(0), express_fenceandshelter_platform_right_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         PASS: express_fenceandshelter_passengers_right;
         purchase: express_fenceandshelter_platform_right;
         express_fenceandshelter_platform_right;
@@ -2195,6 +2222,7 @@ item(FEAT_STATIONS, express_shelteralt_platform_left_station) {
     graphics {
         sprite_layouts: [express_shelteralt_platform_left_sw_ne(0), express_shelteralt_platform_left_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         PASS: express_shelteralt_passengers_left;
         purchase: express_shelteralt_platform_left;
         express_shelteralt_platform_left;
@@ -2302,6 +2330,7 @@ item(FEAT_STATIONS, express_shelteralt_platform_right_station) {
     graphics {
         sprite_layouts: [express_shelteralt_platform_right_sw_ne(0), express_shelteralt_platform_right_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         PASS: express_shelteralt_passengers_right;
         purchase: express_shelteralt_platform_right;
         express_shelteralt_platform_right;
@@ -2413,6 +2442,7 @@ item(FEAT_STATIONS, express_shelteralt_wall_platform_left_station) {
     graphics {
         sprite_layouts: [express_shelteralt_wall_platform_left_sw_ne(0), express_shelteralt_wall_platform_left_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         PASS: express_shelteralt_wall_passengers_left;
         purchase: express_shelteralt_wall_platform_left;
         express_shelteralt_wall_platform_left;
@@ -2521,6 +2551,7 @@ item(FEAT_STATIONS, express_shelteralt_wall_platform_right_station) {
     graphics {
         sprite_layouts: [express_shelteralt_wall_platform_right_sw_ne(0), express_shelteralt_wall_platform_right_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         PASS: express_shelteralt_wall_passengers_right;
         purchase: express_shelteralt_wall_platform_right;
         express_shelteralt_wall_platform_right;
@@ -2607,6 +2638,7 @@ item(FEAT_STATIONS, express_plain_south_end_left_station) {
     graphics {
         sprite_layouts: [express_plain_south_end_left_sw_ne(0), express_plain_south_end_left_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         purchase: express_plain_south_end_left;
         express_plain_south_end_left;
     }
@@ -2687,6 +2719,7 @@ item(FEAT_STATIONS, express_plain_south_end_right_station) {
     graphics {
         sprite_layouts: [express_plain_south_end_right_sw_ne(0), express_plain_south_end_right_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         purchase: express_plain_south_end_right;
         express_plain_south_end_right;
     }
@@ -2767,6 +2800,7 @@ item(FEAT_STATIONS, express_plain_north_end_left_station) {
     graphics {
         sprite_layouts: [express_plain_north_end_left_sw_ne(0), express_plain_north_end_left_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         purchase: express_plain_north_end_left;
         express_plain_north_end_left;
     }
@@ -2847,6 +2881,7 @@ item(FEAT_STATIONS, express_plain_north_end_right_station) {
     graphics {
         sprite_layouts: [express_plain_north_end_right_sw_ne(0), express_plain_north_end_right_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         purchase: express_plain_north_end_right;
         express_plain_north_end_right;
     }
@@ -2927,6 +2962,7 @@ item(FEAT_STATIONS, express_fence_south_end_left_station) {
     graphics {
         sprite_layouts: [express_fence_south_end_left_sw_ne(0), express_fence_south_end_left_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         purchase: express_fence_south_end_left;
         express_fence_south_end_left;
     }
@@ -3007,6 +3043,7 @@ item(FEAT_STATIONS, express_fence_south_end_right_station) {
     graphics {
         sprite_layouts: [express_fence_south_end_right_sw_ne(0), express_fence_south_end_right_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         purchase: express_fence_south_end_right;
         express_fence_south_end_right;
     }
@@ -3087,6 +3124,7 @@ item(FEAT_STATIONS, express_fence_north_end_left_station) {
     graphics {
         sprite_layouts: [express_fence_north_end_left_sw_ne(0), express_fence_north_end_left_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         purchase: express_fence_north_end_left;
         express_fence_north_end_left;
     }
@@ -3167,6 +3205,7 @@ item(FEAT_STATIONS, express_fence_north_end_right_station) {
     graphics {
         sprite_layouts: [express_fence_north_end_right_sw_ne(0), express_fence_north_end_right_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         purchase: express_fence_north_end_right;
         express_fence_north_end_right;
     }
@@ -3220,11 +3259,15 @@ item(FEAT_STATIONS, express_buffer_north_left_station) {
         class:                  "_XPS";
         classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_BUFFER);
-        non_traversable_tiles:  STAT_ALL_TILES;
+        tile_flags: [
+            bitmask(STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_BLOCKED)
+        ];
     }
     graphics {
         sprite_layouts: [express_buffer_north_left_sw_ne(0), express_buffer_north_left_se_nw(0)];
         select_tile_type: 1;
+        availability: switch_intro_year_express;
         purchase: express_buffer_north_left;
         express_buffer_north_left;
     }
@@ -3275,11 +3318,15 @@ item(FEAT_STATIONS, express_buffer_north_right_station) {
         class:                  "_XPS";
         classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_BUFFER);
-        non_traversable_tiles:  STAT_ALL_TILES;
+        tile_flags: [
+            bitmask(STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_BLOCKED)
+        ];
     }
     graphics {
         sprite_layouts: [express_buffer_north_right_sw_ne(0), express_buffer_north_right_se_nw(0)];
         select_tile_type: 1;
+        availability: switch_intro_year_express;
         purchase: express_buffer_north_right;
         express_buffer_north_right;
     }
@@ -3334,11 +3381,15 @@ item(FEAT_STATIONS, express_buffer_south_left_station) {
         class:                  "_XPS";
         classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_BUFFER);
-        non_traversable_tiles:  STAT_ALL_TILES;
+        tile_flags: [
+            bitmask(STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_BLOCKED)
+        ];
     }
     graphics {
         sprite_layouts: [express_buffer_south_left_sw_ne(0), express_buffer_south_left_se_nw(0)];
         select_tile_type: 1;
+        availability: switch_intro_year_express;
         purchase: express_buffer_south_left;
         express_buffer_south_left;
     }
@@ -3388,11 +3439,15 @@ item(FEAT_STATIONS, express_buffer_south_right_station) {
         class:                  "_XPS";
         classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_BUFFER);
-        non_traversable_tiles:  STAT_ALL_TILES;
+        tile_flags: [
+            bitmask(STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_BLOCKED)
+        ];
     }
     graphics {
         sprite_layouts: [express_buffer_south_right_sw_ne(0), express_buffer_south_right_se_nw(0)];
         select_tile_type: 1;
+        availability: switch_intro_year_express;
         purchase: express_buffer_south_right;
         express_buffer_south_right;
     }
@@ -3408,9 +3463,9 @@ spriteset (express_overbridge_left, "stations_express.png") {
     [  10, 10, 64, 64, -32, -34 ]
     [  80, 10, 64, 64, -32, -34 ]
 
-    [  10, 500, 64, 64, -32, -34 ]
-    [  80, 500, 64, 64, -32, -34 ]
-    [  150, 500, 64, 64, -32, -34 ]
+    [  10, 850, 64, 64, -32, -34 ]
+    [  80, 850, 64, 64, -32, -34 ]
+    [  150, 850, 64, 64, -32, -34 ]
 
     [  220, 500, 64, 64, -32, -34 ]
     [  290, 500, 64, 64, -32, -34 ]
@@ -3448,7 +3503,7 @@ spritelayout express_overbridge_left_sw_ne(a) {
         xoffset:        0;
         yoffset:        1;
         zoffset:        0;
-        xextent:        8;
+        xextent:        16;
         yextent:        16;
         zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
@@ -3522,12 +3577,11 @@ item(FEAT_STATIONS, express_left_overbridge) {
         class:                  "_XPS";
         classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
-        hide_wire_tiles:        bitmask(2);
-
     }
     graphics {
         sprite_layouts: [express_overbridge_left_sw_ne(0), express_overbridge_left_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         purchase: express_overbridge_left;
         express_overbridge_left;
     }
@@ -3643,12 +3697,11 @@ item(FEAT_STATIONS, express_right_overbridge) {
         class:                  "_XPS";
         classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
-        hide_wire_tiles:        bitmask(2);
-
     }
     graphics {
         sprite_layouts: [express_overbridge_right_sw_ne(0), express_overbridge_right_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         purchase: express_overbridge_right;
         express_overbridge_right;
     }
@@ -3705,7 +3758,7 @@ spritelayout express_overbridgefences_left_sw_ne(a) {
         xoffset:        0;
         yoffset:        1;
         zoffset:        0;
-        xextent:        8;
+        xextent:        16;
         yextent:        16;
         zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
@@ -3779,12 +3832,11 @@ item(FEAT_STATIONS, express_left_overbridgefences) {
         class:                  "_XPS";
         classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
-        hide_wire_tiles:        bitmask(2);
-
     }
     graphics {
         sprite_layouts: [express_overbridgefences_left_sw_ne(0), express_overbridgefences_left_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         purchase: express_overbridgefences_left;
         express_overbridgefences_left;
     }
@@ -3900,12 +3952,11 @@ item(FEAT_STATIONS, express_right_overbridgefences) {
         class:                  "_XPS";
         classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
-        hide_wire_tiles:        bitmask(2);
-
     }
     graphics {
         sprite_layouts: [express_overbridgefences_right_sw_ne(0), express_overbridgefences_right_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         purchase: express_overbridgefences_right;
         express_overbridgefences_right;
     }
@@ -4024,12 +4075,11 @@ item(FEAT_STATIONS, express_left_overpass) {
         class:                  "_XPS";
         classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_OVERBRIDGE);
-        hide_wire_tiles:        bitmask(2);
-
     }
     graphics {
         sprite_layouts: [express_overpass_left_sw_ne(0), express_overpass_left_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         purchase: express_overpass_left;
         express_overpass_left;
     }
@@ -4145,12 +4195,11 @@ item(FEAT_STATIONS, express_right_overpass) {
         class:                  "_XPS";
         classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_OVERBRIDGE);
-        hide_wire_tiles:        bitmask(2);
-
     }
     graphics {
         sprite_layouts: [express_overpass_right_sw_ne(0), express_overpass_right_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         purchase: express_overpass_right;
         express_overpass_right;
     }
@@ -4206,13 +4255,17 @@ item(FEAT_STATIONS, express_station_building_1a) {
         class:                  "_BLD";
         classname:              string(STR_NAME_STATION_BUILDING);
         name:                   string(STR_NAME_STATION_COLNE);
-        non_traversable_tiles:  bitmask(0,1);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
     }
     graphics {
         sprite_layouts:         [express_building_1a_nw(0), express_building_1a_ne(0)];
         select_tile_type:       0;
+        availability:           switch_intro_year_express;
         purchase:               express_building_1a;
         express_building_1a;
     }
@@ -4262,13 +4315,17 @@ item(FEAT_STATIONS, express_station_building_1b) {
         class:                  "_BLD";
         classname:              string(STR_NAME_STATION_BUILDING);
         name:                   string(STR_NAME_STATION_COLNE);
-        non_traversable_tiles:  bitmask(0,1);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
     }
     graphics {
         sprite_layouts:         [express_building_1b_se(0), express_building_1b_sw(0)];
         select_tile_type:       0;
+        availability:           switch_intro_year_express;
         purchase:               express_building_1b;
         express_building_1b;
     }
@@ -4318,13 +4375,17 @@ item(FEAT_STATIONS, express_station_building_2a) {
         class:                  "_BLD";
         classname:              string(STR_NAME_STATION_BUILDING);
         name:                   string(STR_NAME_STATION_IRWELL);
-        non_traversable_tiles:  bitmask(0,1);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
     }
     graphics {
         sprite_layouts:         [express_building_2a_nw(0), express_building_2a_ne(0)];
         select_tile_type:       0;
+        availability:           switch_intro_year_express;
         purchase:               express_building_2a;
         express_building_2a;
     }
@@ -4374,13 +4435,17 @@ item(FEAT_STATIONS, express_station_building_2b) {
         class:                  "_BLD";
         classname:              string(STR_NAME_STATION_BUILDING);
         name:                   string(STR_NAME_STATION_IRWELL);
-        non_traversable_tiles:  bitmask(0,1);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
     }
     graphics {
         sprite_layouts:         [express_building_2b_se(0), express_building_2b_sw(0)];
         select_tile_type:       0;
+        availability:           switch_intro_year_express;
         purchase:               express_building_2b;
         express_building_2b;
     }
@@ -4430,13 +4495,17 @@ item(FEAT_STATIONS, express_station_building_3a) {
         class:                  "_BLD";
         classname:              string(STR_NAME_STATION_BUILDING);
         name:                   string(STR_NAME_STATION_LUNE);
-        non_traversable_tiles:  bitmask(0,1);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
     }
     graphics {
         sprite_layouts:         [express_building_3a_nw(0), express_building_3a_ne(0)];
         select_tile_type:       0;
+        availability:           switch_intro_year_express;
         purchase:               express_building_3a;
         express_building_3a;
     }
@@ -4486,13 +4555,17 @@ item(FEAT_STATIONS, express_station_building_3b) {
         class:                  "_BLD";
         classname:              string(STR_NAME_STATION_BUILDING);
         name:                   string(STR_NAME_STATION_LUNE);
-        non_traversable_tiles:  bitmask(0,1);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
     }
     graphics {
         sprite_layouts:         [express_building_3b_se(0), express_building_3b_sw(0)];
         select_tile_type:       0;
+        availability:           switch_intro_year_express;
         purchase:               express_building_3b;
         express_building_3b;
     }
@@ -4542,13 +4615,17 @@ item(FEAT_STATIONS, express_station_building_4a) {
         class:                  "_BLD";
         classname:              string(STR_NAME_STATION_BUILDING);
         name:                   string(STR_NAME_STATION_LEA);
-        non_traversable_tiles:  bitmask(0,1);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
     }
     graphics {
         sprite_layouts:         [express_building_4a_nw(0), express_building_4a_ne(0)];
         select_tile_type:       0;
+        availability:           switch_intro_year_express;
         purchase:               express_building_4a;
         express_building_4a;
     }
@@ -4598,20 +4675,141 @@ item(FEAT_STATIONS, express_station_building_4b) {
         class:                  "_BLD";
         classname:              string(STR_NAME_STATION_BUILDING);
         name:                   string(STR_NAME_STATION_LEA);
-        non_traversable_tiles:  bitmask(0,1);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
     }
     graphics {
         sprite_layouts:         [express_building_4b_se(0), express_building_4b_sw(0)];
         select_tile_type:       0;
+        availability:           switch_intro_year_express;
         purchase:               express_building_4b;
         express_building_4b;
     }
 }
 
+/****************************************/
+/***** FEATURE BUILDING FRONT ***********/
+/****************************************/
 
 
+spriteset (express_feature_building_tile_0, "stations_buildings_2.png") {
+    [  150, 690, 64, 96, -32, -66 ]
+    [  220, 690, 64, 96, -32, -66 ]
+}
+
+spriteset (express_feature_building_tile_1, "stations_buildings_2.png") {
+    [  80, 690, 64, 96, -32, -66 ]
+    [  290, 690, 64, 96, -32, -66 ]
+}
+
+spriteset (express_feature_building_tile_2, "stations_buildings_2.png") {
+    [  10, 690, 64, 96, -32, -66 ]
+    [  360, 690, 64, 96, -32, -66 ]
+}
+
+spritelayout express_feature_building_0(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        64;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout express_feature_building_1(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        64;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout express_feature_building_2(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        64;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout express_feature_building_3(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        64;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+switch (FEAT_STATIONS, SELF, switch_express_feature_building, platform_position_from_start(PLATFORM_SAME_SECTION)) {
+    0: return express_feature_building_tile_0;
+    1: return express_feature_building_tile_1;
+    2: return express_feature_building_tile_2;
+}
+
+item(FEAT_STATIONS, express_feature_building) {
+    property {
+        class:                  "_BLD";
+        classname:              string(STR_NAME_STATION_BUILDING);
+        name:                   string(STR_NAME_STATION_ITCHEN);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
+        disabled_platforms:     bitmask(0,2,3,4,5,6,7,8);
+        disabled_length:        bitmask(0,1,2,4,5,6,7,8);
+
+    }
+    graphics {
+        sprite_layouts: [express_feature_building_0(0), express_feature_building_1(0), express_feature_building_2(0), express_feature_building_3(0)];
+        select_tile_type: 0;
+        availability: switch_intro_year_express;
+        purchase: express_feature_building_tile_0;
+        switch_express_feature_building;
+    }
+}
 
 
 
@@ -4623,9 +4821,9 @@ item(FEAT_STATIONS, express_station_building_4b) {
 /***** FOOTBRIDGE WAYPOINT LEFT *****/
 
 spriteset (express_overbridge_waypoint_left, "stations_waypoints.png") {
-    [  10, 360, 64, 64, -32, -34 ]
-    [  80, 360, 64, 64, -32, -34 ]
-    [  150, 360, 64, 64, -32, -34 ]
+    [  10, 850, 64, 64, -32, -34 ]
+    [  80, 850, 64, 64, -32, -34 ]
+    [  150, 850, 64, 64, -32, -34 ]
 }
 
 spritelayout express_overbridge_waypoint_left_sw_ne(a) {
@@ -4678,12 +4876,11 @@ item(FEAT_STATIONS, express_left_overbridge_waypoint) {
         class:                  "WAYP";
         classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
-        hide_wire_tiles:        bitmask(2);
-
     }
     graphics {
         sprite_layouts: [express_overbridge_waypoint_left_sw_ne(0), express_overbridge_waypoint_left_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         purchase: express_overbridge_waypoint_left;
         express_overbridge_waypoint_left;
     }
@@ -4692,9 +4889,9 @@ item(FEAT_STATIONS, express_left_overbridge_waypoint) {
 /***** FOOTBRIDGE WAYPOINT RIGHT *****/
 
 spriteset (express_overbridge_waypoint_right, "stations_waypoints.png") {
-    [  220, 360, 64, 64, -32, -34 ]
-    [  290, 360, 64, 64, -32, -34 ]
-    [  360, 360, 64, 64, -32, -34 ]
+    [  220, 850, 64, 64, -32, -34 ]
+    [  290, 850, 64, 64, -32, -34 ]
+    [  360, 850, 64, 64, -32, -34 ]
 
 }
 
@@ -4748,71 +4945,12 @@ item(FEAT_STATIONS, express_right_overbridge_waypoint) {
         class:                  "WAYP";
         classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
-        hide_wire_tiles:        bitmask(2);
-
     }
     graphics {
         sprite_layouts: [express_overbridge_waypoint_right_sw_ne(0), express_overbridge_waypoint_right_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_express;
         purchase: express_overbridge_waypoint_right;
         express_overbridge_waypoint_right;
-    }
-}
-
-/***** SIGNALBOX WAYPOINT A *****/
-
-spriteset (express_signalbox_waypoint_a, "stations_waypoints.png") {
-    [  10, 290, 64, 64, -32, -34 ]
-    [  80, 290, 64, 64, -32, -34 ]
-
-}
-
-spritelayout express_signalbox_waypoint_a_sw_ne(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_X;
-    }
-        building {
-        sprite:         DEFAULT(0);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        4;
-        zextent:        20;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-spritelayout express_signalbox_waypoint_a_se_nw(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_Y;
-    }
-    building {
-        sprite:         DEFAULT(1);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        5;
-        yextent:        16;
-        zextent:        20;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-item(FEAT_STATIONS, express_signalbox_a_waypoint) {
-    property {
-        class:                  "WAYP";
-        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
-        name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
-        hide_wire_tiles:        bitmask(2);
-
-    }
-    graphics {
-        sprite_layouts: [express_signalbox_waypoint_a_sw_ne(0), express_signalbox_waypoint_a_se_nw(0)];
-        select_tile_type: 2;
-        purchase: express_signalbox_waypoint_a;
-        express_signalbox_waypoint_a;
     }
 }
