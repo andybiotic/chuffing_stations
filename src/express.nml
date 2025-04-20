@@ -1,68 +1,43 @@
-grf {
-    grfid: "NDY\05";
-    name: string(STR_GRF_NAME);
-    desc: string(STR_GRF_DESCRIPTION);
-    version: 1;
-    min_compatible_version: 1;
-}
-
-if (version_openttd(1,2,0,22723) > openttd_version) {
-    error(FATAL, REQUIRES_OPENTTD, string(STR_VERSION_22723));
-}
-
-cargotable {
-    PASS
-}
-
-switch (FEAT_STATIONS, SELF, switch_intro_year_darkbrick, current_year) {
-  0..1954: 0;
-  default: 1;
-}
-
 /***************************************************************************/
-/********************* DARK BRICK PLATFORMS ********************************/
+/********************* EXPRESS PLATFORMS ***********************************/
 /***************************************************************************/
-
-/***************************************/
-/***** PLATFORM WITH LIGHTS ************/
-/***************************************/
 
 /** PLATFORM LEFT **/
 
-spriteset (darkbrick_lights_platform_left, "stations_darkbrick.png") {
+spriteset (express_lights_platform_left, "src/stations_express.png") {
     [  10, 10, 64, 64, -32, -34 ]
     [  80, 10, 64, 64, -32, -34 ]
     [  10, 150, 64, 64, -32, -34 ]
     [  80, 150, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_lights_passengers_left_empty, "stations_darkbrick.png") {
+spriteset (express_lights_passengers_left_empty, "src/stations_express.png") {
     [  430, 710, 64, 64, -32, -34 ]
     [  640, 710, 64, 64, -32, -34 ]
     [  10, 150, 64, 64, -32, -34 ]
     [  80, 150, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_lights_passengers_left_half, "stations_darkbrick.png") {
+spriteset (express_lights_passengers_left_half, "src/stations_express.png") {
     [  500, 710, 64, 64, -32, -34 ]
     [  710, 710, 64, 64, -32, -34 ]
     [  10, 150, 64, 64, -32, -34 ]
     [  80, 150, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_lights_passengers_left_full, "stations_darkbrick.png") {
+spriteset (express_lights_passengers_left_full, "src/stations_express.png") {
     [  570, 710, 64, 64, -32, -34 ]
     [  780, 710, 64, 64, -32, -34 ]
     [  10, 150, 64, 64, -32, -34 ]
     [  80, 150, 64, 64, -32, -34 ]
 }
 
-spritegroup darkbrick_lights_passengers_left {
-    little: [darkbrick_lights_passengers_left_empty, darkbrick_lights_passengers_left_half];
-    lots: darkbrick_lights_passengers_left_full;
+spritegroup express_lights_passengers_left {
+    little: [express_lights_passengers_left_empty, express_lights_passengers_left_half];
+    lots: express_lights_passengers_left_full;
 }
 
-spritelayout darkbrick_lights_platform_left_sw_ne(a) {
+spritelayout express_lights_platform_left_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -84,13 +59,13 @@ spritelayout darkbrick_lights_platform_left_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout darkbrick_lights_platform_left_se_nw(a) {
+spritelayout express_lights_platform_left_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -112,65 +87,65 @@ spritelayout darkbrick_lights_platform_left_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, darkbrick_lights_platform_left_station) {
+item(FEAT_STATIONS, express_lights_platform_left_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_LAMPS);
         cargo_threshold:        240;
     }
     graphics {
-        sprite_layouts: [darkbrick_lights_platform_left_sw_ne(0), darkbrick_lights_platform_left_se_nw(0)];
+        sprite_layouts: [express_lights_platform_left_sw_ne(0), express_lights_platform_left_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        PASS: darkbrick_lights_passengers_left;
-        purchase: darkbrick_lights_platform_left;
-        darkbrick_lights_platform_left;
+        availability: switch_intro_year_express;
+        PASS: express_lights_passengers_left;
+        purchase: express_lights_platform_left;
+        express_lights_platform_left;
     }
 }
 
 /** PLATFORM RIGHT **/
 
-spriteset (darkbrick_lights_platform_right, "stations_darkbrick.png") {
+spriteset (express_lights_platform_right, "src/stations_express.png") {
     [  150, 10, 64, 64, -32, -34 ]
     [  220, 10, 64, 64, -32, -34 ]
     [  150, 150, 64, 64, -32, -34 ]
     [  220, 150, 64, 64, -32, -34 ]
 }
-spriteset (darkbrick_lights_passengers_right_empty, "stations_darkbrick.png") {
+spriteset (express_lights_passengers_right_empty, "src/stations_express.png") {
     [  430, 780, 64, 64, -32, -34 ]
     [  640, 780, 64, 64, -32, -34 ]
     [  150, 150, 64, 64, -32, -34 ]
     [  220, 150, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_lights_passengers_right_half, "stations_darkbrick.png") {
+spriteset (express_lights_passengers_right_half, "src/stations_express.png") {
     [  500, 780, 64, 64, -32, -34 ]
     [  710, 780, 64, 64, -32, -34 ]
     [  150, 150, 64, 64, -32, -34 ]
     [  220, 150, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_lights_passengers_right_full, "stations_darkbrick.png") {
+spriteset (express_lights_passengers_right_full, "src/stations_express.png") {
     [  570, 780, 64, 64, -32, -34 ]
     [  780, 780, 64, 64, -32, -34 ]
     [  150, 150, 64, 64, -32, -34 ]
     [  220, 150, 64, 64, -32, -34 ]
 }
 
-spritegroup darkbrick_lights_passengers_right {
-    little: [darkbrick_lights_passengers_right_empty, darkbrick_lights_passengers_right_half];
-    lots: darkbrick_lights_passengers_right_full;
+spritegroup express_lights_passengers_right {
+    little: [express_lights_passengers_right_empty, express_lights_passengers_right_half];
+    lots: express_lights_passengers_right_full;
 }
 
 
-spritelayout darkbrick_lights_platform_right_sw_ne(a) {
+spritelayout express_lights_platform_right_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -192,13 +167,13 @@ spritelayout darkbrick_lights_platform_right_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout darkbrick_lights_platform_right_se_nw(a) {
+spritelayout express_lights_platform_right_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -220,26 +195,26 @@ spritelayout darkbrick_lights_platform_right_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, darkbrick_lights_platform_right_station) {
+item(FEAT_STATIONS, express_lights_platform_right_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_LAMPS);
         cargo_threshold:        240;
     }
     graphics {
-        sprite_layouts: [darkbrick_lights_platform_right_sw_ne(0), darkbrick_lights_platform_right_se_nw(0)];
+        sprite_layouts: [express_lights_platform_right_sw_ne(0), express_lights_platform_right_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        PASS: darkbrick_lights_passengers_right;
-        purchase: darkbrick_lights_platform_right;
-        darkbrick_lights_platform_right;
+        availability: switch_intro_year_express;
+        PASS: express_lights_passengers_right;
+        purchase: express_lights_platform_right;
+        express_lights_platform_right;
     }
 }
 
@@ -249,40 +224,40 @@ item(FEAT_STATIONS, darkbrick_lights_platform_right_station) {
 
 /** PLATFORM LEFT **/
 
-spriteset (darkbrick_fenceandlights_platform_left, "stations_darkbrick.png") {
+spriteset (express_fenceandlights_platform_left, "src/stations_express.png") {
     [  10, 80, 64, 64, -32, -34 ]
     [  80, 80, 64, 64, -32, -34 ]
     [  10, 220, 64, 64, -32, -34 ]
     [  80, 220, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_fenceandlights_platform_left_empty, "stations_darkbrick.png") {
+spriteset (express_fenceandlights_platform_left_empty, "src/stations_express.png") {
     [  430, 850, 64, 64, -32, -34 ]
     [  640, 850, 64, 64, -32, -34 ]
     [  10, 220, 64, 64, -32, -34 ]
     [  80, 220, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_fenceandlights_platform_left_half, "stations_darkbrick.png") {
+spriteset (express_fenceandlights_platform_left_half, "src/stations_express.png") {
     [  500, 850, 64, 64, -32, -34 ]
     [  710, 850, 64, 64, -32, -34 ]
     [  10, 220, 64, 64, -32, -34 ]
     [  80, 220, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_fenceandlights_platform_left_full, "stations_darkbrick.png") {
+spriteset (express_fenceandlights_platform_left_full, "src/stations_express.png") {
     [  570, 850, 64, 64, -32, -34 ]
     [  780, 850, 64, 64, -32, -34 ]
     [  10, 220, 64, 64, -32, -34 ]
     [  80, 220, 64, 64, -32, -34 ]
 }
 
-spritegroup darkbrick_fenceandlights_passengers_left {
-    little: [darkbrick_fenceandlights_platform_left_empty, darkbrick_fenceandlights_platform_left_half];
-    lots: darkbrick_fenceandlights_platform_left_full;
+spritegroup express_fenceandlights_passengers_left {
+    little: [express_fenceandlights_platform_left_empty, express_fenceandlights_platform_left_half];
+    lots: express_fenceandlights_platform_left_full;
 }
 
-spritelayout darkbrick_fenceandlights_platform_left_sw_ne(a) {
+spritelayout express_fenceandlights_platform_left_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -304,13 +279,13 @@ spritelayout darkbrick_fenceandlights_platform_left_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout darkbrick_fenceandlights_platform_left_se_nw(a) {
+spritelayout express_fenceandlights_platform_left_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -332,65 +307,65 @@ spritelayout darkbrick_fenceandlights_platform_left_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, darkbrick_fenceandlights_platform_left_station) {
+item(FEAT_STATIONS, express_fenceandlights_platform_left_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_LAMPS);
         cargo_threshold:        240;
     }
     graphics {
-        sprite_layouts: [darkbrick_fenceandlights_platform_left_sw_ne(0), darkbrick_fenceandlights_platform_left_se_nw(0)];
+        sprite_layouts: [express_fenceandlights_platform_left_sw_ne(0), express_fenceandlights_platform_left_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        PASS: darkbrick_fenceandlights_passengers_left;
-        purchase: darkbrick_fenceandlights_platform_left;
-        darkbrick_fenceandlights_platform_left;
+        availability: switch_intro_year_express;
+        PASS: express_fenceandlights_passengers_left;
+        purchase: express_fenceandlights_platform_left;
+        express_fenceandlights_platform_left;
     }
 }
 
 /** PLATFORM RIGHT **/
 
-spriteset (darkbrick_fenceandlights_platform_right, "stations_darkbrick.png") {
+spriteset (express_fenceandlights_platform_right, "src/stations_express.png") {
     [  150, 80, 64, 64, -32, -34 ]
     [  220, 80, 64, 64, -32, -34 ]
     [  150, 220, 64, 64, -32, -34 ]
     [  220, 220, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_fenceandlights_platform_right_empty, "stations_darkbrick.png") {
+spriteset (express_fenceandlights_platform_right_empty, "src/stations_express.png") {
     [  430, 920, 64, 64, -32, -34 ]
     [  640, 920, 64, 64, -32, -34 ]
     [  150, 220, 64, 64, -32, -34 ]
     [  220, 220, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_fenceandlights_platform_right_half, "stations_darkbrick.png") {
+spriteset (express_fenceandlights_platform_right_half, "src/stations_express.png") {
     [  500, 920, 64, 64, -32, -34 ]
     [  710, 920, 64, 64, -32, -34 ]
     [  150, 220, 64, 64, -32, -34 ]
     [  220, 220, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_fenceandlights_platform_right_full, "stations_darkbrick.png") {
+spriteset (express_fenceandlights_platform_right_full, "src/stations_express.png") {
     [  570, 920, 64, 64, -32, -34 ]
     [  780, 920, 64, 64, -32, -34 ]
     [  150, 220, 64, 64, -32, -34 ]
     [  220, 220, 64, 64, -32, -34 ]
 }
 
-spritegroup darkbrick_fenceandlights_passengers_right {
-    little: [darkbrick_fenceandlights_platform_right_empty, darkbrick_fenceandlights_platform_right_half];
-    lots: darkbrick_fenceandlights_platform_right_full;
+spritegroup express_fenceandlights_passengers_right {
+    little: [express_fenceandlights_platform_right_empty, express_fenceandlights_platform_right_half];
+    lots: express_fenceandlights_platform_right_full;
 }
 
-spritelayout darkbrick_fenceandlights_platform_right_sw_ne(a) {
+spritelayout express_fenceandlights_platform_right_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -412,13 +387,13 @@ spritelayout darkbrick_fenceandlights_platform_right_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout darkbrick_fenceandlights_platform_right_se_nw(a) {
+spritelayout express_fenceandlights_platform_right_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -440,26 +415,26 @@ spritelayout darkbrick_fenceandlights_platform_right_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, darkbrick_fenceandlights_platform_right_station) {
+item(FEAT_STATIONS, express_fenceandlights_platform_right_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_LAMPS);
         cargo_threshold:        240;
     }
     graphics {
-        sprite_layouts: [darkbrick_fenceandlights_platform_right_sw_ne(0), darkbrick_fenceandlights_platform_right_se_nw(0)];
+        sprite_layouts: [express_fenceandlights_platform_right_sw_ne(0), express_fenceandlights_platform_right_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        PASS: darkbrick_fenceandlights_passengers_right;
-        purchase: darkbrick_fenceandlights_platform_right;
-        darkbrick_fenceandlights_platform_right;
+        availability: switch_intro_year_express;
+        PASS: express_fenceandlights_passengers_right;
+        purchase: express_fenceandlights_platform_right;
+        express_fenceandlights_platform_right;
     }
 }
 
@@ -469,40 +444,40 @@ item(FEAT_STATIONS, darkbrick_fenceandlights_platform_right_station) {
 
 /** PLATFORM LEFT **/
 
-spriteset (darkbrick_sign_platform_left, "stations_darkbrick.png") {
+spriteset (express_sign_platform_left, "src/stations_express.png") {
     [  10, 10, 64, 64, -32, -34 ]
     [  80, 10, 64, 64, -32, -34 ]
     [  290, 150, 64, 64, -32, -34 ]
     [  360, 150, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_sign_platform_left_empty, "stations_darkbrick.png") {
+spriteset (express_sign_platform_left_empty, "src/stations_express.png") {
     [  430, 710, 64, 64, -32, -34 ]
     [  640, 710, 64, 64, -32, -34 ]
     [  290, 150, 64, 64, -32, -34 ]
     [  360, 150, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_sign_platform_left_half, "stations_darkbrick.png") {
+spriteset (express_sign_platform_left_half, "src/stations_express.png") {
     [  500, 710, 64, 64, -32, -34 ]
     [  710, 710, 64, 64, -32, -34 ]
     [  290, 150, 64, 64, -32, -34 ]
     [  360, 150, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_sign_platform_left_full, "stations_darkbrick.png") {
+spriteset (express_sign_platform_left_full, "src/stations_express.png") {
     [  570, 710, 64, 64, -32, -34 ]
     [  780, 710, 64, 64, -32, -34 ]
     [  290, 150, 64, 64, -32, -34 ]
     [  360, 150, 64, 64, -32, -34 ]
 }
 
-spritegroup darkbrick_sign_passengers_left {
-    little: [darkbrick_sign_platform_left_empty, darkbrick_sign_platform_left_half];
-    lots: darkbrick_sign_platform_left_full;
+spritegroup express_sign_passengers_left {
+    little: [express_sign_platform_left_empty, express_sign_platform_left_half];
+    lots: express_sign_platform_left_full;
 }
 
-spritelayout darkbrick_sign_platform_left_sw_ne(a) {
+spritelayout express_sign_platform_left_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -524,13 +499,13 @@ spritelayout darkbrick_sign_platform_left_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout darkbrick_sign_platform_left_se_nw(a) {
+spritelayout express_sign_platform_left_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -552,66 +527,66 @@ spritelayout darkbrick_sign_platform_left_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, darkbrick_sign_platform_left_station) {
+item(FEAT_STATIONS, express_sign_platform_left_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SIGN);
         cargo_threshold:        240;
     }
     graphics {
-        sprite_layouts: [darkbrick_sign_platform_left_sw_ne(0), darkbrick_sign_platform_left_se_nw(0)];
+        sprite_layouts: [express_sign_platform_left_sw_ne(0), express_sign_platform_left_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        PASS: darkbrick_sign_passengers_left;
-        purchase: darkbrick_sign_platform_left;
-        darkbrick_sign_platform_left;
+        availability: switch_intro_year_express;
+        PASS: express_sign_passengers_left;
+        purchase: express_sign_platform_left;
+        express_sign_platform_left;
     }
 }
 
 
 /** PLATFORM RIGHT **/
 
-spriteset (darkbrick_sign_platform_right, "stations_darkbrick.png") {
+spriteset (express_sign_platform_right, "src/stations_express.png") {
     [  150, 10, 64, 64, -32, -34 ]
     [  220, 10, 64, 64, -32, -34 ]
     [  430, 150, 64, 64, -32, -34 ]
     [  500, 150, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_sign_platform_right_empty, "stations_darkbrick.png") {
+spriteset (express_sign_platform_right_empty, "src/stations_express.png") {
     [  430, 780, 64, 64, -32, -34 ]
     [  640, 780, 64, 64, -32, -34 ]
     [  430, 150, 64, 64, -32, -34 ]
     [  500, 150, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_sign_platform_right_half, "stations_darkbrick.png") {
+spriteset (express_sign_platform_right_half, "src/stations_express.png") {
     [  500, 780, 64, 64, -32, -34 ]
     [  710, 780, 64, 64, -32, -34 ]
     [  430, 150, 64, 64, -32, -34 ]
     [  500, 150, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_sign_platform_right_full, "stations_darkbrick.png") {
+spriteset (express_sign_platform_right_full, "src/stations_express.png") {
     [  570, 780, 64, 64, -32, -34 ]
     [  780, 780, 64, 64, -32, -34 ]
     [  430, 150, 64, 64, -32, -34 ]
     [  500, 150, 64, 64, -32, -34 ]
 }
 
-spritegroup darkbrick_sign_passengers_right {
-    little: [darkbrick_sign_platform_right_empty, darkbrick_sign_platform_right_half];
-    lots: darkbrick_sign_platform_right_full;
+spritegroup express_sign_passengers_right {
+    little: [express_sign_platform_right_empty, express_sign_platform_right_half];
+    lots: express_sign_platform_right_full;
 }
 
-spritelayout darkbrick_sign_platform_right_sw_ne(a) {
+spritelayout express_sign_platform_right_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -633,13 +608,13 @@ spritelayout darkbrick_sign_platform_right_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout darkbrick_sign_platform_right_se_nw(a) {
+spritelayout express_sign_platform_right_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -661,26 +636,26 @@ spritelayout darkbrick_sign_platform_right_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, darkbrick_sign_platform_right_station) {
+item(FEAT_STATIONS, express_sign_platform_right_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SIGN);
         cargo_threshold:        240;
     }
     graphics {
-        sprite_layouts: [darkbrick_sign_platform_right_sw_ne(0), darkbrick_sign_platform_right_se_nw(0)];
+        sprite_layouts: [express_sign_platform_right_sw_ne(0), express_sign_platform_right_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        PASS: darkbrick_sign_passengers_right;
-        purchase: darkbrick_sign_platform_right;
-        darkbrick_sign_platform_right;
+        availability: switch_intro_year_express;
+        PASS: express_sign_passengers_right;
+        purchase: express_sign_platform_right;
+        express_sign_platform_right;
     }
 }
 
@@ -690,40 +665,40 @@ item(FEAT_STATIONS, darkbrick_sign_platform_right_station) {
 
 /** PLATFORM LEFT **/
 
-spriteset (darkbrick_fenceandsign_platform_left, "stations_darkbrick.png") {
+spriteset (express_fenceandsign_platform_left, "src/stations_express.png") {
     [  10, 80, 64, 64, -32, -34 ]
     [  80, 80, 64, 64, -32, -34 ]
     [  290, 220, 64, 64, -32, -34 ]
     [  360, 220, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_fenceandsign_platform_left_empty, "stations_darkbrick.png") {
+spriteset (express_fenceandsign_platform_left_empty, "src/stations_express.png") {
     [  430, 850, 64, 64, -32, -34 ]
     [  640, 850, 64, 64, -32, -34 ]
     [  290, 220, 64, 64, -32, -34 ]
     [  360, 220, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_fenceandsign_platform_left_half, "stations_darkbrick.png") {
+spriteset (express_fenceandsign_platform_left_half, "src/stations_express.png") {
     [  500, 850, 64, 64, -32, -34 ]
     [  710, 850, 64, 64, -32, -34 ]
     [  290, 220, 64, 64, -32, -34 ]
     [  360, 220, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_fenceandsign_platform_left_full, "stations_darkbrick.png") {
+spriteset (express_fenceandsign_platform_left_full, "src/stations_express.png") {
     [  570, 850, 64, 64, -32, -34 ]
     [  780, 850, 64, 64, -32, -34 ]
     [  290, 220, 64, 64, -32, -34 ]
     [  360, 220, 64, 64, -32, -34 ]
 }
 
-spritegroup darkbrick_fenceandsign_passengers_left {
-    little: [darkbrick_fenceandsign_platform_left_empty, darkbrick_fenceandsign_platform_left_half];
-    lots: darkbrick_fenceandsign_platform_left_full;
+spritegroup express_fenceandsign_passengers_left {
+    little: [express_fenceandsign_platform_left_empty, express_fenceandsign_platform_left_half];
+    lots: express_fenceandsign_platform_left_full;
 }
 
-spritelayout darkbrick_fenceandsign_platform_left_sw_ne(a) {
+spritelayout express_fenceandsign_platform_left_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -745,13 +720,13 @@ spritelayout darkbrick_fenceandsign_platform_left_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout darkbrick_fenceandsign_platform_left_se_nw(a) {
+spritelayout express_fenceandsign_platform_left_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -773,65 +748,65 @@ spritelayout darkbrick_fenceandsign_platform_left_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, darkbrick_fenceandsign_platform_left_station) {
+item(FEAT_STATIONS, express_fenceandsign_platform_left_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SIGN);
         cargo_threshold:        240;
     }
     graphics {
-        sprite_layouts: [darkbrick_fenceandsign_platform_left_sw_ne(0), darkbrick_fenceandsign_platform_left_se_nw(0)];
+        sprite_layouts: [express_fenceandsign_platform_left_sw_ne(0), express_fenceandsign_platform_left_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        PASS: darkbrick_fenceandsign_passengers_left;
-        purchase: darkbrick_fenceandsign_platform_left;
-        darkbrick_fenceandsign_platform_left;
+        availability: switch_intro_year_express;
+        PASS: express_fenceandsign_passengers_left;
+        purchase: express_fenceandsign_platform_left;
+        express_fenceandsign_platform_left;
     }
 }
 
 /** PLATFORM RIGHT **/
 
-spriteset (darkbrick_fenceandsign_platform_right, "stations_darkbrick.png") {
+spriteset (express_fenceandsign_platform_right, "src/stations_express.png") {
     [  150, 80, 64, 64, -32, -34 ]
     [  220, 80, 64, 64, -32, -34 ]
     [  430, 220, 64, 64, -32, -34 ]
     [  500, 220, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_fenceandsign_platform_right_empty, "stations_darkbrick.png") {
+spriteset (express_fenceandsign_platform_right_empty, "src/stations_express.png") {
     [  430, 920, 64, 64, -32, -34 ]
     [  640, 920, 64, 64, -32, -34 ]
     [  430, 220, 64, 64, -32, -34 ]
     [  500, 220, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_fenceandsign_platform_right_half, "stations_darkbrick.png") {
+spriteset (express_fenceandsign_platform_right_half, "src/stations_express.png") {
     [  500, 920, 64, 64, -32, -34 ]
     [  710, 920, 64, 64, -32, -34 ]
     [  430, 220, 64, 64, -32, -34 ]
     [  500, 220, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_fenceandsign_platform_right_full, "stations_darkbrick.png") {
+spriteset (express_fenceandsign_platform_right_full, "src/stations_express.png") {
     [  570, 920, 64, 64, -32, -34 ]
     [  780, 920, 64, 64, -32, -34 ]
     [  430, 220, 64, 64, -32, -34 ]
     [  500, 220, 64, 64, -32, -34 ]
 }
 
-spritegroup darkbrick_fenceandsign_passengers_right {
-    little: [darkbrick_fenceandsign_platform_right_empty, darkbrick_fenceandsign_platform_right_half];
-    lots: darkbrick_fenceandsign_platform_right_full;
+spritegroup express_fenceandsign_passengers_right {
+    little: [express_fenceandsign_platform_right_empty, express_fenceandsign_platform_right_half];
+    lots: express_fenceandsign_platform_right_full;
 }
 
-spritelayout darkbrick_fenceandsign_platform_right_sw_ne(a) {
+spritelayout express_fenceandsign_platform_right_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -853,13 +828,13 @@ spritelayout darkbrick_fenceandsign_platform_right_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout darkbrick_fenceandsign_platform_right_se_nw(a) {
+spritelayout express_fenceandsign_platform_right_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -881,26 +856,26 @@ spritelayout darkbrick_fenceandsign_platform_right_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, darkbrick_fenceandsign_platform_right_station) {
+item(FEAT_STATIONS, express_fenceandsign_platform_right_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SIGN);
         cargo_threshold:        240;
     }
     graphics {
-        sprite_layouts: [darkbrick_fenceandsign_platform_right_sw_ne(0), darkbrick_fenceandsign_platform_right_se_nw(0)];
+        sprite_layouts: [express_fenceandsign_platform_right_sw_ne(0), express_fenceandsign_platform_right_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        PASS: darkbrick_fenceandsign_passengers_right;
-        purchase: darkbrick_fenceandsign_platform_right;
-        darkbrick_fenceandsign_platform_right;
+        availability: switch_intro_year_express;
+        PASS: express_fenceandsign_passengers_right;
+        purchase: express_fenceandsign_platform_right;
+        express_fenceandsign_platform_right;
     }
 }
 
@@ -910,40 +885,40 @@ item(FEAT_STATIONS, darkbrick_fenceandsign_platform_right_station) {
 
 /** PLATFORM LEFT **/
 
-spriteset (darkbrick_advert_platform_left, "stations_darkbrick.png") {
+spriteset (express_advert_platform_left, "src/stations_express.png") {
     [  10, 10, 64, 64, -32, -34 ]
     [  80, 10, 64, 64, -32, -34 ]
     [  10, 290, 64, 64, -32, -34 ]
     [  80, 290, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_advert_platform_left_empty, "stations_darkbrick.png") {
+spriteset (express_advert_platform_left_empty, "src/stations_express.png") {
     [  430, 710, 64, 64, -32, -34 ]
     [  640, 710, 64, 64, -32, -34 ]
     [  10, 290, 64, 64, -32, -34 ]
     [  80, 290, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_advert_platform_left_half, "stations_darkbrick.png") {
+spriteset (express_advert_platform_left_half, "src/stations_express.png") {
     [  500, 710, 64, 64, -32, -34 ]
     [  710, 710, 64, 64, -32, -34 ]
     [  10, 290, 64, 64, -32, -34 ]
     [  80, 290, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_advert_platform_left_full, "stations_darkbrick.png") {
+spriteset (express_advert_platform_left_full, "src/stations_express.png") {
     [  570, 710, 64, 64, -32, -34 ]
     [  780, 710, 64, 64, -32, -34 ]
     [  10, 290, 64, 64, -32, -34 ]
     [  80, 290, 64, 64, -32, -34 ]
 }
 
-spritegroup darkbrick_advert_passengers_left {
-    little: [darkbrick_advert_platform_left_empty, darkbrick_advert_platform_left_half];
-    lots: darkbrick_advert_platform_left_full;
+spritegroup express_advert_passengers_left {
+    little: [express_advert_platform_left_empty, express_advert_platform_left_half];
+    lots: express_advert_platform_left_full;
 }
 
-spritelayout darkbrick_advert_platform_left_sw_ne(a) {
+spritelayout express_advert_platform_left_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -965,13 +940,13 @@ spritelayout darkbrick_advert_platform_left_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout darkbrick_advert_platform_left_se_nw(a) {
+spritelayout express_advert_platform_left_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -993,65 +968,65 @@ spritelayout darkbrick_advert_platform_left_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, darkbrick_advert_platform_left_station) {
+item(FEAT_STATIONS, express_advert_platform_left_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_ADVERT);
         cargo_threshold:        240;
     }
     graphics {
-        sprite_layouts: [darkbrick_advert_platform_left_sw_ne(0), darkbrick_advert_platform_left_se_nw(0)];
+        sprite_layouts: [express_advert_platform_left_sw_ne(0), express_advert_platform_left_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        PASS: darkbrick_advert_passengers_left;
-        purchase: darkbrick_advert_platform_left;
-        darkbrick_advert_platform_left;
+        availability: switch_intro_year_express;
+        PASS: express_advert_passengers_left;
+        purchase: express_advert_platform_left;
+        express_advert_platform_left;
     }
 }
 
 /** PLATFORM RIGHT **/
 
-spriteset (darkbrick_advert_platform_right, "stations_darkbrick.png") {
+spriteset (express_advert_platform_right, "src/stations_express.png") {
     [  150, 10, 64, 64, -32, -34 ]
     [  220, 10, 64, 64, -32, -34 ]
     [  150, 290, 64, 64, -32, -34 ]
     [  220, 290, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_advert_platform_right_empty, "stations_darkbrick.png") {
+spriteset (express_advert_platform_right_empty, "src/stations_express.png") {
     [  430, 780, 64, 64, -32, -34 ]
     [  640, 780, 64, 64, -32, -34 ]
     [  150, 290, 64, 64, -32, -34 ]
     [  220, 290, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_advert_platform_right_half, "stations_darkbrick.png") {
+spriteset (express_advert_platform_right_half, "src/stations_express.png") {
     [  500, 780, 64, 64, -32, -34 ]
     [  710, 780, 64, 64, -32, -34 ]
     [  150, 290, 64, 64, -32, -34 ]
     [  220, 290, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_advert_platform_right_full, "stations_darkbrick.png") {
+spriteset (express_advert_platform_right_full, "src/stations_express.png") {
     [  570, 780, 64, 64, -32, -34 ]
     [  780, 780, 64, 64, -32, -34 ]
     [  150, 290, 64, 64, -32, -34 ]
     [  220, 290, 64, 64, -32, -34 ]
 }
 
-spritegroup darkbrick_advert_passengers_right {
-    little: [darkbrick_advert_platform_right_empty, darkbrick_advert_platform_right_half];
-    lots: darkbrick_advert_platform_right_full;
+spritegroup express_advert_passengers_right {
+    little: [express_advert_platform_right_empty, express_advert_platform_right_half];
+    lots: express_advert_platform_right_full;
 }
 
-spritelayout darkbrick_advert_platform_right_sw_ne(a) {
+spritelayout express_advert_platform_right_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -1073,13 +1048,13 @@ spritelayout darkbrick_advert_platform_right_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout darkbrick_advert_platform_right_se_nw(a) {
+spritelayout express_advert_platform_right_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -1101,26 +1076,26 @@ spritelayout darkbrick_advert_platform_right_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, darkbrick_advert_platform_right_station) {
+item(FEAT_STATIONS, express_advert_platform_right_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_ADVERT);
         cargo_threshold:        240;
     }
     graphics {
-        sprite_layouts: [darkbrick_advert_platform_right_sw_ne(0), darkbrick_advert_platform_right_se_nw(0)];
+        sprite_layouts: [express_advert_platform_right_sw_ne(0), express_advert_platform_right_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        PASS: darkbrick_advert_passengers_right;
-        purchase: darkbrick_advert_platform_right;
-        darkbrick_advert_platform_right;
+        availability: switch_intro_year_express;
+        PASS: express_advert_passengers_right;
+        purchase: express_advert_platform_right;
+        express_advert_platform_right;
     }
 }
 
@@ -1130,40 +1105,40 @@ item(FEAT_STATIONS, darkbrick_advert_platform_right_station) {
 
 /** PLATFORM LEFT **/
 
-spriteset (darkbrick_fenceandadvert_platform_left, "stations_darkbrick.png") {
+spriteset (express_fenceandadvert_platform_left, "src/stations_express.png") {
     [  10, 80, 64, 64, -32, -34 ]
     [  80, 80, 64, 64, -32, -34 ]
     [  10, 360, 64, 64, -32, -34 ]
     [  80, 360, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_fenceandadvert_platform_left_empty, "stations_darkbrick.png") {
+spriteset (express_fenceandadvert_platform_left_empty, "src/stations_express.png") {
     [  430, 850, 64, 64, -32, -34 ]
     [  640, 850, 64, 64, -32, -34 ]
     [  10, 360, 64, 64, -32, -34 ]
     [  80, 360, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_fenceandadvert_platform_left_half, "stations_darkbrick.png") {
+spriteset (express_fenceandadvert_platform_left_half, "src/stations_express.png") {
     [  500, 850, 64, 64, -32, -34 ]
     [  710, 850, 64, 64, -32, -34 ]
     [  10, 360, 64, 64, -32, -34 ]
     [  80, 360, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_fenceandadvert_platform_left_full, "stations_darkbrick.png") {
+spriteset (express_fenceandadvert_platform_left_full, "src/stations_express.png") {
     [  570, 850, 64, 64, -32, -34 ]
     [  780, 850, 64, 64, -32, -34 ]
     [  10, 360, 64, 64, -32, -34 ]
     [  80, 360, 64, 64, -32, -34 ]
 }
 
-spritegroup darkbrick_fenceandadvert_passengers_left {
-    little: [darkbrick_fenceandadvert_platform_left_empty, darkbrick_fenceandadvert_platform_left_half];
-    lots: darkbrick_fenceandadvert_platform_left_full;
+spritegroup express_fenceandadvert_passengers_left {
+    little: [express_fenceandadvert_platform_left_empty, express_fenceandadvert_platform_left_half];
+    lots: express_fenceandadvert_platform_left_full;
 }
 
-spritelayout darkbrick_fenceandadvert_platform_left_sw_ne(a) {
+spritelayout express_fenceandadvert_platform_left_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -1185,13 +1160,13 @@ spritelayout darkbrick_fenceandadvert_platform_left_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout darkbrick_fenceandadvert_platform_left_se_nw(a) {
+spritelayout express_fenceandadvert_platform_left_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -1213,65 +1188,65 @@ spritelayout darkbrick_fenceandadvert_platform_left_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, darkbrick_fenceandadvert_platform_left_station) {
+item(FEAT_STATIONS, express_fenceandadvert_platform_left_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_ADVERT);
         cargo_threshold:        240;
     }
     graphics {
-        sprite_layouts: [darkbrick_fenceandadvert_platform_left_sw_ne(0), darkbrick_fenceandadvert_platform_left_se_nw(0)];
+        sprite_layouts: [express_fenceandadvert_platform_left_sw_ne(0), express_fenceandadvert_platform_left_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        PASS: darkbrick_fenceandadvert_passengers_left;
-        purchase: darkbrick_fenceandadvert_platform_left;
-        darkbrick_fenceandadvert_platform_left;
+        availability: switch_intro_year_express;
+        PASS: express_fenceandadvert_passengers_left;
+        purchase: express_fenceandadvert_platform_left;
+        express_fenceandadvert_platform_left;
     }
 }
 
 /** PLATFORM RIGHT **/
 
-spriteset (darkbrick_fenceandadvert_platform_right, "stations_darkbrick.png") {
+spriteset (express_fenceandadvert_platform_right, "src/stations_express.png") {
     [  150, 80, 64, 64, -32, -34 ]
     [  220, 80, 64, 64, -32, -34 ]
     [  150, 360, 64, 64, -32, -34 ]
     [  220, 360, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_fenceandadvert_platform_right_empty, "stations_darkbrick.png") {
+spriteset (express_fenceandadvert_platform_right_empty, "src/stations_express.png") {
     [  430, 920, 64, 64, -32, -34 ]
     [  640, 920, 64, 64, -32, -34 ]
     [  150, 360, 64, 64, -32, -34 ]
     [  220, 360, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_fenceandadvert_platform_right_half, "stations_darkbrick.png") {
+spriteset (express_fenceandadvert_platform_right_half, "src/stations_express.png") {
     [  500, 920, 64, 64, -32, -34 ]
     [  710, 920, 64, 64, -32, -34 ]
     [  150, 360, 64, 64, -32, -34 ]
     [  220, 360, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_fenceandadvert_platform_right_full, "stations_darkbrick.png") {
+spriteset (express_fenceandadvert_platform_right_full, "src/stations_express.png") {
     [  570, 920, 64, 64, -32, -34 ]
     [  780, 920, 64, 64, -32, -34 ]
     [  150, 360, 64, 64, -32, -34 ]
     [  220, 360, 64, 64, -32, -34 ]
 }
 
-spritegroup darkbrick_fenceandadvert_passengers_right {
-    little: [darkbrick_fenceandadvert_platform_right_empty, darkbrick_fenceandadvert_platform_right_half];
-    lots: darkbrick_fenceandadvert_platform_right_full;
+spritegroup express_fenceandadvert_passengers_right {
+    little: [express_fenceandadvert_platform_right_empty, express_fenceandadvert_platform_right_half];
+    lots: express_fenceandadvert_platform_right_full;
 }
 
-spritelayout darkbrick_fenceandadvert_platform_right_sw_ne(a) {
+spritelayout express_fenceandadvert_platform_right_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -1293,13 +1268,13 @@ spritelayout darkbrick_fenceandadvert_platform_right_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout darkbrick_fenceandadvert_platform_right_se_nw(a) {
+spritelayout express_fenceandadvert_platform_right_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -1321,26 +1296,26 @@ spritelayout darkbrick_fenceandadvert_platform_right_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, darkbrick_fenceandadvert_platform_right_station) {
+item(FEAT_STATIONS, express_fenceandadvert_platform_right_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_ADVERT);
         cargo_threshold:        240;
     }
     graphics {
-        sprite_layouts: [darkbrick_fenceandadvert_platform_right_sw_ne(0), darkbrick_fenceandadvert_platform_right_se_nw(0)];
+        sprite_layouts: [express_fenceandadvert_platform_right_sw_ne(0), express_fenceandadvert_platform_right_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        PASS: darkbrick_fenceandadvert_passengers_right;
-        purchase: darkbrick_fenceandadvert_platform_right;
-        darkbrick_fenceandadvert_platform_right;
+        availability: switch_intro_year_express;
+        PASS: express_fenceandadvert_passengers_right;
+        purchase: express_fenceandadvert_platform_right;
+        express_fenceandadvert_platform_right;
     }
 }
 
@@ -1350,14 +1325,14 @@ item(FEAT_STATIONS, darkbrick_fenceandadvert_platform_right_station) {
 
 /** PLATFORM LEFT **/
 
-spriteset (darkbrick_underpass_platform_left, "stations_darkbrick.png") {
+spriteset (express_underpass_platform_left, "src/stations_express.png") {
     [  10, 10, 64, 64, -32, -34 ]
     [  80, 10, 64, 64, -32, -34 ]
     [  290, 290, 64, 64, -32, -34 ]
     [  360, 290, 64, 64, -32, -34 ]
 }
 
-spritelayout darkbrick_underpass_platform_left_sw_ne(a) {
+spritelayout express_underpass_platform_left_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -1379,13 +1354,13 @@ spritelayout darkbrick_underpass_platform_left_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout darkbrick_underpass_platform_left_se_nw(a) {
+spritelayout express_underpass_platform_left_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -1407,38 +1382,38 @@ spritelayout darkbrick_underpass_platform_left_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, darkbrick_underpass_platform_left_station) {
+item(FEAT_STATIONS, express_underpass_platform_left_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_UNDERPASS);
         cargo_threshold:        240;
     }
     graphics {
-        sprite_layouts: [darkbrick_underpass_platform_left_sw_ne(0), darkbrick_underpass_platform_left_se_nw(0)];
+        sprite_layouts: [express_underpass_platform_left_sw_ne(0), express_underpass_platform_left_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        purchase: darkbrick_underpass_platform_left;
-        darkbrick_underpass_platform_left;
+        availability: switch_intro_year_express;
+        purchase: express_underpass_platform_left;
+        express_underpass_platform_left;
     }
 }
 
 /** PLATFORM RIGHT **/
 
-spriteset (darkbrick_underpass_platform_right, "stations_darkbrick.png") {
+spriteset (express_underpass_platform_right, "src/stations_express.png") {
     [  150, 10, 64, 64, -32, -34 ]
     [  220, 10, 64, 64, -32, -34 ]
     [  430, 290, 64, 64, -32, -34 ]
     [  500, 290, 64, 64, -32, -34 ]
 }
 
-spritelayout darkbrick_underpass_platform_right_sw_ne(a) {
+spritelayout express_underpass_platform_right_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -1460,13 +1435,13 @@ spritelayout darkbrick_underpass_platform_right_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout darkbrick_underpass_platform_right_se_nw(a) {
+spritelayout express_underpass_platform_right_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -1488,25 +1463,25 @@ spritelayout darkbrick_underpass_platform_right_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, darkbrick_underpass_platform_right_station) {
+item(FEAT_STATIONS, express_underpass_platform_right_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_UNDERPASS);
         cargo_threshold:        240;
     }
     graphics {
-        sprite_layouts: [darkbrick_underpass_platform_right_sw_ne(0), darkbrick_underpass_platform_right_se_nw(0)];
+        sprite_layouts: [express_underpass_platform_right_sw_ne(0), express_underpass_platform_right_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        purchase: darkbrick_underpass_platform_right;
-        darkbrick_underpass_platform_right;
+        availability: switch_intro_year_express;
+        purchase: express_underpass_platform_right;
+        express_underpass_platform_right;
     }
 }
 
@@ -1516,14 +1491,14 @@ item(FEAT_STATIONS, darkbrick_underpass_platform_right_station) {
 
 /** PLATFORM LEFT **/
 
-spriteset (darkbrick_fenceandunderpass_platform_left, "stations_darkbrick.png") {
+spriteset (express_fenceandunderpass_platform_left, "src/stations_express.png") {
     [  10, 80, 64, 64, -32, -34 ]
     [  80, 80, 64, 64, -32, -34 ]
     [  290, 360, 64, 64, -32, -34 ]
     [  360, 360, 64, 64, -32, -34 ]
 }
 
-spritelayout darkbrick_fenceandunderpass_platform_left_sw_ne(a) {
+spritelayout express_fenceandunderpass_platform_left_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -1545,13 +1520,13 @@ spritelayout darkbrick_fenceandunderpass_platform_left_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout darkbrick_fenceandunderpass_platform_left_se_nw(a) {
+spritelayout express_fenceandunderpass_platform_left_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -1573,38 +1548,38 @@ spritelayout darkbrick_fenceandunderpass_platform_left_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, darkbrick_fenceandunderpass_platform_left_station) {
+item(FEAT_STATIONS, express_fenceandunderpass_platform_left_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_UNDERPASS);
         cargo_threshold:        240;
     }
     graphics {
-        sprite_layouts: [darkbrick_fenceandunderpass_platform_left_sw_ne(0), darkbrick_fenceandunderpass_platform_left_se_nw(0)];
+        sprite_layouts: [express_fenceandunderpass_platform_left_sw_ne(0), express_fenceandunderpass_platform_left_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        purchase: darkbrick_fenceandunderpass_platform_left;
-        darkbrick_fenceandunderpass_platform_left;
+        availability: switch_intro_year_express;
+        purchase: express_fenceandunderpass_platform_left;
+        express_fenceandunderpass_platform_left;
     }
 }
 
 /** PLATFORM RIGHT **/
 
-spriteset (darkbrick_fenceandunderpass_platform_right, "stations_darkbrick.png") {
+spriteset (express_fenceandunderpass_platform_right, "src/stations_express.png") {
     [  150, 80, 64, 64, -32, -34 ]
     [  220, 80, 64, 64, -32, -34 ]
     [  430, 360, 64, 64, -32, -34 ]
     [  500, 360, 64, 64, -32, -34 ]
 }
 
-spritelayout darkbrick_fenceandunderpass_platform_right_sw_ne(a) {
+spritelayout express_fenceandunderpass_platform_right_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -1626,13 +1601,13 @@ spritelayout darkbrick_fenceandunderpass_platform_right_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout darkbrick_fenceandunderpass_platform_right_se_nw(a) {
+spritelayout express_fenceandunderpass_platform_right_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -1654,25 +1629,25 @@ spritelayout darkbrick_fenceandunderpass_platform_right_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, darkbrick_fenceandunderpass_platform_right_station) {
+item(FEAT_STATIONS, express_fenceandunderpass_platform_right_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_UNDERPASS);
         cargo_threshold:        240;
     }
     graphics {
-        sprite_layouts: [darkbrick_fenceandunderpass_platform_right_sw_ne(0), darkbrick_fenceandunderpass_platform_right_se_nw(0)];
+        sprite_layouts: [express_fenceandunderpass_platform_right_sw_ne(0), express_fenceandunderpass_platform_right_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        purchase: darkbrick_fenceandunderpass_platform_right;
-        darkbrick_fenceandunderpass_platform_right;
+        availability: switch_intro_year_express;
+        purchase: express_fenceandunderpass_platform_right;
+        express_fenceandunderpass_platform_right;
     }
 }
 
@@ -1682,40 +1657,40 @@ item(FEAT_STATIONS, darkbrick_fenceandunderpass_platform_right_station) {
 
 /** PLATFORM LEFT **/
 
-spriteset (darkbrick_shelter_platform_left, "stations_darkbrick.png") {
+spriteset (express_shelter_platform_left, "src/stations_express.png") {
     [  10, 10, 64, 64, -32, -34 ]
     [  80, 10, 64, 64, -32, -34 ]
     [  570, 150, 64, 64, -32, -34 ]
     [  640, 150, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_shelter_platform_left_empty, "stations_darkbrick.png") {
+spriteset (express_shelter_platform_left_empty, "src/stations_express.png") {
     [  430, 710, 64, 64, -32, -34 ]
     [  640, 710, 64, 64, -32, -34 ]
     [  570, 150, 64, 64, -32, -34 ]
     [  640, 150, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_shelter_platform_left_half, "stations_darkbrick.png") {
+spriteset (express_shelter_platform_left_half, "src/stations_express.png") {
     [  500, 710, 64, 64, -32, -34 ]
     [  710, 710, 64, 64, -32, -34 ]
     [  570, 150, 64, 64, -32, -34 ]
     [  640, 150, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_shelter_platform_left_full, "stations_darkbrick.png") {
+spriteset (express_shelter_platform_left_full, "src/stations_express.png") {
     [  570, 710, 64, 64, -32, -34 ]
     [  780, 710, 64, 64, -32, -34 ]
     [  570, 150, 64, 64, -32, -34 ]
     [  640, 150, 64, 64, -32, -34 ]
 }
 
-spritegroup darkbrick_shelter_passengers_left {
-    little: [darkbrick_shelter_platform_left_empty, darkbrick_shelter_platform_left_half];
-    lots: darkbrick_shelter_platform_left_full;
+spritegroup express_shelter_passengers_left {
+    little: [express_shelter_platform_left_empty, express_shelter_platform_left_half];
+    lots: express_shelter_platform_left_full;
 }
 
-spritelayout darkbrick_shelter_platform_left_sw_ne(a) {
+spritelayout express_shelter_platform_left_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -1743,7 +1718,7 @@ spritelayout darkbrick_shelter_platform_left_sw_ne(a) {
     }
 }
 
-spritelayout darkbrick_shelter_platform_left_se_nw(a) {
+spritelayout express_shelter_platform_left_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -1771,60 +1746,60 @@ spritelayout darkbrick_shelter_platform_left_se_nw(a) {
     }
 }
 
-item(FEAT_STATIONS, darkbrick_shelter_platform_left_station) {
+item(FEAT_STATIONS, express_shelter_platform_left_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SHELTER);
         cargo_threshold:        160;
     }
     graphics {
-        sprite_layouts: [darkbrick_shelter_platform_left_sw_ne(0), darkbrick_shelter_platform_left_se_nw(0)];
+        sprite_layouts: [express_shelter_platform_left_sw_ne(0), express_shelter_platform_left_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        PASS: darkbrick_shelter_passengers_left;
-        purchase: darkbrick_shelter_platform_left;
-        darkbrick_shelter_platform_left;
+        availability: switch_intro_year_express;
+        PASS: express_shelter_passengers_left;
+        purchase: express_shelter_platform_left;
+        express_shelter_platform_left;
     }
 }
 
 
 /** PLATFORM RIGHT **/
 
-spriteset (darkbrick_shelter_platform_right, "stations_darkbrick.png") {
+spriteset (express_shelter_platform_right, "src/stations_express.png") {
     [  150, 10, 64, 64, -32, -34 ]
     [  220, 10, 64, 64, -32, -34 ]
     [  710, 150, 64, 64, -32, -34 ]
     [  780, 150, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_shelter_platform_right_empty, "stations_darkbrick.png") {
+spriteset (express_shelter_platform_right_empty, "src/stations_express.png") {
     [  430, 780, 64, 64, -32, -34 ]
     [  640, 780, 64, 64, -32, -34 ]
     [  710, 150, 64, 64, -32, -34 ]
     [  780, 150, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_shelter_platform_right_half, "stations_darkbrick.png") {
+spriteset (express_shelter_platform_right_half, "src/stations_express.png") {
     [  500, 780, 64, 64, -32, -34 ]
     [  710, 780, 64, 64, -32, -34 ]
     [  710, 150, 64, 64, -32, -34 ]
     [  780, 150, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_shelter_platform_right_full, "stations_darkbrick.png") {
+spriteset (express_shelter_platform_right_full, "src/stations_express.png") {
     [  570, 780, 64, 64, -32, -34 ]
     [  780, 780, 64, 64, -32, -34 ]
     [  710, 150, 64, 64, -32, -34 ]
     [  780, 150, 64, 64, -32, -34 ]
 }
 
-spritegroup darkbrick_shelter_passengers_right {
-    little: [darkbrick_shelter_platform_right_empty, darkbrick_shelter_platform_right_half];
-    lots: darkbrick_shelter_platform_right_full;
+spritegroup express_shelter_passengers_right {
+    little: [express_shelter_platform_right_empty, express_shelter_platform_right_half];
+    lots: express_shelter_platform_right_full;
 }
 
-spritelayout darkbrick_shelter_platform_right_sw_ne(a) {
+spritelayout express_shelter_platform_right_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -1852,7 +1827,7 @@ spritelayout darkbrick_shelter_platform_right_sw_ne(a) {
     }
 }
 
-spritelayout darkbrick_shelter_platform_right_se_nw(a) {
+spritelayout express_shelter_platform_right_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -1880,20 +1855,20 @@ spritelayout darkbrick_shelter_platform_right_se_nw(a) {
     }
 }
 
-item(FEAT_STATIONS, darkbrick_shelter_platform_right_station) {
+item(FEAT_STATIONS, express_shelter_platform_right_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SHELTER);
         cargo_threshold:        160;
     }
     graphics {
-        sprite_layouts: [darkbrick_shelter_platform_right_sw_ne(0), darkbrick_shelter_platform_right_se_nw(0)];
+        sprite_layouts: [express_shelter_platform_right_sw_ne(0), express_shelter_platform_right_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        PASS: darkbrick_shelter_passengers_right;
-        purchase: darkbrick_shelter_platform_right;
-        darkbrick_shelter_platform_right;
+        availability: switch_intro_year_express;
+        PASS: express_shelter_passengers_right;
+        purchase: express_shelter_platform_right;
+        express_shelter_platform_right;
     }
 }
 
@@ -1903,41 +1878,41 @@ item(FEAT_STATIONS, darkbrick_shelter_platform_right_station) {
 
 /** PLATFORM LEFT **/
 
-spriteset (darkbrick_fenceandshelter_platform_left, "stations_darkbrick.png") {
+spriteset (express_fenceandshelter_platform_left, "src/stations_express.png") {
     [  10, 10, 64, 64, -32, -34 ]
     [  80, 10, 64, 64, -32, -34 ]
     [  570, 220, 64, 64, -32, -34 ]
     [  640, 220, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_fenceandshelter_platform_left_empty, "stations_darkbrick.png") {
+spriteset (express_fenceandshelter_platform_left_empty, "src/stations_express.png") {
     [  430, 710, 64, 64, -32, -34 ]
     [  640, 710, 64, 64, -32, -34 ]
     [  570, 220, 64, 64, -32, -34 ]
     [  640, 220, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_fenceandshelter_platform_left_half, "stations_darkbrick.png") {
+spriteset (express_fenceandshelter_platform_left_half, "src/stations_express.png") {
     [  500, 710, 64, 64, -32, -34 ]
     [  710, 710, 64, 64, -32, -34 ]
     [  570, 220, 64, 64, -32, -34 ]
     [  640, 220, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_fenceandshelter_platform_left_full, "stations_darkbrick.png") {
+spriteset (express_fenceandshelter_platform_left_full, "src/stations_express.png") {
     [  570, 710, 64, 64, -32, -34 ]
     [  780, 710, 64, 64, -32, -34 ]
     [  570, 220, 64, 64, -32, -34 ]
     [  640, 220, 64, 64, -32, -34 ]
 }
 
-spritegroup darkbrick_fenceandshelter_passengers_left {
-    little: [darkbrick_fenceandshelter_platform_left_empty, darkbrick_fenceandshelter_platform_left_half];
-    lots: darkbrick_fenceandshelter_platform_left_full;
+spritegroup express_fenceandshelter_passengers_left {
+    little: [express_fenceandshelter_platform_left_empty, express_fenceandshelter_platform_left_half];
+    lots: express_fenceandshelter_platform_left_full;
 }
 
 
-spritelayout darkbrick_fenceandshelter_platform_left_sw_ne(a) {
+spritelayout express_fenceandshelter_platform_left_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -1965,7 +1940,7 @@ spritelayout darkbrick_fenceandshelter_platform_left_sw_ne(a) {
     }
 }
 
-spritelayout darkbrick_fenceandshelter_platform_left_se_nw(a) {
+spritelayout express_fenceandshelter_platform_left_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -1993,60 +1968,60 @@ spritelayout darkbrick_fenceandshelter_platform_left_se_nw(a) {
     }
 }
 
-item(FEAT_STATIONS, darkbrick_fenceandshelter_platform_left_station) {
+item(FEAT_STATIONS, express_fenceandshelter_platform_left_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SHELTER);
         cargo_threshold:        160;
     }
     graphics {
-        sprite_layouts: [darkbrick_fenceandshelter_platform_left_sw_ne(0), darkbrick_fenceandshelter_platform_left_se_nw(0)];
+        sprite_layouts: [express_fenceandshelter_platform_left_sw_ne(0), express_fenceandshelter_platform_left_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        PASS: darkbrick_fenceandshelter_passengers_left;
-        purchase: darkbrick_fenceandshelter_platform_left;
-        darkbrick_fenceandshelter_platform_left;
+        availability: switch_intro_year_express;
+        PASS: express_fenceandshelter_passengers_left;
+        purchase: express_fenceandshelter_platform_left;
+        express_fenceandshelter_platform_left;
     }
 }
 
 
 /** PLATFORM RIGHT **/
 
-spriteset (darkbrick_fenceandshelter_platform_right, "stations_darkbrick.png") {
+spriteset (express_fenceandshelter_platform_right, "src/stations_express.png") {
     [  150, 10, 64, 64, -32, -34 ]
     [  220, 10, 64, 64, -32, -34 ]
     [  710, 220, 64, 64, -32, -34 ]
     [  780, 220, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_fenceandshelter_platform_right_empty, "stations_darkbrick.png") {
+spriteset (express_fenceandshelter_platform_right_empty, "src/stations_express.png") {
     [  430, 780, 64, 64, -32, -34 ]
     [  640, 780, 64, 64, -32, -34 ]
     [  710, 220, 64, 64, -32, -34 ]
     [  780, 220, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_fenceandshelter_platform_right_half, "stations_darkbrick.png") {
+spriteset (express_fenceandshelter_platform_right_half, "src/stations_express.png") {
     [  500, 780, 64, 64, -32, -34 ]
     [  710, 780, 64, 64, -32, -34 ]
     [  710, 220, 64, 64, -32, -34 ]
     [  780, 220, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_fenceandshelter_platform_right_full, "stations_darkbrick.png") {
+spriteset (express_fenceandshelter_platform_right_full, "src/stations_express.png") {
     [  570, 780, 64, 64, -32, -34 ]
     [  780, 780, 64, 64, -32, -34 ]
     [  710, 220, 64, 64, -32, -34 ]
     [  780, 220, 64, 64, -32, -34 ]
 }
 
-spritegroup darkbrick_fenceandshelter_passengers_right {
-    little: [darkbrick_fenceandshelter_platform_right_empty, darkbrick_fenceandshelter_platform_right_half];
-    lots: darkbrick_fenceandshelter_platform_right_full;
+spritegroup express_fenceandshelter_passengers_right {
+    little: [express_fenceandshelter_platform_right_empty, express_fenceandshelter_platform_right_half];
+    lots: express_fenceandshelter_platform_right_full;
 }
 
-spritelayout darkbrick_fenceandshelter_platform_right_sw_ne(a) {
+spritelayout express_fenceandshelter_platform_right_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -2074,7 +2049,7 @@ spritelayout darkbrick_fenceandshelter_platform_right_sw_ne(a) {
     }
 }
 
-spritelayout darkbrick_fenceandshelter_platform_right_se_nw(a) {
+spritelayout express_fenceandshelter_platform_right_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -2102,20 +2077,20 @@ spritelayout darkbrick_fenceandshelter_platform_right_se_nw(a) {
     }
 }
 
-item(FEAT_STATIONS, darkbrick_fenceandshelter_platform_right_station) {
+item(FEAT_STATIONS, express_fenceandshelter_platform_right_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SHELTER);
         cargo_threshold:        160;
     }
     graphics {
-        sprite_layouts: [darkbrick_fenceandshelter_platform_right_sw_ne(0), darkbrick_fenceandshelter_platform_right_se_nw(0)];
+        sprite_layouts: [express_fenceandshelter_platform_right_sw_ne(0), express_fenceandshelter_platform_right_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        PASS: darkbrick_fenceandshelter_passengers_right;
-        purchase: darkbrick_fenceandshelter_platform_right;
-        darkbrick_fenceandshelter_platform_right;
+        availability: switch_intro_year_express;
+        PASS: express_fenceandshelter_passengers_right;
+        purchase: express_fenceandshelter_platform_right;
+        express_fenceandshelter_platform_right;
     }
 }
 
@@ -2125,40 +2100,40 @@ item(FEAT_STATIONS, darkbrick_fenceandshelter_platform_right_station) {
 
 /** PLATFORM LEFT **/
 
-spriteset (darkbrick_shelteralt_platform_left, "stations_darkbrick.png") {
+spriteset (express_shelteralt_platform_left, "src/stations_express.png") {
     [  10, 10, 64, 64, -32, -34 ]
     [  80, 10, 64, 64, -32, -34 ]
     [  570, 290, 64, 64, -32, -34 ]
     [  640, 290, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_shelteralt_platform_left_empty, "stations_darkbrick.png") {
+spriteset (express_shelteralt_platform_left_empty, "src/stations_express.png") {
     [  430, 710, 64, 64, -32, -34 ]
     [  640, 710, 64, 64, -32, -34 ]
     [  570, 290, 64, 64, -32, -34 ]
     [  640, 290, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_shelteralt_platform_left_half, "stations_darkbrick.png") {
+spriteset (express_shelteralt_platform_left_half, "src/stations_express.png") {
     [  500, 710, 64, 64, -32, -34 ]
     [  710, 710, 64, 64, -32, -34 ]
     [  570, 290, 64, 64, -32, -34 ]
     [  640, 290, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_shelteralt_platform_left_full, "stations_darkbrick.png") {
+spriteset (express_shelteralt_platform_left_full, "src/stations_express.png") {
     [  570, 710, 64, 64, -32, -34 ]
     [  780, 710, 64, 64, -32, -34 ]
     [  570, 290, 64, 64, -32, -34 ]
     [  640, 290, 64, 64, -32, -34 ]
 }
 
-spritegroup darkbrick_shelteralt_passengers_left {
-    little: [darkbrick_shelteralt_platform_left_empty, darkbrick_shelteralt_platform_left_half];
-    lots: darkbrick_shelteralt_platform_left_full;
+spritegroup express_shelteralt_passengers_left {
+    little: [express_shelteralt_platform_left_empty, express_shelteralt_platform_left_half];
+    lots: express_shelteralt_platform_left_full;
 }
 
-spritelayout darkbrick_shelteralt_platform_left_sw_ne(a) {
+spritelayout express_shelteralt_platform_left_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -2180,13 +2155,13 @@ spritelayout darkbrick_shelteralt_platform_left_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout darkbrick_shelteralt_platform_left_se_nw(a) {
+spritelayout express_shelteralt_platform_left_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -2208,65 +2183,65 @@ spritelayout darkbrick_shelteralt_platform_left_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, darkbrick_shelteralt_platform_left_station) {
+item(FEAT_STATIONS, express_shelteralt_platform_left_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SHELTERALT);
         cargo_threshold:        160;
     }
     graphics {
-        sprite_layouts: [darkbrick_shelteralt_platform_left_sw_ne(0), darkbrick_shelteralt_platform_left_se_nw(0)];
+        sprite_layouts: [express_shelteralt_platform_left_sw_ne(0), express_shelteralt_platform_left_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        PASS: darkbrick_shelteralt_passengers_left;
-        purchase: darkbrick_shelteralt_platform_left;
-        darkbrick_shelteralt_platform_left;
+        availability: switch_intro_year_express;
+        PASS: express_shelteralt_passengers_left;
+        purchase: express_shelteralt_platform_left;
+        express_shelteralt_platform_left;
     }
 }
 
 /** PLATFORM RIGHT **/
 
-spriteset (darkbrick_shelteralt_platform_right, "stations_darkbrick.png") {
+spriteset (express_shelteralt_platform_right, "src/stations_express.png") {
     [  150, 10, 64, 64, -32, -34 ]
     [  220, 10, 64, 64, -32, -34 ]
     [  710, 290, 64, 64, -32, -34 ]
     [  780, 290, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_shelteralt_platform_right_empty, "stations_darkbrick.png") {
+spriteset (express_shelteralt_platform_right_empty, "src/stations_express.png") {
     [  430, 780, 64, 64, -32, -34 ]
     [  640, 780, 64, 64, -32, -34 ]
     [  710, 290, 64, 64, -32, -34 ]
     [  780, 290, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_shelteralt_platform_right_half, "stations_darkbrick.png") {
+spriteset (express_shelteralt_platform_right_half, "src/stations_express.png") {
     [  500, 780, 64, 64, -32, -34 ]
     [  710, 780, 64, 64, -32, -34 ]
     [  710, 290, 64, 64, -32, -34 ]
     [  780, 290, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_shelteralt_platform_right_full, "stations_darkbrick.png") {
+spriteset (express_shelteralt_platform_right_full, "src/stations_express.png") {
     [  570, 780, 64, 64, -32, -34 ]
     [  780, 780, 64, 64, -32, -34 ]
     [  710, 290, 64, 64, -32, -34 ]
     [  780, 290, 64, 64, -32, -34 ]
 }
 
-spritegroup darkbrick_shelteralt_passengers_right {
-    little: [darkbrick_shelteralt_platform_right_empty, darkbrick_shelteralt_platform_right_half];
-    lots: darkbrick_shelteralt_platform_right_full;
+spritegroup express_shelteralt_passengers_right {
+    little: [express_shelteralt_platform_right_empty, express_shelteralt_platform_right_half];
+    lots: express_shelteralt_platform_right_full;
 }
 
-spritelayout darkbrick_shelteralt_platform_right_sw_ne(a) {
+spritelayout express_shelteralt_platform_right_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -2288,13 +2263,13 @@ spritelayout darkbrick_shelteralt_platform_right_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout darkbrick_shelteralt_platform_right_se_nw(a) {
+spritelayout express_shelteralt_platform_right_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -2316,26 +2291,26 @@ spritelayout darkbrick_shelteralt_platform_right_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, darkbrick_shelteralt_platform_right_station) {
+item(FEAT_STATIONS, express_shelteralt_platform_right_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SHELTERALT);
         cargo_threshold:        160;
     }
     graphics {
-        sprite_layouts: [darkbrick_shelteralt_platform_right_sw_ne(0), darkbrick_shelteralt_platform_right_se_nw(0)];
+        sprite_layouts: [express_shelteralt_platform_right_sw_ne(0), express_shelteralt_platform_right_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        PASS: darkbrick_shelteralt_passengers_right;
-        purchase: darkbrick_shelteralt_platform_right;
-        darkbrick_shelteralt_platform_right;
+        availability: switch_intro_year_express;
+        PASS: express_shelteralt_passengers_right;
+        purchase: express_shelteralt_platform_right;
+        express_shelteralt_platform_right;
     }
 }
 
@@ -2345,40 +2320,40 @@ item(FEAT_STATIONS, darkbrick_shelteralt_platform_right_station) {
 
 /** PLATFORM LEFT **/
 
-spriteset (darkbrick_shelteralt_wall_platform_left, "stations_darkbrick.png") {
+spriteset (express_shelteralt_wall_platform_left, "src/stations_express.png") {
     [  10, 10, 64, 64, -32, -34 ]
     [  80, 10, 64, 64, -32, -34 ]
     [  570, 360, 64, 64, -32, -34 ]
     [  640, 360, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_shelteralt_wall_platform_left_empty, "stations_darkbrick.png") {
+spriteset (express_shelteralt_wall_platform_left_empty, "src/stations_express.png") {
     [  430, 710, 64, 64, -32, -34 ]
     [  640, 710, 64, 64, -32, -34 ]
     [  570, 360, 64, 64, -32, -34 ]
     [  640, 360, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_shelteralt_wall_platform_left_half, "stations_darkbrick.png") {
+spriteset (express_shelteralt_wall_platform_left_half, "src/stations_express.png") {
     [  500, 710, 64, 64, -32, -34 ]
     [  710, 710, 64, 64, -32, -34 ]
     [  570, 360, 64, 64, -32, -34 ]
     [  640, 360, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_shelteralt_wall_platform_left_full, "stations_darkbrick.png") {
+spriteset (express_shelteralt_wall_platform_left_full, "src/stations_express.png") {
     [  570, 710, 64, 64, -32, -34 ]
     [  780, 710, 64, 64, -32, -34 ]
     [  570, 360, 64, 64, -32, -34 ]
     [  640, 360, 64, 64, -32, -34 ]
 }
 
-spritegroup darkbrick_shelteralt_wall_passengers_left {
-    little: [darkbrick_shelteralt_wall_platform_left_empty, darkbrick_shelteralt_wall_platform_left_half];
-    lots: darkbrick_shelteralt_wall_platform_left_full;
+spritegroup express_shelteralt_wall_passengers_left {
+    little: [express_shelteralt_wall_platform_left_empty, express_shelteralt_wall_platform_left_half];
+    lots: express_shelteralt_wall_platform_left_full;
 }
 
-spritelayout darkbrick_shelteralt_wall_platform_left_sw_ne(a) {
+spritelayout express_shelteralt_wall_platform_left_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -2400,13 +2375,13 @@ spritelayout darkbrick_shelteralt_wall_platform_left_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout darkbrick_shelteralt_wall_platform_left_se_nw(a) {
+spritelayout express_shelteralt_wall_platform_left_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -2428,66 +2403,66 @@ spritelayout darkbrick_shelteralt_wall_platform_left_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, darkbrick_shelteralt_wall_platform_left_station) {
+item(FEAT_STATIONS, express_shelteralt_wall_platform_left_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SHELTERALT);
         cargo_threshold:        160;
     }
     graphics {
-        sprite_layouts: [darkbrick_shelteralt_wall_platform_left_sw_ne(0), darkbrick_shelteralt_wall_platform_left_se_nw(0)];
+        sprite_layouts: [express_shelteralt_wall_platform_left_sw_ne(0), express_shelteralt_wall_platform_left_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        PASS: darkbrick_shelteralt_wall_passengers_left;
-        purchase: darkbrick_shelteralt_wall_platform_left;
-        darkbrick_shelteralt_wall_platform_left;
+        availability: switch_intro_year_express;
+        PASS: express_shelteralt_wall_passengers_left;
+        purchase: express_shelteralt_wall_platform_left;
+        express_shelteralt_wall_platform_left;
     }
 }
 
 
 /** PLATFORM RIGHT **/
 
-spriteset (darkbrick_shelteralt_wall_platform_right, "stations_darkbrick.png") {
+spriteset (express_shelteralt_wall_platform_right, "src/stations_express.png") {
     [  150, 10, 64, 64, -32, -34 ]
     [  220, 10, 64, 64, -32, -34 ]
     [  710, 360, 64, 64, -32, -34 ]
     [  780, 360, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_shelteralt_wall_platform_right_empty, "stations_darkbrick.png") {
+spriteset (express_shelteralt_wall_platform_right_empty, "src/stations_express.png") {
     [  430, 780, 64, 64, -32, -34 ]
     [  640, 780, 64, 64, -32, -34 ]
     [  710, 360, 64, 64, -32, -34 ]
     [  780, 360, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_shelteralt_wall_platform_right_half, "stations_darkbrick.png") {
+spriteset (express_shelteralt_wall_platform_right_half, "src/stations_express.png") {
     [  500, 780, 64, 64, -32, -34 ]
     [  710, 780, 64, 64, -32, -34 ]
     [  710, 360, 64, 64, -32, -34 ]
     [  780, 360, 64, 64, -32, -34 ]
 }
 
-spriteset (darkbrick_shelteralt_wall_platform_right_full, "stations_darkbrick.png") {
+spriteset (express_shelteralt_wall_platform_right_full, "src/stations_express.png") {
     [  570, 780, 64, 64, -32, -34 ]
     [  780, 780, 64, 64, -32, -34 ]
     [  710, 360, 64, 64, -32, -34 ]
     [  780, 360, 64, 64, -32, -34 ]
 }
 
-spritegroup darkbrick_shelteralt_wall_passengers_right {
-    little: [darkbrick_shelteralt_wall_platform_right_empty, darkbrick_shelteralt_wall_platform_right_half];
-    lots: darkbrick_shelteralt_wall_platform_right_full;
+spritegroup express_shelteralt_wall_passengers_right {
+    little: [express_shelteralt_wall_platform_right_empty, express_shelteralt_wall_platform_right_half];
+    lots: express_shelteralt_wall_platform_right_full;
 }
 
-spritelayout darkbrick_shelteralt_wall_platform_right_sw_ne(a) {
+spritelayout express_shelteralt_wall_platform_right_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -2509,13 +2484,13 @@ spritelayout darkbrick_shelteralt_wall_platform_right_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout darkbrick_shelteralt_wall_platform_right_se_nw(a) {
+spritelayout express_shelteralt_wall_platform_right_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -2537,26 +2512,26 @@ spritelayout darkbrick_shelteralt_wall_platform_right_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, darkbrick_shelteralt_wall_platform_right_station) {
+item(FEAT_STATIONS, express_shelteralt_wall_platform_right_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SHELTERALT);
         cargo_threshold:        160;
     }
     graphics {
-        sprite_layouts: [darkbrick_shelteralt_wall_platform_right_sw_ne(0), darkbrick_shelteralt_wall_platform_right_se_nw(0)];
+        sprite_layouts: [express_shelteralt_wall_platform_right_sw_ne(0), express_shelteralt_wall_platform_right_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        PASS: darkbrick_shelteralt_wall_passengers_right;
-        purchase: darkbrick_shelteralt_wall_platform_right;
-        darkbrick_shelteralt_wall_platform_right;
+        availability: switch_intro_year_express;
+        PASS: express_shelteralt_wall_passengers_right;
+        purchase: express_shelteralt_wall_platform_right;
+        express_shelteralt_wall_platform_right;
     }
 }
 
@@ -2568,14 +2543,14 @@ item(FEAT_STATIONS, darkbrick_shelteralt_wall_platform_right_station) {
 
 /***** PLATFORM SOUTH END LEFT *****/
 
-spriteset (darkbrick_plain_south_end_left, "stations_darkbrick.png") {
+spriteset (express_plain_south_end_left, "src/stations_express.png") {
     [  290, 10, 64, 64, -32, -34 ]
     [  360, 10, 64, 64, -32, -34 ]
     [  10, 150, 64, 64, -32, -34 ]
     [  80, 150, 64, 64, -32, -34 ]
 }
 
-spritelayout darkbrick_plain_south_end_left_sw_ne(a) {
+spritelayout express_plain_south_end_left_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -2597,13 +2572,13 @@ spritelayout darkbrick_plain_south_end_left_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout darkbrick_plain_south_end_left_se_nw(a) {
+spritelayout express_plain_south_end_left_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -2625,38 +2600,38 @@ spritelayout darkbrick_plain_south_end_left_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, darkbrick_plain_south_end_left_station) {
+item(FEAT_STATIONS, express_plain_south_end_left_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_END);
     }
     graphics {
-        sprite_layouts: [darkbrick_plain_south_end_left_sw_ne(0), darkbrick_plain_south_end_left_se_nw(0)];
+        sprite_layouts: [express_plain_south_end_left_sw_ne(0), express_plain_south_end_left_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        purchase: darkbrick_plain_south_end_left;
-        darkbrick_plain_south_end_left;
+        availability: switch_intro_year_express;
+        purchase: express_plain_south_end_left;
+        express_plain_south_end_left;
     }
 }
 
 
 /***** PLATFORM SOUTH END RIGHT *****/
 
-spriteset (darkbrick_plain_south_end_right, "stations_darkbrick.png") {
+spriteset (express_plain_south_end_right, "src/stations_express.png") {
     [  430, 10, 64, 64, -32, -34 ]
     [  500, 10, 64, 64, -32, -34 ]
     [  150, 150, 64, 64, -32, -34 ]
     [  220, 150, 64, 64, -32, -34 ]
 }
 
-spritelayout darkbrick_plain_south_end_right_sw_ne(a) {
+spritelayout express_plain_south_end_right_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -2678,13 +2653,13 @@ spritelayout darkbrick_plain_south_end_right_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout darkbrick_plain_south_end_right_se_nw(a) {
+spritelayout express_plain_south_end_right_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -2706,38 +2681,38 @@ spritelayout darkbrick_plain_south_end_right_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, darkbrick_plain_south_end_right_station) {
+item(FEAT_STATIONS, express_plain_south_end_right_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_END);
     }
     graphics {
-        sprite_layouts: [darkbrick_plain_south_end_right_sw_ne(0), darkbrick_plain_south_end_right_se_nw(0)];
+        sprite_layouts: [express_plain_south_end_right_sw_ne(0), express_plain_south_end_right_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        purchase: darkbrick_plain_south_end_right;
-        darkbrick_plain_south_end_right;
+        availability: switch_intro_year_express;
+        purchase: express_plain_south_end_right;
+        express_plain_south_end_right;
     }
 }
 
 
 /***** PLATFORM NORTH END LEFT *****/
 
-spriteset (darkbrick_plain_north_end_left, "stations_darkbrick.png") {
+spriteset (express_plain_north_end_left, "src/stations_express.png") {
     [  570, 10, 64, 64, -32, -34 ]
     [  640, 10, 64, 64, -32, -34 ]
     [  10, 150, 64, 64, -32, -34 ]
     [  80, 150, 64, 64, -32, -34 ]
 }
 
-spritelayout darkbrick_plain_north_end_left_sw_ne(a) {
+spritelayout express_plain_north_end_left_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -2759,13 +2734,13 @@ spritelayout darkbrick_plain_north_end_left_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout darkbrick_plain_north_end_left_se_nw(a) {
+spritelayout express_plain_north_end_left_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -2787,38 +2762,38 @@ spritelayout darkbrick_plain_north_end_left_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, darkbrick_plain_north_end_left_station) {
+item(FEAT_STATIONS, express_plain_north_end_left_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_END);
     }
     graphics {
-        sprite_layouts: [darkbrick_plain_north_end_left_sw_ne(0), darkbrick_plain_north_end_left_se_nw(0)];
+        sprite_layouts: [express_plain_north_end_left_sw_ne(0), express_plain_north_end_left_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        purchase: darkbrick_plain_north_end_left;
-        darkbrick_plain_north_end_left;
+        availability: switch_intro_year_express;
+        purchase: express_plain_north_end_left;
+        express_plain_north_end_left;
     }
 }
 
 
 /***** PLATFORM NORTH END RIGHT *****/
 
-spriteset (darkbrick_plain_north_end_right, "stations_darkbrick.png") {
+spriteset (express_plain_north_end_right, "src/stations_express.png") {
     [  710, 10, 64, 64, -32, -34 ]
     [  780, 10, 64, 64, -32, -34 ]
     [  150, 150, 64, 64, -32, -34 ]
     [  220, 150, 64, 64, -32, -34 ]
 }
 
-spritelayout darkbrick_plain_north_end_right_sw_ne(a) {
+spritelayout express_plain_north_end_right_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -2840,13 +2815,13 @@ spritelayout darkbrick_plain_north_end_right_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout darkbrick_plain_north_end_right_se_nw(a) {
+spritelayout express_plain_north_end_right_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -2868,38 +2843,38 @@ spritelayout darkbrick_plain_north_end_right_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, darkbrick_plain_north_end_right_station) {
+item(FEAT_STATIONS, express_plain_north_end_right_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_END);
     }
     graphics {
-        sprite_layouts: [darkbrick_plain_north_end_right_sw_ne(0), darkbrick_plain_north_end_right_se_nw(0)];
+        sprite_layouts: [express_plain_north_end_right_sw_ne(0), express_plain_north_end_right_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        purchase: darkbrick_plain_north_end_right;
-        darkbrick_plain_north_end_right;
+        availability: switch_intro_year_express;
+        purchase: express_plain_north_end_right;
+        express_plain_north_end_right;
     }
 }
 
 
 /***** PLATFORM SOUTH END LEFT *****/
 
-spriteset (darkbrick_fence_south_end_left, "stations_darkbrick.png") {
+spriteset (express_fence_south_end_left, "src/stations_express.png") {
     [  290, 80, 64, 64, -32, -34 ]
     [  360, 80, 64, 64, -32, -34 ]
     [  10, 220, 64, 64, -32, -34 ]
     [  80, 220, 64, 64, -32, -34 ]
 }
 
-spritelayout darkbrick_fence_south_end_left_sw_ne(a) {
+spritelayout express_fence_south_end_left_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -2921,13 +2896,13 @@ spritelayout darkbrick_fence_south_end_left_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout darkbrick_fence_south_end_left_se_nw(a) {
+spritelayout express_fence_south_end_left_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -2949,38 +2924,38 @@ spritelayout darkbrick_fence_south_end_left_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, darkbrick_fence_south_end_left_station) {
+item(FEAT_STATIONS, express_fence_south_end_left_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_END);
     }
     graphics {
-        sprite_layouts: [darkbrick_fence_south_end_left_sw_ne(0), darkbrick_fence_south_end_left_se_nw(0)];
+        sprite_layouts: [express_fence_south_end_left_sw_ne(0), express_fence_south_end_left_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        purchase: darkbrick_fence_south_end_left;
-        darkbrick_fence_south_end_left;
+        availability: switch_intro_year_express;
+        purchase: express_fence_south_end_left;
+        express_fence_south_end_left;
     }
 }
 
 
 /***** PLATFORM SOUTH END RIGHT *****/
 
-spriteset (darkbrick_fence_south_end_right, "stations_darkbrick.png") {
+spriteset (express_fence_south_end_right, "src/stations_express.png") {
     [  430, 80, 64, 64, -32, -34 ]
     [  500, 80, 64, 64, -32, -34 ]
     [  150, 220, 64, 64, -32, -34 ]
     [  220, 220, 64, 64, -32, -34 ]
 }
 
-spritelayout darkbrick_fence_south_end_right_sw_ne(a) {
+spritelayout express_fence_south_end_right_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -3002,13 +2977,13 @@ spritelayout darkbrick_fence_south_end_right_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout darkbrick_fence_south_end_right_se_nw(a) {
+spritelayout express_fence_south_end_right_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -3030,38 +3005,38 @@ spritelayout darkbrick_fence_south_end_right_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, darkbrick_fence_south_end_right_station) {
+item(FEAT_STATIONS, express_fence_south_end_right_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_END);
     }
     graphics {
-        sprite_layouts: [darkbrick_fence_south_end_right_sw_ne(0), darkbrick_fence_south_end_right_se_nw(0)];
+        sprite_layouts: [express_fence_south_end_right_sw_ne(0), express_fence_south_end_right_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        purchase: darkbrick_fence_south_end_right;
-        darkbrick_fence_south_end_right;
+        availability: switch_intro_year_express;
+        purchase: express_fence_south_end_right;
+        express_fence_south_end_right;
     }
 }
 
 
 /***** PLATFORM NORTH END LEFT *****/
 
-spriteset (darkbrick_fence_north_end_left, "stations_darkbrick.png") {
+spriteset (express_fence_north_end_left, "src/stations_express.png") {
     [  570, 80, 64, 64, -32, -34 ]
     [  640, 80, 64, 64, -32, -34 ]
     [  10, 220, 64, 64, -32, -34 ]
     [  80, 220, 64, 64, -32, -34 ]
 }
 
-spritelayout darkbrick_fence_north_end_left_sw_ne(a) {
+spritelayout express_fence_north_end_left_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -3083,13 +3058,13 @@ spritelayout darkbrick_fence_north_end_left_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout darkbrick_fence_north_end_left_se_nw(a) {
+spritelayout express_fence_north_end_left_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -3111,38 +3086,38 @@ spritelayout darkbrick_fence_north_end_left_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, darkbrick_fence_north_end_left_station) {
+item(FEAT_STATIONS, express_fence_north_end_left_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_END);
     }
     graphics {
-        sprite_layouts: [darkbrick_fence_north_end_left_sw_ne(0), darkbrick_fence_north_end_left_se_nw(0)];
+        sprite_layouts: [express_fence_north_end_left_sw_ne(0), express_fence_north_end_left_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        purchase: darkbrick_fence_north_end_left;
-        darkbrick_fence_north_end_left;
+        availability: switch_intro_year_express;
+        purchase: express_fence_north_end_left;
+        express_fence_north_end_left;
     }
 }
 
 
 /***** PLATFORM NORTH END RIGHT *****/
 
-spriteset (darkbrick_fence_north_end_right, "stations_darkbrick.png") {
+spriteset (express_fence_north_end_right, "src/stations_express.png") {
     [  710, 80, 64, 64, -32, -34 ]
     [  780, 80, 64, 64, -32, -34 ]
     [  150, 220, 64, 64, -32, -34 ]
     [  220, 220, 64, 64, -32, -34 ]
 }
 
-spritelayout darkbrick_fence_north_end_right_sw_ne(a) {
+spritelayout express_fence_north_end_right_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -3164,13 +3139,13 @@ spritelayout darkbrick_fence_north_end_right_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout darkbrick_fence_north_end_right_se_nw(a) {
+spritelayout express_fence_north_end_right_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -3192,37 +3167,37 @@ spritelayout darkbrick_fence_north_end_right_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-item(FEAT_STATIONS, darkbrick_fence_north_end_right_station) {
+item(FEAT_STATIONS, express_fence_north_end_right_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_END);
     }
     graphics {
-        sprite_layouts: [darkbrick_fence_north_end_right_sw_ne(0), darkbrick_fence_north_end_right_se_nw(0)];
+        sprite_layouts: [express_fence_north_end_right_sw_ne(0), express_fence_north_end_right_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        purchase: darkbrick_fence_north_end_right;
-        darkbrick_fence_north_end_right;
+        availability: switch_intro_year_express;
+        purchase: express_fence_north_end_right;
+        express_fence_north_end_right;
     }
 }
 
 /***********************************************/
-/***** PLATFORM NORTH BUFFER BUILDING **********/
+/***** PLATFORM NORTH BUFFER *******************/
 /***********************************************/
 
-spriteset (darkbrick_buffer_north_building_left, "stations_darkbrick.png") {
+spriteset (express_buffer_north_left, "src/stations_express.png") {
     [  290, 430, 64, 64, -32, -34 ]
     [  360, 430, 64, 64, -32, -34 ]
 }
 
-spritelayout darkbrick_buffer_north_building_left_sw_ne(a) {
+spritelayout express_buffer_north_left_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -3239,7 +3214,7 @@ spritelayout darkbrick_buffer_north_building_left_sw_ne(a) {
     }
 }
 
-spritelayout darkbrick_buffer_north_building_left_se_nw(a) {
+spritelayout express_buffer_north_left_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -3256,10 +3231,10 @@ spritelayout darkbrick_buffer_north_building_left_se_nw(a) {
     }
 }
 
-item(FEAT_STATIONS, darkbrick_buffer_north_building_left_station) {
+item(FEAT_STATIONS, express_buffer_north_left_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_BUFFER);
         tile_flags: [
             bitmask(STAT_TILE_BLOCKED),
@@ -3267,21 +3242,21 @@ item(FEAT_STATIONS, darkbrick_buffer_north_building_left_station) {
         ];
     }
     graphics {
-        sprite_layouts: [darkbrick_buffer_north_building_left_sw_ne(0), darkbrick_buffer_north_building_left_se_nw(0)];
+        sprite_layouts: [express_buffer_north_left_sw_ne(0), express_buffer_north_left_se_nw(0)];
         select_tile_type: 1;
-        availability: switch_intro_year_darkbrick;
-        purchase: darkbrick_buffer_north_building_left;
-        darkbrick_buffer_north_building_left;
+        availability: switch_intro_year_express;
+        purchase: express_buffer_north_left;
+        express_buffer_north_left;
     }
 }
 
 
-spriteset (darkbrick_buffer_north_building_right, "stations_darkbrick.png") {
+spriteset (express_buffer_north_right, "src/stations_express.png") {
     [  430, 430, 64, 64, -32, -34 ]
     [  500, 430, 64, 64, -32, -34 ]
 }
 
-spritelayout darkbrick_buffer_north_building_right_sw_ne(a) {
+spritelayout express_buffer_north_right_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -3298,7 +3273,7 @@ spritelayout darkbrick_buffer_north_building_right_sw_ne(a) {
     }
 }
 
-spritelayout darkbrick_buffer_north_building_right_se_nw(a) {
+spritelayout express_buffer_north_right_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -3315,10 +3290,10 @@ spritelayout darkbrick_buffer_north_building_right_se_nw(a) {
     }
 }
 
-item(FEAT_STATIONS, darkbrick_buffer_north_building_right_station) {
+item(FEAT_STATIONS, express_buffer_north_right_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_BUFFER);
         tile_flags: [
             bitmask(STAT_TILE_BLOCKED),
@@ -3326,25 +3301,25 @@ item(FEAT_STATIONS, darkbrick_buffer_north_building_right_station) {
         ];
     }
     graphics {
-        sprite_layouts: [darkbrick_buffer_north_building_right_sw_ne(0), darkbrick_buffer_north_building_right_se_nw(0)];
+        sprite_layouts: [express_buffer_north_right_sw_ne(0), express_buffer_north_right_se_nw(0)];
         select_tile_type: 1;
-        availability: switch_intro_year_darkbrick;
-        purchase: darkbrick_buffer_north_building_right;
-        darkbrick_buffer_north_building_right;
+        availability: switch_intro_year_express;
+        purchase: express_buffer_north_right;
+        express_buffer_north_right;
     }
 }
 
 
 /***********************************************/
-/***** PLATFORM SOUTH BUFFER BUILDING **********/
+/***** PLATFORM SOUTH BUFFER *******************/
 /***********************************************/
 
-spriteset (darkbrick_buffer_south_building_left, "stations_darkbrick.png") {
+spriteset (express_buffer_south_left, "src/stations_express.png") {
     [  570, 430, 64, 64, -32, -34 ]
     [  640, 430, 64, 64, -32, -34 ]
 }
 
-spritelayout darkbrick_buffer_south_building_left_sw_ne(a) {
+spritelayout express_buffer_south_left_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -3361,7 +3336,7 @@ spritelayout darkbrick_buffer_south_building_left_sw_ne(a) {
     }
 }
 
-spritelayout darkbrick_buffer_south_building_left_se_nw(a) {
+spritelayout express_buffer_south_left_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -3378,10 +3353,10 @@ spritelayout darkbrick_buffer_south_building_left_se_nw(a) {
     }
 }
 
-item(FEAT_STATIONS, darkbrick_buffer_south_building_left_station) {
+item(FEAT_STATIONS, express_buffer_south_left_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_BUFFER);
         tile_flags: [
             bitmask(STAT_TILE_BLOCKED),
@@ -3389,20 +3364,20 @@ item(FEAT_STATIONS, darkbrick_buffer_south_building_left_station) {
         ];
     }
     graphics {
-        sprite_layouts: [darkbrick_buffer_south_building_left_sw_ne(0), darkbrick_buffer_south_building_left_se_nw(0)];
+        sprite_layouts: [express_buffer_south_left_sw_ne(0), express_buffer_south_left_se_nw(0)];
         select_tile_type: 1;
-        availability: switch_intro_year_darkbrick;
-        purchase: darkbrick_buffer_south_building_left;
-        darkbrick_buffer_south_building_left;
+        availability: switch_intro_year_express;
+        purchase: express_buffer_south_left;
+        express_buffer_south_left;
     }
 }
 
-spriteset (darkbrick_buffer_south_building_right, "stations_darkbrick.png") {
+spriteset (express_buffer_south_right, "src/stations_express.png") {
     [  710, 430, 64, 64, -32, -34 ]
     [  780, 430, 64, 64, -32, -34 ]
 }
 
-spritelayout darkbrick_buffer_south_building_right_sw_ne(a) {
+spritelayout express_buffer_south_right_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -3419,7 +3394,7 @@ spritelayout darkbrick_buffer_south_building_right_sw_ne(a) {
     }
 }
 
-spritelayout darkbrick_buffer_south_building_right_se_nw(a) {
+spritelayout express_buffer_south_right_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -3436,10 +3411,10 @@ spritelayout darkbrick_buffer_south_building_right_se_nw(a) {
     }
 }
 
-item(FEAT_STATIONS, darkbrick_buffer_south_building_right_station) {
+item(FEAT_STATIONS, express_buffer_south_right_station) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_BUFFER);
         tile_flags: [
             bitmask(STAT_TILE_BLOCKED),
@@ -3447,11 +3422,11 @@ item(FEAT_STATIONS, darkbrick_buffer_south_building_right_station) {
         ];
     }
     graphics {
-        sprite_layouts: [darkbrick_buffer_south_building_right_sw_ne(0), darkbrick_buffer_south_building_right_se_nw(0)];
+        sprite_layouts: [express_buffer_south_right_sw_ne(0), express_buffer_south_right_se_nw(0)];
         select_tile_type: 1;
-        availability: switch_intro_year_darkbrick;
-        purchase: darkbrick_buffer_south_building_right;
-        darkbrick_buffer_south_building_right;
+        availability: switch_intro_year_express;
+        purchase: express_buffer_south_right;
+        express_buffer_south_right;
     }
 }
 
@@ -3461,20 +3436,20 @@ item(FEAT_STATIONS, darkbrick_buffer_south_building_right_station) {
 
 /***** FOOTBRIDGE LEFT *****/
 
-spriteset (darkbrick_overbridge_left, "stations_darkbrick.png") {
+spriteset (express_overbridge_left, "src/stations_express.png") {
     [  10, 10, 64, 64, -32, -34 ]
     [  80, 10, 64, 64, -32, -34 ]
 
-    [  10, 500, 64, 64, -32, -34 ]
-    [  80, 500, 64, 64, -32, -34 ]
-    [  150, 500, 64, 64, -32, -34 ]
+    [  10, 850, 64, 64, -32, -34 ]
+    [  80, 850, 64, 64, -32, -34 ]
+    [  150, 850, 64, 64, -32, -34 ]
 
     [  220, 500, 64, 64, -32, -34 ]
     [  290, 500, 64, 64, -32, -34 ]
     [  360, 500, 64, 64, -32, -34 ]
 }
 
-spritelayout darkbrick_overbridge_left_sw_ne(a) {
+spritelayout express_overbridge_left_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -3524,7 +3499,7 @@ spritelayout darkbrick_overbridge_left_sw_ne(a) {
     }
 }
 
-spritelayout darkbrick_overbridge_left_se_nw(a) {
+spritelayout express_overbridge_left_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -3574,25 +3549,25 @@ spritelayout darkbrick_overbridge_left_se_nw(a) {
     }
 }
 
-item(FEAT_STATIONS, darkbrick_left_overbridge) {
+item(FEAT_STATIONS, express_left_overbridge) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
     }
     graphics {
-        sprite_layouts: [darkbrick_overbridge_left_sw_ne(0), darkbrick_overbridge_left_se_nw(0)];
+        sprite_layouts: [express_overbridge_left_sw_ne(0), express_overbridge_left_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        purchase: darkbrick_overbridge_left;
-        darkbrick_overbridge_left;
+        availability: switch_intro_year_express;
+        purchase: express_overbridge_left;
+        express_overbridge_left;
     }
 }
 
 
 /***** FOOTBRIDGE RIGHT *****/
 
-spriteset (darkbrick_overbridge_right, "stations_darkbrick.png") {
+spriteset (express_overbridge_right, "src/stations_express.png") {
     [  150, 10, 64, 64, -32, -34 ]
     [  220, 10, 64, 64, -32, -34 ]
 
@@ -3605,7 +3580,7 @@ spriteset (darkbrick_overbridge_right, "stations_darkbrick.png") {
     [  780, 500, 64, 64, -32, -34 ]
 }
 
-spritelayout darkbrick_overbridge_right_sw_ne(a) {
+spritelayout express_overbridge_right_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -3644,7 +3619,7 @@ spritelayout darkbrick_overbridge_right_sw_ne(a) {
     }
 }
 
-spritelayout darkbrick_overbridge_right_se_nw(a) {
+spritelayout express_overbridge_right_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -3694,18 +3669,18 @@ spritelayout darkbrick_overbridge_right_se_nw(a) {
     }
 }
 
-item(FEAT_STATIONS, darkbrick_right_overbridge) {
+item(FEAT_STATIONS, express_right_overbridge) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
     }
     graphics {
-        sprite_layouts: [darkbrick_overbridge_right_sw_ne(0), darkbrick_overbridge_right_se_nw(0)];
+        sprite_layouts: [express_overbridge_right_sw_ne(0), express_overbridge_right_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        purchase: darkbrick_overbridge_right;
-        darkbrick_overbridge_right;
+        availability: switch_intro_year_express;
+        purchase: express_overbridge_right;
+        express_overbridge_right;
     }
 }
 
@@ -3716,7 +3691,7 @@ item(FEAT_STATIONS, darkbrick_right_overbridge) {
 
 /***** FOOTBRIDGE LEFT *****/
 
-spriteset (darkbrick_overbridgefences_left, "stations_darkbrick.png") {
+spriteset (express_overbridgefences_left, "src/stations_express.png") {
     [  10, 80, 64, 64, -32, -34 ]
     [  80, 80, 64, 64, -32, -34 ]
 
@@ -3729,7 +3704,7 @@ spriteset (darkbrick_overbridgefences_left, "stations_darkbrick.png") {
     [  360, 570, 64, 64, -32, -34 ]
 }
 
-spritelayout darkbrick_overbridgefences_left_sw_ne(a) {
+spritelayout express_overbridgefences_left_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -3779,7 +3754,7 @@ spritelayout darkbrick_overbridgefences_left_sw_ne(a) {
     }
 }
 
-spritelayout darkbrick_overbridgefences_left_se_nw(a) {
+spritelayout express_overbridgefences_left_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -3829,25 +3804,25 @@ spritelayout darkbrick_overbridgefences_left_se_nw(a) {
     }
 }
 
-item(FEAT_STATIONS, darkbrick_left_overbridgefences) {
+item(FEAT_STATIONS, express_left_overbridgefences) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
     }
     graphics {
-        sprite_layouts: [darkbrick_overbridgefences_left_sw_ne(0), darkbrick_overbridgefences_left_se_nw(0)];
+        sprite_layouts: [express_overbridgefences_left_sw_ne(0), express_overbridgefences_left_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        purchase: darkbrick_overbridgefences_left;
-        darkbrick_overbridgefences_left;
+        availability: switch_intro_year_express;
+        purchase: express_overbridgefences_left;
+        express_overbridgefences_left;
     }
 }
 
 
 /***** FOOTBRIDGE RIGHT *****/
 
-spriteset (darkbrick_overbridgefences_right, "stations_darkbrick.png") {
+spriteset (express_overbridgefences_right, "src/stations_express.png") {
     [  150, 80, 64, 64, -32, -34 ]
     [  220, 80, 64, 64, -32, -34 ]
 
@@ -3860,7 +3835,7 @@ spriteset (darkbrick_overbridgefences_right, "stations_darkbrick.png") {
     [  780, 570, 64, 64, -32, -34 ]
 }
 
-spritelayout darkbrick_overbridgefences_right_sw_ne(a) {
+spritelayout express_overbridgefences_right_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -3899,7 +3874,7 @@ spritelayout darkbrick_overbridgefences_right_sw_ne(a) {
     }
 }
 
-spritelayout darkbrick_overbridgefences_right_se_nw(a) {
+spritelayout express_overbridgefences_right_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -3949,18 +3924,18 @@ spritelayout darkbrick_overbridgefences_right_se_nw(a) {
     }
 }
 
-item(FEAT_STATIONS, darkbrick_right_overbridgefences) {
+item(FEAT_STATIONS, express_right_overbridgefences) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
     }
     graphics {
-        sprite_layouts: [darkbrick_overbridgefences_right_sw_ne(0), darkbrick_overbridgefences_right_se_nw(0)];
+        sprite_layouts: [express_overbridgefences_right_sw_ne(0), express_overbridgefences_right_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        purchase: darkbrick_overbridgefences_right;
-        darkbrick_overbridgefences_right;
+        availability: switch_intro_year_express;
+        purchase: express_overbridgefences_right;
+        express_overbridgefences_right;
     }
 }
 
@@ -3970,9 +3945,9 @@ item(FEAT_STATIONS, darkbrick_right_overbridgefences) {
 
 /***** OVERBRIDGE LEFT *****/
 
-spriteset (darkbrick_overpass_left, "stations_darkbrick.png") {
-    [  10, 80, 64, 64, -32, -34 ]
-    [  80, 80, 64, 64, -32, -34 ]
+spriteset (express_overpass_left, "src/stations_express.png") {
+    [  10, 10, 64, 64, -32, -34 ]
+    [  80, 10, 64, 64, -32, -34 ]
 
     [  10, 640, 64, 64, -32, -34 ]
     [  80, 640, 64, 64, -32, -34 ]
@@ -3983,7 +3958,7 @@ spriteset (darkbrick_overpass_left, "stations_darkbrick.png") {
     [  360, 640, 64, 64, -32, -34 ]
 }
 
-spritelayout darkbrick_overpass_left_sw_ne(a) {
+spritelayout express_overpass_left_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -4020,20 +3995,9 @@ spritelayout darkbrick_overpass_left_sw_ne(a) {
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
-        building {
-        sprite:         DEFAULT(4);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        8;
-        yextent:        16;
-        zextent:        30;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
 }
 
-spritelayout darkbrick_overpass_left_se_nw(a) {
+spritelayout express_overpass_left_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -4083,25 +4047,25 @@ spritelayout darkbrick_overpass_left_se_nw(a) {
     }
 }
 
-item(FEAT_STATIONS, darkbrick_left_overpass) {
+item(FEAT_STATIONS, express_left_overpass) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_OVERBRIDGE);
     }
     graphics {
-        sprite_layouts: [darkbrick_overpass_left_sw_ne(0), darkbrick_overpass_left_se_nw(0)];
+        sprite_layouts: [express_overpass_left_sw_ne(0), express_overpass_left_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        purchase: darkbrick_overpass_left;
-        darkbrick_overpass_left;
+        availability: switch_intro_year_express;
+        purchase: express_overpass_left;
+        express_overpass_left;
     }
 }
 
 
 /***** OVERBRIDGE RIGHT *****/
 
-spriteset (darkbrick_overpass_right, "stations_darkbrick.png") {
+spriteset (express_overpass_right, "src/stations_express.png") {
     [  150, 10, 64, 64, -32, -34 ]
     [  220, 10, 64, 64, -32, -34 ]
 
@@ -4114,7 +4078,7 @@ spriteset (darkbrick_overpass_right, "stations_darkbrick.png") {
     [  780, 640, 64, 64, -32, -34 ]
 }
 
-spritelayout darkbrick_overpass_right_sw_ne(a) {
+spritelayout express_overpass_right_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -4153,7 +4117,7 @@ spritelayout darkbrick_overpass_right_sw_ne(a) {
     }
 }
 
-spritelayout darkbrick_overpass_right_se_nw(a) {
+spritelayout express_overpass_right_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -4203,45 +4167,35 @@ spritelayout darkbrick_overpass_right_se_nw(a) {
     }
 }
 
-item(FEAT_STATIONS, darkbrick_right_overpass) {
+item(FEAT_STATIONS, express_right_overpass) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        class:                  "_XPS";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_OVERBRIDGE);
     }
     graphics {
-        sprite_layouts: [darkbrick_overpass_right_sw_ne(0), darkbrick_overpass_right_se_nw(0)];
+        sprite_layouts: [express_overpass_right_sw_ne(0), express_overpass_right_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        purchase: darkbrick_overpass_right;
-        darkbrick_overpass_right;
+        availability: switch_intro_year_express;
+        purchase: express_overpass_right;
+        express_overpass_right;
     }
 }
 
-/****************************************/
-/***** TERMINUS PLATFORMS ***************/
-/****************************************/
 
 
-spriteset (darkbrick_terminus_left, "stations_darkbrick.png") {
-    [  10, 850, 64, 64, -32, -34 ]
-    [  80, 850, 64, 64, -32, -34 ]
+/***********************************************/
+/***** BUILDINGS *******************************/
+/***********************************************/
 
-    [  220, 850, 64, 64, -32, -34 ]
-    [  290, 850, 64, 64, -32, -34 ]
+spriteset (express_building_1a, "src/stations_buildings_2.png") {
+    [ 10, 10, 64, 64, -32, -32 ]
+    [ 80, 10, 64, 64, -32, -32 ]
 }
 
-spriteset (darkbrick_terminus_right, "stations_darkbrick.png") {
-    [  10, 920, 64, 64, -32, -34 ]
-    [  80, 920, 64, 64, -32, -34 ]
-
-    [  220, 920, 64, 64, -32, -34 ]
-    [  290, 920, 64, 64, -32, -34 ]
-}
-
-spritelayout darkbrick_terminus_sw_ne(a) {
+spritelayout express_building_1a_nw(a) {
     ground {
-        sprite: GROUNDSPRITE_RAIL_X;
+        sprite: GROUNDSPRITE_CONCRETE;
     }
     building {
         sprite:         DEFAULT(0);
@@ -4249,10 +4203,16 @@ spritelayout darkbrick_terminus_sw_ne(a) {
         yoffset:        1;
         zoffset:        0;
         xextent:        16;
-        yextent:        5;
-        zextent:        48;
+        yextent:        16;
+        zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout express_building_1a_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
     }
     building {
         sprite:         DEFAULT(1);
@@ -4261,13 +4221,606 @@ spritelayout darkbrick_terminus_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        16;
-        zextent:        48;
+        zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout darkbrick_terminus_se_nw(a) {
+item(FEAT_STATIONS, express_station_building_1a) {
+    property {
+        class:                  "_BLD";
+        classname:              string(STR_NAME_STATION_BUILDING);
+        name:                   string(STR_NAME_STATION_COLNE);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
+        disabled_platforms:     bitmask(2,3,4,5,6,7,8);
+        disabled_length:        bitmask(2,3,4,5,6,7,8);
+    }
+    graphics {
+        sprite_layouts:         [express_building_1a_nw(0), express_building_1a_ne(0)];
+        select_tile_type:       0;
+        availability:           switch_intro_year_express;
+        purchase:               express_building_1a;
+        express_building_1a;
+    }
+}
+
+spriteset (express_building_1b, "src/stations_buildings_2.png") {
+    [ 150, 10, 64, 64, -32, -32 ]
+    [ 220, 10, 64, 64, -32, -32 ]
+}
+
+spritelayout express_building_1b_se(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout express_building_1b_sw(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, express_station_building_1b) {
+    property {
+        class:                  "_BLD";
+        classname:              string(STR_NAME_STATION_BUILDING);
+        name:                   string(STR_NAME_STATION_COLNE);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
+        disabled_platforms:     bitmask(2,3,4,5,6,7,8);
+        disabled_length:        bitmask(2,3,4,5,6,7,8);
+    }
+    graphics {
+        sprite_layouts:         [express_building_1b_se(0), express_building_1b_sw(0)];
+        select_tile_type:       0;
+        availability:           switch_intro_year_express;
+        purchase:               express_building_1b;
+        express_building_1b;
+    }
+}
+
+spriteset (express_building_2a, "src/stations_buildings_2.png") {
+    [ 290, 10, 64, 64, -32, -32 ]
+    [ 360, 10, 64, 64, -32, -32 ]
+}
+
+spritelayout express_building_2a_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout express_building_2a_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, express_station_building_2a) {
+    property {
+        class:                  "_BLD";
+        classname:              string(STR_NAME_STATION_BUILDING);
+        name:                   string(STR_NAME_STATION_IRWELL);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
+        disabled_platforms:     bitmask(2,3,4,5,6,7,8);
+        disabled_length:        bitmask(2,3,4,5,6,7,8);
+    }
+    graphics {
+        sprite_layouts:         [express_building_2a_nw(0), express_building_2a_ne(0)];
+        select_tile_type:       0;
+        availability:           switch_intro_year_express;
+        purchase:               express_building_2a;
+        express_building_2a;
+    }
+}
+
+spriteset (express_building_2b, "src/stations_buildings_2.png") {
+    [ 430, 10, 64, 64, -32, -32 ]
+    [ 500, 10, 64, 64, -32, -32 ]
+}
+
+spritelayout express_building_2b_se(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout express_building_2b_sw(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, express_station_building_2b) {
+    property {
+        class:                  "_BLD";
+        classname:              string(STR_NAME_STATION_BUILDING);
+        name:                   string(STR_NAME_STATION_IRWELL);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
+        disabled_platforms:     bitmask(2,3,4,5,6,7,8);
+        disabled_length:        bitmask(2,3,4,5,6,7,8);
+    }
+    graphics {
+        sprite_layouts:         [express_building_2b_se(0), express_building_2b_sw(0)];
+        select_tile_type:       0;
+        availability:           switch_intro_year_express;
+        purchase:               express_building_2b;
+        express_building_2b;
+    }
+}
+
+spriteset (express_building_3a, "src/stations_buildings_2.png") {
+    [ 570, 10, 64, 64, -32, -32 ]
+    [ 640, 10, 64, 64, -32, -32 ]
+}
+
+spritelayout express_building_3a_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout express_building_3a_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, express_station_building_3a) {
+    property {
+        class:                  "_BLD";
+        classname:              string(STR_NAME_STATION_BUILDING);
+        name:                   string(STR_NAME_STATION_LUNE);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
+        disabled_platforms:     bitmask(2,3,4,5,6,7,8);
+        disabled_length:        bitmask(2,3,4,5,6,7,8);
+    }
+    graphics {
+        sprite_layouts:         [express_building_3a_nw(0), express_building_3a_ne(0)];
+        select_tile_type:       0;
+        availability:           switch_intro_year_express;
+        purchase:               express_building_3a;
+        express_building_3a;
+    }
+}
+
+spriteset (express_building_3b, "src/stations_buildings_2.png") {
+    [ 710, 10, 64, 64, -32, -32 ]
+    [ 780, 10, 64, 64, -32, -32 ]
+}
+
+spritelayout express_building_3b_se(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout express_building_3b_sw(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, express_station_building_3b) {
+    property {
+        class:                  "_BLD";
+        classname:              string(STR_NAME_STATION_BUILDING);
+        name:                   string(STR_NAME_STATION_LUNE);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
+        disabled_platforms:     bitmask(2,3,4,5,6,7,8);
+        disabled_length:        bitmask(2,3,4,5,6,7,8);
+    }
+    graphics {
+        sprite_layouts:         [express_building_3b_se(0), express_building_3b_sw(0)];
+        select_tile_type:       0;
+        availability:           switch_intro_year_express;
+        purchase:               express_building_3b;
+        express_building_3b;
+    }
+}
+
+spriteset (express_building_4a, "src/stations_buildings_2.png") {
+    [ 10, 80, 64, 64, -32, -32 ]
+    [ 80, 80, 64, 64, -32, -32 ]
+}
+
+spritelayout express_building_4a_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout express_building_4a_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, express_station_building_4a) {
+    property {
+        class:                  "_BLD";
+        classname:              string(STR_NAME_STATION_BUILDING);
+        name:                   string(STR_NAME_STATION_LEA);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
+        disabled_platforms:     bitmask(2,3,4,5,6,7,8);
+        disabled_length:        bitmask(2,3,4,5,6,7,8);
+    }
+    graphics {
+        sprite_layouts:         [express_building_4a_nw(0), express_building_4a_ne(0)];
+        select_tile_type:       0;
+        availability:           switch_intro_year_express;
+        purchase:               express_building_4a;
+        express_building_4a;
+    }
+}
+
+spriteset (express_building_4b, "src/stations_buildings_2.png") {
+    [ 150, 80, 64, 64, -32, -32 ]
+    [ 220, 80, 64, 64, -32, -32 ]
+}
+
+spritelayout express_building_4b_se(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout express_building_4b_sw(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, express_station_building_4b) {
+    property {
+        class:                  "_BLD";
+        classname:              string(STR_NAME_STATION_BUILDING);
+        name:                   string(STR_NAME_STATION_LEA);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
+        disabled_platforms:     bitmask(2,3,4,5,6,7,8);
+        disabled_length:        bitmask(2,3,4,5,6,7,8);
+    }
+    graphics {
+        sprite_layouts:         [express_building_4b_se(0), express_building_4b_sw(0)];
+        select_tile_type:       0;
+        availability:           switch_intro_year_express;
+        purchase:               express_building_4b;
+        express_building_4b;
+    }
+}
+
+/****************************************/
+/***** FEATURE BUILDING FRONT ***********/
+/****************************************/
+
+
+spriteset (express_feature_building_tile_0, "src/stations_buildings_2.png") {
+    [  150, 690, 64, 96, -32, -66 ]
+    [  220, 690, 64, 96, -32, -66 ]
+}
+
+spriteset (express_feature_building_tile_1, "src/stations_buildings_2.png") {
+    [  80, 690, 64, 96, -32, -66 ]
+    [  290, 690, 64, 96, -32, -66 ]
+}
+
+spriteset (express_feature_building_tile_2, "src/stations_buildings_2.png") {
+    [  10, 690, 64, 96, -32, -66 ]
+    [  360, 690, 64, 96, -32, -66 ]
+}
+
+spritelayout express_feature_building_0(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        64;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout express_feature_building_1(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        64;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout express_feature_building_2(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        64;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout express_feature_building_3(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        64;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+switch (FEAT_STATIONS, SELF, switch_express_feature_building, platform_position_from_start(PLATFORM_SAME_SECTION)) {
+    0: return express_feature_building_tile_0;
+    1: return express_feature_building_tile_1;
+    2: return express_feature_building_tile_2;
+}
+
+item(FEAT_STATIONS, express_feature_building) {
+    property {
+        class:                  "_BLD";
+        classname:              string(STR_NAME_STATION_BUILDING);
+        name:                   string(STR_NAME_STATION_ITCHEN);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
+        disabled_platforms:     bitmask(0,2,3,4,5,6,7,8);
+        disabled_length:        bitmask(0,1,2,4,5,6,7,8);
+
+    }
+    graphics {
+        sprite_layouts: [express_feature_building_0(0), express_feature_building_1(0), express_feature_building_2(0), express_feature_building_3(0)];
+        select_tile_type: 0;
+        availability: switch_intro_year_express;
+        purchase: express_feature_building_tile_0;
+        switch_express_feature_building;
+    }
+}
+
+
+
+
+/***********************************/
+/***** FOOTBRIDGE WAYPOINT *********/
+/***********************************/
+
+/***** FOOTBRIDGE WAYPOINT LEFT *****/
+
+spriteset (express_overbridge_waypoint_left, "src/stations_waypoints.png") {
+    [  10, 850, 64, 64, -32, -34 ]
+    [  80, 850, 64, 64, -32, -34 ]
+    [  150, 850, 64, 64, -32, -34 ]
+}
+
+spritelayout express_overbridge_waypoint_left_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        1;
+        zoffset:        0;
+        xextent:        6;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout express_overbridge_waypoint_left_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -4276,574 +4829,70 @@ spritelayout darkbrick_terminus_se_nw(a) {
         xoffset:        0;
         yoffset:        1;
         zoffset:        0;
-        xextent:        5;
-        yextent:        16;
-        zextent:        48;
+        xextent:        2;
+        yextent:        6;
+        zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
     building {
-        sprite:         DEFAULT(3);
+        sprite:         DEFAULT(1);
         xoffset:        0;
         yoffset:        1;
         zoffset:        0;
         xextent:        16;
-        yextent:        16;
-        zextent:        48;
+        yextent:        6;
+        zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-switch (FEAT_STATIONS, SELF, switch_darkbrick_double_platform, platform_number_from_start(PLATFORM_SAME_SECTION)) {
-    0: return darkbrick_terminus_left;
-    1: return darkbrick_terminus_right;
-}
-
-item(FEAT_STATIONS, darkbrick_terminus) {
+item(FEAT_STATIONS, express_left_overbridge_waypoint) {
     property {
-        class:                  "_DRK";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
-        name:                   string(STR_NAME_STATION_PLATFORM_COVERED);
-        disabled_platforms:     bitmask(1,3,4,5,6,7,8);
+        class:                  "WAYP";
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
     }
     graphics {
-        sprite_layouts: [darkbrick_terminus_sw_ne(0), darkbrick_terminus_se_nw(0)];
+        sprite_layouts: [express_overbridge_waypoint_left_sw_ne(0), express_overbridge_waypoint_left_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_darkbrick;
-        purchase: darkbrick_terminus_left;
-        switch_darkbrick_double_platform;
+        availability: switch_intro_year_express;
+        purchase: express_overbridge_waypoint_left;
+        express_overbridge_waypoint_left;
     }
 }
 
+/***** FOOTBRIDGE WAYPOINT RIGHT *****/
 
-
-
-/******************************/
-/***** BULDINGS ***************/
-/******************************/
-
-
-spriteset (darkbrick_building_1a, "stations_buildings_1.png") {
-    [ 10, 570, 64, 64, -32, -32 ]
-    [ 80, 570, 64, 64, -32, -32 ]
-}
-
-spritelayout darkbrick_building_1a_nw(a) {
-    ground {
-        sprite: GROUNDSPRITE_CONCRETE;
-    }
-    building {
-        sprite:         DEFAULT(0);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        16;
-        zextent:        22;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-spritelayout darkbrick_building_1a_ne(a) {
-    ground {
-        sprite: GROUNDSPRITE_CONCRETE;
-    }
-    building {
-        sprite:         DEFAULT(1);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        16;
-        zextent:        22;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-item(FEAT_STATIONS, darkbrick_station_building_1a) {
-    property {
-        class:                  "_BLD";
-        classname:              string(STR_NAME_STATION_BUILDING);
-        name:                   string(STR_NAME_STATION_MEASE);
-         tile_flags: [
-            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE),
-            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE)
-        ];
-        disabled_platforms:     bitmask(2,3,4,5,6,7,8);
-        disabled_length:        bitmask(2,3,4,5,6,7,8);
-    }
-    graphics {
-        sprite_layouts:         [darkbrick_building_1a_nw(0), darkbrick_building_1a_ne(0)];
-        select_tile_type:       0;
-        availability:           switch_intro_year_darkbrick;
-        purchase:               darkbrick_building_1a;
-        darkbrick_building_1a;
-    }
-}
-
-spriteset (darkbrick_building_1b, "stations_buildings_1.png") {
-    [ 150, 570, 64, 64, -32, -32 ]
-    [ 220, 570, 64, 64, -32, -32 ]
-}
-
-spritelayout darkbrick_building_1b_se(a) {
-    ground {
-        sprite: GROUNDSPRITE_CONCRETE;
-    }
-    building {
-        sprite:         DEFAULT(0);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        16;
-        zextent:        22;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-spritelayout darkbrick_building_1b_sw(a) {
-    ground {
-        sprite: GROUNDSPRITE_CONCRETE;
-    }
-    building {
-        sprite:         DEFAULT(1);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        16;
-        zextent:        22;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-item(FEAT_STATIONS, darkbrick_station_building_1b) {
-    property {
-        class:                  "_BLD";
-        classname:              string(STR_NAME_STATION_BUILDING);
-        name:                   string(STR_NAME_STATION_MEASE);
-         tile_flags: [
-            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE),
-            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE)
-        ];
-        disabled_platforms:     bitmask(2,3,4,5,6,7,8);
-        disabled_length:        bitmask(2,3,4,5,6,7,8);
-    }
-    graphics {
-        sprite_layouts:         [darkbrick_building_1b_se(0), darkbrick_building_1b_sw(0)];
-        select_tile_type:       0;
-        availability:           switch_intro_year_darkbrick;
-        purchase:               darkbrick_building_1b;
-        darkbrick_building_1b;
-    }
-}
-
-spriteset (darkbrick_building_2a, "stations_buildings_1.png") {
-    [ 290, 570, 64, 64, -32, -32 ]
-    [ 360, 570, 64, 64, -32, -32 ]
-}
-
-spritelayout darkbrick_building_2a_nw(a) {
-    ground {
-        sprite: GROUNDSPRITE_CONCRETE;
-    }
-    building {
-        sprite:         DEFAULT(0);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        16;
-        zextent:        32;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-spritelayout darkbrick_building_2a_ne(a) {
-    ground {
-        sprite: GROUNDSPRITE_CONCRETE;
-    }
-    building {
-        sprite:         DEFAULT(1);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        16;
-        zextent:        32;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-item(FEAT_STATIONS, darkbrick_station_building_2a) {
-    property {
-        class:                  "_BLD";
-        classname:              string(STR_NAME_STATION_BUILDING);
-        name:                   string(STR_NAME_STATION_ANKER);
-         tile_flags: [
-            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE),
-            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE)
-        ];
-        disabled_platforms:     bitmask(2,3,4,5,6,7,8);
-        disabled_length:        bitmask(2,3,4,5,6,7,8);
-    }
-    graphics {
-        sprite_layouts:         [darkbrick_building_2a_nw(0), darkbrick_building_2a_ne(0)];
-        select_tile_type:       0;
-        availability:           switch_intro_year_darkbrick;
-        purchase:               darkbrick_building_2a;
-        darkbrick_building_2a;
-    }
-}
-
-spriteset (darkbrick_building_2b, "stations_buildings_1.png") {
-    [ 430, 570, 64, 64, -32, -32 ]
-    [ 500, 570, 64, 64, -32, -32 ]
-}
-
-spritelayout darkbrick_building_2b_se(a) {
-    ground {
-        sprite: GROUNDSPRITE_CONCRETE;
-    }
-    building {
-        sprite:         DEFAULT(0);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        16;
-        zextent:        32;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-spritelayout darkbrick_building_2b_sw(a) {
-    ground {
-        sprite: GROUNDSPRITE_CONCRETE;
-    }
-    building {
-        sprite:         DEFAULT(1);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        16;
-        zextent:        32;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-item(FEAT_STATIONS, darkbrick_station_building_2b) {
-    property {
-        class:                  "_BLD";
-        classname:              string(STR_NAME_STATION_BUILDING);
-        name:                   string(STR_NAME_STATION_ANKER);
-         tile_flags: [
-            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE),
-            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE)
-        ];
-        disabled_platforms:     bitmask(2,3,4,5,6,7,8);
-        disabled_length:        bitmask(2,3,4,5,6,7,8);
-    }
-    graphics {
-        sprite_layouts:         [darkbrick_building_2b_se(0), darkbrick_building_2b_sw(0)];
-        select_tile_type:       0;
-        availability:           switch_intro_year_darkbrick;
-        purchase:               darkbrick_building_2b;
-        darkbrick_building_2b;
-    }
-}
-
-spriteset (darkbrick_building_3a, "stations_buildings_1.png") {
-    [ 570, 570, 64, 64, -32, -32 ]
-    [ 640, 570, 64, 64, -32, -32 ]
-}
-
-spritelayout darkbrick_building_3a_nw(a) {
-    ground {
-        sprite: GROUNDSPRITE_CONCRETE;
-    }
-    building {
-        sprite:         DEFAULT(0);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        16;
-        zextent:        30;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-spritelayout darkbrick_building_3a_ne(a) {
-    ground {
-        sprite: GROUNDSPRITE_CONCRETE;
-    }
-    building {
-        sprite:         DEFAULT(1);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        16;
-        zextent:        30;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-item(FEAT_STATIONS, darkbrick_station_building_3a) {
-    property {
-        class:                  "_BLD";
-        classname:              string(STR_NAME_STATION_BUILDING);
-        name:                   string(STR_NAME_STATION_RIBBLE);
-         tile_flags: [
-            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE),
-            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE)
-        ];
-        disabled_platforms:     bitmask(2,3,4,5,6,7,8);
-        disabled_length:        bitmask(2,3,4,5,6,7,8);
-    }
-    graphics {
-        sprite_layouts:         [darkbrick_building_3a_nw(0), darkbrick_building_3a_ne(0)];
-        select_tile_type:       0;
-        availability:           switch_intro_year_darkbrick;
-        purchase:               darkbrick_building_3a;
-        darkbrick_building_3a;
-    }
-}
-
-spriteset (darkbrick_building_3b, "stations_buildings_1.png") {
-    [ 710, 570, 64, 64, -32, -32 ]
-    [ 780, 570, 64, 64, -32, -32 ]
-}
-
-spritelayout darkbrick_building_3b_se(a) {
-    ground {
-        sprite: GROUNDSPRITE_CONCRETE;
-    }
-    building {
-        sprite:         DEFAULT(0);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        16;
-        zextent:        30;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-spritelayout darkbrick_building_3b_sw(a) {
-    ground {
-        sprite: GROUNDSPRITE_CONCRETE;
-    }
-    building {
-        sprite:         DEFAULT(1);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        16;
-        zextent:        30;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-item(FEAT_STATIONS, darkbrick_station_building_3b) {
-    property {
-        class:                  "_BLD";
-        classname:              string(STR_NAME_STATION_BUILDING);
-        name:                   string(STR_NAME_STATION_RIBBLE);
-         tile_flags: [
-            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE),
-            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE)
-        ];
-        disabled_platforms:     bitmask(2,3,4,5,6,7,8);
-        disabled_length:        bitmask(2,3,4,5,6,7,8);
-    }
-    graphics {
-        sprite_layouts:         [darkbrick_building_3b_se(0), darkbrick_building_3b_sw(0)];
-        select_tile_type:       0;
-        availability:           switch_intro_year_darkbrick;
-        purchase:               darkbrick_building_3b;
-        darkbrick_building_3b;
-    }
-}
-
-
-spriteset (darkbrick_building_4a, "stations_buildings_1.png") {
-    [ 10, 640, 64, 64, -32, -32 ]
-    [ 80, 640, 64, 64, -32, -32 ]
-}
-
-spritelayout darkbrick_building_4a_nw(a) {
-    ground {
-        sprite: GROUNDSPRITE_CONCRETE;
-    }
-    building {
-        sprite:         DEFAULT(0);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        16;
-        zextent:        30;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-spritelayout darkbrick_building_4a_ne(a) {
-    ground {
-        sprite: GROUNDSPRITE_CONCRETE;
-    }
-    building {
-        sprite:         DEFAULT(1);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        16;
-        zextent:        30;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-item(FEAT_STATIONS, darkbrick_station_building_4a) {
-    property {
-        class:                  "_BLD";
-        classname:              string(STR_NAME_STATION_BUILDING);
-        name:                   string(STR_NAME_STATION_SOAR);
-         tile_flags: [
-            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE),
-            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE)
-        ];
-        disabled_platforms:     bitmask(2,3,4,5,6,7,8);
-        disabled_length:        bitmask(2,3,4,5,6,7,8);
-    }
-    graphics {
-        sprite_layouts:         [darkbrick_building_4a_nw(0), darkbrick_building_4a_ne(0)];
-        select_tile_type:       0;
-        availability:           switch_intro_year_darkbrick;
-        purchase:               darkbrick_building_4a;
-        darkbrick_building_4a;
-    }
-}
-
-spriteset (darkbrick_building_4b, "stations_buildings_1.png") {
-    [ 150, 640, 64, 64, -32, -32 ]
-    [ 220, 640, 64, 64, -32, -32 ]
-}
-
-spritelayout darkbrick_building_4b_se(a) {
-    ground {
-        sprite: GROUNDSPRITE_CONCRETE;
-    }
-    building {
-        sprite:         DEFAULT(0);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        16;
-        zextent:        30;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-spritelayout darkbrick_building_4b_sw(a) {
-    ground {
-        sprite: GROUNDSPRITE_CONCRETE;
-    }
-    building {
-        sprite:         DEFAULT(1);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        16;
-        zextent:        30;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-item(FEAT_STATIONS, darkbrick_station_building_4b) {
-    property {
-        class:                  "_BLD";
-        classname:              string(STR_NAME_STATION_BUILDING);
-        name:                   string(STR_NAME_STATION_SOAR);
-         tile_flags: [
-            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE),
-            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE)
-        ];
-        disabled_platforms:     bitmask(2,3,4,5,6,7,8);
-        disabled_length:        bitmask(2,3,4,5,6,7,8);
-    }
-    graphics {
-        sprite_layouts:         [darkbrick_building_4b_se(0), darkbrick_building_4b_sw(0)];
-        select_tile_type:       0;
-        availability:           switch_intro_year_darkbrick;
-        purchase:               darkbrick_building_4b;
-        darkbrick_building_4b;
-    }
-}
-
-/**************************************************************************/
-/***** NO FOOTBRIDGE WAYPOINT BECAUSE IT IS THE SAME AS ANOTHER TYPE ******/
-/**************************************************************************/
-
-/***** SIGNALBOX WAYPOINT 1A *****/
-
-spriteset (darkbrick_signalbox_waypoint_1a, "stations_waypoints.png") {
-    [  10, 570, 64, 64, -32, -34 ]
-    [  80, 570, 64, 64, -32, -34 ]
+spriteset (express_overbridge_waypoint_right, "src/stations_waypoints.png") {
+    [  220, 850, 64, 64, -32, -34 ]
+    [  290, 850, 64, 64, -32, -34 ]
+    [  360, 850, 64, 64, -32, -34 ]
 
 }
 
-spritelayout darkbrick_signalbox_waypoint_1a_sw_ne(a) {
+spritelayout express_overbridge_waypoint_right_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
     building {
-        sprite:         DEFAULT(0);
+        sprite:         DEFAULT(1);
         xoffset:        0;
         yoffset:        1;
         zoffset:        0;
-        xextent:        16;
-        yextent:        5;
+        xextent:        6;
+        yextent:        2;
         zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
-}
-
-spritelayout darkbrick_signalbox_waypoint_1a_se_nw(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_Y;
-    }
-    building {
-        sprite:         DEFAULT(1);
-        xoffset:        11;
+        building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
         yoffset:        1;
         zoffset:        0;
-        xextent:        5;
+        xextent:        6;
         yextent:        16;
         zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
@@ -4851,190 +4900,34 @@ spritelayout darkbrick_signalbox_waypoint_1a_se_nw(a) {
     }
 }
 
-item(FEAT_STATIONS, darkbrick_signalbox_1a_waypoint) {
-    property {
-        class:                  "WAYP";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
-        name:                   string(STR_NAME_STATION_PLATFORM_SIGNALBOX);
-        
-
-    }
-    graphics {
-        sprite_layouts: [darkbrick_signalbox_waypoint_1a_sw_ne(0), darkbrick_signalbox_waypoint_1a_se_nw(0)];
-        select_tile_type: 2;
-        purchase: darkbrick_signalbox_waypoint_1a;
-        darkbrick_signalbox_waypoint_1a;
-    }
-}
-
-/***** SIGNALBOX WAYPOINT 1B *****/
-
-spriteset (darkbrick_signalbox_waypoint_1b, "stations_waypoints.png") {
-    [  150, 570, 64, 64, -32, -34 ]
-    [  220, 570, 64, 64, -32, -34 ]
-
-}
-
-spritelayout darkbrick_signalbox_waypoint_1b_sw_ne(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_X;
-    }
-    building {
-        sprite:         DEFAULT(0);
-        xoffset:        0;
-        yoffset:        12;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        5;
-        zextent:        20;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-spritelayout darkbrick_signalbox_waypoint_1b_se_nw(a) {
+spritelayout express_overbridge_waypoint_right_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
     building {
-        sprite:         DEFAULT(1);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        5;
-        yextent:        16;
-        zextent:        20;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-item(FEAT_STATIONS, darkbrick_signalbox_1b_waypoint) {
-    property {
-        class:                  "WAYP";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
-        name:                   string(STR_NAME_STATION_PLATFORM_SIGNALBOX);
-
-    }
-    graphics {
-        sprite_layouts: [darkbrick_signalbox_waypoint_1b_sw_ne(0), darkbrick_signalbox_waypoint_1b_se_nw(0)];
-        select_tile_type: 2;
-        purchase: darkbrick_signalbox_waypoint_1b;
-        darkbrick_signalbox_waypoint_1b;
-    }
-}
-
-/***** SIGNALBOX WAYPOINT 2A *****/
-
-spriteset (darkbrick_signalbox_waypoint_2a, "stations_waypoints.png") {
-    [  290, 570, 64, 64, -32, -34 ]
-    [  360, 570, 64, 64, -32, -34 ]
-
-}
-
-spritelayout darkbrick_signalbox_waypoint_2a_sw_ne(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_X;
-    }
-    building {
-        sprite:         DEFAULT(0);
+        sprite:         DEFAULT(2);
         xoffset:        0;
         yoffset:        1;
         zoffset:        0;
         xextent:        16;
-        yextent:        5;
+        yextent:        6;
         zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
 }
 
-spritelayout darkbrick_signalbox_waypoint_2a_se_nw(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_Y;
-    }
-    building {
-        sprite:         DEFAULT(1);
-        xoffset:        11;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        5;
-        yextent:        16;
-        zextent:        20;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-item(FEAT_STATIONS, darkbrick_signalbox_2a_waypoint) {
+item(FEAT_STATIONS, express_right_overbridge_waypoint) {
     property {
         class:                  "WAYP";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
-        name:                   string(STR_NAME_STATION_PLATFORM_SIGNALBOX);
-        
-
+        classname:              string(STR_NAME_STATCLASS_EXPRESS_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
     }
     graphics {
-        sprite_layouts: [darkbrick_signalbox_waypoint_2a_sw_ne(0), darkbrick_signalbox_waypoint_2a_se_nw(0)];
+        sprite_layouts: [express_overbridge_waypoint_right_sw_ne(0), express_overbridge_waypoint_right_se_nw(0)];
         select_tile_type: 2;
-        purchase: darkbrick_signalbox_waypoint_2a;
-        darkbrick_signalbox_waypoint_2a;
-    }
-}
-
-/***** SIGNALBOX WAYPOINT 2B *****/
-
-spriteset (darkbrick_signalbox_waypoint_2b, "stations_waypoints.png") {
-    [  430, 570, 64, 64, -32, -34 ]
-    [  500, 570, 64, 64, -32, -34 ]
-
-}
-
-spritelayout darkbrick_signalbox_waypoint_2b_sw_ne(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_X;
-    }
-    building {
-        sprite:         DEFAULT(0);
-        xoffset:        0;
-        yoffset:        12;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        5;
-        zextent:        20;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-spritelayout darkbrick_signalbox_waypoint_2b_se_nw(a) {
-    ground {
-        sprite: GROUNDSPRITE_RAIL_Y;
-    }
-    building {
-        sprite:         DEFAULT(1);
-        xoffset:        0;
-        yoffset:        1;
-        zoffset:        0;
-        xextent:        5;
-        yextent:        16;
-        zextent:        20;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-}
-
-item(FEAT_STATIONS, darkbrick_signalbox_2b_waypoint) {
-    property {
-        class:                  "WAYP";
-        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
-        name:                   string(STR_NAME_STATION_PLATFORM_SIGNALBOX);
-
-    }
-    graphics {
-        sprite_layouts: [darkbrick_signalbox_waypoint_2b_sw_ne(0), darkbrick_signalbox_waypoint_2b_se_nw(0)];
-        select_tile_type: 2;
-        purchase: darkbrick_signalbox_waypoint_2b;
-        darkbrick_signalbox_waypoint_2b;
+        availability: switch_intro_year_express;
+        purchase: express_overbridge_waypoint_right;
+        express_overbridge_waypoint_right;
     }
 }

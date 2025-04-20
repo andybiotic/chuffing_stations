@@ -1,20 +1,3 @@
-grf {
-    grfid: "NDY\05";
-    name: string(STR_GRF_NAME);
-    desc: string(STR_GRF_DESCRIPTION);
-    version: 1;
-    min_compatible_version: 1;
-}
-
-if (version_openttd(1,2,0,22723) > openttd_version) {
-    error(FATAL, REQUIRES_OPENTTD, string(STR_VERSION_22723));
-}
-
-cargotable {
-    PASS
-}
-
-
 /***************************************************************************/
 /********************* STATION SQUARES *************************************/
 /***************************************************************************/
@@ -24,7 +7,7 @@ cargotable {
 /****************************************/
 
 
-spriteset (square_1_1, "stations_squares.png") {
+spriteset (square_1_1, "src/stations_squares.png") {
     [  10, 10, 64, 64, -32, -34 ]
     [  80, 10, 64, 64, -32, -34 ]
 }
@@ -81,7 +64,7 @@ item(FEAT_STATIONS, station_square_1_1) {
     }
 }
 
-spriteset (square_1_2, "stations_squares.png") {
+spriteset (square_1_2, "src/stations_squares.png") {
     [  150, 10, 64, 64, -32, -34 ]
     [  220, 10, 64, 64, -32, -34 ]
 }
@@ -138,7 +121,7 @@ item(FEAT_STATIONS, station_square_1_2) {
     }
 }
 
-spriteset (square_1_3, "stations_squares.png") {
+spriteset (square_1_3, "src/stations_squares.png") {
     [  290, 10, 64, 64, -32, -34, ANIM ]
     [  360, 10, 64, 64, -32, -34, ANIM ]
 }
@@ -195,7 +178,7 @@ item(FEAT_STATIONS, station_square_1_3) {
     }
 }
 
-spriteset (square_1_4, "stations_squares.png") {
+spriteset (square_1_4, "src/stations_squares.png") {
     [  430, 10, 64, 64, -32, -34 ]
     [  500, 10, 64, 64, -32, -34 ]
 }
@@ -257,7 +240,7 @@ item(FEAT_STATIONS, station_square_1_4) {
 /****************************************/
 
 
-spriteset (square_2_1, "stations_squares.png") {
+spriteset (square_2_1, "src/stations_squares.png") {
     [  10, 80, 64, 64, -32, -34 ]
     [  80, 80, 64, 64, -32, -34 ]
 }
@@ -314,7 +297,7 @@ item(FEAT_STATIONS, station_square_2_1) {
     }
 }
 
-spriteset (square_2_2, "stations_squares.png") {
+spriteset (square_2_2, "src/stations_squares.png") {
     [  150, 80, 64, 64, -32, -34 ]
     [  220, 80, 64, 64, -32, -34 ]
 }
@@ -371,7 +354,7 @@ item(FEAT_STATIONS, station_square_2_2) {
     }
 }
 
-spriteset (square_2_3, "stations_squares.png") {
+spriteset (square_2_3, "src/stations_squares.png") {
     [  290, 80, 64, 64, -32, -34 ]
     [  360, 80, 64, 64, -32, -34 ]
 }
@@ -428,7 +411,7 @@ item(FEAT_STATIONS, station_square_2_3) {
     }
 }
 
-spriteset (square_2_4, "stations_squares.png") {
+spriteset (square_2_4, "src/stations_squares.png") {
     [  430, 80, 64, 64, -32, -34 ]
     [  500, 80, 64, 64, -32, -34 ]
 }
@@ -490,7 +473,7 @@ item(FEAT_STATIONS, station_square_2_4) {
 /****************************************/
 
 
-spriteset (square_3_1, "stations_squares.png") {
+spriteset (square_3_1, "src/stations_squares.png") {
     [  10, 150, 64, 64, -32, -34 ]
     [  80, 150, 64, 64, -32, -34 ]
 }
@@ -547,7 +530,7 @@ item(FEAT_STATIONS, station_square_3_1) {
     }
 }
 
-spriteset (square_3_2, "stations_squares.png") {
+spriteset (square_3_2, "src/stations_squares.png") {
     [  150, 150, 64, 64, -32, -34 ]
     [  220, 150, 64, 64, -32, -34 ]
 }
@@ -604,7 +587,7 @@ item(FEAT_STATIONS, station_square_3_2) {
     }
 }
 
-spriteset (square_3_3, "stations_squares.png") {
+spriteset (square_3_3, "src/stations_squares.png") {
     [  290, 150, 64, 64, -32, -34 ]
     [  360, 150, 64, 64, -32, -34 ]
 }
@@ -661,7 +644,7 @@ item(FEAT_STATIONS, station_square_3_3) {
     }
 }
 
-spriteset (square_3_4, "stations_squares.png") {
+spriteset (square_3_4, "src/stations_squares.png") {
     [  430, 150, 64, 64, -32, -34 ]
     [  500, 150, 64, 64, -32, -34 ]
 }
@@ -723,7 +706,7 @@ item(FEAT_STATIONS, station_square_3_4) {
 /****************************************/
 
 
-spriteset (square_4_1, "stations_squares.png") {
+spriteset (square_4_1, "src/stations_squares.png") {
     [  10, 220, 64, 64, -32, -34 ]
     [  80, 220, 64, 64, -32, -34 ]
 }
@@ -780,7 +763,7 @@ item(FEAT_STATIONS, station_square_4_1) {
     }
 }
 
-spriteset (square_4_2, "stations_squares.png") {
+spriteset (square_4_2, "src/stations_squares.png") {
     [  150, 220, 64, 64, -32, -34 ]
     [  220, 220, 64, 64, -32, -34 ]
 }
@@ -837,7 +820,7 @@ item(FEAT_STATIONS, station_square_4_2) {
     }
 }
 
-spriteset (square_4_3, "stations_squares.png") {
+spriteset (square_4_3, "src/stations_squares.png") {
     [  290, 220, 64, 64, -32, -34 ]
     [  360, 220, 64, 64, -32, -34 ]
 }
@@ -894,7 +877,7 @@ item(FEAT_STATIONS, station_square_4_3) {
     }
 }
 
-spriteset (square_4_4, "stations_squares.png") {
+spriteset (square_4_4, "src/stations_squares.png") {
     [  430, 220, 64, 64, -32, -34 ]
     [  500, 220, 64, 64, -32, -34 ]
 }
