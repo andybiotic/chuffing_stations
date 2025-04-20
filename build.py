@@ -6,10 +6,10 @@
 newgrf_name = "chuffing_stations"
 
 # Files which should be first, in order (header, cargotable, etc)
-header_stuff = ["header"]
+header_stuff = ["header", "squares", "wooden", "stone", "stone_extra", "redbrick", "suburban", "darkbrick", "modern", "express", "city"]
 
 # Files to place in alphabetical order below
-unordered_stuff = ["city", "darkbrick", "express", "modern", "redbrick", "squares", "stone_extra", "stone", "suburban", "wooden"]
+unordered_stuff = []
 
 # Do you want to copy the completed NewGRF to your OpenTTD folder? (If in the typical location at "~/Documents/OpenTTD/newgrf")
 copy_bool = False
