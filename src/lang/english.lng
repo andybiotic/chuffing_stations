@@ -2,6 +2,8 @@
 STR_GRF_NAME                                                    :{TITLE} {VERSION}
 STR_GRF_DESCRIPTION                                             :{ORANGE}{TITLE}{}{BLACK}This station set is based on some common designs from around the UK.
 
+STR_GRF_WEBSITE                                                 :{WEBSITE}
+
 STR_VERSION_22723                                               :1.2.0 (r22723)
 
 STR_NAME_STATCLASS                                              :Platforms
