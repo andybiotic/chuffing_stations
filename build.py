@@ -12,7 +12,7 @@ header_stuff = ["header", "squares", "wooden", "stone", "stone_extra", "redbrick
 unordered_stuff = []
 
 # Do you want to copy the completed NewGRF to your OpenTTD folder? (If in the typical location at "~/Documents/OpenTTD/newgrf")
-copy_bool = False
+copy_bool = True
 
 #################################
 # NO NEED TO CHANGE STUFF BELOW #

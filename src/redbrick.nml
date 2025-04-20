@@ -1717,7 +1717,7 @@ spritelayout redbrick_shelter_platform_left_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
@@ -1734,7 +1734,7 @@ spritelayout redbrick_shelter_platform_left_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
@@ -1745,7 +1745,7 @@ spritelayout redbrick_shelter_platform_left_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
@@ -1826,7 +1826,7 @@ spritelayout redbrick_shelter_platform_right_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
@@ -1854,7 +1854,7 @@ spritelayout redbrick_shelter_platform_right_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
@@ -1939,7 +1939,7 @@ spritelayout redbrick_fenceandshelter_platform_left_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
@@ -1967,7 +1967,7 @@ spritelayout redbrick_fenceandshelter_platform_left_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
@@ -2048,7 +2048,7 @@ spritelayout redbrick_fenceandshelter_platform_right_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        16;
+        zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
@@ -2076,7 +2076,7 @@ spritelayout redbrick_fenceandshelter_platform_right_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        16;
+        zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
@@ -2160,7 +2160,7 @@ spritelayout redbrick_shelteralt_platform_left_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        12;
+        zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
@@ -2188,7 +2188,7 @@ spritelayout redbrick_shelteralt_platform_left_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        12;
+        zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
@@ -2268,7 +2268,7 @@ spritelayout redbrick_shelteralt_platform_right_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        12;
+        zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
@@ -2296,7 +2296,7 @@ spritelayout redbrick_shelteralt_platform_right_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        12;
+        zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
@@ -2380,7 +2380,7 @@ spritelayout redbrick_shelteralt_wall_platform_left_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        12;
+        zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
@@ -2408,7 +2408,7 @@ spritelayout redbrick_shelteralt_wall_platform_left_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        12;
+        zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
@@ -2489,7 +2489,7 @@ spritelayout redbrick_shelteralt_wall_platform_right_sw_ne(a) {
         zoffset:        0;
         xextent:        16;
         yextent:        5;
-        zextent:        12;
+        zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }
@@ -2517,7 +2517,7 @@ spritelayout redbrick_shelteralt_wall_platform_right_se_nw(a) {
         zoffset:        0;
         xextent:        5;
         yextent:        16;
-        zextent:        12;
+        zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
     }

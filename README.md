@@ -26,7 +26,7 @@ To play with Chuffing Stations, you can download the latest version using the Op
 
 
 ### Thanks
-Many thanks to everyone who has contributed to maintaining and developing OpenTTD over the years. Thank you to the various artists, coders and contributors of the many newGRFs that keep me playing. Special thanks to **andythenorth** and **Chris Sawyer**.
+Many thanks to everyone who has contributed to maintaining and developing OpenTTD over the years. Thank you to the various artists, coders and contributors of the many newGRFs that keep me playing. Special thanks to **andythenorth** and **Chris Sawyer**. I'd also like to thank 2TallTyler for their help with the build process and bug reporting.
 
 ### Credits
 Chuffing Stations contains some elements from [FIRS](https://github.com/andythenorth/firs) and [CHIPS](https://github.com/andythenorth/chips). 
@@ -44,7 +44,7 @@ The elegant brick designs from around the Midland region inspired this station t
 **Suburban**
 From around 1910, this clean, geometric style was typical of stations in and around London.
 
-**Dark Brick**
+**Dark Brick**xw
 Beginning in the 1950s, the West Coast Modernisation Programme triggered the reconfiguration of many key stations. Many were rebuilt using brutalist designs.
 
 **Modern Stations**
@@ -59,7 +59,7 @@ Glass and metal are used in these contemporary designs.
 
 
 ## Modifying Chuffing Stations
-Chuffing Stations is released under the **CC BY-NC-SA license**. This license requires that reusers give credit to the creator. It allows reusers to distribute, remix, adapt, and build upon the material in any medium or format, for noncommercial purposes only. If others modify or adapt the material, they must license the modified material under identical terms.
+Chuffing Stations is released under the **GPLv2 license**.
 
 ### Stations in NML
 I'd recommend checking out my [example_stations](https://github.com/andybiotic/example_stations) project first. This project contains a simplified station newGRF with a similar structure to Chuffing Stations. You can also find some instructions on compiling the newGRF using NMLC and other useful information and samples.
