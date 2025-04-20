@@ -1292,7 +1292,7 @@ spritelayout darkbrick_fenceandadvert_platform_right_se_nw(a) {
         zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
-    }    
+    }
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
@@ -1625,7 +1625,7 @@ spritelayout darkbrick_fenceandunderpass_platform_right_se_nw(a) {
         zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
-    }    
+    }
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
@@ -4835,7 +4835,7 @@ item(FEAT_STATIONS, darkbrick_signalbox_1a_waypoint) {
         class:                  "WAYP";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SIGNALBOX);
-        
+
 
     }
     graphics {
@@ -4950,7 +4950,7 @@ item(FEAT_STATIONS, darkbrick_signalbox_2a_waypoint) {
         class:                  "WAYP";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SIGNALBOX);
-        
+
 
     }
     graphics {

@@ -4,7 +4,7 @@
 
 Inspired by the diverse history of rail transport across the United Kingdom, **Chuffing Stations** is intended to provide players with a wide range of modular station tiles. It features platform and building designs from the pioneering days of the Industrial Revolution through to the cutting-edge technology of modern high-speed trains.
 
-Chuffing Stations is designed to be highly flexible while also matching the charm and character of the classic OpenTTD graphics. 
+Chuffing Stations is designed to be highly flexible while also matching the charm and character of the classic OpenTTD graphics.
 
 I hope you enjoy this set.
 
@@ -29,14 +29,14 @@ To play with Chuffing Stations, you can download the latest version using the Op
 Many thanks to everyone who has contributed to maintaining and developing OpenTTD over the years. Thank you to the various artists, coders and contributors of the many newGRFs that keep me playing. Special thanks to **andythenorth** and **Chris Sawyer**. I'd also like to thank 2TallTyler for their help with the build process and bug reporting.
 
 ### Credits
-Chuffing Stations contains some elements from [FIRS](https://github.com/andythenorth/firs) and [CHIPS](https://github.com/andythenorth/chips). 
+Chuffing Stations contains some elements from [FIRS](https://github.com/andythenorth/firs) and [CHIPS](https://github.com/andythenorth/chips).
 
 ## The Stations
 **Wooden**
 These basic platforms are typical of early railways and smaller branch lines. A few items of platform furniture are included, as well as some simple structures.
 
 **Stone**
-More sophisticated stations are often found on busier lines. Many of these stone buildings are inspired by the early buildings in the Great Western region. 
+More sophisticated stations are often found on busier lines. Many of these stone buildings are inspired by the early buildings in the Great Western region.
 
 **Red Brick**
 The elegant brick designs from around the Midland region inspired this station type.
@@ -72,7 +72,7 @@ Each of the station types (wooden, stone etc.) are written in their own NML file
 `chuffing_stations.nml` was created by manually copying and pasting the contents of the individual files into this one. You'll need to remove the newGRF header from each of the source files. On slightly older versions of OpenTTD (13 and lower) you may find that the smaller individual newGRFs work as expected, but the main GRF throws an error when loaded in OpenTTD. This appears to be resolved from version 14 onwards.
 
 ### Artwork and Workflow
-The png files are provided as-is, and licensed as above. Feel free to modify these. The graphics were created using the iPad app 'Pixaki'. These were exported in to GIMP where they were converted to the OTTD 8bpp palette. More information on my art workflow can be found in [example_stations](https://github.com/andybiotic/example_stations). 
+The png files are provided as-is, and licensed as above. Feel free to modify these. The graphics were created using the iPad app 'Pixaki'. These were exported in to GIMP where they were converted to the OTTD 8bpp palette. More information on my art workflow can be found in [example_stations](https://github.com/andybiotic/example_stations).
 
 
 

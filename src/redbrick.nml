@@ -1293,7 +1293,7 @@ spritelayout redbrick_fenceandbench_platform_right_se_nw(a) {
         zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
-    }    
+    }
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
@@ -1626,7 +1626,7 @@ spritelayout redbrick_fenceandunderpass_platform_right_se_nw(a) {
         zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
-    }    
+    }
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
@@ -4311,7 +4311,7 @@ item(FEAT_STATIONS, redbrick_terminus) {
 spriteset (redbrick_arched_end_left, "src/stations_redbrick.png") {
     [  10, 850, 64, 64, -32, -34 ]
     [  80, 850, 64, 64, -32, -34 ]
-   
+
     [  220, 850, 64, 64, -32, -34 ]
     [  290, 850, 64, 64, -32, -34 ]
 }
@@ -4409,7 +4409,7 @@ item(FEAT_STATIONS, redbrick_arched_end) {
 spriteset (redbrick_arched_middle_left, "src/stations_redbrick.png") {
     [  10, 850, 64, 64, -32, -34 ]
     [  150, 850, 64, 64, -32, -34 ]
-   
+
     [  220, 850, 64, 64, -32, -34 ]
     [  360, 850, 64, 64, -32, -34 ]
 }
@@ -5209,7 +5209,7 @@ switch (FEAT_STATIONS, SELF, switch_redbrick_feature_building, platform_number_f
     1: return redbrick_feature_building_tile_1;
     2: return redbrick_feature_building_tile_2;
     3: return redbrick_feature_building_tile_3;
-    
+
 }
 
 item(FEAT_STATIONS, redbrick_feature_building) {
@@ -5428,7 +5428,7 @@ item(FEAT_STATIONS, redbrick_signalbox_1a_waypoint) {
         class:                  "WAYP";
         classname:              string(STR_NAME_STATCLASS_REDBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SIGNALBOX);
-        
+
 
     }
     graphics {
@@ -5543,7 +5543,7 @@ item(FEAT_STATIONS, redbrick_signalbox_2a_waypoint) {
         class:                  "WAYP";
         classname:              string(STR_NAME_STATCLASS_REDBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SIGNALBOX);
-        
+
 
     }
     graphics {

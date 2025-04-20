@@ -35,7 +35,7 @@ STR_NAME_STATION_PLATFORM_UNDERPASS                             :Underpass
 STR_NAME_STATION_PLATFORM_OVERBRIDGE                            :Overbridge
 STR_NAME_STATION_PLATFORM_FOOTBRIDGE                            :Footbridge
 STR_NAME_STATION_PLATFORM_DISPLAYS                              :Platform With Digital Displays
-STR_NAME_STATION_PLATFORM_BUFFER                                :Buffer 
+STR_NAME_STATION_PLATFORM_BUFFER                                :Buffer
 STR_NAME_STATION_PLATFORM_STAIRS                                :Shelter with Stairs
 STR_NAME_STATION_PLATFORM_COVERED                               :Covered platforms
 STR_NAME_STATION_PLATFORM_ARCHED                                :Arched platforms
@@ -51,7 +51,7 @@ STR_NAME_STATION_SQUARE_FLOWERS                                 :Square with Flo
 STR_NAME_STATION_SQUARE_BUSH                                    :Square with Bushes
 STR_NAME_STATION_SQUARE_WATER                                   :Square with Water Feature
 
-STR_NAME_STATION_BUILDING                                       :Chuffing Buildings 
+STR_NAME_STATION_BUILDING                                       :Chuffing Buildings
 
 STR_NAME_STATION_MERSEY                                         :Mersey Ticket Office
 STR_NAME_STATION_NEWTON                                         :Newton Ticket Office

@@ -1288,7 +1288,7 @@ spritelayout city_fenceandadvert_platform_right_se_nw(a) {
         zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
-    }    
+    }
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
@@ -1621,7 +1621,7 @@ spritelayout city_fenceandunderpass_platform_right_se_nw(a) {
         zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
-    }    
+    }
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;

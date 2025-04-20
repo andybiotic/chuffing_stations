@@ -1282,7 +1282,7 @@ spritelayout stone_fenceandbench_platform_right_se_nw(a) {
         zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
-    }    
+    }
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
@@ -3644,7 +3644,7 @@ spritelayout stone_covered_platforms_left_se_nw(a) {
         zextent:        40;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
-    }    
+    }
 }
 
 item(FEAT_STATIONS, left_stone_covered_platforms) {
@@ -3763,7 +3763,7 @@ item(FEAT_STATIONS, right_stone_covered_platforms) {
 spriteset (stone_arched_end_left, "src/stations_stone.png") {
     [  10, 850, 64, 64, -32, -34 ]
     [  80, 850, 64, 64, -32, -34 ]
-   
+
     [  220, 850, 64, 64, -32, -34 ]
     [  290, 850, 64, 64, -32, -34 ]
 }
@@ -3861,7 +3861,7 @@ item(FEAT_STATIONS, stone_arched_end) {
 spriteset (stone_arched_middle_left, "src/stations_stone.png") {
     [  10, 850, 64, 64, -32, -34 ]
     [  150, 850, 64, 64, -32, -34 ]
-   
+
     [  220, 850, 64, 64, -32, -34 ]
     [  360, 850, 64, 64, -32, -34 ]
 }
@@ -4654,7 +4654,7 @@ switch (FEAT_STATIONS, SELF, switch_stone_feature_building, platform_number_from
     1: return stone_feature_building_tile_1;
     2: return stone_feature_building_tile_2;
     3: return stone_feature_building_tile_3;
-    
+
 }
 
 item(FEAT_STATIONS, stone_feature_building) {
@@ -4778,7 +4778,7 @@ switch (FEAT_STATIONS, SELF, switch_stone_feature_building_rear, platform_number
     1: return stone_feature_building_rear_tile_1;
     2: return stone_feature_building_rear_tile_2;
     3: return stone_feature_building_rear_tile_3;
-    
+
 }
 
 item(FEAT_STATIONS, stone_feature_building_rear) {
@@ -4889,7 +4889,7 @@ spritelayout stone_addon_1b_ne(a) {
 switch (FEAT_STATIONS, SELF, switch_stone_hotel_building, platform_position_from_start(PLATFORM_SAME_SECTION)) {
     0: return stone_addon_tile_0;
     1: return stone_addon_tile_1;
-    
+
 }
 
 item(FEAT_STATIONS, stone_station_addon_1a) {
@@ -5101,7 +5101,7 @@ item(FEAT_STATIONS, stone_left_overbridge_waypoint) {
         class:                  "WAYP";
         classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
-        
+
 
     }
     graphics {
@@ -5171,7 +5171,7 @@ item(FEAT_STATIONS, stone_right_overbridge_waypoint) {
         class:                  "WAYP";
         classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
-        
+
 
     }
     graphics {
@@ -5229,7 +5229,7 @@ item(FEAT_STATIONS, stone_signalbox_1a_waypoint) {
         class:                  "WAYP";
         classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SIGNALBOX);
-        
+
 
     }
     graphics {
@@ -5344,7 +5344,7 @@ item(FEAT_STATIONS, stone_signalbox_2a_waypoint) {
         class:                  "WAYP";
         classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SIGNALBOX);
-        
+
 
     }
     graphics {

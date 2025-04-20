@@ -1288,7 +1288,7 @@ spritelayout modern_fenceandadvert_platform_right_se_nw(a) {
         zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
-    }    
+    }
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
@@ -1621,7 +1621,7 @@ spritelayout modern_fenceandunderpass_platform_right_se_nw(a) {
         zextent:        12;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
-    }    
+    }
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
@@ -3554,7 +3554,7 @@ item(FEAT_STATIONS, modern_left_overbridge) {
         class:                  "_MDN";
         classname:              string(STR_NAME_STATCLASS_MODERN_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
-        
+
 
     }
     graphics {
@@ -3676,7 +3676,7 @@ item(FEAT_STATIONS, modern_right_overbridge) {
         class:                  "_MDN";
         classname:              string(STR_NAME_STATCLASS_MODERN_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
-        
+
 
     }
     graphics {
@@ -3933,7 +3933,7 @@ item(FEAT_STATIONS, modern_right_overbridgefences) {
         class:                  "_MDN";
         classname:              string(STR_NAME_STATCLASS_MODERN_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
-    
+
     }
     graphics {
         sprite_layouts: [modern_overbridgefences_right_sw_ne(0), modern_overbridgefences_right_se_nw(0)];
@@ -4275,7 +4275,7 @@ item(FEAT_STATIONS, modern_terminus) {
         classname:              string(STR_NAME_STATCLASS_MODERN_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_COVERED);
         disabled_platforms:     bitmask(1,3,4,5,6,7,8);
-        
+
 
     }
     graphics {
@@ -4965,7 +4965,7 @@ item(FEAT_STATIONS, modern_signalbox_1a_waypoint) {
         class:                  "WAYP";
         classname:              string(STR_NAME_STATCLASS_MODERN_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SIGNALBOX);
-        
+
 
     }
     graphics {
