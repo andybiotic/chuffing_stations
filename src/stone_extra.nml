@@ -10,11 +10,11 @@
 /***** COVERED PLATFORMS LEFT *****/
 
 spriteset (stone_extra_covered_platforms_left, "src/stations_stone_extra.png") {
-    [  10, 710, 64, 64, -32, -34 ]
-    [  10, 780, 64, 64, -32, -34 ]
+    [  10, 710, 64, 64, -31, -32 ]
+    [  10, 780, 64, 64, -31, -32 ]
 
-    [  80, 710, 64, 64, -32, -34 ]
-    [  80, 780, 64, 64, -32, -34 ]
+    [  80, 710, 64, 64, -31, -32 ]
+    [  80, 780, 64, 64, -31, -32 ]
 }
 
 spritelayout stone_extra_covered_platforms_left_sw_ne(a) {
@@ -24,10 +24,10 @@ spritelayout stone_extra_covered_platforms_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
-        yextent:        2;
+        yextent:        5;
         zextent:        40;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
@@ -35,7 +35,7 @@ spritelayout stone_extra_covered_platforms_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -52,9 +52,9 @@ spritelayout stone_extra_covered_platforms_left_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
-        xextent:        16;
+        xextent:        5;
         yextent:        16;
         zextent:        40;
         recolour_mode:  RECOLOUR_REMAP;
@@ -63,9 +63,9 @@ spritelayout stone_extra_covered_platforms_left_se_nw(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
-        xextent:        2;
+        xextent:        16;
         yextent:        16;
         zextent:        40;
         recolour_mode:  RECOLOUR_REMAP;
@@ -88,7 +88,6 @@ item(FEAT_STATIONS, left_stone_extra_covered_platforms) {
     graphics {
         sprite_layouts: [stone_extra_covered_platforms_left_sw_ne(0), stone_extra_covered_platforms_left_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_stone_extra;
         purchase: stone_extra_covered_platforms_left;
         stone_extra_covered_platforms_left;
     }
@@ -97,11 +96,11 @@ item(FEAT_STATIONS, left_stone_extra_covered_platforms) {
 /***** COVERED PLATFORMS RIGHT *****/
 
 spriteset (stone_extra_covered_platforms_right, "src/stations_stone_extra.png") {
-    [  150, 710, 64, 64, -32, -34 ]
-    [  150, 780, 64, 64, -32, -34 ]
+    [  150, 710, 64, 64, -31, -32 ]
+    [  150, 780, 64, 64, -31, -32 ]
 
-    [  220, 710, 64, 64, -32, -34 ]
-    [  220, 780, 64, 64, -32, -34 ]
+    [  220, 710, 64, 64, -31, -32 ]
+    [  220, 780, 64, 64, -31, -32 ]
 }
 
 spritelayout stone_extra_covered_platforms_right_sw_ne(a) {
@@ -111,10 +110,10 @@ spritelayout stone_extra_covered_platforms_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
-        yextent:        2;
+        yextent:        5;
         zextent:        40;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
@@ -122,7 +121,7 @@ spritelayout stone_extra_covered_platforms_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -139,9 +138,9 @@ spritelayout stone_extra_covered_platforms_right_se_nw(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
-        xextent:        16;
+        xextent:        5;
         yextent:        16;
         zextent:        40;
         recolour_mode:  RECOLOUR_REMAP;
@@ -150,7 +149,7 @@ spritelayout stone_extra_covered_platforms_right_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -176,7 +175,6 @@ item(FEAT_STATIONS, right_stone_extra_covered_platforms) {
     graphics {
         sprite_layouts: [stone_extra_covered_platforms_right_sw_ne(0), stone_extra_covered_platforms_right_se_nw(0)];
         select_tile_type: 2;
-        availability: switch_intro_year_stone_extra;
         purchase: stone_extra_covered_platforms_right;
         stone_extra_covered_platforms_right;
     }
@@ -189,19 +187,19 @@ item(FEAT_STATIONS, right_stone_extra_covered_platforms) {
 
 
 spriteset (stone_extra_arched_end_left, "src/stations_stone_extra.png") {
-    [  10, 850, 64, 64, -32, -34 ]
-    [  80, 850, 64, 64, -32, -34 ]
+    [  10, 850, 64, 64, -31, -32 ]
+    [  80, 850, 64, 64, -31, -32 ]
 
-    [  220, 850, 64, 64, -32, -34 ]
-    [  290, 850, 64, 64, -32, -34 ]
+    [  220, 850, 64, 64, -31, -32 ]
+    [  290, 850, 64, 64, -31, -32 ]
 }
 
 spriteset (stone_extra_arched_end_right, "src/stations_stone_extra.png") {
-    [  80, 920, 64, 64, -32, -34 ]
-    [  10, 920, 64, 96, -32, -66 ]
+    [  80, 920, 64, 64, -31, -32 ]
+    [  10, 920, 64, 96, -31, -64 ]
 
-    [  220, 920, 64, 64, -32, -34 ]
-    [  290, 920, 64, 96, -32, -66 ]
+    [  220, 920, 64, 64, -31, -32 ]
+    [  290, 920, 64, 96, -31, -64 ]
 }
 
 spritelayout stone_extra_arched_end_sw_ne(a) {
@@ -211,7 +209,7 @@ spritelayout stone_extra_arched_end_sw_ne(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -222,7 +220,7 @@ spritelayout stone_extra_arched_end_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -239,7 +237,7 @@ spritelayout stone_extra_arched_end_se_nw(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -250,7 +248,7 @@ spritelayout stone_extra_arched_end_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -288,19 +286,19 @@ item(FEAT_STATIONS, stone_extra_arched_end) {
 }
 
 spriteset (stone_extra_arched_middle_left, "src/stations_stone_extra.png") {
-    [  10, 850, 64, 64, -32, -34 ]
-    [  150, 850, 64, 64, -32, -34 ]
+    [  10, 850, 64, 64, -31, -32 ]
+    [  150, 850, 64, 64, -31, -32 ]
 
-    [  220, 850, 64, 64, -32, -34 ]
-    [  360, 850, 64, 64, -32, -34 ]
+    [  220, 850, 64, 64, -31, -32 ]
+    [  360, 850, 64, 64, -31, -32 ]
 }
 
 spriteset (stone_extra_arched_middle_right, "src/stations_stone_extra.png") {
-    [  80, 920, 64, 64, -32, -34 ]
-    [  150, 920, 64, 96, -32, -66 ]
+    [  80, 920, 64, 64, -31, -32 ]
+    [  150, 920, 64, 96, -31, -64 ]
 
-    [  220, 920, 64, 64, -32, -34 ]
-    [  360, 920, 64, 96, -32, -66 ]
+    [  220, 920, 64, 64, -31, -32 ]
+    [  360, 920, 64, 96, -31, -64 ]
 }
 
 spritelayout stone_extra_arched_middle_sw_ne(a) {
@@ -310,7 +308,7 @@ spritelayout stone_extra_arched_middle_sw_ne(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -321,7 +319,7 @@ spritelayout stone_extra_arched_middle_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -338,7 +336,7 @@ spritelayout stone_extra_arched_middle_se_nw(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -349,7 +347,7 @@ spritelayout stone_extra_arched_middle_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
