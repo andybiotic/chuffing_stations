@@ -70,7 +70,7 @@ spritelayout stone_extra_covered_platforms_left_se_nw(a) {
         zextent:        40;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
-    }    
+    }
 }
 
 item(FEAT_STATIONS, left_stone_extra_covered_platforms) {
@@ -191,7 +191,7 @@ item(FEAT_STATIONS, right_stone_extra_covered_platforms) {
 spriteset (stone_extra_arched_end_left, "src/stations_stone_extra.png") {
     [  10, 850, 64, 64, -32, -34 ]
     [  80, 850, 64, 64, -32, -34 ]
-   
+
     [  220, 850, 64, 64, -32, -34 ]
     [  290, 850, 64, 64, -32, -34 ]
 }
@@ -290,7 +290,7 @@ item(FEAT_STATIONS, stone_extra_arched_end) {
 spriteset (stone_extra_arched_middle_left, "src/stations_stone_extra.png") {
     [  10, 850, 64, 64, -32, -34 ]
     [  150, 850, 64, 64, -32, -34 ]
-   
+
     [  220, 850, 64, 64, -32, -34 ]
     [  360, 850, 64, 64, -32, -34 ]
 }

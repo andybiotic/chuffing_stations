@@ -58,7 +58,7 @@ processed_nml_file.close()
 
 print("#### nmlc ####")
 
-# Run 
+# Run
 nmlc = subprocess.run(["nmlc", "-c", "-t", f"src{os.path.sep}custom_tags.txt", "-l", f"src{os.path.sep}lang", "--grf", grf_name, merged_nml_path], stdout = subprocess.PIPE, stderr = subprocess.PIPE, text=True)
 print(nmlc.stdout)
 print(nmlc.stderr)
