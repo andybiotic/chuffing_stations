@@ -10,10 +10,10 @@
 /***************************************/
 
 spriteset (wooden_plain_platform_left, "src/stations_wooden.png") {
-    [  10, 10, 64, 64, -32, -34 ]
-    [  80, 10, 64, 64, -32, -34 ]
-    [  10, 150, 64, 64, -32, -34 ]
-    [  80, 150, 64, 64, -32, -34 ]
+    [  10, 10, 64, 64, -31, -32]
+    [  80, 10, 64, 64, -31, -32]
+    [  10, 150, 64, 64, -31, -32]
+    [  80, 150, 64, 64, -31, -32]
 }
 
 spritelayout wooden_plain_platform_left_sw_ne(a) {
@@ -23,7 +23,7 @@ spritelayout wooden_plain_platform_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -34,7 +34,7 @@ spritelayout wooden_plain_platform_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -51,7 +51,7 @@ spritelayout wooden_plain_platform_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -62,7 +62,7 @@ spritelayout wooden_plain_platform_left_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -90,10 +90,10 @@ item(FEAT_STATIONS, wooden_plain_platform_left_station) {
 /***** PLATFORM RIGHT *****/
 
 spriteset (wooden_plain_platform_right, "src/stations_wooden.png") {
-    [  150, 10, 64, 64, -32, -34 ]
-    [  220, 10, 64, 64, -32, -34 ]
-    [  150, 150, 64, 64, -32, -34 ]
-    [  220, 150, 64, 64, -32, -34 ]
+    [  150, 10, 64, 64, -31, -32]
+    [  220, 10, 64, 64, -31, -32]
+    [  150, 150, 64, 64, -31, -32]
+    [  220, 150, 64, 64, -31, -32]
 }
 
 spritelayout wooden_plain_platform_right_sw_ne(a) {
@@ -103,7 +103,7 @@ spritelayout wooden_plain_platform_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -114,7 +114,7 @@ spritelayout wooden_plain_platform_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -131,7 +131,7 @@ spritelayout wooden_plain_platform_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -142,7 +142,7 @@ spritelayout wooden_plain_platform_right_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -174,10 +174,10 @@ item(FEAT_STATIONS, wooden_plain_platform_right_station) {
 /***** PLATFORM LEFT *****/
 
 spriteset (wooden_fence_platform_left, "src/stations_wooden.png") {
-    [  10, 80, 64, 64, -32, -34 ]
-    [  80, 80, 64, 64, -32, -34 ]
-    [  10, 220, 64, 64, -32, -34 ]
-    [  80, 220, 64, 64, -32, -34 ]
+    [  10, 80, 64, 64, -31, -32]
+    [  80, 80, 64, 64, -31, -32]
+    [  10, 220, 64, 64, -31, -32]
+    [  80, 220, 64, 64, -31, -32]
 }
 
 spritelayout wooden_fence_platform_left_sw_ne(a) {
@@ -187,7 +187,7 @@ spritelayout wooden_fence_platform_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -198,7 +198,7 @@ spritelayout wooden_fence_platform_left_sw_ne(a) {
         building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -215,7 +215,7 @@ spritelayout wooden_fence_platform_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -226,7 +226,7 @@ spritelayout wooden_fence_platform_left_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -254,10 +254,10 @@ item(FEAT_STATIONS, wooden_fence_platform_left_station) {
 /***** PLATFORM RIGHT *****/
 
 spriteset (wooden_fence_platform_right, "src/stations_wooden.png") {
-    [  150, 80, 64, 64, -32, -34 ]
-    [  220, 80, 64, 64, -32, -34 ]
-    [  150, 220, 64, 64, -32, -34 ]
-    [  220, 220, 64, 64, -32, -34 ]
+    [  150, 80, 64, 64, -31, -32]
+    [  220, 80, 64, 64, -31, -32]
+    [  150, 220, 64, 64, -31, -32]
+    [  220, 220, 64, 64, -31, -32]
 }
 
 spritelayout wooden_fence_platform_right_sw_ne(a) {
@@ -267,7 +267,7 @@ spritelayout wooden_fence_platform_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -278,7 +278,7 @@ spritelayout wooden_fence_platform_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -295,7 +295,7 @@ spritelayout wooden_fence_platform_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -306,7 +306,7 @@ spritelayout wooden_fence_platform_right_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -335,10 +335,10 @@ item(FEAT_STATIONS, wooden_fence_platform_right_station) {
 /***** PLATFORM WITH SIGN LEFT *****/
 
 spriteset (wooden_sign_platform_left, "src/stations_wooden.png") {
-    [  10, 10, 64, 64, -32, -34 ]
-    [  80, 10, 64, 64, -32, -34 ]
-    [  290, 150, 64, 64, -32, -34 ]
-    [  360, 150, 64, 64, -32, -34 ]
+    [  10, 10, 64, 64, -31, -32]
+    [  80, 10, 64, 64, -31, -32]
+    [  290, 150, 64, 64, -31, -32]
+    [  360, 150, 64, 64, -31, -32]
 }
 
 spritelayout wooden_sign_platform_left_sw_ne(a) {
@@ -348,7 +348,7 @@ spritelayout wooden_sign_platform_left_sw_ne(a) {
         building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -359,7 +359,7 @@ spritelayout wooden_sign_platform_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -376,7 +376,7 @@ spritelayout wooden_sign_platform_left_se_nw(a) {
         building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -387,7 +387,7 @@ spritelayout wooden_sign_platform_left_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -416,10 +416,10 @@ item(FEAT_STATIONS, wooden_sign_platform_left_station) {
 /***** PLATFORM WITH SIGN RIGHT *****/
 
 spriteset (wooden_sign_platform_right, "src/stations_wooden.png") {
-    [  150, 10, 64, 64, -32, -34 ]
-    [  220, 10, 64, 64, -32, -34 ]
-    [  430, 150, 64, 64, -32, -34 ]
-    [  500, 150, 64, 64, -32, -34 ]
+    [  150, 10, 64, 64, -31, -32]
+    [  220, 10, 64, 64, -31, -32]
+    [  430, 150, 64, 64, -31, -32]
+    [  500, 150, 64, 64, -31, -32]
 }
 
 spritelayout wooden_sign_platform_right_sw_ne(a) {
@@ -429,7 +429,7 @@ spritelayout wooden_sign_platform_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -440,7 +440,7 @@ spritelayout wooden_sign_platform_right_sw_ne(a) {
         building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -457,7 +457,7 @@ spritelayout wooden_sign_platform_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -468,7 +468,7 @@ spritelayout wooden_sign_platform_right_se_nw(a) {
         building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -499,10 +499,10 @@ item(FEAT_STATIONS, wooden_sign_platform_right_station) {
 /***** PLATFORM WITH FENCES AND SIGN LEFT *****/
 
 spriteset (wooden_fenceandsign_platform_left, "src/stations_wooden.png") {
-    [  10, 80, 64, 64, -32, -34 ]
-    [  80, 80, 64, 64, -32, -34 ]
-    [  290, 220, 64, 64, -32, -34 ]
-    [  360, 220, 64, 64, -32, -34 ]
+    [  10, 80, 64, 64, -31, -32]
+    [  80, 80, 64, 64, -31, -32]
+    [  290, 220, 64, 64, -31, -32]
+    [  360, 220, 64, 64, -31, -32]
 }
 
 spritelayout wooden_fenceandsign_platform_left_sw_ne(a) {
@@ -512,7 +512,7 @@ spritelayout wooden_fenceandsign_platform_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -523,7 +523,7 @@ spritelayout wooden_fenceandsign_platform_left_sw_ne(a) {
         building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -540,7 +540,7 @@ spritelayout wooden_fenceandsign_platform_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -551,7 +551,7 @@ spritelayout wooden_fenceandsign_platform_left_se_nw(a) {
         building {
         sprite:         DEFAULT(3);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -580,10 +580,10 @@ item(FEAT_STATIONS, wooden_fenceandsign_platform_left_station) {
 /***** PLATFORM WITH FENCES AND SIGN RIGHT *****/
 
 spriteset (wooden_fenceandsign_platform_right, "src/stations_wooden.png") {
-    [  150, 80, 64, 64, -32, -34 ]
-    [  220, 80, 64, 64, -32, -34 ]
-    [  430, 220, 64, 64, -32, -34 ]
-    [  500, 220, 64, 64, -32, -34 ]
+    [  150, 80, 64, 64, -31, -32]
+    [  220, 80, 64, 64, -31, -32]
+    [  430, 220, 64, 64, -31, -32]
+    [  500, 220, 64, 64, -31, -32]
 }
 
 spritelayout wooden_fenceandsign_platform_right_sw_ne(a) {
@@ -593,7 +593,7 @@ spritelayout wooden_fenceandsign_platform_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -604,7 +604,7 @@ spritelayout wooden_fenceandsign_platform_right_sw_ne(a) {
         building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -621,7 +621,7 @@ spritelayout wooden_fenceandsign_platform_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -632,7 +632,7 @@ spritelayout wooden_fenceandsign_platform_right_se_nw(a) {
         building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -669,10 +669,10 @@ item(FEAT_STATIONS, wooden_fenceandsign_platform_right_station) {
 /***** PLATFORM LEFT *****/
 
 spriteset (wooden_bench_platform_left, "src/stations_wooden.png") {
-    [  10, 10, 64, 64, -32, -34 ]
-    [  80, 10, 64, 64, -32, -34 ]
-    [  10, 290, 64, 64, -32, -34 ]
-    [  80, 290, 64, 64, -32, -34 ]
+    [  10, 10, 64, 64, -31, -32]
+    [  80, 10, 64, 64, -31, -32]
+    [  10, 290, 64, 64, -31, -32]
+    [  80, 290, 64, 64, -31, -32]
 }
 
 spritelayout wooden_bench_platform_left_sw_ne(a) {
@@ -682,7 +682,7 @@ spritelayout wooden_bench_platform_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -693,7 +693,7 @@ spritelayout wooden_bench_platform_left_sw_ne(a) {
         building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -710,7 +710,7 @@ spritelayout wooden_bench_platform_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -721,7 +721,7 @@ spritelayout wooden_bench_platform_left_se_nw(a) {
         building {
         sprite:         DEFAULT(3);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -749,10 +749,10 @@ item(FEAT_STATIONS, wooden_bench_platform_left_station) {
 /***** PLATFORM RIGHT *****/
 
 spriteset (wooden_bench_platform_right, "src/stations_wooden.png") {
-    [  150, 10, 64, 64, -32, -34 ]
-    [  220, 10, 64, 64, -32, -34 ]
-    [  150, 290, 64, 64, -32, -34 ]
-    [  220, 290, 64, 64, -32, -34 ]
+    [  150, 10, 64, 64, -31, -32]
+    [  220, 10, 64, 64, -31, -32]
+    [  150, 290, 64, 64, -31, -32]
+    [  220, 290, 64, 64, -31, -32]
 }
 
 spritelayout wooden_bench_platform_right_sw_ne(a) {
@@ -762,7 +762,7 @@ spritelayout wooden_bench_platform_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -773,7 +773,7 @@ spritelayout wooden_bench_platform_right_sw_ne(a) {
         building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -790,7 +790,7 @@ spritelayout wooden_bench_platform_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -801,7 +801,7 @@ spritelayout wooden_bench_platform_right_se_nw(a) {
         building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -835,10 +835,10 @@ item(FEAT_STATIONS, wooden_bench_platform_right_station) {
 /***** PLATFORM LEFT *****/
 
 spriteset (wooden_fenceandbench_platform_left, "src/stations_wooden.png") {
-    [  10, 80, 64, 64, -32, -34 ]
-    [  80, 80, 64, 64, -32, -34 ]
-    [  10, 360, 64, 64, -32, -34 ]
-    [  80, 360, 64, 64, -32, -34 ]
+    [  10, 80, 64, 64, -31, -32]
+    [  80, 80, 64, 64, -31, -32]
+    [  10, 360, 64, 64, -31, -32]
+    [  80, 360, 64, 64, -31, -32]
 }
 
 spritelayout wooden_fenceandbench_platform_left_sw_ne(a) {
@@ -848,7 +848,7 @@ spritelayout wooden_fenceandbench_platform_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -859,7 +859,7 @@ spritelayout wooden_fenceandbench_platform_left_sw_ne(a) {
         building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -876,7 +876,7 @@ spritelayout wooden_fenceandbench_platform_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -887,7 +887,7 @@ spritelayout wooden_fenceandbench_platform_left_se_nw(a) {
         building {
         sprite:         DEFAULT(3);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -915,10 +915,10 @@ item(FEAT_STATIONS, wooden_fenceandbench_platform_left_station) {
 /***** PLATFORM RIGHT *****/
 
 spriteset (wooden_fenceandbench_platform_right, "src/stations_wooden.png") {
-    [  150, 80, 64, 64, -32, -34 ]
-    [  220, 80, 64, 64, -32, -34 ]
-    [  150, 360, 64, 64, -32, -34 ]
-    [  220, 360, 64, 64, -32, -34 ]
+    [  150, 80, 64, 64, -31, -32]
+    [  220, 80, 64, 64, -31, -32]
+    [  150, 360, 64, 64, -31, -32]
+    [  220, 360, 64, 64, -31, -32]
 }
 
 spritelayout wooden_fenceandbench_platform_right_sw_ne(a) {
@@ -928,7 +928,7 @@ spritelayout wooden_fenceandbench_platform_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -939,7 +939,7 @@ spritelayout wooden_fenceandbench_platform_right_sw_ne(a) {
         building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -956,7 +956,7 @@ spritelayout wooden_fenceandbench_platform_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -967,7 +967,7 @@ spritelayout wooden_fenceandbench_platform_right_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -996,10 +996,10 @@ item(FEAT_STATIONS, wooden_fenceandbench_platform_right_station) {
 /***** PLATFORM SHELTER LEFT *****/
 
 spriteset (wooden_shelter_platform_left, "src/stations_wooden.png") {
-    [  10, 10, 64, 64, -32, -34 ]
-    [  80, 10, 64, 64, -32, -34 ]
-    [  570, 150, 64, 64, -32, -34 ]
-    [  640, 150, 64, 64, -32, -34 ]
+    [  10, 10, 64, 64, -31, -32]
+    [  80, 10, 64, 64, -31, -32]
+    [  570, 150, 64, 64, -31, -32]
+    [  640, 150, 64, 64, -31, -32]
 }
 
 spritelayout wooden_shelter_platform_left_sw_ne(a) {
@@ -1009,7 +1009,7 @@ spritelayout wooden_shelter_platform_left_sw_ne(a) {
         building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1020,7 +1020,7 @@ spritelayout wooden_shelter_platform_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1037,7 +1037,7 @@ spritelayout wooden_shelter_platform_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1048,7 +1048,7 @@ spritelayout wooden_shelter_platform_left_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1077,10 +1077,10 @@ item(FEAT_STATIONS, wooden_shelter_platform_left_station) {
 /***** PLATFORM SHELTER RIGHT *****/
 
 spriteset (wooden_shelter_platform_right, "src/stations_wooden.png") {
-    [  150, 10, 64, 64, -32, -34 ]
-    [  220, 10, 64, 64, -32, -34 ]
-    [  710, 150, 64, 64, -32, -34 ]
-    [  780, 150, 64, 64, -32, -34 ]
+    [  150, 10, 64, 64, -31, -32]
+    [  220, 10, 64, 64, -31, -32]
+    [  710, 150, 64, 64, -31, -32]
+    [  780, 150, 64, 64, -31, -32]
 }
 
 spritelayout wooden_shelter_platform_right_sw_ne(a) {
@@ -1090,7 +1090,7 @@ spritelayout wooden_shelter_platform_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1101,7 +1101,7 @@ spritelayout wooden_shelter_platform_right_sw_ne(a) {
         building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1118,7 +1118,7 @@ spritelayout wooden_shelter_platform_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1129,7 +1129,7 @@ spritelayout wooden_shelter_platform_right_se_nw(a) {
         building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1161,10 +1161,10 @@ item(FEAT_STATIONS, wooden_shelter_platform_right_station) {
 /***** PLATFORM FENCE AND SHELTER LEFT *****/
 
 spriteset (wooden_fenceandshelter_platform_left, "src/stations_wooden.png") {
-    [  10, 80, 64, 64, -32, -34 ]
-    [  80, 80, 64, 64, -32, -34 ]
-    [  570, 220, 64, 64, -32, -34 ]
-    [  640, 220, 64, 64, -32, -34 ]
+    [  10, 80, 64, 64, -31, -32]
+    [  80, 80, 64, 64, -31, -32]
+    [  570, 220, 64, 64, -31, -32]
+    [  640, 220, 64, 64, -31, -32]
 }
 
 spritelayout wooden_fenceandshelter_platform_left_sw_ne(a) {
@@ -1174,7 +1174,7 @@ spritelayout wooden_fenceandshelter_platform_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1185,7 +1185,7 @@ spritelayout wooden_fenceandshelter_platform_left_sw_ne(a) {
         building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1202,7 +1202,7 @@ spritelayout wooden_fenceandshelter_platform_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1213,7 +1213,7 @@ spritelayout wooden_fenceandshelter_platform_left_se_nw(a) {
         building {
         sprite:         DEFAULT(3);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1242,10 +1242,10 @@ item(FEAT_STATIONS, wooden_fenceandshelter_platform_left_station) {
 /***** PLATFORM FENCE AND SHELTER RIGHT *****/
 
 spriteset (wooden_fenceandshelter_platform_right, "src/stations_wooden.png") {
-    [  150, 80, 64, 64, -32, -34 ]
-    [  220, 80, 64, 64, -32, -34 ]
-    [  710, 220, 64, 64, -32, -34 ]
-    [  780, 220, 64, 64, -32, -34 ]
+    [  150, 80, 64, 64, -31, -32]
+    [  220, 80, 64, 64, -31, -32]
+    [  710, 220, 64, 64, -31, -32]
+    [  780, 220, 64, 64, -31, -32]
 }
 
 spritelayout wooden_fenceandshelter_platform_right_sw_ne(a) {
@@ -1255,7 +1255,7 @@ spritelayout wooden_fenceandshelter_platform_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1266,7 +1266,7 @@ spritelayout wooden_fenceandshelter_platform_right_sw_ne(a) {
         building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1283,7 +1283,7 @@ spritelayout wooden_fenceandshelter_platform_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1294,7 +1294,7 @@ spritelayout wooden_fenceandshelter_platform_right_se_nw(a) {
         building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1330,10 +1330,10 @@ item(FEAT_STATIONS, wooden_fenceandshelter_platform_right_station) {
 /***** PLATFORM SOUTH END LEFT *****/
 
 spriteset (wooden_plain_south_end_left, "src/stations_wooden.png") {
-    [  290, 10, 64, 64, -32, -34 ]
-    [  360, 10, 64, 64, -32, -34 ]
-    [  10, 150, 64, 64, -32, -34 ]
-    [  80, 150, 64, 64, -32, -34 ]
+    [  290, 10, 64, 64, -31, -32]
+    [  360, 10, 64, 64, -31, -32]
+    [  10, 150, 64, 64, -31, -32]
+    [  80, 150, 64, 64, -31, -32]
 }
 
 spritelayout wooden_plain_south_end_left_sw_ne(a) {
@@ -1343,7 +1343,7 @@ spritelayout wooden_plain_south_end_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1354,7 +1354,7 @@ spritelayout wooden_plain_south_end_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1371,7 +1371,7 @@ spritelayout wooden_plain_south_end_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1382,7 +1382,7 @@ spritelayout wooden_plain_south_end_left_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1411,10 +1411,10 @@ item(FEAT_STATIONS, wooden_plain_south_end_left_station) {
 /***** PLATFORM SOUTH END RIGHT *****/
 
 spriteset (wooden_plain_south_end_right, "src/stations_wooden.png") {
-    [  430, 10, 64, 64, -32, -34 ]
-    [  500, 10, 64, 64, -32, -34 ]
-    [  150, 150, 64, 64, -32, -34 ]
-    [  220, 150, 64, 64, -32, -34 ]
+    [  430, 10, 64, 64, -31, -32]
+    [  500, 10, 64, 64, -31, -32]
+    [  150, 150, 64, 64, -31, -32]
+    [  220, 150, 64, 64, -31, -32]
 }
 
 spritelayout wooden_plain_south_end_right_sw_ne(a) {
@@ -1424,7 +1424,7 @@ spritelayout wooden_plain_south_end_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1435,7 +1435,7 @@ spritelayout wooden_plain_south_end_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1452,7 +1452,7 @@ spritelayout wooden_plain_south_end_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1463,7 +1463,7 @@ spritelayout wooden_plain_south_end_right_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1492,10 +1492,10 @@ item(FEAT_STATIONS, wooden_plain_south_end_right_station) {
 /***** PLATFORM NORTH END LEFT *****/
 
 spriteset (wooden_plain_north_end_left, "src/stations_wooden.png") {
-    [  570, 10, 64, 64, -32, -34 ]
-    [  640, 10, 64, 64, -32, -34 ]
-    [  10, 150, 64, 64, -32, -34 ]
-    [  80, 150, 64, 64, -32, -34 ]
+    [  570, 10, 64, 64, -31, -32]
+    [  640, 10, 64, 64, -31, -32]
+    [  10, 150, 64, 64, -31, -32]
+    [  80, 150, 64, 64, -31, -32]
 
 }
 
@@ -1506,7 +1506,7 @@ spritelayout wooden_plain_north_end_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1517,7 +1517,7 @@ spritelayout wooden_plain_north_end_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1534,7 +1534,7 @@ spritelayout wooden_plain_north_end_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1545,7 +1545,7 @@ spritelayout wooden_plain_north_end_left_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1574,10 +1574,10 @@ item(FEAT_STATIONS, wooden_plain_north_end_left_station) {
 /***** PLATFORM NORTH END RIGHT *****/
 
 spriteset (wooden_plain_north_end_right, "src/stations_wooden.png") {
-    [  710, 10, 64, 64, -32, -34 ]
-    [  780, 10, 64, 64, -32, -34 ]
-    [  150, 150, 64, 64, -32, -34 ]
-    [  220, 150, 64, 64, -32, -34 ]
+    [  710, 10, 64, 64, -31, -32]
+    [  780, 10, 64, 64, -31, -32]
+    [  150, 150, 64, 64, -31, -32]
+    [  220, 150, 64, 64, -31, -32]
 }
 
 spritelayout wooden_plain_north_end_right_sw_ne(a) {
@@ -1587,7 +1587,7 @@ spritelayout wooden_plain_north_end_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1598,7 +1598,7 @@ spritelayout wooden_plain_north_end_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1615,7 +1615,7 @@ spritelayout wooden_plain_north_end_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1626,7 +1626,7 @@ spritelayout wooden_plain_north_end_right_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1655,10 +1655,10 @@ item(FEAT_STATIONS, wooden_plain_north_end_right_station) {
 /***** PLATFORM SOUTH END LEFT *****/
 
 spriteset (wooden_fence_south_end_left, "src/stations_wooden.png") {
-    [  290, 80, 64, 64, -32, -34 ]
-    [  360, 80, 64, 64, -32, -34 ]
-    [  10, 220, 64, 64, -32, -34 ]
-    [  80, 220, 64, 64, -32, -34 ]
+    [  290, 80, 64, 64, -31, -32]
+    [  360, 80, 64, 64, -31, -32]
+    [  10, 220, 64, 64, -31, -32]
+    [  80, 220, 64, 64, -31, -32]
 }
 
 spritelayout wooden_fence_south_end_left_sw_ne(a) {
@@ -1668,7 +1668,7 @@ spritelayout wooden_fence_south_end_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1679,7 +1679,7 @@ spritelayout wooden_fence_south_end_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1696,7 +1696,7 @@ spritelayout wooden_fence_south_end_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1707,7 +1707,7 @@ spritelayout wooden_fence_south_end_left_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1736,10 +1736,10 @@ item(FEAT_STATIONS, wooden_fence_south_end_left_station) {
 /***** PLATFORM SOUTH END RIGHT *****/
 
 spriteset (wooden_fence_south_end_right, "src/stations_wooden.png") {
-    [  430, 80, 64, 64, -32, -34 ]
-    [  500, 80, 64, 64, -32, -34 ]
-    [  150, 220, 64, 64, -32, -34 ]
-    [  220, 220, 64, 64, -32, -34 ]
+    [  430, 80, 64, 64, -31, -32]
+    [  500, 80, 64, 64, -31, -32]
+    [  150, 220, 64, 64, -31, -32]
+    [  220, 220, 64, 64, -31, -32]
 }
 
 spritelayout wooden_fence_south_end_right_sw_ne(a) {
@@ -1749,7 +1749,7 @@ spritelayout wooden_fence_south_end_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1760,7 +1760,7 @@ spritelayout wooden_fence_south_end_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1777,7 +1777,7 @@ spritelayout wooden_fence_south_end_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1788,7 +1788,7 @@ spritelayout wooden_fence_south_end_right_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1817,10 +1817,10 @@ item(FEAT_STATIONS, wooden_fence_south_end_right_station) {
 /***** PLATFORM NORTH END LEFT *****/
 
 spriteset (wooden_fence_north_end_left, "src/stations_wooden.png") {
-    [  570, 80, 64, 64, -32, -34 ]
-    [  640, 80, 64, 64, -32, -34 ]
-    [  10, 220, 64, 64, -32, -34 ]
-    [  80, 220, 64, 64, -32, -34 ]
+    [  570, 80, 64, 64, -31, -32]
+    [  640, 80, 64, 64, -31, -32]
+    [  10, 220, 64, 64, -31, -32]
+    [  80, 220, 64, 64, -31, -32]
 
 }
 
@@ -1831,7 +1831,7 @@ spritelayout wooden_fence_north_end_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1842,7 +1842,7 @@ spritelayout wooden_fence_north_end_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1859,7 +1859,7 @@ spritelayout wooden_fence_north_end_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1870,7 +1870,7 @@ spritelayout wooden_fence_north_end_left_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1900,10 +1900,10 @@ item(FEAT_STATIONS, wooden_fence_north_end_left_station) {
 /***** PLATFORM NORTH END RIGHT *****/
 
 spriteset (wooden_fence_north_end_right, "src/stations_wooden.png") {
-    [  710, 80, 64, 64, -32, -34 ]
-    [  780, 80, 64, 64, -32, -34 ]
-    [  150, 220, 64, 64, -32, -34 ]
-    [  220, 220, 64, 64, -32, -34 ]
+    [  710, 80, 64, 64, -31, -32]
+    [  780, 80, 64, 64, -31, -32]
+    [  150, 220, 64, 64, -31, -32]
+    [  220, 220, 64, 64, -31, -32]
 }
 
 spritelayout wooden_fence_north_end_right_sw_ne(a) {
@@ -1913,7 +1913,7 @@ spritelayout wooden_fence_north_end_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1924,7 +1924,7 @@ spritelayout wooden_fence_north_end_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1941,7 +1941,7 @@ spritelayout wooden_fence_north_end_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1952,7 +1952,7 @@ spritelayout wooden_fence_north_end_right_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1985,8 +1985,8 @@ item(FEAT_STATIONS, wooden_fence_north_end_right_station) {
 /***********************************************/
 
 spriteset (wooden_buffer_north_building_left, "src/stations_wooden.png") {
-    [  290, 430, 64, 64, -32, -34 ]
-    [  360, 430, 64, 64, -32, -34 ]
+    [  290, 430, 64, 64, -31, -32]
+    [  360, 430, 64, 64, -31, -32]
 }
 
 spritelayout wooden_buffer_north_building_left_sw_ne(a) {
@@ -1996,7 +1996,7 @@ spritelayout wooden_buffer_north_building_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -2013,7 +2013,7 @@ spritelayout wooden_buffer_north_building_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -2044,8 +2044,8 @@ item(FEAT_STATIONS, wooden_buffer_north_building_left_station) {
 
 
 spriteset (wooden_buffer_north_building_right, "src/stations_wooden.png") {
-    [  430, 430, 64, 64, -32, -34 ]
-    [  500, 430, 64, 64, -32, -34 ]
+    [  430, 430, 64, 64, -31, -32]
+    [  500, 430, 64, 64, -31, -32]
 }
 
 spritelayout wooden_buffer_north_building_right_sw_ne(a) {
@@ -2055,7 +2055,7 @@ spritelayout wooden_buffer_north_building_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -2072,7 +2072,7 @@ spritelayout wooden_buffer_north_building_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -2107,8 +2107,8 @@ item(FEAT_STATIONS, wooden_buffer_north_building_right_station) {
 /***********************************************/
 
 spriteset (wooden_buffer_south_building_left, "src/stations_wooden.png") {
-    [  570, 430, 64, 64, -32, -34 ]
-    [  640, 430, 64, 64, -32, -34 ]
+    [  570, 430, 64, 64, -31, -32]
+    [  640, 430, 64, 64, -31, -32]
 }
 
 spritelayout wooden_buffer_south_building_left_sw_ne(a) {
@@ -2118,7 +2118,7 @@ spritelayout wooden_buffer_south_building_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -2135,7 +2135,7 @@ spritelayout wooden_buffer_south_building_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -2165,8 +2165,8 @@ item(FEAT_STATIONS, wooden_buffer_south_building_left_station) {
 }
 
 spriteset (wooden_buffer_south_building_right, "src/stations_wooden.png") {
-    [  710, 430, 64, 64, -32, -34 ]
-    [  780, 430, 64, 64, -32, -34 ]
+    [  710, 430, 64, 64, -31, -32]
+    [  780, 430, 64, 64, -31, -32]
 }
 
 spritelayout wooden_buffer_south_building_right_sw_ne(a) {
@@ -2176,7 +2176,7 @@ spritelayout wooden_buffer_south_building_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -2193,7 +2193,7 @@ spritelayout wooden_buffer_south_building_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -2227,8 +2227,8 @@ item(FEAT_STATIONS, wooden_buffer_south_building_right_station) {
 /***********************************************/
 
 spriteset (wood_building_1a, "src/stations_buildings_1.png") {
-    [ 10, 10, 64, 64, -32, -32 ]
-    [ 80, 10, 64, 64, -32, -32 ]
+    [ 10, 10, 64, 64, -31, -32]
+    [ 80, 10, 64, 64, -31, -32]
 }
 
 spritelayout wood_building_1a_nw(a) {
@@ -2238,7 +2238,7 @@ spritelayout wood_building_1a_nw(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -2255,7 +2255,7 @@ spritelayout wood_building_1a_ne(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -2286,8 +2286,8 @@ item(FEAT_STATIONS, wood_station_building_1a) {
 }
 
 spriteset (wood_building_1b, "src/stations_buildings_1.png") {
-    [ 150, 10, 64, 64, -32, -32 ]
-    [ 220, 10, 64, 64, -32, -32 ]
+    [ 150, 10, 64, 64, -31, -32]
+    [ 220, 10, 64, 64, -31, -32]
 }
 
 spritelayout wood_building_1b_se(a) {
@@ -2297,7 +2297,7 @@ spritelayout wood_building_1b_se(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -2314,7 +2314,7 @@ spritelayout wood_building_1b_sw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -2345,8 +2345,8 @@ item(FEAT_STATIONS, wood_station_building_1b) {
 }
 
 spriteset (wood_building_2a, "src/stations_buildings_1.png") {
-    [ 290, 10, 64, 64, -32, -32 ]
-    [ 360, 10, 64, 64, -32, -32 ]
+    [ 290, 10, 64, 64, -31, -32]
+    [ 360, 10, 64, 64, -31, -32]
 }
 
 spritelayout wood_building_2a_nw(a) {
@@ -2356,7 +2356,7 @@ spritelayout wood_building_2a_nw(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -2373,7 +2373,7 @@ spritelayout wood_building_2a_ne(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -2404,8 +2404,8 @@ item(FEAT_STATIONS, wood_station_building_2a) {
 }
 
 spriteset (wood_building_2b, "src/stations_buildings_1.png") {
-    [ 430, 10, 64, 64, -32, -32 ]
-    [ 500, 10, 64, 64, -32, -32 ]
+    [ 430, 10, 64, 64, -31, -32]
+    [ 500, 10, 64, 64, -31, -32]
 }
 
 spritelayout wood_building_2b_se(a) {
@@ -2415,7 +2415,7 @@ spritelayout wood_building_2b_se(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -2432,7 +2432,7 @@ spritelayout wood_building_2b_sw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -2465,8 +2465,8 @@ item(FEAT_STATIONS, wood_station_building_2b) {
 /***** SIGN WAYPOINT 1A *****/
 
 spriteset (wood_sign_waypoint_1a, "src/stations_waypoints.png") {
-    [  10, 10, 64, 64, -32, -34 ]
-    [  80, 10, 64, 64, -32, -34 ]
+    [  10, 10, 64, 64, -31, -32]
+    [  80, 10, 64, 64, -31, -32]
 
 }
 
@@ -2477,7 +2477,7 @@ spritelayout wood_sign_waypoint_1a_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -2494,7 +2494,7 @@ spritelayout wood_sign_waypoint_1a_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -2523,8 +2523,8 @@ item(FEAT_STATIONS, wood_sign_1a_waypoint) {
 /***** SIGN WAYPOINT 1B *****/
 
 spriteset (wood_sign_waypoint_1b, "src/stations_waypoints.png") {
-    [  150, 10, 64, 64, -32, -34 ]
-    [  220, 10, 64, 64, -32, -34 ]
+    [  150, 10, 64, 64, -31, -32]
+    [  220, 10, 64, 64, -31, -32]
 
 }
 
@@ -2535,7 +2535,7 @@ spritelayout wood_sign_waypoint_1b_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -2552,7 +2552,7 @@ spritelayout wood_sign_waypoint_1b_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -2580,8 +2580,8 @@ item(FEAT_STATIONS, wood_sign_1b_waypoint) {
 /***** SIGN WAYPOINT 2A *****/
 
 spriteset (wood_sign_waypoint_2a, "src/stations_waypoints.png") {
-    [  290, 10, 64, 64, -32, -34 ]
-    [  360, 10, 64, 64, -32, -34 ]
+    [  290, 10, 64, 64, -31, -32]
+    [  360, 10, 64, 64, -31, -32]
 
 }
 
@@ -2592,7 +2592,7 @@ spritelayout wood_sign_waypoint_2a_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -2609,7 +2609,7 @@ spritelayout wood_sign_waypoint_2a_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -2638,8 +2638,8 @@ item(FEAT_STATIONS, wood_sign_2a_waypoint) {
 /***** SIGN WAYPOINT 2B *****/
 
 spriteset (wood_sign_waypoint_2b, "src/stations_waypoints.png") {
-    [  430, 10, 64, 64, -32, -34 ]
-    [  500, 10, 64, 64, -32, -34 ]
+    [  430, 10, 64, 64, -31, -32]
+    [  500, 10, 64, 64, -31, -32]
 
 }
 
@@ -2650,7 +2650,7 @@ spritelayout wood_sign_waypoint_2b_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -2667,7 +2667,7 @@ spritelayout wood_sign_waypoint_2b_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
