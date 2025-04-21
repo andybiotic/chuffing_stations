@@ -44,7 +44,7 @@ The elegant brick designs from around the Midland region inspired this station t
 **Suburban**
 From around 1910, this clean, geometric style was typical of stations in and around London.
 
-**Dark Brick**xw
+**Dark Brick**
 Beginning in the 1950s, the West Coast Modernisation Programme triggered the reconfiguration of many key stations. Many were rebuilt using brutalist designs.
 
 **Modern Stations**
