@@ -10,31 +10,31 @@
 /** PLATFORM LEFT **/
 
 spriteset (redbrick_lights_platform_left, "src/stations_redbrick.png") {
-    [  10, 10, 64, 64, -32, -34 ]
-    [  80, 10, 64, 64, -32, -34 ]
-    [  10, 150, 64, 64, -32, -34 ]
-    [  80, 150, 64, 64, -32, -34 ]
+    [  10, 10, 64, 64, -31, -32 ]
+    [  80, 10, 64, 64, -31, -32 ]
+    [  10, 150, 64, 64, -31, -32 ]
+    [  80, 150, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_lights_passengers_left_empty, "src/stations_redbrick.png") {
-    [  430, 710, 64, 64, -32, -34 ]
-    [  640, 710, 64, 64, -32, -34 ]
-    [  10, 150, 64, 64, -32, -34 ]
-    [  80, 150, 64, 64, -32, -34 ]
+    [  430, 710, 64, 64, -31, -32 ]
+    [  640, 710, 64, 64, -31, -32 ]
+    [  10, 150, 64, 64, -31, -32 ]
+    [  80, 150, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_lights_passengers_left_half, "src/stations_redbrick.png") {
-    [  500, 710, 64, 64, -32, -34 ]
-    [  710, 710, 64, 64, -32, -34 ]
-    [  10, 150, 64, 64, -32, -34 ]
-    [  80, 150, 64, 64, -32, -34 ]
+    [  500, 710, 64, 64, -31, -32 ]
+    [  710, 710, 64, 64, -31, -32 ]
+    [  10, 150, 64, 64, -31, -32 ]
+    [  80, 150, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_lights_passengers_left_full, "src/stations_redbrick.png") {
-    [  570, 710, 64, 64, -32, -34 ]
-    [  780, 710, 64, 64, -32, -34 ]
-    [  10, 150, 64, 64, -32, -34 ]
-    [  80, 150, 64, 64, -32, -34 ]
+    [  570, 710, 64, 64, -31, -32 ]
+    [  780, 710, 64, 64, -31, -32 ]
+    [  10, 150, 64, 64, -31, -32 ]
+    [  80, 150, 64, 64, -31, -32 ]
 }
 
 spritegroup redbrick_lights_passengers_left {
@@ -49,7 +49,7 @@ spritelayout redbrick_lights_platform_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -60,7 +60,7 @@ spritelayout redbrick_lights_platform_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -77,7 +77,7 @@ spritelayout redbrick_lights_platform_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -88,7 +88,7 @@ spritelayout redbrick_lights_platform_left_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -118,30 +118,30 @@ item(FEAT_STATIONS, redbrick_lights_platform_left_station) {
 /** PLATFORM RIGHT **/
 
 spriteset (redbrick_lights_platform_right, "src/stations_redbrick.png") {
-    [  150, 10, 64, 64, -32, -34 ]
-    [  220, 10, 64, 64, -32, -34 ]
-    [  150, 150, 64, 64, -32, -34 ]
-    [  220, 150, 64, 64, -32, -34 ]
+    [  150, 10, 64, 64, -31, -32 ]
+    [  220, 10, 64, 64, -31, -32 ]
+    [  150, 150, 64, 64, -31, -32 ]
+    [  220, 150, 64, 64, -31, -32 ]
 }
 spriteset (redbrick_lights_passengers_right_empty, "src/stations_redbrick.png") {
-    [  430, 780, 64, 64, -32, -34 ]
-    [  640, 780, 64, 64, -32, -34 ]
-    [  150, 150, 64, 64, -32, -34 ]
-    [  220, 150, 64, 64, -32, -34 ]
+    [  430, 780, 64, 64, -31, -32 ]
+    [  640, 780, 64, 64, -31, -32 ]
+    [  150, 150, 64, 64, -31, -32 ]
+    [  220, 150, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_lights_passengers_right_half, "src/stations_redbrick.png") {
-    [  500, 780, 64, 64, -32, -34 ]
-    [  710, 780, 64, 64, -32, -34 ]
-    [  150, 150, 64, 64, -32, -34 ]
-    [  220, 150, 64, 64, -32, -34 ]
+    [  500, 780, 64, 64, -31, -32 ]
+    [  710, 780, 64, 64, -31, -32 ]
+    [  150, 150, 64, 64, -31, -32 ]
+    [  220, 150, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_lights_passengers_right_full, "src/stations_redbrick.png") {
-    [  570, 780, 64, 64, -32, -34 ]
-    [  780, 780, 64, 64, -32, -34 ]
-    [  150, 150, 64, 64, -32, -34 ]
-    [  220, 150, 64, 64, -32, -34 ]
+    [  570, 780, 64, 64, -31, -32 ]
+    [  780, 780, 64, 64, -31, -32 ]
+    [  150, 150, 64, 64, -31, -32 ]
+    [  220, 150, 64, 64, -31, -32 ]
 }
 
 spritegroup redbrick_lights_passengers_right {
@@ -157,7 +157,7 @@ spritelayout redbrick_lights_platform_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -168,7 +168,7 @@ spritelayout redbrick_lights_platform_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -185,7 +185,7 @@ spritelayout redbrick_lights_platform_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -196,7 +196,7 @@ spritelayout redbrick_lights_platform_right_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -230,31 +230,31 @@ item(FEAT_STATIONS, redbrick_lights_platform_right_station) {
 /** PLATFORM LEFT **/
 
 spriteset (redbrick_fenceandlights_platform_left, "src/stations_redbrick.png") {
-    [  10, 80, 64, 64, -32, -34 ]
-    [  80, 80, 64, 64, -32, -34 ]
-    [  10, 220, 64, 64, -32, -34 ]
-    [  80, 220, 64, 64, -32, -34 ]
+    [  10, 80, 64, 64, -31, -32 ]
+    [  80, 80, 64, 64, -31, -32 ]
+    [  10, 220, 64, 64, -31, -32 ]
+    [  80, 220, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_fenceandlights_platform_left_empty, "src/stations_redbrick.png") {
-    [  430, 850, 64, 64, -32, -34 ]
-    [  640, 850, 64, 64, -32, -34 ]
-    [  10, 220, 64, 64, -32, -34 ]
-    [  80, 220, 64, 64, -32, -34 ]
+    [  430, 850, 64, 64, -31, -32 ]
+    [  640, 850, 64, 64, -31, -32 ]
+    [  10, 220, 64, 64, -31, -32 ]
+    [  80, 220, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_fenceandlights_platform_left_half, "src/stations_redbrick.png") {
-    [  500, 850, 64, 64, -32, -34 ]
-    [  710, 850, 64, 64, -32, -34 ]
-    [  10, 220, 64, 64, -32, -34 ]
-    [  80, 220, 64, 64, -32, -34 ]
+    [  500, 850, 64, 64, -31, -32 ]
+    [  710, 850, 64, 64, -31, -32 ]
+    [  10, 220, 64, 64, -31, -32 ]
+    [  80, 220, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_fenceandlights_platform_left_full, "src/stations_redbrick.png") {
-    [  570, 850, 64, 64, -32, -34 ]
-    [  780, 850, 64, 64, -32, -34 ]
-    [  10, 220, 64, 64, -32, -34 ]
-    [  80, 220, 64, 64, -32, -34 ]
+    [  570, 850, 64, 64, -31, -32 ]
+    [  780, 850, 64, 64, -31, -32 ]
+    [  10, 220, 64, 64, -31, -32 ]
+    [  80, 220, 64, 64, -31, -32 ]
 }
 
 spritegroup redbrick_fenceandlights_passengers_left {
@@ -269,7 +269,7 @@ spritelayout redbrick_fenceandlights_platform_left_sw_ne(a) {
         building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -280,7 +280,7 @@ spritelayout redbrick_fenceandlights_platform_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -297,7 +297,7 @@ spritelayout redbrick_fenceandlights_platform_left_se_nw(a) {
         building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -308,7 +308,7 @@ spritelayout redbrick_fenceandlights_platform_left_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -338,31 +338,31 @@ item(FEAT_STATIONS, redbrick_fenceandlights_platform_left_station) {
 /** PLATFORM RIGHT **/
 
 spriteset (redbrick_fenceandlights_platform_right, "src/stations_redbrick.png") {
-    [  150, 80, 64, 64, -32, -34 ]
-    [  220, 80, 64, 64, -32, -34 ]
-    [  150, 220, 64, 64, -32, -34 ]
-    [  220, 220, 64, 64, -32, -34 ]
+    [  150, 80, 64, 64, -31, -32 ]
+    [  220, 80, 64, 64, -31, -32 ]
+    [  150, 220, 64, 64, -31, -32 ]
+    [  220, 220, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_fenceandlights_platform_right_empty, "src/stations_redbrick.png") {
-    [  430, 920, 64, 64, -32, -34 ]
-    [  640, 920, 64, 64, -32, -34 ]
-    [  150, 220, 64, 64, -32, -34 ]
-    [  220, 220, 64, 64, -32, -34 ]
+    [  430, 920, 64, 64, -31, -32 ]
+    [  640, 920, 64, 64, -31, -32 ]
+    [  150, 220, 64, 64, -31, -32 ]
+    [  220, 220, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_fenceandlights_platform_right_half, "src/stations_redbrick.png") {
-    [  500, 920, 64, 64, -32, -34 ]
-    [  710, 920, 64, 64, -32, -34 ]
-    [  150, 220, 64, 64, -32, -34 ]
-    [  220, 220, 64, 64, -32, -34 ]
+    [  500, 920, 64, 64, -31, -32 ]
+    [  710, 920, 64, 64, -31, -32 ]
+    [  150, 220, 64, 64, -31, -32 ]
+    [  220, 220, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_fenceandlights_platform_right_full, "src/stations_redbrick.png") {
-    [  570, 920, 64, 64, -32, -34 ]
-    [  780, 920, 64, 64, -32, -34 ]
-    [  150, 220, 64, 64, -32, -34 ]
-    [  220, 220, 64, 64, -32, -34 ]
+    [  570, 920, 64, 64, -31, -32 ]
+    [  780, 920, 64, 64, -31, -32 ]
+    [  150, 220, 64, 64, -31, -32 ]
+    [  220, 220, 64, 64, -31, -32 ]
 }
 
 spritegroup redbrick_fenceandlights_passengers_right {
@@ -377,7 +377,7 @@ spritelayout redbrick_fenceandlights_platform_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -388,7 +388,7 @@ spritelayout redbrick_fenceandlights_platform_right_sw_ne(a) {
         building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -405,7 +405,7 @@ spritelayout redbrick_fenceandlights_platform_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -416,7 +416,7 @@ spritelayout redbrick_fenceandlights_platform_right_se_nw(a) {
         building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -450,31 +450,31 @@ item(FEAT_STATIONS, redbrick_fenceandlights_platform_right_station) {
 /** PLATFORM LEFT **/
 
 spriteset (redbrick_sign_platform_left, "src/stations_redbrick.png") {
-    [  10, 10, 64, 64, -32, -34 ]
-    [  80, 10, 64, 64, -32, -34 ]
-    [  290, 150, 64, 64, -32, -34 ]
-    [  360, 150, 64, 64, -32, -34 ]
+    [  10, 10, 64, 64, -31, -32 ]
+    [  80, 10, 64, 64, -31, -32 ]
+    [  290, 150, 64, 64, -31, -32 ]
+    [  360, 150, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_sign_platform_left_empty, "src/stations_redbrick.png") {
-    [  430, 710, 64, 64, -32, -34 ]
-    [  640, 710, 64, 64, -32, -34 ]
-    [  290, 150, 64, 64, -32, -34 ]
-    [  360, 150, 64, 64, -32, -34 ]
+    [  430, 710, 64, 64, -31, -32 ]
+    [  640, 710, 64, 64, -31, -32 ]
+    [  290, 150, 64, 64, -31, -32 ]
+    [  360, 150, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_sign_platform_left_half, "src/stations_redbrick.png") {
-    [  500, 710, 64, 64, -32, -34 ]
-    [  710, 710, 64, 64, -32, -34 ]
-    [  290, 150, 64, 64, -32, -34 ]
-    [  360, 150, 64, 64, -32, -34 ]
+    [  500, 710, 64, 64, -31, -32 ]
+    [  710, 710, 64, 64, -31, -32 ]
+    [  290, 150, 64, 64, -31, -32 ]
+    [  360, 150, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_sign_platform_left_full, "src/stations_redbrick.png") {
-    [  570, 710, 64, 64, -32, -34 ]
-    [  780, 710, 64, 64, -32, -34 ]
-    [  290, 150, 64, 64, -32, -34 ]
-    [  360, 150, 64, 64, -32, -34 ]
+    [  570, 710, 64, 64, -31, -32 ]
+    [  780, 710, 64, 64, -31, -32 ]
+    [  290, 150, 64, 64, -31, -32 ]
+    [  360, 150, 64, 64, -31, -32 ]
 }
 
 spritegroup redbrick_sign_passengers_left {
@@ -489,7 +489,7 @@ spritelayout redbrick_sign_platform_left_sw_ne(a) {
         building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -500,7 +500,7 @@ spritelayout redbrick_sign_platform_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -517,7 +517,7 @@ spritelayout redbrick_sign_platform_left_se_nw(a) {
         building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -528,7 +528,7 @@ spritelayout redbrick_sign_platform_left_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -559,31 +559,31 @@ item(FEAT_STATIONS, redbrick_sign_platform_left_station) {
 /** PLATFORM RIGHT **/
 
 spriteset (redbrick_sign_platform_right, "src/stations_redbrick.png") {
-    [  150, 10, 64, 64, -32, -34 ]
-    [  220, 10, 64, 64, -32, -34 ]
-    [  430, 150, 64, 64, -32, -34 ]
-    [  500, 150, 64, 64, -32, -34 ]
+    [  150, 10, 64, 64, -31, -32 ]
+    [  220, 10, 64, 64, -31, -32 ]
+    [  430, 150, 64, 64, -31, -32 ]
+    [  500, 150, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_sign_platform_right_empty, "src/stations_redbrick.png") {
-    [  430, 780, 64, 64, -32, -34 ]
-    [  640, 780, 64, 64, -32, -34 ]
-    [  430, 150, 64, 64, -32, -34 ]
-    [  500, 150, 64, 64, -32, -34 ]
+    [  430, 780, 64, 64, -31, -32 ]
+    [  640, 780, 64, 64, -31, -32 ]
+    [  430, 150, 64, 64, -31, -32 ]
+    [  500, 150, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_sign_platform_right_half, "src/stations_redbrick.png") {
-    [  500, 780, 64, 64, -32, -34 ]
-    [  710, 780, 64, 64, -32, -34 ]
-    [  430, 150, 64, 64, -32, -34 ]
-    [  500, 150, 64, 64, -32, -34 ]
+    [  500, 780, 64, 64, -31, -32 ]
+    [  710, 780, 64, 64, -31, -32 ]
+    [  430, 150, 64, 64, -31, -32 ]
+    [  500, 150, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_sign_platform_right_full, "src/stations_redbrick.png") {
-    [  570, 780, 64, 64, -32, -34 ]
-    [  780, 780, 64, 64, -32, -34 ]
-    [  430, 150, 64, 64, -32, -34 ]
-    [  500, 150, 64, 64, -32, -34 ]
+    [  570, 780, 64, 64, -31, -32 ]
+    [  780, 780, 64, 64, -31, -32 ]
+    [  430, 150, 64, 64, -31, -32 ]
+    [  500, 150, 64, 64, -31, -32 ]
 }
 
 spritegroup redbrick_sign_passengers_right {
@@ -598,7 +598,7 @@ spritelayout redbrick_sign_platform_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -609,7 +609,7 @@ spritelayout redbrick_sign_platform_right_sw_ne(a) {
         building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -626,7 +626,7 @@ spritelayout redbrick_sign_platform_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -637,7 +637,7 @@ spritelayout redbrick_sign_platform_right_se_nw(a) {
         building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -671,31 +671,31 @@ item(FEAT_STATIONS, redbrick_sign_platform_right_station) {
 /** PLATFORM LEFT **/
 
 spriteset (redbrick_fenceandsign_platform_left, "src/stations_redbrick.png") {
-    [  10, 80, 64, 64, -32, -34 ]
-    [  80, 80, 64, 64, -32, -34 ]
-    [  290, 220, 64, 64, -32, -34 ]
-    [  360, 220, 64, 64, -32, -34 ]
+    [  10, 80, 64, 64, -31, -32 ]
+    [  80, 80, 64, 64, -31, -32 ]
+    [  290, 220, 64, 64, -31, -32 ]
+    [  360, 220, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_fenceandsign_platform_left_empty, "src/stations_redbrick.png") {
-    [  430, 850, 64, 64, -32, -34 ]
-    [  640, 850, 64, 64, -32, -34 ]
-    [  290, 220, 64, 64, -32, -34 ]
-    [  360, 220, 64, 64, -32, -34 ]
+    [  430, 850, 64, 64, -31, -32 ]
+    [  640, 850, 64, 64, -31, -32 ]
+    [  290, 220, 64, 64, -31, -32 ]
+    [  360, 220, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_fenceandsign_platform_left_half, "src/stations_redbrick.png") {
-    [  500, 850, 64, 64, -32, -34 ]
-    [  710, 850, 64, 64, -32, -34 ]
-    [  290, 220, 64, 64, -32, -34 ]
-    [  360, 220, 64, 64, -32, -34 ]
+    [  500, 850, 64, 64, -31, -32 ]
+    [  710, 850, 64, 64, -31, -32 ]
+    [  290, 220, 64, 64, -31, -32 ]
+    [  360, 220, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_fenceandsign_platform_left_full, "src/stations_redbrick.png") {
-    [  570, 850, 64, 64, -32, -34 ]
-    [  780, 850, 64, 64, -32, -34 ]
-    [  290, 220, 64, 64, -32, -34 ]
-    [  360, 220, 64, 64, -32, -34 ]
+    [  570, 850, 64, 64, -31, -32 ]
+    [  780, 850, 64, 64, -31, -32 ]
+    [  290, 220, 64, 64, -31, -32 ]
+    [  360, 220, 64, 64, -31, -32 ]
 }
 
 spritegroup redbrick_fenceandsign_passengers_left {
@@ -710,7 +710,7 @@ spritelayout redbrick_fenceandsign_platform_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -721,7 +721,7 @@ spritelayout redbrick_fenceandsign_platform_left_sw_ne(a) {
         building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -738,7 +738,7 @@ spritelayout redbrick_fenceandsign_platform_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -749,7 +749,7 @@ spritelayout redbrick_fenceandsign_platform_left_se_nw(a) {
         building {
         sprite:         DEFAULT(3);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -779,31 +779,31 @@ item(FEAT_STATIONS, redbrick_fenceandsign_platform_left_station) {
 /** PLATFORM RIGHT **/
 
 spriteset (redbrick_fenceandsign_platform_right, "src/stations_redbrick.png") {
-    [  150, 80, 64, 64, -32, -34 ]
-    [  220, 80, 64, 64, -32, -34 ]
-    [  430, 220, 64, 64, -32, -34 ]
-    [  500, 220, 64, 64, -32, -34 ]
+    [  150, 80, 64, 64, -31, -32 ]
+    [  220, 80, 64, 64, -31, -32 ]
+    [  430, 220, 64, 64, -31, -32 ]
+    [  500, 220, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_fenceandsign_platform_right_empty, "src/stations_redbrick.png") {
-    [  430, 920, 64, 64, -32, -34 ]
-    [  640, 920, 64, 64, -32, -34 ]
-    [  430, 220, 64, 64, -32, -34 ]
-    [  500, 220, 64, 64, -32, -34 ]
+    [  430, 920, 64, 64, -31, -32 ]
+    [  640, 920, 64, 64, -31, -32 ]
+    [  430, 220, 64, 64, -31, -32 ]
+    [  500, 220, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_fenceandsign_platform_right_half, "src/stations_redbrick.png") {
-    [  500, 920, 64, 64, -32, -34 ]
-    [  710, 920, 64, 64, -32, -34 ]
-    [  430, 220, 64, 64, -32, -34 ]
-    [  500, 220, 64, 64, -32, -34 ]
+    [  500, 920, 64, 64, -31, -32 ]
+    [  710, 920, 64, 64, -31, -32 ]
+    [  430, 220, 64, 64, -31, -32 ]
+    [  500, 220, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_fenceandsign_platform_right_full, "src/stations_redbrick.png") {
-    [  570, 920, 64, 64, -32, -34 ]
-    [  780, 920, 64, 64, -32, -34 ]
-    [  430, 220, 64, 64, -32, -34 ]
-    [  500, 220, 64, 64, -32, -34 ]
+    [  570, 920, 64, 64, -31, -32 ]
+    [  780, 920, 64, 64, -31, -32 ]
+    [  430, 220, 64, 64, -31, -32 ]
+    [  500, 220, 64, 64, -31, -32 ]
 }
 
 spritegroup redbrick_fenceandsign_passengers_right {
@@ -818,7 +818,7 @@ spritelayout redbrick_fenceandsign_platform_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -829,7 +829,7 @@ spritelayout redbrick_fenceandsign_platform_right_sw_ne(a) {
         building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -846,7 +846,7 @@ spritelayout redbrick_fenceandsign_platform_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -857,7 +857,7 @@ spritelayout redbrick_fenceandsign_platform_right_se_nw(a) {
         building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -891,31 +891,31 @@ item(FEAT_STATIONS, redbrick_fenceandsign_platform_right_station) {
 /** PLATFORM LEFT **/
 
 spriteset (redbrick_bench_platform_left, "src/stations_redbrick.png") {
-    [  10, 10, 64, 64, -32, -34 ]
-    [  80, 10, 64, 64, -32, -34 ]
-    [  10, 290, 64, 64, -32, -34 ]
-    [  80, 290, 64, 64, -32, -34 ]
+    [  10, 10, 64, 64, -31, -32 ]
+    [  80, 10, 64, 64, -31, -32 ]
+    [  10, 290, 64, 64, -31, -32 ]
+    [  80, 290, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_bench_platform_left_empty, "src/stations_redbrick.png") {
-    [  430, 710, 64, 64, -32, -34 ]
-    [  640, 710, 64, 64, -32, -34 ]
-    [  10, 290, 64, 64, -32, -34 ]
-    [  80, 290, 64, 64, -32, -34 ]
+    [  430, 710, 64, 64, -31, -32 ]
+    [  640, 710, 64, 64, -31, -32 ]
+    [  10, 290, 64, 64, -31, -32 ]
+    [  80, 290, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_bench_platform_left_half, "src/stations_redbrick.png") {
-    [  500, 710, 64, 64, -32, -34 ]
-    [  710, 710, 64, 64, -32, -34 ]
-    [  10, 290, 64, 64, -32, -34 ]
-    [  80, 290, 64, 64, -32, -34 ]
+    [  500, 710, 64, 64, -31, -32 ]
+    [  710, 710, 64, 64, -31, -32 ]
+    [  10, 290, 64, 64, -31, -32 ]
+    [  80, 290, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_bench_platform_left_full, "src/stations_redbrick.png") {
-    [  570, 710, 64, 64, -32, -34 ]
-    [  780, 710, 64, 64, -32, -34 ]
-    [  10, 290, 64, 64, -32, -34 ]
-    [  80, 290, 64, 64, -32, -34 ]
+    [  570, 710, 64, 64, -31, -32 ]
+    [  780, 710, 64, 64, -31, -32 ]
+    [  10, 290, 64, 64, -31, -32 ]
+    [  80, 290, 64, 64, -31, -32 ]
 }
 
 spritegroup redbrick_bench_passengers_left {
@@ -930,7 +930,7 @@ spritelayout redbrick_bench_platform_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -941,7 +941,7 @@ spritelayout redbrick_bench_platform_left_sw_ne(a) {
         building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -958,7 +958,7 @@ spritelayout redbrick_bench_platform_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -969,7 +969,7 @@ spritelayout redbrick_bench_platform_left_se_nw(a) {
         building {
         sprite:         DEFAULT(3);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -999,31 +999,31 @@ item(FEAT_STATIONS, redbrick_bench_platform_left_station) {
 /** PLATFORM RIGHT **/
 
 spriteset (redbrick_bench_platform_right, "src/stations_redbrick.png") {
-    [  150, 10, 64, 64, -32, -34 ]
-    [  220, 10, 64, 64, -32, -34 ]
-    [  150, 290, 64, 64, -32, -34 ]
-    [  220, 290, 64, 64, -32, -34 ]
+    [  150, 10, 64, 64, -31, -32 ]
+    [  220, 10, 64, 64, -31, -32 ]
+    [  150, 290, 64, 64, -31, -32 ]
+    [  220, 290, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_bench_platform_right_empty, "src/stations_redbrick.png") {
-    [  430, 780, 64, 64, -32, -34 ]
-    [  640, 780, 64, 64, -32, -34 ]
-    [  150, 290, 64, 64, -32, -34 ]
-    [  220, 290, 64, 64, -32, -34 ]
+    [  430, 780, 64, 64, -31, -32 ]
+    [  640, 780, 64, 64, -31, -32 ]
+    [  150, 290, 64, 64, -31, -32 ]
+    [  220, 290, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_bench_platform_right_half, "src/stations_redbrick.png") {
-    [  500, 780, 64, 64, -32, -34 ]
-    [  710, 780, 64, 64, -32, -34 ]
-    [  150, 290, 64, 64, -32, -34 ]
-    [  220, 290, 64, 64, -32, -34 ]
+    [  500, 780, 64, 64, -31, -32 ]
+    [  710, 780, 64, 64, -31, -32 ]
+    [  150, 290, 64, 64, -31, -32 ]
+    [  220, 290, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_bench_platform_right_full, "src/stations_redbrick.png") {
-    [  570, 780, 64, 64, -32, -34 ]
-    [  780, 780, 64, 64, -32, -34 ]
-    [  150, 290, 64, 64, -32, -34 ]
-    [  220, 290, 64, 64, -32, -34 ]
+    [  570, 780, 64, 64, -31, -32 ]
+    [  780, 780, 64, 64, -31, -32 ]
+    [  150, 290, 64, 64, -31, -32 ]
+    [  220, 290, 64, 64, -31, -32 ]
 }
 
 spritegroup redbrick_bench_passengers_right {
@@ -1038,7 +1038,7 @@ spritelayout redbrick_bench_platform_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1049,7 +1049,7 @@ spritelayout redbrick_bench_platform_right_sw_ne(a) {
         building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1066,7 +1066,7 @@ spritelayout redbrick_bench_platform_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1077,7 +1077,7 @@ spritelayout redbrick_bench_platform_right_se_nw(a) {
         building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1111,31 +1111,31 @@ item(FEAT_STATIONS, redbrick_bench_platform_right_station) {
 /** PLATFORM LEFT **/
 
 spriteset (redbrick_fenceandbench_platform_left, "src/stations_redbrick.png") {
-    [  10, 80, 64, 64, -32, -34 ]
-    [  80, 80, 64, 64, -32, -34 ]
-    [  10, 360, 64, 64, -32, -34 ]
-    [  80, 360, 64, 64, -32, -34 ]
+    [  10, 80, 64, 64, -31, -32 ]
+    [  80, 80, 64, 64, -31, -32 ]
+    [  10, 360, 64, 64, -31, -32 ]
+    [  80, 360, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_fenceandbench_platform_left_empty, "src/stations_redbrick.png") {
-    [  430, 850, 64, 64, -32, -34 ]
-    [  640, 850, 64, 64, -32, -34 ]
-    [  10, 360, 64, 64, -32, -34 ]
-    [  80, 360, 64, 64, -32, -34 ]
+    [  430, 850, 64, 64, -31, -32 ]
+    [  640, 850, 64, 64, -31, -32 ]
+    [  10, 360, 64, 64, -31, -32 ]
+    [  80, 360, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_fenceandbench_platform_left_half, "src/stations_redbrick.png") {
-    [  500, 850, 64, 64, -32, -34 ]
-    [  710, 850, 64, 64, -32, -34 ]
-    [  10, 360, 64, 64, -32, -34 ]
-    [  80, 360, 64, 64, -32, -34 ]
+    [  500, 850, 64, 64, -31, -32 ]
+    [  710, 850, 64, 64, -31, -32 ]
+    [  10, 360, 64, 64, -31, -32 ]
+    [  80, 360, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_fenceandbench_platform_left_full, "src/stations_redbrick.png") {
-    [  570, 850, 64, 64, -32, -34 ]
-    [  780, 850, 64, 64, -32, -34 ]
-    [  10, 360, 64, 64, -32, -34 ]
-    [  80, 360, 64, 64, -32, -34 ]
+    [  570, 850, 64, 64, -31, -32 ]
+    [  780, 850, 64, 64, -31, -32 ]
+    [  10, 360, 64, 64, -31, -32 ]
+    [  80, 360, 64, 64, -31, -32 ]
 }
 
 spritegroup redbrick_fenceandbench_passengers_left {
@@ -1150,7 +1150,7 @@ spritelayout redbrick_fenceandbench_platform_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1161,7 +1161,7 @@ spritelayout redbrick_fenceandbench_platform_left_sw_ne(a) {
         building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1178,7 +1178,7 @@ spritelayout redbrick_fenceandbench_platform_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1189,7 +1189,7 @@ spritelayout redbrick_fenceandbench_platform_left_se_nw(a) {
         building {
         sprite:         DEFAULT(3);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1219,31 +1219,31 @@ item(FEAT_STATIONS, redbrick_fenceandbench_platform_left_station) {
 /** PLATFORM RIGHT **/
 
 spriteset (redbrick_fenceandbench_platform_right, "src/stations_redbrick.png") {
-    [  150, 80, 64, 64, -32, -34 ]
-    [  220, 80, 64, 64, -32, -34 ]
-    [  150, 360, 64, 64, -32, -34 ]
-    [  220, 360, 64, 64, -32, -34 ]
+    [  150, 80, 64, 64, -31, -32 ]
+    [  220, 80, 64, 64, -31, -32 ]
+    [  150, 360, 64, 64, -31, -32 ]
+    [  220, 360, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_fenceandbench_platform_right_empty, "src/stations_redbrick.png") {
-    [  430, 920, 64, 64, -32, -34 ]
-    [  640, 920, 64, 64, -32, -34 ]
-    [  150, 360, 64, 64, -32, -34 ]
-    [  220, 360, 64, 64, -32, -34 ]
+    [  430, 920, 64, 64, -31, -32 ]
+    [  640, 920, 64, 64, -31, -32 ]
+    [  150, 360, 64, 64, -31, -32 ]
+    [  220, 360, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_fenceandbench_platform_right_half, "src/stations_redbrick.png") {
-    [  500, 920, 64, 64, -32, -34 ]
-    [  710, 920, 64, 64, -32, -34 ]
-    [  150, 360, 64, 64, -32, -34 ]
-    [  220, 360, 64, 64, -32, -34 ]
+    [  500, 920, 64, 64, -31, -32 ]
+    [  710, 920, 64, 64, -31, -32 ]
+    [  150, 360, 64, 64, -31, -32 ]
+    [  220, 360, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_fenceandbench_platform_right_full, "src/stations_redbrick.png") {
-    [  570, 920, 64, 64, -32, -34 ]
-    [  780, 920, 64, 64, -32, -34 ]
-    [  150, 360, 64, 64, -32, -34 ]
-    [  220, 360, 64, 64, -32, -34 ]
+    [  570, 920, 64, 64, -31, -32 ]
+    [  780, 920, 64, 64, -31, -32 ]
+    [  150, 360, 64, 64, -31, -32 ]
+    [  220, 360, 64, 64, -31, -32 ]
 }
 
 spritegroup redbrick_fenceandbench_passengers_right {
@@ -1258,7 +1258,7 @@ spritelayout redbrick_fenceandbench_platform_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1269,7 +1269,7 @@ spritelayout redbrick_fenceandbench_platform_right_sw_ne(a) {
         building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1286,7 +1286,7 @@ spritelayout redbrick_fenceandbench_platform_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1297,7 +1297,7 @@ spritelayout redbrick_fenceandbench_platform_right_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1331,10 +1331,10 @@ item(FEAT_STATIONS, redbrick_fenceandbench_platform_right_station) {
 /** PLATFORM LEFT **/
 
 spriteset (redbrick_underpass_platform_left, "src/stations_redbrick.png") {
-    [  10, 10, 64, 64, -32, -34 ]
-    [  80, 10, 64, 64, -32, -34 ]
-    [  290, 290, 64, 64, -32, -34 ]
-    [  360, 290, 64, 64, -32, -34 ]
+    [  10, 10, 64, 64, -31, -32 ]
+    [  80, 10, 64, 64, -31, -32 ]
+    [  290, 290, 64, 64, -31, -32 ]
+    [  360, 290, 64, 64, -31, -32 ]
 }
 
 spritelayout redbrick_underpass_platform_left_sw_ne(a) {
@@ -1344,7 +1344,7 @@ spritelayout redbrick_underpass_platform_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1355,7 +1355,7 @@ spritelayout redbrick_underpass_platform_left_sw_ne(a) {
         building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1372,7 +1372,7 @@ spritelayout redbrick_underpass_platform_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1383,7 +1383,7 @@ spritelayout redbrick_underpass_platform_left_se_nw(a) {
         building {
         sprite:         DEFAULT(3);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1412,10 +1412,10 @@ item(FEAT_STATIONS, redbrick_underpass_platform_left_station) {
 /** PLATFORM RIGHT **/
 
 spriteset (redbrick_underpass_platform_right, "src/stations_redbrick.png") {
-    [  150, 10, 64, 64, -32, -34 ]
-    [  220, 10, 64, 64, -32, -34 ]
-    [  430, 290, 64, 64, -32, -34 ]
-    [  500, 290, 64, 64, -32, -34 ]
+    [  150, 10, 64, 64, -31, -32 ]
+    [  220, 10, 64, 64, -31, -32 ]
+    [  430, 290, 64, 64, -31, -32 ]
+    [  500, 290, 64, 64, -31, -32 ]
 }
 
 spritelayout redbrick_underpass_platform_right_sw_ne(a) {
@@ -1425,7 +1425,7 @@ spritelayout redbrick_underpass_platform_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1436,7 +1436,7 @@ spritelayout redbrick_underpass_platform_right_sw_ne(a) {
         building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1453,7 +1453,7 @@ spritelayout redbrick_underpass_platform_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1464,7 +1464,7 @@ spritelayout redbrick_underpass_platform_right_se_nw(a) {
         building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1497,10 +1497,10 @@ item(FEAT_STATIONS, redbrick_underpass_platform_right_station) {
 /** PLATFORM LEFT **/
 
 spriteset (redbrick_fenceandunderpass_platform_left, "src/stations_redbrick.png") {
-    [  10, 80, 64, 64, -32, -34 ]
-    [  80, 80, 64, 64, -32, -34 ]
-    [  290, 360, 64, 64, -32, -34 ]
-    [  360, 360, 64, 64, -32, -34 ]
+    [  10, 80, 64, 64, -31, -32 ]
+    [  80, 80, 64, 64, -31, -32 ]
+    [  290, 360, 64, 64, -31, -32 ]
+    [  360, 360, 64, 64, -31, -32 ]
 }
 
 spritelayout redbrick_fenceandunderpass_platform_left_sw_ne(a) {
@@ -1510,7 +1510,7 @@ spritelayout redbrick_fenceandunderpass_platform_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1521,7 +1521,7 @@ spritelayout redbrick_fenceandunderpass_platform_left_sw_ne(a) {
         building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1538,7 +1538,7 @@ spritelayout redbrick_fenceandunderpass_platform_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1549,7 +1549,7 @@ spritelayout redbrick_fenceandunderpass_platform_left_se_nw(a) {
         building {
         sprite:         DEFAULT(3);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1578,10 +1578,10 @@ item(FEAT_STATIONS, redbrick_fenceandunderpass_platform_left_station) {
 /** PLATFORM RIGHT **/
 
 spriteset (redbrick_fenceandunderpass_platform_right, "src/stations_redbrick.png") {
-    [  150, 80, 64, 64, -32, -34 ]
-    [  220, 80, 64, 64, -32, -34 ]
-    [  430, 360, 64, 64, -32, -34 ]
-    [  500, 360, 64, 64, -32, -34 ]
+    [  150, 80, 64, 64, -31, -32 ]
+    [  220, 80, 64, 64, -31, -32 ]
+    [  430, 360, 64, 64, -31, -32 ]
+    [  500, 360, 64, 64, -31, -32 ]
 }
 
 spritelayout redbrick_fenceandunderpass_platform_right_sw_ne(a) {
@@ -1591,7 +1591,7 @@ spritelayout redbrick_fenceandunderpass_platform_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1602,7 +1602,7 @@ spritelayout redbrick_fenceandunderpass_platform_right_sw_ne(a) {
         building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1619,7 +1619,7 @@ spritelayout redbrick_fenceandunderpass_platform_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1630,7 +1630,7 @@ spritelayout redbrick_fenceandunderpass_platform_right_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1663,31 +1663,31 @@ item(FEAT_STATIONS, redbrick_fenceandunderpass_platform_right_station) {
 /** PLATFORM LEFT **/
 
 spriteset (redbrick_shelter_platform_left, "src/stations_redbrick.png") {
-    [  10, 10, 64, 64, -32, -34 ]
-    [  80, 10, 64, 64, -32, -34 ]
-    [  570, 150, 64, 64, -32, -34 ]
-    [  640, 150, 64, 64, -32, -34 ]
+    [  10, 10, 64, 64, -31, -32 ]
+    [  80, 10, 64, 64, -31, -32 ]
+    [  570, 150, 64, 64, -31, -32 ]
+    [  640, 150, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_shelter_platform_left_empty, "src/stations_redbrick.png") {
-    [  430, 710, 64, 64, -32, -34 ]
-    [  640, 710, 64, 64, -32, -34 ]
-    [  570, 150, 64, 64, -32, -34 ]
-    [  640, 150, 64, 64, -32, -34 ]
+    [  430, 710, 64, 64, -31, -32 ]
+    [  640, 710, 64, 64, -31, -32 ]
+    [  570, 150, 64, 64, -31, -32 ]
+    [  640, 150, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_shelter_platform_left_half, "src/stations_redbrick.png") {
-    [  500, 710, 64, 64, -32, -34 ]
-    [  710, 710, 64, 64, -32, -34 ]
-    [  570, 150, 64, 64, -32, -34 ]
-    [  640, 150, 64, 64, -32, -34 ]
+    [  500, 710, 64, 64, -31, -32 ]
+    [  710, 710, 64, 64, -31, -32 ]
+    [  570, 150, 64, 64, -31, -32 ]
+    [  640, 150, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_shelter_platform_left_full, "src/stations_redbrick.png") {
-    [  570, 710, 64, 64, -32, -34 ]
-    [  780, 710, 64, 64, -32, -34 ]
-    [  570, 150, 64, 64, -32, -34 ]
-    [  640, 150, 64, 64, -32, -34 ]
+    [  570, 710, 64, 64, -31, -32 ]
+    [  780, 710, 64, 64, -31, -32 ]
+    [  570, 150, 64, 64, -31, -32 ]
+    [  640, 150, 64, 64, -31, -32 ]
 }
 
 spritegroup redbrick_shelter_passengers_left {
@@ -1702,7 +1702,7 @@ spritelayout redbrick_shelter_platform_left_sw_ne(a) {
         building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1713,7 +1713,7 @@ spritelayout redbrick_shelter_platform_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1730,7 +1730,7 @@ spritelayout redbrick_shelter_platform_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1741,7 +1741,7 @@ spritelayout redbrick_shelter_platform_left_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1772,31 +1772,31 @@ item(FEAT_STATIONS, redbrick_shelter_platform_left_station) {
 /** PLATFORM RIGHT **/
 
 spriteset (redbrick_shelter_platform_right, "src/stations_redbrick.png") {
-    [  150, 10, 64, 64, -32, -34 ]
-    [  220, 10, 64, 64, -32, -34 ]
-    [  710, 150, 64, 64, -32, -34 ]
-    [  780, 150, 64, 64, -32, -34 ]
+    [  150, 10, 64, 64, -31, -32 ]
+    [  220, 10, 64, 64, -31, -32 ]
+    [  710, 150, 64, 64, -31, -32 ]
+    [  780, 150, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_shelter_platform_right_empty, "src/stations_redbrick.png") {
-    [  430, 780, 64, 64, -32, -34 ]
-    [  640, 780, 64, 64, -32, -34 ]
-    [  710, 150, 64, 64, -32, -34 ]
-    [  780, 150, 64, 64, -32, -34 ]
+    [  430, 780, 64, 64, -31, -32 ]
+    [  640, 780, 64, 64, -31, -32 ]
+    [  710, 150, 64, 64, -31, -32 ]
+    [  780, 150, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_shelter_platform_right_half, "src/stations_redbrick.png") {
-    [  500, 780, 64, 64, -32, -34 ]
-    [  710, 780, 64, 64, -32, -34 ]
-    [  710, 150, 64, 64, -32, -34 ]
-    [  780, 150, 64, 64, -32, -34 ]
+    [  500, 780, 64, 64, -31, -32 ]
+    [  710, 780, 64, 64, -31, -32 ]
+    [  710, 150, 64, 64, -31, -32 ]
+    [  780, 150, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_shelter_platform_right_full, "src/stations_redbrick.png") {
-    [  570, 780, 64, 64, -32, -34 ]
-    [  780, 780, 64, 64, -32, -34 ]
-    [  710, 150, 64, 64, -32, -34 ]
-    [  780, 150, 64, 64, -32, -34 ]
+    [  570, 780, 64, 64, -31, -32 ]
+    [  780, 780, 64, 64, -31, -32 ]
+    [  710, 150, 64, 64, -31, -32 ]
+    [  780, 150, 64, 64, -31, -32 ]
 }
 
 spritegroup redbrick_shelter_passengers_right {
@@ -1811,7 +1811,7 @@ spritelayout redbrick_shelter_platform_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1822,7 +1822,7 @@ spritelayout redbrick_shelter_platform_right_sw_ne(a) {
         building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1839,7 +1839,7 @@ spritelayout redbrick_shelter_platform_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1850,7 +1850,7 @@ spritelayout redbrick_shelter_platform_right_se_nw(a) {
         building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1884,31 +1884,31 @@ item(FEAT_STATIONS, redbrick_shelter_platform_right_station) {
 /** PLATFORM LEFT **/
 
 spriteset (redbrick_fenceandshelter_platform_left, "src/stations_redbrick.png") {
-    [  10, 80, 64, 64, -32, -34 ]
-    [  80, 80, 64, 64, -32, -34 ]
-    [  570, 220, 64, 64, -32, -34 ]
-    [  640, 220, 64, 64, -32, -34 ]
+    [  10, 80, 64, 64, -31, -32 ]
+    [  80, 80, 64, 64, -31, -32 ]
+    [  570, 220, 64, 64, -31, -32 ]
+    [  640, 220, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_fenceandshelter_platform_left_empty, "src/stations_redbrick.png") {
-    [  430, 850, 64, 64, -32, -34 ]
-    [  640, 850, 64, 64, -32, -34 ]
-    [  570, 220, 64, 64, -32, -34 ]
-    [  640, 220, 64, 64, -32, -34 ]
+    [  430, 850, 64, 64, -31, -32 ]
+    [  640, 850, 64, 64, -31, -32 ]
+    [  570, 220, 64, 64, -31, -32 ]
+    [  640, 220, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_fenceandshelter_platform_left_half, "src/stations_redbrick.png") {
-    [  500, 850, 64, 64, -32, -34 ]
-    [  710, 850, 64, 64, -32, -34 ]
-    [  570, 220, 64, 64, -32, -34 ]
-    [  640, 220, 64, 64, -32, -34 ]
+    [  500, 850, 64, 64, -31, -32 ]
+    [  710, 850, 64, 64, -31, -32 ]
+    [  570, 220, 64, 64, -31, -32 ]
+    [  640, 220, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_fenceandshelter_platform_left_full, "src/stations_redbrick.png") {
-    [  570, 850, 64, 64, -32, -34 ]
-    [  780, 850, 64, 64, -32, -34 ]
-    [  570, 220, 64, 64, -32, -34 ]
-    [  640, 220, 64, 64, -32, -34 ]
+    [  570, 850, 64, 64, -31, -32 ]
+    [  780, 850, 64, 64, -31, -32 ]
+    [  570, 220, 64, 64, -31, -32 ]
+    [  640, 220, 64, 64, -31, -32 ]
 }
 
 spritegroup redbrick_fenceandshelter_passengers_left {
@@ -1924,7 +1924,7 @@ spritelayout redbrick_fenceandshelter_platform_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1935,7 +1935,7 @@ spritelayout redbrick_fenceandshelter_platform_left_sw_ne(a) {
         building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -1952,7 +1952,7 @@ spritelayout redbrick_fenceandshelter_platform_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1963,7 +1963,7 @@ spritelayout redbrick_fenceandshelter_platform_left_se_nw(a) {
         building {
         sprite:         DEFAULT(3);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -1994,31 +1994,31 @@ item(FEAT_STATIONS, redbrick_fenceandshelter_platform_left_station) {
 /** PLATFORM RIGHT **/
 
 spriteset (redbrick_fenceandshelter_platform_right, "src/stations_redbrick.png") {
-    [  150, 80, 64, 64, -32, -34 ]
-    [  220, 80, 64, 64, -32, -34 ]
-    [  710, 220, 64, 64, -32, -34 ]
-    [  780, 220, 64, 64, -32, -34 ]
+    [  150, 80, 64, 64, -31, -32 ]
+    [  220, 80, 64, 64, -31, -32 ]
+    [  710, 220, 64, 64, -31, -32 ]
+    [  780, 220, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_fenceandshelter_platform_right_empty, "src/stations_redbrick.png") {
-    [  430, 920, 64, 64, -32, -34 ]
-    [  640, 920, 64, 64, -32, -34 ]
-    [  710, 220, 64, 64, -32, -34 ]
-    [  780, 220, 64, 64, -32, -34 ]
+    [  430, 920, 64, 64, -31, -32 ]
+    [  640, 920, 64, 64, -31, -32 ]
+    [  710, 220, 64, 64, -31, -32 ]
+    [  780, 220, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_fenceandshelter_platform_right_half, "src/stations_redbrick.png") {
-    [  500, 920, 64, 64, -32, -34 ]
-    [  710, 920, 64, 64, -32, -34 ]
-    [  710, 220, 64, 64, -32, -34 ]
-    [  780, 220, 64, 64, -32, -34 ]
+    [  500, 920, 64, 64, -31, -32 ]
+    [  710, 920, 64, 64, -31, -32 ]
+    [  710, 220, 64, 64, -31, -32 ]
+    [  780, 220, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_fenceandshelter_platform_right_full, "src/stations_redbrick.png") {
-    [  570, 920, 64, 64, -32, -34 ]
-    [  780, 920, 64, 64, -32, -34 ]
-    [  710, 220, 64, 64, -32, -34 ]
-    [  780, 220, 64, 64, -32, -34 ]
+    [  570, 920, 64, 64, -31, -32 ]
+    [  780, 920, 64, 64, -31, -32 ]
+    [  710, 220, 64, 64, -31, -32 ]
+    [  780, 220, 64, 64, -31, -32 ]
 }
 
 spritegroup redbrick_fenceandshelter_passengers_right {
@@ -2033,7 +2033,7 @@ spritelayout redbrick_fenceandshelter_platform_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -2044,7 +2044,7 @@ spritelayout redbrick_fenceandshelter_platform_right_sw_ne(a) {
         building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -2061,7 +2061,7 @@ spritelayout redbrick_fenceandshelter_platform_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -2072,7 +2072,7 @@ spritelayout redbrick_fenceandshelter_platform_right_se_nw(a) {
         building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -2106,31 +2106,31 @@ item(FEAT_STATIONS, redbrick_fenceandshelter_platform_right_station) {
 /** PLATFORM LEFT **/
 
 spriteset (redbrick_shelteralt_platform_left, "src/stations_redbrick.png") {
-    [  10, 10, 64, 64, -32, -34 ]
-    [  80, 10, 64, 64, -32, -34 ]
-    [  570, 290, 64, 64, -32, -34 ]
-    [  640, 290, 64, 64, -32, -34 ]
+    [  10, 10, 64, 64, -31, -32 ]
+    [  80, 10, 64, 64, -31, -32 ]
+    [  570, 290, 64, 64, -31, -32 ]
+    [  640, 290, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_shelteralt_platform_left_empty, "src/stations_redbrick.png") {
-    [  430, 710, 64, 64, -32, -34 ]
-    [  640, 710, 64, 64, -32, -34 ]
-    [  570, 290, 64, 64, -32, -34 ]
-    [  640, 290, 64, 64, -32, -34 ]
+    [  430, 710, 64, 64, -31, -32 ]
+    [  640, 710, 64, 64, -31, -32 ]
+    [  570, 290, 64, 64, -31, -32 ]
+    [  640, 290, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_shelteralt_platform_left_half, "src/stations_redbrick.png") {
-    [  500, 710, 64, 64, -32, -34 ]
-    [  710, 710, 64, 64, -32, -34 ]
-    [  570, 290, 64, 64, -32, -34 ]
-    [  640, 290, 64, 64, -32, -34 ]
+    [  500, 710, 64, 64, -31, -32 ]
+    [  710, 710, 64, 64, -31, -32 ]
+    [  570, 290, 64, 64, -31, -32 ]
+    [  640, 290, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_shelteralt_platform_left_full, "src/stations_redbrick.png") {
-    [  570, 710, 64, 64, -32, -34 ]
-    [  780, 710, 64, 64, -32, -34 ]
-    [  570, 290, 64, 64, -32, -34 ]
-    [  640, 290, 64, 64, -32, -34 ]
+    [  570, 710, 64, 64, -31, -32 ]
+    [  780, 710, 64, 64, -31, -32 ]
+    [  570, 290, 64, 64, -31, -32 ]
+    [  640, 290, 64, 64, -31, -32 ]
 }
 
 spritegroup redbrick_shelteralt_passengers_left {
@@ -2145,7 +2145,7 @@ spritelayout redbrick_shelteralt_platform_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -2156,7 +2156,7 @@ spritelayout redbrick_shelteralt_platform_left_sw_ne(a) {
         building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -2173,7 +2173,7 @@ spritelayout redbrick_shelteralt_platform_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -2184,7 +2184,7 @@ spritelayout redbrick_shelteralt_platform_left_se_nw(a) {
         building {
         sprite:         DEFAULT(3);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -2214,31 +2214,31 @@ item(FEAT_STATIONS, redbrick_shelteralt_platform_left_station) {
 /** PLATFORM RIGHT **/
 
 spriteset (redbrick_shelteralt_platform_right, "src/stations_redbrick.png") {
-    [  150, 10, 64, 64, -32, -34 ]
-    [  220, 10, 64, 64, -32, -34 ]
-    [  710, 290, 64, 64, -32, -34 ]
-    [  780, 290, 64, 64, -32, -34 ]
+    [  150, 10, 64, 64, -31, -32 ]
+    [  220, 10, 64, 64, -31, -32 ]
+    [  710, 290, 64, 64, -31, -32 ]
+    [  780, 290, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_shelteralt_platform_right_empty, "src/stations_redbrick.png") {
-    [  430, 780, 64, 64, -32, -34 ]
-    [  640, 780, 64, 64, -32, -34 ]
-    [  710, 290, 64, 64, -32, -34 ]
-    [  780, 290, 64, 64, -32, -34 ]
+    [  430, 780, 64, 64, -31, -32 ]
+    [  640, 780, 64, 64, -31, -32 ]
+    [  710, 290, 64, 64, -31, -32 ]
+    [  780, 290, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_shelteralt_platform_right_half, "src/stations_redbrick.png") {
-    [  500, 780, 64, 64, -32, -34 ]
-    [  710, 780, 64, 64, -32, -34 ]
-    [  710, 290, 64, 64, -32, -34 ]
-    [  780, 290, 64, 64, -32, -34 ]
+    [  500, 780, 64, 64, -31, -32 ]
+    [  710, 780, 64, 64, -31, -32 ]
+    [  710, 290, 64, 64, -31, -32 ]
+    [  780, 290, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_shelteralt_platform_right_full, "src/stations_redbrick.png") {
-    [  570, 780, 64, 64, -32, -34 ]
-    [  780, 780, 64, 64, -32, -34 ]
-    [  710, 290, 64, 64, -32, -34 ]
-    [  780, 290, 64, 64, -32, -34 ]
+    [  570, 780, 64, 64, -31, -32 ]
+    [  780, 780, 64, 64, -31, -32 ]
+    [  710, 290, 64, 64, -31, -32 ]
+    [  780, 290, 64, 64, -31, -32 ]
 }
 
 spritegroup redbrick_shelteralt_passengers_right {
@@ -2253,7 +2253,7 @@ spritelayout redbrick_shelteralt_platform_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -2264,7 +2264,7 @@ spritelayout redbrick_shelteralt_platform_right_sw_ne(a) {
         building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -2281,7 +2281,7 @@ spritelayout redbrick_shelteralt_platform_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -2292,7 +2292,7 @@ spritelayout redbrick_shelteralt_platform_right_se_nw(a) {
         building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -2326,31 +2326,31 @@ item(FEAT_STATIONS, redbrick_shelteralt_platform_right_station) {
 /** PLATFORM LEFT **/
 
 spriteset (redbrick_shelteralt_wall_platform_left, "src/stations_redbrick.png") {
-    [  10, 10, 64, 64, -32, -34 ]
-    [  80, 10, 64, 64, -32, -34 ]
-    [  570, 360, 64, 64, -32, -34 ]
-    [  640, 360, 64, 64, -32, -34 ]
+    [  10, 10, 64, 64, -31, -32 ]
+    [  80, 10, 64, 64, -31, -32 ]
+    [  570, 360, 64, 64, -31, -32 ]
+    [  640, 360, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_shelteralt_wall_platform_left_empty, "src/stations_redbrick.png") {
-    [  430, 850, 64, 64, -32, -34 ]
-    [  640, 850, 64, 64, -32, -34 ]
-    [  570, 360, 64, 64, -32, -34 ]
-    [  640, 360, 64, 64, -32, -34 ]
+    [  430, 850, 64, 64, -31, -32 ]
+    [  640, 850, 64, 64, -31, -32 ]
+    [  570, 360, 64, 64, -31, -32 ]
+    [  640, 360, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_shelteralt_wall_platform_left_half, "src/stations_redbrick.png") {
-    [  500, 850, 64, 64, -32, -34 ]
-    [  710, 850, 64, 64, -32, -34 ]
-    [  570, 360, 64, 64, -32, -34 ]
-    [  640, 360, 64, 64, -32, -34 ]
+    [  500, 850, 64, 64, -31, -32 ]
+    [  710, 850, 64, 64, -31, -32 ]
+    [  570, 360, 64, 64, -31, -32 ]
+    [  640, 360, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_shelteralt_wall_platform_left_full, "src/stations_redbrick.png") {
-    [  570, 850, 64, 64, -32, -34 ]
-    [  780, 850, 64, 64, -32, -34 ]
-    [  570, 360, 64, 64, -32, -34 ]
-    [  640, 360, 64, 64, -32, -34 ]
+    [  570, 850, 64, 64, -31, -32 ]
+    [  780, 850, 64, 64, -31, -32 ]
+    [  570, 360, 64, 64, -31, -32 ]
+    [  640, 360, 64, 64, -31, -32 ]
 }
 
 spritegroup redbrick_shelteralt_wall_passengers_left {
@@ -2365,7 +2365,7 @@ spritelayout redbrick_shelteralt_wall_platform_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -2376,7 +2376,7 @@ spritelayout redbrick_shelteralt_wall_platform_left_sw_ne(a) {
         building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -2393,7 +2393,7 @@ spritelayout redbrick_shelteralt_wall_platform_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -2404,7 +2404,7 @@ spritelayout redbrick_shelteralt_wall_platform_left_se_nw(a) {
         building {
         sprite:         DEFAULT(3);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -2435,31 +2435,31 @@ item(FEAT_STATIONS, redbrick_shelteralt_wall_platform_left_station) {
 /** PLATFORM RIGHT **/
 
 spriteset (redbrick_shelteralt_wall_platform_right, "src/stations_redbrick.png") {
-    [  150, 10, 64, 64, -32, -34 ]
-    [  220, 10, 64, 64, -32, -34 ]
-    [  710, 360, 64, 64, -32, -34 ]
-    [  780, 360, 64, 64, -32, -34 ]
+    [  150, 10, 64, 64, -31, -32 ]
+    [  220, 10, 64, 64, -31, -32 ]
+    [  710, 360, 64, 64, -31, -32 ]
+    [  780, 360, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_shelteralt_wall_platform_right_empty, "src/stations_redbrick.png") {
-    [  430, 920, 64, 64, -32, -34 ]
-    [  640, 920, 64, 64, -32, -34 ]
-    [  710, 360, 64, 64, -32, -34 ]
-    [  780, 360, 64, 64, -32, -34 ]
+    [  430, 920, 64, 64, -31, -32 ]
+    [  640, 920, 64, 64, -31, -32 ]
+    [  710, 360, 64, 64, -31, -32 ]
+    [  780, 360, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_shelteralt_wall_platform_right_half, "src/stations_redbrick.png") {
-    [  500, 920, 64, 64, -32, -34 ]
-    [  710, 920, 64, 64, -32, -34 ]
-    [  710, 360, 64, 64, -32, -34 ]
-    [  780, 360, 64, 64, -32, -34 ]
+    [  500, 920, 64, 64, -31, -32 ]
+    [  710, 920, 64, 64, -31, -32 ]
+    [  710, 360, 64, 64, -31, -32 ]
+    [  780, 360, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_shelteralt_wall_platform_right_full, "src/stations_redbrick.png") {
-    [  570, 920, 64, 64, -32, -34 ]
-    [  780, 920, 64, 64, -32, -34 ]
-    [  710, 360, 64, 64, -32, -34 ]
-    [  780, 360, 64, 64, -32, -34 ]
+    [  570, 920, 64, 64, -31, -32 ]
+    [  780, 920, 64, 64, -31, -32 ]
+    [  710, 360, 64, 64, -31, -32 ]
+    [  780, 360, 64, 64, -31, -32 ]
 }
 
 spritegroup redbrick_shelteralt_wall_passengers_right {
@@ -2474,7 +2474,7 @@ spritelayout redbrick_shelteralt_wall_platform_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -2485,7 +2485,7 @@ spritelayout redbrick_shelteralt_wall_platform_right_sw_ne(a) {
         building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -2502,7 +2502,7 @@ spritelayout redbrick_shelteralt_wall_platform_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -2513,7 +2513,7 @@ spritelayout redbrick_shelteralt_wall_platform_right_se_nw(a) {
         building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -2549,10 +2549,10 @@ item(FEAT_STATIONS, redbrick_shelteralt_wall_platform_right_station) {
 /***** PLATFORM SOUTH END LEFT *****/
 
 spriteset (redbrick_plain_south_end_left, "src/stations_redbrick.png") {
-    [  290, 10, 64, 64, -32, -34 ]
-    [  360, 10, 64, 64, -32, -34 ]
-    [  10, 150, 64, 64, -32, -34 ]
-    [  80, 150, 64, 64, -32, -34 ]
+    [  290, 10, 64, 64, -31, -32 ]
+    [  360, 10, 64, 64, -31, -32 ]
+    [  10, 150, 64, 64, -31, -32 ]
+    [  80, 150, 64, 64, -31, -32 ]
 }
 
 spritelayout redbrick_plain_south_end_left_sw_ne(a) {
@@ -2562,7 +2562,7 @@ spritelayout redbrick_plain_south_end_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -2573,7 +2573,7 @@ spritelayout redbrick_plain_south_end_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -2590,7 +2590,7 @@ spritelayout redbrick_plain_south_end_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -2601,7 +2601,7 @@ spritelayout redbrick_plain_south_end_left_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -2630,10 +2630,10 @@ item(FEAT_STATIONS, redbrick_plain_south_end_left_station) {
 /***** PLATFORM SOUTH END RIGHT *****/
 
 spriteset (redbrick_plain_south_end_right, "src/stations_redbrick.png") {
-    [  430, 10, 64, 64, -32, -34 ]
-    [  500, 10, 64, 64, -32, -34 ]
-    [  150, 150, 64, 64, -32, -34 ]
-    [  220, 150, 64, 64, -32, -34 ]
+    [  430, 10, 64, 64, -31, -32 ]
+    [  500, 10, 64, 64, -31, -32 ]
+    [  150, 150, 64, 64, -31, -32 ]
+    [  220, 150, 64, 64, -31, -32 ]
 }
 
 spritelayout redbrick_plain_south_end_right_sw_ne(a) {
@@ -2643,7 +2643,7 @@ spritelayout redbrick_plain_south_end_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -2654,7 +2654,7 @@ spritelayout redbrick_plain_south_end_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -2671,7 +2671,7 @@ spritelayout redbrick_plain_south_end_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -2682,7 +2682,7 @@ spritelayout redbrick_plain_south_end_right_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -2711,10 +2711,10 @@ item(FEAT_STATIONS, redbrick_plain_south_end_right_station) {
 /***** PLATFORM NORTH END LEFT *****/
 
 spriteset (redbrick_plain_north_end_left, "src/stations_redbrick.png") {
-    [  570, 10, 64, 64, -32, -34 ]
-    [  640, 10, 64, 64, -32, -34 ]
-    [  10, 150, 64, 64, -32, -34 ]
-    [  80, 150, 64, 64, -32, -34 ]
+    [  570, 10, 64, 64, -31, -32 ]
+    [  640, 10, 64, 64, -31, -32 ]
+    [  10, 150, 64, 64, -31, -32 ]
+    [  80, 150, 64, 64, -31, -32 ]
 }
 
 spritelayout redbrick_plain_north_end_left_sw_ne(a) {
@@ -2724,7 +2724,7 @@ spritelayout redbrick_plain_north_end_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -2735,7 +2735,7 @@ spritelayout redbrick_plain_north_end_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -2752,7 +2752,7 @@ spritelayout redbrick_plain_north_end_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -2763,7 +2763,7 @@ spritelayout redbrick_plain_north_end_left_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -2792,10 +2792,10 @@ item(FEAT_STATIONS, redbrick_plain_north_end_left_station) {
 /***** PLATFORM NORTH END RIGHT *****/
 
 spriteset (redbrick_plain_north_end_right, "src/stations_redbrick.png") {
-    [  710, 10, 64, 64, -32, -34 ]
-    [  780, 10, 64, 64, -32, -34 ]
-    [  150, 150, 64, 64, -32, -34 ]
-    [  220, 150, 64, 64, -32, -34 ]
+    [  710, 10, 64, 64, -31, -32 ]
+    [  780, 10, 64, 64, -31, -32 ]
+    [  150, 150, 64, 64, -31, -32 ]
+    [  220, 150, 64, 64, -31, -32 ]
 }
 
 spritelayout redbrick_plain_north_end_right_sw_ne(a) {
@@ -2805,7 +2805,7 @@ spritelayout redbrick_plain_north_end_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -2816,7 +2816,7 @@ spritelayout redbrick_plain_north_end_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -2833,7 +2833,7 @@ spritelayout redbrick_plain_north_end_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -2844,7 +2844,7 @@ spritelayout redbrick_plain_north_end_right_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -2873,10 +2873,10 @@ item(FEAT_STATIONS, redbrick_plain_north_end_right_station) {
 /***** PLATFORM SOUTH END LEFT *****/
 
 spriteset (redbrick_fence_south_end_left, "src/stations_redbrick.png") {
-    [  290, 80, 64, 64, -32, -34 ]
-    [  360, 80, 64, 64, -32, -34 ]
-    [  10, 220, 64, 64, -32, -34 ]
-    [  80, 220, 64, 64, -32, -34 ]
+    [  290, 80, 64, 64, -31, -32 ]
+    [  360, 80, 64, 64, -31, -32 ]
+    [  10, 220, 64, 64, -31, -32 ]
+    [  80, 220, 64, 64, -31, -32 ]
 }
 
 spritelayout redbrick_fence_south_end_left_sw_ne(a) {
@@ -2886,7 +2886,7 @@ spritelayout redbrick_fence_south_end_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -2897,7 +2897,7 @@ spritelayout redbrick_fence_south_end_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -2914,7 +2914,7 @@ spritelayout redbrick_fence_south_end_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -2925,7 +2925,7 @@ spritelayout redbrick_fence_south_end_left_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -2954,10 +2954,10 @@ item(FEAT_STATIONS, redbrick_fence_south_end_left_station) {
 /***** PLATFORM SOUTH END RIGHT *****/
 
 spriteset (redbrick_fence_south_end_right, "src/stations_redbrick.png") {
-    [  430, 80, 64, 64, -32, -34 ]
-    [  500, 80, 64, 64, -32, -34 ]
-    [  150, 220, 64, 64, -32, -34 ]
-    [  220, 220, 64, 64, -32, -34 ]
+    [  430, 80, 64, 64, -31, -32 ]
+    [  500, 80, 64, 64, -31, -32 ]
+    [  150, 220, 64, 64, -31, -32 ]
+    [  220, 220, 64, 64, -31, -32 ]
 }
 
 spritelayout redbrick_fence_south_end_right_sw_ne(a) {
@@ -2967,7 +2967,7 @@ spritelayout redbrick_fence_south_end_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -2978,7 +2978,7 @@ spritelayout redbrick_fence_south_end_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -2995,7 +2995,7 @@ spritelayout redbrick_fence_south_end_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -3006,7 +3006,7 @@ spritelayout redbrick_fence_south_end_right_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -3035,10 +3035,10 @@ item(FEAT_STATIONS, redbrick_fence_south_end_right_station) {
 /***** PLATFORM NORTH END LEFT *****/
 
 spriteset (redbrick_fence_north_end_left, "src/stations_redbrick.png") {
-    [  570, 80, 64, 64, -32, -34 ]
-    [  640, 80, 64, 64, -32, -34 ]
-    [  10, 220, 64, 64, -32, -34 ]
-    [  80, 220, 64, 64, -32, -34 ]
+    [  570, 80, 64, 64, -31, -32 ]
+    [  640, 80, 64, 64, -31, -32 ]
+    [  10, 220, 64, 64, -31, -32 ]
+    [  80, 220, 64, 64, -31, -32 ]
 }
 
 spritelayout redbrick_fence_north_end_left_sw_ne(a) {
@@ -3048,7 +3048,7 @@ spritelayout redbrick_fence_north_end_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -3059,7 +3059,7 @@ spritelayout redbrick_fence_north_end_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -3076,7 +3076,7 @@ spritelayout redbrick_fence_north_end_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -3087,7 +3087,7 @@ spritelayout redbrick_fence_north_end_left_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -3116,10 +3116,10 @@ item(FEAT_STATIONS, redbrick_fence_north_end_left_station) {
 /***** PLATFORM NORTH END RIGHT *****/
 
 spriteset (redbrick_fence_north_end_right, "src/stations_redbrick.png") {
-    [  710, 80, 64, 64, -32, -34 ]
-    [  780, 80, 64, 64, -32, -34 ]
-    [  150, 220, 64, 64, -32, -34 ]
-    [  220, 220, 64, 64, -32, -34 ]
+    [  710, 80, 64, 64, -31, -32 ]
+    [  780, 80, 64, 64, -31, -32 ]
+    [  150, 220, 64, 64, -31, -32 ]
+    [  220, 220, 64, 64, -31, -32 ]
 }
 
 spritelayout redbrick_fence_north_end_right_sw_ne(a) {
@@ -3129,7 +3129,7 @@ spritelayout redbrick_fence_north_end_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -3140,7 +3140,7 @@ spritelayout redbrick_fence_north_end_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -3157,7 +3157,7 @@ spritelayout redbrick_fence_north_end_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -3168,7 +3168,7 @@ spritelayout redbrick_fence_north_end_right_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -3198,8 +3198,8 @@ item(FEAT_STATIONS, redbrick_fence_north_end_right_station) {
 /***********************************************/
 
 spriteset (redbrick_buffer_north_building_left, "src/stations_redbrick.png") {
-    [  290, 430, 64, 64, -32, -34 ]
-    [  360, 430, 64, 64, -32, -34 ]
+    [  290, 430, 64, 64, -31, -32 ]
+    [  360, 430, 64, 64, -31, -32 ]
 }
 
 spritelayout redbrick_buffer_north_building_left_sw_ne(a) {
@@ -3209,7 +3209,7 @@ spritelayout redbrick_buffer_north_building_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -3226,7 +3226,7 @@ spritelayout redbrick_buffer_north_building_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -3257,8 +3257,8 @@ item(FEAT_STATIONS, redbrick_buffer_north_building_left_station) {
 
 
 spriteset (redbrick_buffer_north_building_right, "src/stations_redbrick.png") {
-    [  430, 430, 64, 64, -32, -34 ]
-    [  500, 430, 64, 64, -32, -34 ]
+    [  430, 430, 64, 64, -31, -32 ]
+    [  500, 430, 64, 64, -31, -32 ]
 }
 
 spritelayout redbrick_buffer_north_building_right_sw_ne(a) {
@@ -3268,7 +3268,7 @@ spritelayout redbrick_buffer_north_building_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -3285,7 +3285,7 @@ spritelayout redbrick_buffer_north_building_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -3320,8 +3320,8 @@ item(FEAT_STATIONS, redbrick_buffer_north_building_right_station) {
 /***********************************************/
 
 spriteset (redbrick_buffer_south_building_left, "src/stations_redbrick.png") {
-    [  570, 430, 64, 64, -32, -34 ]
-    [  640, 430, 64, 64, -32, -34 ]
+    [  570, 430, 64, 64, -31, -32 ]
+    [  640, 430, 64, 64, -31, -32 ]
 }
 
 spritelayout redbrick_buffer_south_building_left_sw_ne(a) {
@@ -3331,7 +3331,7 @@ spritelayout redbrick_buffer_south_building_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -3348,7 +3348,7 @@ spritelayout redbrick_buffer_south_building_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -3378,8 +3378,8 @@ item(FEAT_STATIONS, redbrick_buffer_south_building_left_station) {
 }
 
 spriteset (redbrick_buffer_south_building_right, "src/stations_redbrick.png") {
-    [  710, 430, 64, 64, -32, -34 ]
-    [  780, 430, 64, 64, -32, -34 ]
+    [  710, 430, 64, 64, -31, -32 ]
+    [  780, 430, 64, 64, -31, -32 ]
 }
 
 spritelayout redbrick_buffer_south_building_right_sw_ne(a) {
@@ -3389,7 +3389,7 @@ spritelayout redbrick_buffer_south_building_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -3406,7 +3406,7 @@ spritelayout redbrick_buffer_south_building_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -3442,16 +3442,16 @@ item(FEAT_STATIONS, redbrick_buffer_south_building_right_station) {
 /***** FOOTBRIDGE LEFT *****/
 
 spriteset (redbrick_overbridge_left, "src/stations_redbrick.png") {
-    [  10, 10, 64, 64, -32, -34 ]
-    [  80, 10, 64, 64, -32, -34 ]
+    [  10, 10, 64, 64, -31, -32 ]
+    [  80, 10, 64, 64, -31, -32 ]
 
-    [  10, 500, 64, 64, -32, -34 ]
-    [  80, 500, 64, 64, -32, -34 ]
-    [  150, 500, 64, 64, -32, -34 ]
+    [  10, 500, 64, 64, -31, -32 ]
+    [  80, 500, 64, 64, -31, -32 ]
+    [  150, 500, 64, 64, -31, -32 ]
 
-    [  220, 500, 64, 64, -32, -34 ]
-    [  290, 500, 64, 64, -32, -34 ]
-    [  360, 500, 64, 64, -32, -34 ]
+    [  220, 500, 64, 64, -31, -32 ]
+    [  290, 500, 64, 64, -31, -32 ]
+    [  360, 500, 64, 64, -31, -32 ]
 }
 
 spritelayout redbrick_overbridge_left_sw_ne(a) {
@@ -3461,7 +3461,7 @@ spritelayout redbrick_overbridge_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -3472,7 +3472,7 @@ spritelayout redbrick_overbridge_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        8;
         yextent:        16;
@@ -3483,7 +3483,7 @@ spritelayout redbrick_overbridge_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -3494,7 +3494,7 @@ spritelayout redbrick_overbridge_left_sw_ne(a) {
         building {
         sprite:         DEFAULT(4);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        8;
         yextent:        16;
@@ -3511,7 +3511,7 @@ spritelayout redbrick_overbridge_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -3522,7 +3522,7 @@ spritelayout redbrick_overbridge_left_se_nw(a) {
     building {
         sprite:         DEFAULT(7);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        2;
         yextent:        16;
@@ -3533,7 +3533,7 @@ spritelayout redbrick_overbridge_left_se_nw(a) {
     building {
         sprite:         DEFAULT(6);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        8;
@@ -3544,7 +3544,7 @@ spritelayout redbrick_overbridge_left_se_nw(a) {
         building {
         sprite:         DEFAULT(5);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -3573,16 +3573,16 @@ item(FEAT_STATIONS, redbrick_left_overbridge) {
 /***** FOOTBRIDGE RIGHT *****/
 
 spriteset (redbrick_overbridge_right, "src/stations_redbrick.png") {
-    [  150, 10, 64, 64, -32, -34 ]
-    [  220, 10, 64, 64, -32, -34 ]
+    [  150, 10, 64, 64, -31, -32 ]
+    [  220, 10, 64, 64, -31, -32 ]
 
-    [  430, 500, 64, 64, -32, -34 ]
-    [  500, 500, 64, 64, -32, -34 ]
-    [  570, 500, 64, 64, -32, -34 ]
+    [  430, 500, 64, 64, -31, -32 ]
+    [  500, 500, 64, 64, -31, -32 ]
+    [  570, 500, 64, 64, -31, -32 ]
 
-    [  640, 500, 64, 64, -32, -34 ]
-    [  710, 500, 64, 64, -32, -34 ]
-    [  780, 500, 64, 64, -32, -34 ]
+    [  640, 500, 64, 64, -31, -32 ]
+    [  710, 500, 64, 64, -31, -32 ]
+    [  780, 500, 64, 64, -31, -32 ]
 }
 
 spritelayout redbrick_overbridge_right_sw_ne(a) {
@@ -3592,7 +3592,7 @@ spritelayout redbrick_overbridge_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -3603,7 +3603,7 @@ spritelayout redbrick_overbridge_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        12;
         yextent:        5;
@@ -3614,7 +3614,7 @@ spritelayout redbrick_overbridge_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        3;
@@ -3631,7 +3631,7 @@ spritelayout redbrick_overbridge_right_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -3642,7 +3642,7 @@ spritelayout redbrick_overbridge_right_se_nw(a) {
             building {
         sprite:         DEFAULT(5);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        6;
@@ -3653,7 +3653,7 @@ spritelayout redbrick_overbridge_right_se_nw(a) {
     building {
         sprite:         DEFAULT(6);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -3664,7 +3664,7 @@ spritelayout redbrick_overbridge_right_se_nw(a) {
         building {
         sprite:         DEFAULT(7);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -3697,16 +3697,16 @@ item(FEAT_STATIONS, redbrick_right_overbridge) {
 /***** FOOTBRIDGE LEFT *****/
 
 spriteset (redbrick_overbridgefences_left, "src/stations_redbrick.png") {
-    [  10, 80, 64, 64, -32, -34 ]
-    [  80, 80, 64, 64, -32, -34 ]
+    [  10, 80, 64, 64, -31, -32 ]
+    [  80, 80, 64, 64, -31, -32 ]
 
-    [  10, 570, 64, 64, -32, -34 ]
-    [  80, 570, 64, 64, -32, -34 ]
-    [  150, 570, 64, 64, -32, -34 ]
+    [  10, 570, 64, 64, -31, -32 ]
+    [  80, 570, 64, 64, -31, -32 ]
+    [  150, 570, 64, 64, -31, -32 ]
 
-    [  220, 570, 64, 64, -32, -34 ]
-    [  290, 570, 64, 64, -32, -34 ]
-    [  360, 570, 64, 64, -32, -34 ]
+    [  220, 570, 64, 64, -31, -32 ]
+    [  290, 570, 64, 64, -31, -32 ]
+    [  360, 570, 64, 64, -31, -32 ]
 }
 
 spritelayout redbrick_overbridge_fences_left_sw_ne(a) {
@@ -3716,7 +3716,7 @@ spritelayout redbrick_overbridge_fences_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -3727,7 +3727,7 @@ spritelayout redbrick_overbridge_fences_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        8;
         yextent:        16;
@@ -3738,7 +3738,7 @@ spritelayout redbrick_overbridge_fences_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -3749,7 +3749,7 @@ spritelayout redbrick_overbridge_fences_left_sw_ne(a) {
         building {
         sprite:         DEFAULT(4);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        8;
         yextent:        16;
@@ -3766,7 +3766,7 @@ spritelayout redbrick_overbridge_fences_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -3777,7 +3777,7 @@ spritelayout redbrick_overbridge_fences_left_se_nw(a) {
     building {
         sprite:         DEFAULT(7);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        2;
         yextent:        16;
@@ -3788,7 +3788,7 @@ spritelayout redbrick_overbridge_fences_left_se_nw(a) {
     building {
         sprite:         DEFAULT(6);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        8;
@@ -3799,7 +3799,7 @@ spritelayout redbrick_overbridge_fences_left_se_nw(a) {
         building {
         sprite:         DEFAULT(5);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -3828,16 +3828,16 @@ item(FEAT_STATIONS, redbrick_left_overbridgefences) {
 /***** FOOTBRIDGE RIGHT *****/
 
 spriteset (redbrick_overbridgefences_right, "src/stations_redbrick.png") {
-    [  150, 80, 64, 64, -32, -34 ]
-    [  220, 80, 64, 64, -32, -34 ]
+    [  150, 80, 64, 64, -31, -32 ]
+    [  220, 80, 64, 64, -31, -32 ]
 
-    [  430, 570, 64, 64, -32, -34 ]
-    [  500, 570, 64, 64, -32, -34 ]
-    [  570, 570, 64, 64, -32, -34 ]
+    [  430, 570, 64, 64, -31, -32 ]
+    [  500, 570, 64, 64, -31, -32 ]
+    [  570, 570, 64, 64, -31, -32 ]
 
-    [  640, 570, 64, 64, -32, -34 ]
-    [  710, 570, 64, 64, -32, -34 ]
-    [  780, 570, 64, 64, -32, -34 ]
+    [  640, 570, 64, 64, -31, -32 ]
+    [  710, 570, 64, 64, -31, -32 ]
+    [  780, 570, 64, 64, -31, -32 ]
 }
 
 spritelayout redbrick_overbridge_fences_right_sw_ne(a) {
@@ -3847,7 +3847,7 @@ spritelayout redbrick_overbridge_fences_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -3858,7 +3858,7 @@ spritelayout redbrick_overbridge_fences_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        12;
         yextent:        5;
@@ -3869,7 +3869,7 @@ spritelayout redbrick_overbridge_fences_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        6;
         yextent:        3;
@@ -3886,7 +3886,7 @@ spritelayout redbrick_overbridge_fences_right_se_nw(a) {
         building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -3897,7 +3897,7 @@ spritelayout redbrick_overbridge_fences_right_se_nw(a) {
             building {
         sprite:         DEFAULT(5);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        6;
@@ -3908,7 +3908,7 @@ spritelayout redbrick_overbridge_fences_right_se_nw(a) {
     building {
         sprite:         DEFAULT(6);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -3919,7 +3919,7 @@ spritelayout redbrick_overbridge_fences_right_se_nw(a) {
         building {
         sprite:         DEFAULT(7);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -3951,16 +3951,16 @@ item(FEAT_STATIONS, redbrick_right_overbridgefences) {
 /***** FOOTBRIDGE LEFT *****/
 
 spriteset (redbrick_overpass_left, "src/stations_redbrick.png") {
-    [  10, 80, 64, 64, -32, -34 ]
-    [  80, 80, 64, 64, -32, -34 ]
+    [  10, 80, 64, 64, -31, -32 ]
+    [  80, 80, 64, 64, -31, -32 ]
 
-    [  10, 640, 64, 64, -32, -34 ]
-    [  80, 640, 64, 64, -32, -34 ]
-    [  150, 640, 64, 64, -32, -34 ]
+    [  10, 640, 64, 64, -31, -32 ]
+    [  80, 640, 64, 64, -31, -32 ]
+    [  150, 640, 64, 64, -31, -32 ]
 
-    [  220, 640, 64, 64, -32, -34 ]
-    [  290, 640, 64, 64, -32, -34 ]
-    [  360, 640, 64, 64, -32, -34 ]
+    [  220, 640, 64, 64, -31, -32 ]
+    [  290, 640, 64, 64, -31, -32 ]
+    [  360, 640, 64, 64, -31, -32 ]
 }
 
 spritelayout redbrick_overpass_left_sw_ne(a) {
@@ -3970,7 +3970,7 @@ spritelayout redbrick_overpass_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -3981,7 +3981,7 @@ spritelayout redbrick_overpass_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        8;
         yextent:        16;
@@ -3992,7 +3992,7 @@ spritelayout redbrick_overpass_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        8;
         yextent:        16;
@@ -4003,7 +4003,7 @@ spritelayout redbrick_overpass_left_sw_ne(a) {
         building {
         sprite:         DEFAULT(4);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        8;
         yextent:        16;
@@ -4020,7 +4020,7 @@ spritelayout redbrick_overpass_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -4031,7 +4031,7 @@ spritelayout redbrick_overpass_left_se_nw(a) {
     building {
         sprite:         DEFAULT(7);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        2;
         yextent:        16;
@@ -4042,7 +4042,7 @@ spritelayout redbrick_overpass_left_se_nw(a) {
     building {
         sprite:         DEFAULT(6);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        8;
@@ -4053,7 +4053,7 @@ spritelayout redbrick_overpass_left_se_nw(a) {
         building {
         sprite:         DEFAULT(5);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -4082,16 +4082,16 @@ item(FEAT_STATIONS, redbrick_left_overpass) {
 /***** FOOTBRIDGE RIGHT *****/
 
 spriteset (redbrick_overpass_right, "src/stations_redbrick.png") {
-    [  150, 80, 64, 64, -32, -34 ]
-    [  220, 80, 64, 64, -32, -34 ]
+    [  150, 80, 64, 64, -31, -32 ]
+    [  220, 80, 64, 64, -31, -32 ]
 
-    [  430, 640, 64, 64, -32, -34 ]
-    [  500, 640, 64, 64, -32, -34 ]
-    [  570, 640, 64, 64, -32, -34 ]
+    [  430, 640, 64, 64, -31, -32 ]
+    [  500, 640, 64, 64, -31, -32 ]
+    [  570, 640, 64, 64, -31, -32 ]
 
-    [  640, 640, 64, 64, -32, -34 ]
-    [  710, 640, 64, 64, -32, -34 ]
-    [  780, 640, 64, 64, -32, -34 ]
+    [  640, 640, 64, 64, -31, -32 ]
+    [  710, 640, 64, 64, -31, -32 ]
+    [  780, 640, 64, 64, -31, -32 ]
 }
 
 spritelayout redbrick_overpass_right_sw_ne(a) {
@@ -4101,7 +4101,7 @@ spritelayout redbrick_overpass_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -4112,7 +4112,7 @@ spritelayout redbrick_overpass_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        12;
         yextent:        5;
@@ -4123,7 +4123,7 @@ spritelayout redbrick_overpass_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        6;
         yextent:        3;
@@ -4140,7 +4140,7 @@ spritelayout redbrick_overpass_right_se_nw(a) {
         building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -4151,7 +4151,7 @@ spritelayout redbrick_overpass_right_se_nw(a) {
             building {
         sprite:         DEFAULT(5);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        6;
@@ -4162,7 +4162,7 @@ spritelayout redbrick_overpass_right_se_nw(a) {
     building {
         sprite:         DEFAULT(6);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -4173,7 +4173,7 @@ spritelayout redbrick_overpass_right_se_nw(a) {
         building {
         sprite:         DEFAULT(7);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -4204,19 +4204,19 @@ item(FEAT_STATIONS, redbrick_right_overpass) {
 
 
 spriteset (redbrick_terminus_left, "src/stations_redbrick.png") {
-    [  10, 710, 64, 64, -32, -34 ]
-    [  80, 710, 64, 64, -32, -34 ]
+    [  10, 710, 64, 64, -31, -32 ]
+    [  80, 710, 64, 64, -31, -32 ]
 
-    [  220, 710, 64, 64, -32, -34 ]
-    [  290, 710, 64, 64, -32, -34 ]
+    [  220, 710, 64, 64, -31, -32 ]
+    [  290, 710, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_terminus_right, "src/stations_redbrick.png") {
-    [  10, 780, 64, 64, -32, -34 ]
-    [  80, 780, 64, 64, -32, -34 ]
+    [  10, 780, 64, 64, -31, -32 ]
+    [  80, 780, 64, 64, -31, -32 ]
 
-    [  220, 780, 64, 64, -32, -34 ]
-    [  290, 780, 64, 64, -32, -34 ]
+    [  220, 780, 64, 64, -31, -32 ]
+    [  290, 780, 64, 64, -31, -32 ]
 }
 
 spritelayout redbrick_terminus_sw_ne(a) {
@@ -4226,7 +4226,7 @@ spritelayout redbrick_terminus_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -4237,7 +4237,7 @@ spritelayout redbrick_terminus_sw_ne(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -4254,7 +4254,7 @@ spritelayout redbrick_terminus_se_nw(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -4265,7 +4265,7 @@ spritelayout redbrick_terminus_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -4309,19 +4309,19 @@ item(FEAT_STATIONS, redbrick_terminus) {
 
 
 spriteset (redbrick_arched_end_left, "src/stations_redbrick.png") {
-    [  10, 850, 64, 64, -32, -34 ]
-    [  80, 850, 64, 64, -32, -34 ]
+    [  10, 850, 64, 64, -31, -32 ]
+    [  80, 850, 64, 64, -31, -32 ]
 
-    [  220, 850, 64, 64, -32, -34 ]
-    [  290, 850, 64, 64, -32, -34 ]
+    [  220, 850, 64, 64, -31, -32 ]
+    [  290, 850, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_arched_end_right, "src/stations_redbrick.png") {
-    [  80, 920, 64, 64, -32, -34 ]
-    [  10, 920, 64, 96, -32, -66 ]
+    [  80, 920, 64, 64, -31, -32 ]
+    [  10, 920, 64, 96, -31, -64 ]
 
-    [  220, 920, 64, 64, -32, -34 ]
-    [  290, 920, 64, 96, -32, -66 ]
+    [  220, 920, 64, 64, -31, -32 ]
+    [  290, 920, 64, 96, -31, -64 ]
 }
 
 spritelayout redbrick_arched_end_sw_ne(a) {
@@ -4331,7 +4331,7 @@ spritelayout redbrick_arched_end_sw_ne(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -4342,7 +4342,7 @@ spritelayout redbrick_arched_end_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -4359,7 +4359,7 @@ spritelayout redbrick_arched_end_se_nw(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -4370,7 +4370,7 @@ spritelayout redbrick_arched_end_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -4407,19 +4407,19 @@ item(FEAT_STATIONS, redbrick_arched_end) {
 }
 
 spriteset (redbrick_arched_middle_left, "src/stations_redbrick.png") {
-    [  10, 850, 64, 64, -32, -34 ]
-    [  150, 850, 64, 64, -32, -34 ]
+    [  10, 850, 64, 64, -31, -32 ]
+    [  150, 850, 64, 64, -31, -32 ]
 
-    [  220, 850, 64, 64, -32, -34 ]
-    [  360, 850, 64, 64, -32, -34 ]
+    [  220, 850, 64, 64, -31, -32 ]
+    [  360, 850, 64, 64, -31, -32 ]
 }
 
 spriteset (redbrick_arched_middle_right, "src/stations_redbrick.png") {
-    [  80, 920, 64, 64, -32, -34 ]
-    [  150, 920, 64, 96, -32, -66 ]
+    [  80, 920, 64, 64, -31, -32 ]
+    [  150, 920, 64, 96, -31, -64 ]
 
-    [  220, 920, 64, 64, -32, -34 ]
-    [  360, 920, 64, 96, -32, -66 ]
+    [  220, 920, 64, 64, -31, -32 ]
+    [  360, 920, 64, 96, -31, -64 ]
 }
 
 spritelayout redbrick_arched_middle_sw_ne(a) {
@@ -4429,7 +4429,7 @@ spritelayout redbrick_arched_middle_sw_ne(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -4440,7 +4440,7 @@ spritelayout redbrick_arched_middle_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -4457,7 +4457,7 @@ spritelayout redbrick_arched_middle_se_nw(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -4468,7 +4468,7 @@ spritelayout redbrick_arched_middle_se_nw(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -4521,7 +4521,7 @@ spritelayout redbrick_building_1a_nw(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -4538,7 +4538,7 @@ spritelayout redbrick_building_1a_ne(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -4581,7 +4581,7 @@ spritelayout redbrick_building_1b_se(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -4598,7 +4598,7 @@ spritelayout redbrick_building_1b_sw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -4641,7 +4641,7 @@ spritelayout redbrick_building_2a_nw(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -4658,7 +4658,7 @@ spritelayout redbrick_building_2a_ne(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -4701,7 +4701,7 @@ spritelayout redbrick_building_2b_se(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -4718,7 +4718,7 @@ spritelayout redbrick_building_2b_sw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -4762,7 +4762,7 @@ spritelayout redbrick_building_3a_nw(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -4779,7 +4779,7 @@ spritelayout redbrick_building_3a_ne(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -4822,7 +4822,7 @@ spritelayout redbrick_building_3b_se(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -4839,7 +4839,7 @@ spritelayout redbrick_building_3b_sw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -4883,7 +4883,7 @@ spritelayout redbrick_building_4a_nw(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -4900,7 +4900,7 @@ spritelayout redbrick_building_4a_ne(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -4943,7 +4943,7 @@ spritelayout redbrick_building_4b_se(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -4960,7 +4960,7 @@ spritelayout redbrick_building_4b_sw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -5003,7 +5003,7 @@ spritelayout redbrick_building_5a_se(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        1;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -5020,7 +5020,7 @@ spritelayout redbrick_building_5a_sw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        1;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -5063,7 +5063,7 @@ spritelayout redbrick_building_5b_se(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        1;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -5080,7 +5080,7 @@ spritelayout redbrick_building_5b_sw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        1;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -5143,7 +5143,7 @@ spritelayout redbrick_feature_building_0(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -5160,7 +5160,7 @@ spritelayout redbrick_feature_building_1(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -5177,7 +5177,7 @@ spritelayout redbrick_feature_building_2(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -5194,7 +5194,7 @@ spritelayout redbrick_feature_building_3(a) {
     building {
         sprite:         DEFAULT(3);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -5247,9 +5247,9 @@ item(FEAT_STATIONS, redbrick_feature_building) {
 /***** FOOTBRIDGE WAYPOINT LEFT *****/
 
 spriteset (redbrick_overbridge_waypoint_left, "src/stations_waypoints.png") {
-    [  10, 360, 64, 64, -32, -34 ]
-    [  80, 360, 64, 64, -32, -34 ]
-    [  150, 360, 64, 64, -32, -34 ]
+    [  10, 360, 64, 64, -31, -32 ]
+    [  80, 360, 64, 64, -31, -32 ]
+    [  150, 360, 64, 64, -31, -32 ]
 }
 
 spritelayout redbrick_overbridge_waypoint_left_sw_ne(a) {
@@ -5259,7 +5259,7 @@ spritelayout redbrick_overbridge_waypoint_left_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -5276,7 +5276,7 @@ spritelayout redbrick_overbridge_waypoint_left_se_nw(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        2;
         yextent:        6;
@@ -5287,7 +5287,7 @@ spritelayout redbrick_overbridge_waypoint_left_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -5315,9 +5315,9 @@ item(FEAT_STATIONS, redbrick_left_overbridge_waypoint) {
 /***** FOOTBRIDGE WAYPOINT RIGHT *****/
 
 spriteset (redbrick_overbridge_waypoint_right, "src/stations_waypoints.png") {
-    [  220, 360, 64, 64, -32, -34 ]
-    [  290, 360, 64, 64, -32, -34 ]
-    [  360, 360, 64, 64, -32, -34 ]
+    [  220, 360, 64, 64, -31, -32 ]
+    [  290, 360, 64, 64, -31, -32 ]
+    [  360, 360, 64, 64, -31, -32 ]
 
 }
 
@@ -5328,7 +5328,7 @@ spritelayout redbrick_overbridge_waypoint_right_sw_ne(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        6;
         yextent:        2;
@@ -5339,7 +5339,7 @@ spritelayout redbrick_overbridge_waypoint_right_sw_ne(a) {
         building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -5356,7 +5356,7 @@ spritelayout redbrick_overbridge_waypoint_right_se_nw(a) {
     building {
         sprite:         DEFAULT(2);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -5384,8 +5384,8 @@ item(FEAT_STATIONS, redbrick_right_overbridge_waypoint) {
 /***** SIGNALBOX WAYPOINT 1A *****/
 
 spriteset (redbrick_signalbox_waypoint_1a, "src/stations_waypoints.png") {
-    [  10, 290, 64, 64, -32, -34 ]
-    [  80, 290, 64, 64, -32, -34 ]
+    [  10, 290, 64, 64, -31, -32 ]
+    [  80, 290, 64, 64, -31, -32 ]
 
 }
 
@@ -5396,7 +5396,7 @@ spritelayout redbrick_signalbox_waypoint_1a_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -5413,7 +5413,7 @@ spritelayout redbrick_signalbox_waypoint_1a_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -5442,8 +5442,8 @@ item(FEAT_STATIONS, redbrick_signalbox_1a_waypoint) {
 /***** SIGNALBOX WAYPOINT 1B *****/
 
 spriteset (redbrick_signalbox_waypoint_1b, "src/stations_waypoints.png") {
-    [  150, 290, 64, 64, -32, -34 ]
-    [  220, 290, 64, 64, -32, -34 ]
+    [  150, 290, 64, 64, -31, -32 ]
+    [  220, 290, 64, 64, -31, -32 ]
 
 }
 
@@ -5454,7 +5454,7 @@ spritelayout redbrick_signalbox_waypoint_1b_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -5471,7 +5471,7 @@ spritelayout redbrick_signalbox_waypoint_1b_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -5499,8 +5499,8 @@ item(FEAT_STATIONS, redbrick_signalbox_1b_waypoint) {
 /***** SIGNALBOX WAYPOINT 2A *****/
 
 spriteset (redbrick_signalbox_waypoint_2a, "src/stations_waypoints.png") {
-    [  290, 290, 64, 64, -32, -34 ]
-    [  360, 290, 64, 64, -32, -34 ]
+    [  290, 290, 64, 64, -31, -32 ]
+    [  360, 290, 64, 64, -31, -32 ]
 
 }
 
@@ -5511,7 +5511,7 @@ spritelayout redbrick_signalbox_waypoint_2a_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -5528,7 +5528,7 @@ spritelayout redbrick_signalbox_waypoint_2a_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        11;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
@@ -5557,8 +5557,8 @@ item(FEAT_STATIONS, redbrick_signalbox_2a_waypoint) {
 /***** SIGNALBOX WAYPOINT 2B *****/
 
 spriteset (redbrick_signalbox_waypoint_2b, "src/stations_waypoints.png") {
-    [  430, 290, 64, 64, -32, -34 ]
-    [  500, 290, 64, 64, -32, -34 ]
+    [  430, 290, 64, 64, -31, -32 ]
+    [  500, 290, 64, 64, -31, -32 ]
 
 }
 
@@ -5569,7 +5569,7 @@ spritelayout redbrick_signalbox_waypoint_2b_sw_ne(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        12;
+        yoffset:        11;
         zoffset:        0;
         xextent:        16;
         yextent:        5;
@@ -5586,7 +5586,7 @@ spritelayout redbrick_signalbox_waypoint_2b_se_nw(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        5;
         yextent:        16;
