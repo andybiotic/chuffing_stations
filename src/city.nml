@@ -3531,7 +3531,7 @@ spritelayout city_overbridge_left_se_nw(a) {
         yoffset:        1;
         zoffset:        0;
         xextent:        16;
-        yextent:        8;
+        yextent:        16;
         zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
@@ -3786,7 +3786,7 @@ spritelayout city_overbridgefences_left_se_nw(a) {
         yoffset:        1;
         zoffset:        0;
         xextent:        16;
-        yextent:        8;
+        yextent:        16;
         zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;

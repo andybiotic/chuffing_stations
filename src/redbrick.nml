@@ -5261,7 +5261,7 @@ spritelayout redbrick_overbridge_waypoint_left_sw_ne(a) {
         xoffset:        0;
         yoffset:        1;
         zoffset:        0;
-        xextent:        6;
+        xextent:        16;
         yextent:        16;
         zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
@@ -5290,7 +5290,7 @@ spritelayout redbrick_overbridge_waypoint_left_se_nw(a) {
         yoffset:        1;
         zoffset:        0;
         xextent:        16;
-        yextent:        6;
+        yextent:        16;
         zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
@@ -5299,7 +5299,7 @@ spritelayout redbrick_overbridge_waypoint_left_se_nw(a) {
 
 item(FEAT_STATIONS, redbrick_left_overbridge_waypoint) {
     property {
-        class:                  "WAYP";
+        class:                  "WAYP";    
         classname:              string(STR_NAME_STATCLASS_REDBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
     }
@@ -5341,7 +5341,7 @@ spritelayout redbrick_overbridge_waypoint_right_sw_ne(a) {
         xoffset:        0;
         yoffset:        1;
         zoffset:        0;
-        xextent:        6;
+        xextent:        16;
         yextent:        16;
         zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
@@ -5359,7 +5359,7 @@ spritelayout redbrick_overbridge_waypoint_right_se_nw(a) {
         yoffset:        1;
         zoffset:        0;
         xextent:        16;
-        yextent:        6;
+        yextent:        16;
         zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;

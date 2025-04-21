@@ -3535,7 +3535,7 @@ spritelayout darkbrick_overbridge_left_se_nw(a) {
         yoffset:        1;
         zoffset:        0;
         xextent:        16;
-        yextent:        8;
+        yextent:        16;
         zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
@@ -3790,7 +3790,7 @@ spritelayout darkbrick_overbridgefences_left_se_nw(a) {
         yoffset:        1;
         zoffset:        0;
         xextent:        16;
-        yextent:        8;
+        yextent:        16;
         zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
@@ -4044,7 +4044,7 @@ spritelayout darkbrick_overpass_left_se_nw(a) {
         yoffset:        1;
         zoffset:        0;
         xextent:        6;
-        yextent:        8;
+        yextent:        16;
         zextent:        30;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
@@ -4055,7 +4055,7 @@ spritelayout darkbrick_overpass_left_se_nw(a) {
         yoffset:        1;
         zoffset:        0;
         xextent:        5;
-        yextent:        6;
+        yextent:        16;
         zextent:        30;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
@@ -4164,7 +4164,7 @@ spritelayout darkbrick_overpass_right_se_nw(a) {
         yoffset:        1;
         zoffset:        0;
         xextent:        16;
-        yextent:        6;
+        yextent:        16;
         zextent:        30;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;

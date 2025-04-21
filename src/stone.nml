@@ -5060,7 +5060,7 @@ spritelayout stone_overbridge_waypoint_left_sw_ne(a) {
         xoffset:        0;
         yoffset:        1;
         zoffset:        0;
-        xextent:        6;
+        xextent:        16;
         yextent:        16;
         zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
@@ -5089,7 +5089,7 @@ spritelayout stone_overbridge_waypoint_left_se_nw(a) {
         yoffset:        1;
         zoffset:        0;
         xextent:        16;
-        yextent:        6;
+        yextent:        16;
         zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
@@ -5141,7 +5141,7 @@ spritelayout stone_overbridge_waypoint_right_sw_ne(a) {
         xoffset:        0;
         yoffset:        1;
         zoffset:        0;
-        xextent:        6;
+        xextent:        16;
         yextent:        16;
         zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
@@ -5159,7 +5159,7 @@ spritelayout stone_overbridge_waypoint_right_se_nw(a) {
         yoffset:        1;
         zoffset:        0;
         xextent:        16;
-        yextent:        6;
+        yextent:        16;
         zextent:        20;
         recolour_mode:  RECOLOUR_REMAP;
         palette:        PALETTE_USE_DEFAULT;
