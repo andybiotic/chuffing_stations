@@ -4,6 +4,13 @@ grf {
     desc: string(STR_GRF_DESCRIPTION);
     version: 11;
     min_compatible_version: 10;
+    param 1 {
+        param_disable_unlock_year {
+            type: bool;
+            name: string(STR_PARAM_DISABLE_UNLOCK_YEAR_NAME);
+            desc: string(STR_PARAM_DISABLE_UNLOCK_YEAR_DESCRIPTION);
+        }
+    }
 }
 
 if (version_openttd(1,2,0,22723) > openttd_version) {
@@ -15,37 +22,37 @@ cargotable {
 }
 
 switch (FEAT_STATIONS, SELF, switch_intro_year_redbrick, current_year) {
-  0..1884: 0;
+  0..1884: param[1] ? 1 : 0;
   default: 1;
 }
 
 switch (FEAT_STATIONS, SELF, switch_intro_year_stone_extra, current_year) {
-  0..1924: 0;
+  0..1924: param[1] ? 1 : 0;
   default: 1;
 }
 
 switch (FEAT_STATIONS, SELF, switch_intro_year_suburban, current_year) {
-  0..1924: 0;
+  0..1924: param[1] ? 1 : 0;
   default: 1;
 }
 
 switch (FEAT_STATIONS, SELF, switch_intro_year_darkbrick, current_year) {
-  0..1954: 0;
+  0..1954: param[1] ? 1 : 0;
   default: 1;
 }
 
 switch (FEAT_STATIONS, SELF, switch_intro_year_modern, current_year) {
-  0..1964: 0;
+  0..1964: param[1] ? 1 : 0;
   default: 1;
 }
 
 switch (FEAT_STATIONS, SELF, switch_intro_year_express, current_year) {
-  0..1979: 0;
+  0..1979: param[1] ? 1 : 0;
   default: 1;
 }
 
 switch (FEAT_STATIONS, SELF, switch_intro_year_city, current_year) {
-  0..2004: 0;
+  0..2004: param[1] ? 1 : 0;
   default: 1;
 }
 
