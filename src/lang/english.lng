@@ -1,6 +1,8 @@
 ##grflangid 0x01
-STR_GRF_NAME                                                    :Chuffing Stations v1.1
-STR_GRF_DESCRIPTION                                             :{ORANGE}Chuffing Stations{}{BLACK}This station set is based on some common designs from around the UK.
+STR_GRF_NAME                                                    :{TITLE} {VERSION}
+STR_GRF_DESCRIPTION                                             :{ORANGE}{TITLE}{}{BLACK}This station set is based on some common designs from around the UK.
+
+STR_GRF_WEBSITE                                                 :{WEBSITE}
 
 STR_PARAM_DISABLE_UNLOCK_YEAR_NAME                              :Disable unlock year for stations
 STR_PARAM_DISABLE_UNLOCK_YEAR_DESCRIPTION                       :Toggle whether all station types are available regardless of the in-game year.
