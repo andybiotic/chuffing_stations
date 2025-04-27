@@ -16,7 +16,6 @@ Andy
 - Over 30 unique station buildings, available in multiple orientations.
 - A variety of platform styles, sizes and styles.
 - Many distinct bridges, signal boxes and trackside objects.
-- Cargo aware graphics, your stations look busy when there are passengers waiting!
 - Bridges as waypoints for non-stop tracks.
 - A huge range of platform items, such as fences, benches, shelters and more...
 
@@ -44,7 +43,7 @@ Chuffing Stations contains some elements from [FIRS](https://github.com/andythen
 - Parameter added to disable station introduction dates (Thanks, Iris-Persephone).
 - Some signal boxes moved to the correct side.
 - Significant graphical fixes.
-- Cargo aware graphics removed. These will be back in future version!
+- Cargo aware graphics disabled for now. These will be back in future version...
 
 ## The Stations
 **Wooden**
