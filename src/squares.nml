@@ -8,8 +8,8 @@
 
 
 spriteset (square_1_1, "src/stations_squares.png") {
-    [  10, 10, 64, 64, -32, -34 ]
-    [  80, 10, 64, 64, -32, -34 ]
+    [  10, 10, 64, 64, -31, -32 ]
+    [  80, 10, 64, 64, -31, -32 ]
 }
 
 spritelayout square_1_1a(a) {
@@ -65,8 +65,8 @@ item(FEAT_STATIONS, station_square_1_1) {
 }
 
 spriteset (square_1_2, "src/stations_squares.png") {
-    [  150, 10, 64, 64, -32, -34 ]
-    [  220, 10, 64, 64, -32, -34 ]
+    [  150, 10, 64, 64, -31, -32 ]
+    [  220, 10, 64, 64, -31, -32 ]
 }
 
 spritelayout square_1_2a(a) {
@@ -76,7 +76,7 @@ spritelayout square_1_2a(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -93,7 +93,7 @@ spritelayout square_1_2b(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -122,8 +122,8 @@ item(FEAT_STATIONS, station_square_1_2) {
 }
 
 spriteset (square_1_3, "src/stations_squares.png") {
-    [  290, 10, 64, 64, -32, -34, ANIM ]
-    [  360, 10, 64, 64, -32, -34, ANIM ]
+    [  290, 10, 64, 64, -31, -32, ANIM ]
+    [  360, 10, 64, 64, -31, -32, ANIM ]
 }
 
 spritelayout square_1_3a(a) {
@@ -133,7 +133,7 @@ spritelayout square_1_3a(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -150,7 +150,7 @@ spritelayout square_1_3b(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -179,8 +179,8 @@ item(FEAT_STATIONS, station_square_1_3) {
 }
 
 spriteset (square_1_4, "src/stations_squares.png") {
-    [  430, 10, 64, 64, -32, -34 ]
-    [  500, 10, 64, 64, -32, -34 ]
+    [  430, 10, 64, 64, -31, -32 ]
+    [  500, 10, 64, 64, -31, -32 ]
 }
 
 spritelayout square_1_4a(a) {
@@ -190,7 +190,7 @@ spritelayout square_1_4a(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -207,7 +207,7 @@ spritelayout square_1_4b(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -241,8 +241,8 @@ item(FEAT_STATIONS, station_square_1_4) {
 
 
 spriteset (square_2_1, "src/stations_squares.png") {
-    [  10, 80, 64, 64, -32, -34 ]
-    [  80, 80, 64, 64, -32, -34 ]
+    [  10, 80, 64, 64, -31, -32 ]
+    [  80, 80, 64, 64, -31, -32 ]
 }
 
 spritelayout square_2_1a(a) {
@@ -298,8 +298,8 @@ item(FEAT_STATIONS, station_square_2_1) {
 }
 
 spriteset (square_2_2, "src/stations_squares.png") {
-    [  150, 80, 64, 64, -32, -34 ]
-    [  220, 80, 64, 64, -32, -34 ]
+    [  150, 80, 64, 64, -31, -32 ]
+    [  220, 80, 64, 64, -31, -32 ]
 }
 
 spritelayout square_2_2a(a) {
@@ -309,7 +309,7 @@ spritelayout square_2_2a(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -326,7 +326,7 @@ spritelayout square_2_2b(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -355,8 +355,8 @@ item(FEAT_STATIONS, station_square_2_2) {
 }
 
 spriteset (square_2_3, "src/stations_squares.png") {
-    [  290, 80, 64, 64, -32, -34 ]
-    [  360, 80, 64, 64, -32, -34 ]
+    [  290, 80, 64, 64, -31, -32 ]
+    [  360, 80, 64, 64, -31, -32 ]
 }
 
 spritelayout square_2_3a(a) {
@@ -366,7 +366,7 @@ spritelayout square_2_3a(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -383,7 +383,7 @@ spritelayout square_2_3b(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -412,8 +412,8 @@ item(FEAT_STATIONS, station_square_2_3) {
 }
 
 spriteset (square_2_4, "src/stations_squares.png") {
-    [  430, 80, 64, 64, -32, -34 ]
-    [  500, 80, 64, 64, -32, -34 ]
+    [  430, 80, 64, 64, -31, -32 ]
+    [  500, 80, 64, 64, -31, -32 ]
 }
 
 spritelayout square_2_4a(a) {
@@ -423,7 +423,7 @@ spritelayout square_2_4a(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -440,7 +440,7 @@ spritelayout square_2_4b(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -474,8 +474,8 @@ item(FEAT_STATIONS, station_square_2_4) {
 
 
 spriteset (square_3_1, "src/stations_squares.png") {
-    [  10, 150, 64, 64, -32, -34 ]
-    [  80, 150, 64, 64, -32, -34 ]
+    [  10, 150, 64, 64, -31, -32 ]
+    [  80, 150, 64, 64, -31, -32 ]
 }
 
 spritelayout square_3_1a(a) {
@@ -531,8 +531,8 @@ item(FEAT_STATIONS, station_square_3_1) {
 }
 
 spriteset (square_3_2, "src/stations_squares.png") {
-    [  150, 150, 64, 64, -32, -34 ]
-    [  220, 150, 64, 64, -32, -34 ]
+    [  150, 150, 64, 64, -31, -32 ]
+    [  220, 150, 64, 64, -31, -32 ]
 }
 
 spritelayout square_3_2a(a) {
@@ -542,7 +542,7 @@ spritelayout square_3_2a(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -559,7 +559,7 @@ spritelayout square_3_2b(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -588,8 +588,8 @@ item(FEAT_STATIONS, station_square_3_2) {
 }
 
 spriteset (square_3_3, "src/stations_squares.png") {
-    [  290, 150, 64, 64, -32, -34 ]
-    [  360, 150, 64, 64, -32, -34 ]
+    [  290, 150, 64, 64, -31, -32 ]
+    [  360, 150, 64, 64, -31, -32 ]
 }
 
 spritelayout square_3_3a(a) {
@@ -599,7 +599,7 @@ spritelayout square_3_3a(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -616,7 +616,7 @@ spritelayout square_3_3b(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -645,8 +645,8 @@ item(FEAT_STATIONS, station_square_3_3) {
 }
 
 spriteset (square_3_4, "src/stations_squares.png") {
-    [  430, 150, 64, 64, -32, -34 ]
-    [  500, 150, 64, 64, -32, -34 ]
+    [  430, 150, 64, 64, -31, -32 ]
+    [  500, 150, 64, 64, -31, -32 ]
 }
 
 spritelayout square_3_4a(a) {
@@ -656,7 +656,7 @@ spritelayout square_3_4a(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -673,7 +673,7 @@ spritelayout square_3_4b(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -707,8 +707,8 @@ item(FEAT_STATIONS, station_square_3_4) {
 
 
 spriteset (square_4_1, "src/stations_squares.png") {
-    [  10, 220, 64, 64, -32, -34 ]
-    [  80, 220, 64, 64, -32, -34 ]
+    [  10, 220, 64, 64, -31, -32 ]
+    [  80, 220, 64, 64, -31, -32 ]
 }
 
 spritelayout square_4_1a(a) {
@@ -764,8 +764,8 @@ item(FEAT_STATIONS, station_square_4_1) {
 }
 
 spriteset (square_4_2, "src/stations_squares.png") {
-    [  150, 220, 64, 64, -32, -34 ]
-    [  220, 220, 64, 64, -32, -34 ]
+    [  150, 220, 64, 64, -31, -32 ]
+    [  220, 220, 64, 64, -31, -32 ]
 }
 
 spritelayout square_4_2a(a) {
@@ -775,7 +775,7 @@ spritelayout square_4_2a(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -792,7 +792,7 @@ spritelayout square_4_2b(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -821,8 +821,8 @@ item(FEAT_STATIONS, station_square_4_2) {
 }
 
 spriteset (square_4_3, "src/stations_squares.png") {
-    [  290, 220, 64, 64, -32, -34 ]
-    [  360, 220, 64, 64, -32, -34 ]
+    [  290, 220, 64, 64, -31, -32 ]
+    [  360, 220, 64, 64, -31, -32 ]
 }
 
 spritelayout square_4_3a(a) {
@@ -832,7 +832,7 @@ spritelayout square_4_3a(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -849,7 +849,7 @@ spritelayout square_4_3b(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -878,8 +878,8 @@ item(FEAT_STATIONS, station_square_4_3) {
 }
 
 spriteset (square_4_4, "src/stations_squares.png") {
-    [  430, 220, 64, 64, -32, -34 ]
-    [  500, 220, 64, 64, -32, -34 ]
+    [  430, 220, 64, 64, -31, -32 ]
+    [  500, 220, 64, 64, -31, -32 ]
 }
 
 spritelayout square_4_4a(a) {
@@ -889,7 +889,7 @@ spritelayout square_4_4a(a) {
     building {
         sprite:         DEFAULT(0);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;
@@ -906,7 +906,7 @@ spritelayout square_4_4b(a) {
     building {
         sprite:         DEFAULT(1);
         xoffset:        0;
-        yoffset:        1;
+        yoffset:        0;
         zoffset:        0;
         xextent:        16;
         yextent:        16;

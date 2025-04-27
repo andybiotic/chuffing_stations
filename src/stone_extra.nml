@@ -50,7 +50,7 @@ spritelayout stone_extra_covered_platforms_left_se_nw(a) {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
     building {
-        sprite:         DEFAULT(3);
+        sprite:         DEFAULT(2);
         xoffset:        0;
         yoffset:        0;
         zoffset:        0;
@@ -61,7 +61,7 @@ spritelayout stone_extra_covered_platforms_left_se_nw(a) {
         palette:        PALETTE_USE_DEFAULT;
     }
     building {
-        sprite:         DEFAULT(2);
+        sprite:         DEFAULT(3);
         xoffset:        0;
         yoffset:        0;
         zoffset:        0;

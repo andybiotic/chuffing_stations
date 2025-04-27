@@ -4,7 +4,7 @@ STR_GRF_DESCRIPTION                                             :{ORANGE}{TITLE}
 
 STR_GRF_WEBSITE                                                 :{WEBSITE}
 
-STR_PARAM_DISABLE_UNLOCK_YEAR_NAME                              :Disable unlock year for stations
+STR_PARAM_DISABLE_UNLOCK_YEAR_NAME                              :Disable station introduction dates
 STR_PARAM_DISABLE_UNLOCK_YEAR_DESCRIPTION                       :Toggle whether all station types are available regardless of the in-game year.
 
 STR_VERSION_22723                                               :1.2.0 (r22723)
