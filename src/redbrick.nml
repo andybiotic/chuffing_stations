@@ -4305,22 +4305,22 @@ item(FEAT_STATIONS, redbrick_station_building_5b) {
 /****************************************/
 
 
-spriteset (redbrick_feature_building_tile_0, "src/graphics/stations_buildings_2_empty.png") {
+spriteset (redbrick_feature_building_tile_0, "src/graphics/stations_buildings_2_half.png") {
     [  10, 580, 64, 96, -32, -66 ]
     [  500, 580, 64, 96, -32, -66 ]
 }
 
-spriteset (redbrick_feature_building_tile_1, "src/graphics/stations_buildings_2_empty.png") {
+spriteset (redbrick_feature_building_tile_1, "src/graphics/stations_buildings_2_half.png") {
     [  80, 580, 64, 96, -32, -66 ]
     [  430, 580, 64, 96, -32, -66 ]
 }
 
-spriteset (redbrick_feature_building_tile_2, "src/graphics/stations_buildings_2_empty.png") {
+spriteset (redbrick_feature_building_tile_2, "src/graphics/stations_buildings_2_half.png") {
     [  150, 580, 64, 96, -32, -66 ]
     [  360, 580, 64, 96, -32, -66 ]
 }
 
-spriteset (redbrick_feature_building_tile_3, "src/graphics/stations_buildings_2_empty.png") {
+spriteset (redbrick_feature_building_tile_3, "src/graphics/stations_buildings_2_half.png") {
     [  220, 580, 64, 96, -32, -66 ]
     [  290, 580, 64, 96, -32, -66 ]
 }
