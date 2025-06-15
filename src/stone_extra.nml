@@ -9,7 +9,7 @@
 
 /***** COVERED PLATFORMS LEFT *****/
 
-spriteset (stone_extra_covered_platforms_left, "src/stations_stone_extra.png") {
+spriteset (stone_extra_covered_platforms_left, "src/graphics/stations_stone_additional_empty.png") {
     [  10, 710, 64, 64, -31, -32 ]
     [  10, 780, 64, 64, -31, -32 ]
 
@@ -95,7 +95,7 @@ item(FEAT_STATIONS, left_stone_extra_covered_platforms) {
 
 /***** COVERED PLATFORMS RIGHT *****/
 
-spriteset (stone_extra_covered_platforms_right, "src/stations_stone_extra.png") {
+spriteset (stone_extra_covered_platforms_right, "src/graphics/stations_stone_additional_empty.png") {
     [  150, 710, 64, 64, -31, -32 ]
     [  150, 780, 64, 64, -31, -32 ]
 
@@ -186,7 +186,7 @@ item(FEAT_STATIONS, right_stone_extra_covered_platforms) {
 /****************************************/
 
 
-spriteset (stone_extra_arched_end_left, "src/stations_stone_extra.png") {
+spriteset (stone_extra_arched_end_left, "src/graphics/stations_stone_additional_empty.png") {
     [  10, 850, 64, 64, -31, -32 ]
     [  80, 850, 64, 64, -31, -32 ]
 
@@ -194,7 +194,7 @@ spriteset (stone_extra_arched_end_left, "src/stations_stone_extra.png") {
     [  290, 850, 64, 64, -31, -32 ]
 }
 
-spriteset (stone_extra_arched_end_right, "src/stations_stone_extra.png") {
+spriteset (stone_extra_arched_end_right, "src/graphics/stations_stone_additional_empty.png") {
     [  80, 920, 64, 64, -31, -32 ]
     [  10, 920, 64, 96, -31, -64 ]
 
@@ -285,7 +285,7 @@ item(FEAT_STATIONS, stone_extra_arched_end) {
     }
 }
 
-spriteset (stone_extra_arched_middle_left, "src/stations_stone_extra.png") {
+spriteset (stone_extra_arched_middle_left, "src/graphics/stations_stone_additional_empty.png") {
     [  10, 850, 64, 64, -31, -32 ]
     [  150, 850, 64, 64, -31, -32 ]
 
@@ -293,7 +293,7 @@ spriteset (stone_extra_arched_middle_left, "src/stations_stone_extra.png") {
     [  360, 850, 64, 64, -31, -32 ]
 }
 
-spriteset (stone_extra_arched_middle_right, "src/stations_stone_extra.png") {
+spriteset (stone_extra_arched_middle_right, "src/graphics/stations_stone_additional_empty.png") {
     [  80, 920, 64, 64, -31, -32 ]
     [  150, 920, 64, 96, -31, -64 ]
 

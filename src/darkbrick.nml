@@ -8,7 +8,17 @@
 
 /** PLATFORM LEFT **/
 
-spriteset (darkbrick_lights_platform_left, "src/stations_darkbrick.png") {
+spriteset (darkbrick_lights_platform_left, "src/graphics/stations_darkbrick_empty.png") {
+    [  10, 150, 64, 64, -31, -32 ]
+    [  80, 150, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_lights_platform_left_half, "src/graphics/stations_darkbrick_half.png") {
+    [  10, 150, 64, 64, -31, -32 ]
+    [  80, 150, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_lights_platform_left_full, "src/graphics/stations_darkbrick_full.png") {
     [  10, 150, 64, 64, -31, -32 ]
     [  80, 150, 64, 64, -31, -32 ]
 }
@@ -47,17 +57,23 @@ spritelayout darkbrick_lights_platform_left_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_lights_left {
+    little: [darkbrick_lights_platform_left, darkbrick_lights_platform_left_half];
+    lots:   darkbrick_lights_platform_left_full;
+}
+
 item(FEAT_STATIONS, darkbrick_lights_platform_left_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_LAMPS);
-        cargo_threshold:        240;
+        cargo_threshold:        param_set_cargo_threshold*160;
     }
     graphics {
         sprite_layouts: [darkbrick_lights_platform_left_sw_ne(0), darkbrick_lights_platform_left_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_lights_left;
         purchase: darkbrick_lights_platform_left;
         darkbrick_lights_platform_left;
     }
@@ -65,7 +81,17 @@ item(FEAT_STATIONS, darkbrick_lights_platform_left_station) {
 
 /** PLATFORM RIGHT **/
 
-spriteset (darkbrick_lights_platform_right, "src/stations_darkbrick.png") {
+spriteset (darkbrick_lights_platform_right, "src/graphics/stations_darkbrick_empty.png") {
+    [  150, 150, 64, 64, -31, -32 ]
+    [  220, 150, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_lights_platform_right_half, "src/graphics/stations_darkbrick_half.png") {
+    [  150, 150, 64, 64, -31, -32 ]
+    [  220, 150, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_lights_platform_right_full, "src/graphics/stations_darkbrick_full.png") {
     [  150, 150, 64, 64, -31, -32 ]
     [  220, 150, 64, 64, -31, -32 ]
 }
@@ -104,17 +130,23 @@ spritelayout darkbrick_lights_platform_right_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_lights_right {
+    little: [darkbrick_lights_platform_right, darkbrick_lights_platform_right_half];
+    lots:   darkbrick_lights_platform_right_full;
+}
+
 item(FEAT_STATIONS, darkbrick_lights_platform_right_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_LAMPS);
-        cargo_threshold:        240;
+        cargo_threshold:        param_set_cargo_threshold*160;
     }
     graphics {
         sprite_layouts: [darkbrick_lights_platform_right_sw_ne(0), darkbrick_lights_platform_right_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_lights_right;
         purchase: darkbrick_lights_platform_right;
         darkbrick_lights_platform_right;
     }
@@ -126,7 +158,15 @@ item(FEAT_STATIONS, darkbrick_lights_platform_right_station) {
 
 /** PLATFORM LEFT **/
 
-spriteset (darkbrick_fenceandlights_platform_left, "src/stations_darkbrick.png") {
+spriteset (darkbrick_fenceandlights_platform_left, "src/graphics/stations_darkbrick_empty.png") {
+    [  10, 220, 64, 64, -31, -32 ]
+    [  80, 220, 64, 64, -31, -32 ]
+}
+spriteset (darkbrick_fenceandlights_platform_left_half, "src/graphics/stations_darkbrick_half.png") {
+    [  10, 220, 64, 64, -31, -32 ]
+    [  80, 220, 64, 64, -31, -32 ]
+}
+spriteset (darkbrick_fenceandlights_platform_left_full, "src/graphics/stations_darkbrick_full.png") {
     [  10, 220, 64, 64, -31, -32 ]
     [  80, 220, 64, 64, -31, -32 ]
 }
@@ -165,17 +205,23 @@ spritelayout darkbrick_fenceandlights_platform_left_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_fenceandlights_left {
+    little: [darkbrick_fenceandlights_platform_left, darkbrick_fenceandlights_platform_left_half];
+    lots:   darkbrick_fenceandlights_platform_left_full;
+}
+
 item(FEAT_STATIONS, darkbrick_fenceandlights_platform_left_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_LAMPS);
-        cargo_threshold:        240;
+        cargo_threshold:        param_set_cargo_threshold*160;
     }
     graphics {
         sprite_layouts: [darkbrick_fenceandlights_platform_left_sw_ne(0), darkbrick_fenceandlights_platform_left_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_fenceandlights_left;
         purchase: darkbrick_fenceandlights_platform_left;
         darkbrick_fenceandlights_platform_left;
     }
@@ -183,7 +229,15 @@ item(FEAT_STATIONS, darkbrick_fenceandlights_platform_left_station) {
 
 /** PLATFORM RIGHT **/
 
-spriteset (darkbrick_fenceandlights_platform_right, "src/stations_darkbrick.png") {
+spriteset (darkbrick_fenceandlights_platform_right, "src/graphics/stations_darkbrick_empty.png") {
+    [  150, 220, 64, 64, -31, -32 ]
+    [  220, 220, 64, 64, -31, -32 ]
+}
+spriteset (darkbrick_fenceandlights_platform_right_half, "src/graphics/stations_darkbrick_half.png") {
+    [  150, 220, 64, 64, -31, -32 ]
+    [  220, 220, 64, 64, -31, -32 ]
+}
+spriteset (darkbrick_fenceandlights_platform_right_full, "src/graphics/stations_darkbrick_full.png") {
     [  150, 220, 64, 64, -31, -32 ]
     [  220, 220, 64, 64, -31, -32 ]
 }
@@ -222,17 +276,23 @@ spritelayout darkbrick_fenceandlights_platform_right_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_fenceandlights_right {
+    little: [darkbrick_fenceandlights_platform_right, darkbrick_fenceandlights_platform_right_half];
+    lots:   darkbrick_fenceandlights_platform_right_full;
+}
+
 item(FEAT_STATIONS, darkbrick_fenceandlights_platform_right_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_LAMPS);
-        cargo_threshold:        240;
+        cargo_threshold:        param_set_cargo_threshold*160;
     }
     graphics {
         sprite_layouts: [darkbrick_fenceandlights_platform_right_sw_ne(0), darkbrick_fenceandlights_platform_right_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_fenceandlights_right;
         purchase: darkbrick_fenceandlights_platform_right;
         darkbrick_fenceandlights_platform_right;
     }
@@ -244,7 +304,17 @@ item(FEAT_STATIONS, darkbrick_fenceandlights_platform_right_station) {
 
 /** PLATFORM LEFT **/
 
-spriteset (darkbrick_sign_platform_left, "src/stations_darkbrick.png") {
+spriteset (darkbrick_sign_platform_left, "src/graphics/stations_darkbrick_empty.png") {
+    [  290, 150, 64, 64, -31, -32 ]
+    [  360, 150, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_sign_platform_left_half, "src/graphics/stations_darkbrick_half.png") {
+    [  290, 150, 64, 64, -31, -32 ]
+    [  360, 150, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_sign_platform_left_full, "src/graphics/stations_darkbrick_full.png") {
     [  290, 150, 64, 64, -31, -32 ]
     [  360, 150, 64, 64, -31, -32 ]
 }
@@ -283,17 +353,23 @@ spritelayout darkbrick_sign_platform_left_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_sign_left {
+    little: [darkbrick_sign_platform_left, darkbrick_sign_platform_left_half];
+    lots:   darkbrick_sign_platform_left_full;
+}
+
 item(FEAT_STATIONS, darkbrick_sign_platform_left_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SIGN);
-        cargo_threshold:        240;
+        cargo_threshold:        param_set_cargo_threshold*160;
     }
     graphics {
         sprite_layouts: [darkbrick_sign_platform_left_sw_ne(0), darkbrick_sign_platform_left_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_sign_left;
         purchase: darkbrick_sign_platform_left;
         darkbrick_sign_platform_left;
     }
@@ -302,7 +378,17 @@ item(FEAT_STATIONS, darkbrick_sign_platform_left_station) {
 
 /** PLATFORM RIGHT **/
 
-spriteset (darkbrick_sign_platform_right, "src/stations_darkbrick.png") {
+spriteset (darkbrick_sign_platform_right, "src/graphics/stations_darkbrick_empty.png") {
+    [  430, 150, 64, 64, -31, -32 ]
+    [  500, 150, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_sign_platform_right_half, "src/graphics/stations_darkbrick_half.png") {
+    [  430, 150, 64, 64, -31, -32 ]
+    [  500, 150, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_sign_platform_right_full, "src/graphics/stations_darkbrick_full.png") {
     [  430, 150, 64, 64, -31, -32 ]
     [  500, 150, 64, 64, -31, -32 ]
 }
@@ -341,17 +427,23 @@ spritelayout darkbrick_sign_platform_right_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_sign_right {
+    little: [darkbrick_sign_platform_right, darkbrick_sign_platform_right_half];
+    lots:   darkbrick_sign_platform_right_full;
+}
+
 item(FEAT_STATIONS, darkbrick_sign_platform_right_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SIGN);
-        cargo_threshold:        240;
+        cargo_threshold:        param_set_cargo_threshold*160;
     }
     graphics {
         sprite_layouts: [darkbrick_sign_platform_right_sw_ne(0), darkbrick_sign_platform_right_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_sign_right;
         purchase: darkbrick_sign_platform_right;
         darkbrick_sign_platform_right;
     }
@@ -363,7 +455,17 @@ item(FEAT_STATIONS, darkbrick_sign_platform_right_station) {
 
 /** PLATFORM LEFT **/
 
-spriteset (darkbrick_fenceandsign_platform_left, "src/stations_darkbrick.png") {
+spriteset (darkbrick_fenceandsign_platform_left, "src/graphics/stations_darkbrick_empty.png") {
+    [  290, 220, 64, 64, -31, -32 ]
+    [  360, 220, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_fenceandsign_platform_left_half, "src/graphics/stations_darkbrick_half.png") {
+    [  290, 220, 64, 64, -31, -32 ]
+    [  360, 220, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_fenceandsign_platform_left_full, "src/graphics/stations_darkbrick_full.png") {
     [  290, 220, 64, 64, -31, -32 ]
     [  360, 220, 64, 64, -31, -32 ]
 }
@@ -402,17 +504,23 @@ spritelayout darkbrick_fenceandsign_platform_left_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_fenceandsign_left {
+    little: [darkbrick_fenceandsign_platform_left, darkbrick_fenceandsign_platform_left_half];
+    lots:   darkbrick_fenceandsign_platform_left_full;
+}
+
 item(FEAT_STATIONS, darkbrick_fenceandsign_platform_left_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SIGN);
-        cargo_threshold:        240;
+        cargo_threshold:        param_set_cargo_threshold*160;
     }
     graphics {
         sprite_layouts: [darkbrick_fenceandsign_platform_left_sw_ne(0), darkbrick_fenceandsign_platform_left_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_fenceandsign_left;
         purchase: darkbrick_fenceandsign_platform_left;
         darkbrick_fenceandsign_platform_left;
     }
@@ -420,7 +528,17 @@ item(FEAT_STATIONS, darkbrick_fenceandsign_platform_left_station) {
 
 /** PLATFORM RIGHT **/
 
-spriteset (darkbrick_fenceandsign_platform_right, "src/stations_darkbrick.png") {
+spriteset (darkbrick_fenceandsign_platform_right, "src/graphics/stations_darkbrick_empty.png") {
+    [  430, 220, 64, 64, -31, -32 ]
+    [  500, 220, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_fenceandsign_platform_right_half, "src/graphics/stations_darkbrick_half.png") {
+    [  430, 220, 64, 64, -31, -32 ]
+    [  500, 220, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_fenceandsign_platform_right_full, "src/graphics/stations_darkbrick_full.png") {
     [  430, 220, 64, 64, -31, -32 ]
     [  500, 220, 64, 64, -31, -32 ]
 }
@@ -459,34 +577,50 @@ spritelayout darkbrick_fenceandsign_platform_right_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_fenceandsign_right {
+    little: [darkbrick_fenceandsign_platform_right, darkbrick_fenceandsign_platform_right_half];
+    lots:   darkbrick_fenceandsign_platform_right_full;
+}
+
 item(FEAT_STATIONS, darkbrick_fenceandsign_platform_right_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SIGN);
-        cargo_threshold:        240;
+        cargo_threshold:        param_set_cargo_threshold*160;
     }
     graphics {
         sprite_layouts: [darkbrick_fenceandsign_platform_right_sw_ne(0), darkbrick_fenceandsign_platform_right_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_fenceandsign_right;
         purchase: darkbrick_fenceandsign_platform_right;
         darkbrick_fenceandsign_platform_right;
     }
 }
 
 /***************************************/
-/***** PLATFORM WITH ADVERT *************/
+/***** PLATFORM WITH BENCH *************/
 /***************************************/
 
 /** PLATFORM LEFT **/
 
-spriteset (darkbrick_advert_platform_left, "src/stations_darkbrick.png") {
+spriteset (darkbrick_bench_platform_left, "src/graphics/stations_darkbrick_empty.png") {
     [  10, 290, 64, 64, -31, -32 ]
     [  80, 290, 64, 64, -31, -32 ]
 }
 
-spritelayout darkbrick_advert_platform_left_sw_ne(a) {
+spriteset (darkbrick_bench_platform_left_half, "src/graphics/stations_darkbrick_half.png") {
+    [  10, 290, 64, 64, -31, -32 ]
+    [  80, 290, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_bench_platform_left_full, "src/graphics/stations_darkbrick_full.png") {
+    [  10, 290, 64, 64, -31, -32 ]
+    [  80, 290, 64, 64, -31, -32 ]
+}
+
+spritelayout darkbrick_bench_platform_left_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -503,7 +637,7 @@ spritelayout darkbrick_advert_platform_left_sw_ne(a) {
     }
 }
 
-spritelayout darkbrick_advert_platform_left_se_nw(a) {
+spritelayout darkbrick_bench_platform_left_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -520,30 +654,46 @@ spritelayout darkbrick_advert_platform_left_se_nw(a) {
     }
 }
 
-item(FEAT_STATIONS, darkbrick_advert_platform_left_station) {
+spritegroup group_darkbrick_bench_left {
+    little: [darkbrick_bench_platform_left, darkbrick_bench_platform_left_half];
+    lots:   darkbrick_bench_platform_left_full;
+}
+
+item(FEAT_STATIONS, darkbrick_bench_platform_left_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_ADVERT);
-        cargo_threshold:        240;
+        cargo_threshold:        param_set_cargo_threshold*160;
     }
     graphics {
-        sprite_layouts: [darkbrick_advert_platform_left_sw_ne(0), darkbrick_advert_platform_left_se_nw(0)];
+        sprite_layouts: [darkbrick_bench_platform_left_sw_ne(0), darkbrick_bench_platform_left_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
-        purchase: darkbrick_advert_platform_left;
-        darkbrick_advert_platform_left;
+        PASS: group_darkbrick_bench_left;
+        purchase: darkbrick_bench_platform_left;
+        darkbrick_bench_platform_left;
     }
 }
 
 /** PLATFORM RIGHT **/
 
-spriteset (darkbrick_advert_platform_right, "src/stations_darkbrick.png") {
+spriteset (darkbrick_bench_platform_right, "src/graphics/stations_darkbrick_empty.png") {
     [  150, 290, 64, 64, -31, -32 ]
     [  220, 290, 64, 64, -31, -32 ]
 }
 
-spritelayout darkbrick_advert_platform_right_sw_ne(a) {
+spriteset (darkbrick_bench_platform_right_half, "src/graphics/stations_darkbrick_half.png") {
+    [  150, 290, 64, 64, -31, -32 ]
+    [  220, 290, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_bench_platform_right_full, "src/graphics/stations_darkbrick_full.png") {
+    [  150, 290, 64, 64, -31, -32 ]
+    [  220, 290, 64, 64, -31, -32 ]
+}
+
+spritelayout darkbrick_bench_platform_right_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -560,7 +710,7 @@ spritelayout darkbrick_advert_platform_right_sw_ne(a) {
     }
 }
 
-spritelayout darkbrick_advert_platform_right_se_nw(a) {
+spritelayout darkbrick_bench_platform_right_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -577,34 +727,50 @@ spritelayout darkbrick_advert_platform_right_se_nw(a) {
     }
 }
 
-item(FEAT_STATIONS, darkbrick_advert_platform_right_station) {
+spritegroup group_darkbrick_bench_right {
+    little: [darkbrick_bench_platform_right, darkbrick_bench_platform_right_half];
+    lots:   darkbrick_bench_platform_right_full;
+}
+
+item(FEAT_STATIONS, darkbrick_bench_platform_right_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_ADVERT);
-        cargo_threshold:        240;
+        cargo_threshold:        param_set_cargo_threshold*160;
     }
     graphics {
-        sprite_layouts: [darkbrick_advert_platform_right_sw_ne(0), darkbrick_advert_platform_right_se_nw(0)];
+        sprite_layouts: [darkbrick_bench_platform_right_sw_ne(0), darkbrick_bench_platform_right_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
-        purchase: darkbrick_advert_platform_right;
-        darkbrick_advert_platform_right;
+        PASS: group_darkbrick_bench_right;
+        purchase: darkbrick_bench_platform_right;
+        darkbrick_bench_platform_right;
     }
 }
 
 /******************************************/
-/***** PLATFORMS WITH FENCE AND ADVERT *****/
+/***** PLATFORMS WITH FENCE AND BENCH *****/
 /******************************************/
 
 /** PLATFORM LEFT **/
 
-spriteset (darkbrick_fenceandadvert_platform_left, "src/stations_darkbrick.png") {
+spriteset (darkbrick_fenceandbench_platform_left, "src/graphics/stations_darkbrick_empty.png") {
     [  10, 360, 64, 64, -31, -32 ]
     [  80, 360, 64, 64, -31, -32 ]
 }
 
-spritelayout darkbrick_fenceandadvert_platform_left_sw_ne(a) {
+spriteset (darkbrick_fenceandbench_platform_left_half, "src/graphics/stations_darkbrick_half.png") {
+    [  10, 360, 64, 64, -31, -32 ]
+    [  80, 360, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_fenceandbench_platform_left_full, "src/graphics/stations_darkbrick_full.png") {
+    [  10, 360, 64, 64, -31, -32 ]
+    [  80, 360, 64, 64, -31, -32 ]
+}
+
+spritelayout darkbrick_fenceandbench_platform_left_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -621,7 +787,7 @@ spritelayout darkbrick_fenceandadvert_platform_left_sw_ne(a) {
     }
 }
 
-spritelayout darkbrick_fenceandadvert_platform_left_se_nw(a) {
+spritelayout darkbrick_fenceandbench_platform_left_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -638,30 +804,46 @@ spritelayout darkbrick_fenceandadvert_platform_left_se_nw(a) {
     }
 }
 
-item(FEAT_STATIONS, darkbrick_fenceandadvert_platform_left_station) {
+spritegroup group_darkbrick_fenceandbench_left {
+    little: [darkbrick_fenceandbench_platform_left, darkbrick_fenceandbench_platform_left_half];
+    lots:   darkbrick_fenceandbench_platform_left_full;
+}
+
+item(FEAT_STATIONS, darkbrick_fenceandbench_platform_left_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_ADVERT);
-        cargo_threshold:        240;
+        cargo_threshold:        param_set_cargo_threshold*160;
     }
     graphics {
-        sprite_layouts: [darkbrick_fenceandadvert_platform_left_sw_ne(0), darkbrick_fenceandadvert_platform_left_se_nw(0)];
+        sprite_layouts: [darkbrick_fenceandbench_platform_left_sw_ne(0), darkbrick_fenceandbench_platform_left_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
-        purchase: darkbrick_fenceandadvert_platform_left;
-        darkbrick_fenceandadvert_platform_left;
+        PASS: group_darkbrick_fenceandbench_left;
+        purchase: darkbrick_fenceandbench_platform_left;
+        darkbrick_fenceandbench_platform_left;
     }
 }
 
 /** PLATFORM RIGHT **/
 
-spriteset (darkbrick_fenceandadvert_platform_right, "src/stations_darkbrick.png") {
+spriteset (darkbrick_fenceandbench_platform_right, "src/graphics/stations_darkbrick_empty.png") {
     [  150, 360, 64, 64, -31, -32 ]
     [  220, 360, 64, 64, -31, -32 ]
 }
 
-spritelayout darkbrick_fenceandadvert_platform_right_sw_ne(a) {
+spriteset (darkbrick_fenceandbench_platform_right_half, "src/graphics/stations_darkbrick_half.png") {
+    [  150, 360, 64, 64, -31, -32 ]
+    [  220, 360, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_fenceandbench_platform_right_full, "src/graphics/stations_darkbrick_full.png") {
+    [  150, 360, 64, 64, -31, -32 ]
+    [  220, 360, 64, 64, -31, -32 ]
+}
+
+spritelayout darkbrick_fenceandbench_platform_right_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -678,7 +860,7 @@ spritelayout darkbrick_fenceandadvert_platform_right_sw_ne(a) {
     }
 }
 
-spritelayout darkbrick_fenceandadvert_platform_right_se_nw(a) {
+spritelayout darkbrick_fenceandbench_platform_right_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -695,19 +877,25 @@ spritelayout darkbrick_fenceandadvert_platform_right_se_nw(a) {
     }
 }
 
-item(FEAT_STATIONS, darkbrick_fenceandadvert_platform_right_station) {
+spritegroup group_darkbrick_fenceandbench_right {
+    little: [darkbrick_fenceandbench_platform_right, darkbrick_fenceandbench_platform_right_half];
+    lots:   darkbrick_fenceandbench_platform_right_full;
+}
+
+item(FEAT_STATIONS, darkbrick_fenceandbench_platform_right_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_ADVERT);
-        cargo_threshold:        240;
+        cargo_threshold:        param_set_cargo_threshold*160;
     }
     graphics {
-        sprite_layouts: [darkbrick_fenceandadvert_platform_right_sw_ne(0), darkbrick_fenceandadvert_platform_right_se_nw(0)];
+        sprite_layouts: [darkbrick_fenceandbench_platform_right_sw_ne(0), darkbrick_fenceandbench_platform_right_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
-        purchase: darkbrick_fenceandadvert_platform_right;
-        darkbrick_fenceandadvert_platform_right;
+        PASS: group_darkbrick_fenceandbench_right;
+        purchase: darkbrick_fenceandbench_platform_right;
+        darkbrick_fenceandbench_platform_right;
     }
 }
 
@@ -717,7 +905,17 @@ item(FEAT_STATIONS, darkbrick_fenceandadvert_platform_right_station) {
 
 /** PLATFORM LEFT **/
 
-spriteset (darkbrick_underpass_platform_left, "src/stations_darkbrick.png") {
+spriteset (darkbrick_underpass_platform_left, "src/graphics/stations_darkbrick_empty.png") {
+    [  290, 290, 64, 64, -31, -32 ]
+    [  360, 290, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_underpass_platform_left_half, "src/graphics/stations_darkbrick_half.png") {
+    [  290, 290, 64, 64, -31, -32 ]
+    [  360, 290, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_underpass_platform_left_full, "src/graphics/stations_darkbrick_full.png") {
     [  290, 290, 64, 64, -31, -32 ]
     [  360, 290, 64, 64, -31, -32 ]
 }
@@ -756,17 +954,23 @@ spritelayout darkbrick_underpass_platform_left_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_underpass_platform_left {
+    little: [darkbrick_underpass_platform_left, darkbrick_underpass_platform_left_half];
+    lots:   darkbrick_underpass_platform_left_full;
+}
+
 item(FEAT_STATIONS, darkbrick_underpass_platform_left_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_UNDERPASS);
-        cargo_threshold:        240;
+        cargo_threshold:        param_set_cargo_threshold*160;
     }
     graphics {
         sprite_layouts: [darkbrick_underpass_platform_left_sw_ne(0), darkbrick_underpass_platform_left_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_underpass_platform_left;
         purchase: darkbrick_underpass_platform_left;
         darkbrick_underpass_platform_left;
     }
@@ -774,7 +978,17 @@ item(FEAT_STATIONS, darkbrick_underpass_platform_left_station) {
 
 /** PLATFORM RIGHT **/
 
-spriteset (darkbrick_underpass_platform_right, "src/stations_darkbrick.png") {
+spriteset (darkbrick_underpass_platform_right, "src/graphics/stations_darkbrick_empty.png") {
+    [  430, 290, 64, 64, -31, -32 ]
+    [  500, 290, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_underpass_platform_right_half, "src/graphics/stations_darkbrick_half.png") {
+    [  430, 290, 64, 64, -31, -32 ]
+    [  500, 290, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_underpass_platform_right_full, "src/graphics/stations_darkbrick_full.png") {
     [  430, 290, 64, 64, -31, -32 ]
     [  500, 290, 64, 64, -31, -32 ]
 }
@@ -813,17 +1027,23 @@ spritelayout darkbrick_underpass_platform_right_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_underpass_platform_right {
+    little: [darkbrick_underpass_platform_right, darkbrick_underpass_platform_right_half];
+    lots:   darkbrick_underpass_platform_right_full;
+}
+
 item(FEAT_STATIONS, darkbrick_underpass_platform_right_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_UNDERPASS);
-        cargo_threshold:        240;
+        cargo_threshold:        param_set_cargo_threshold*160;
     }
     graphics {
         sprite_layouts: [darkbrick_underpass_platform_right_sw_ne(0), darkbrick_underpass_platform_right_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_underpass_platform_right;
         purchase: darkbrick_underpass_platform_right;
         darkbrick_underpass_platform_right;
     }
@@ -835,7 +1055,17 @@ item(FEAT_STATIONS, darkbrick_underpass_platform_right_station) {
 
 /** PLATFORM LEFT **/
 
-spriteset (darkbrick_fenceandunderpass_platform_left, "src/stations_darkbrick.png") {
+spriteset (darkbrick_fenceandunderpass_platform_left, "src/graphics/stations_darkbrick_empty.png") {
+    [  290, 360, 64, 64, -31, -32 ]
+    [  360, 360, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_fenceandunderpass_platform_left_half, "src/graphics/stations_darkbrick_half.png") {
+    [  290, 360, 64, 64, -31, -32 ]
+    [  360, 360, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_fenceandunderpass_platform_left_full, "src/graphics/stations_darkbrick_full.png") {
     [  290, 360, 64, 64, -31, -32 ]
     [  360, 360, 64, 64, -31, -32 ]
 }
@@ -874,17 +1104,24 @@ spritelayout darkbrick_fenceandunderpass_platform_left_se_nw(a) {
     }
 }
 
+
+spritegroup group_darkbrick_fenceandunderpass_platform_left {
+    little: [darkbrick_fenceandunderpass_platform_left, darkbrick_fenceandunderpass_platform_left_half];
+    lots:   darkbrick_fenceandunderpass_platform_left_full;
+}
+
 item(FEAT_STATIONS, darkbrick_fenceandunderpass_platform_left_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_UNDERPASS);
-        cargo_threshold:        240;
+        cargo_threshold:        param_set_cargo_threshold*160;
     }
     graphics {
         sprite_layouts: [darkbrick_fenceandunderpass_platform_left_sw_ne(0), darkbrick_fenceandunderpass_platform_left_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_fenceandunderpass_platform_left;
         purchase: darkbrick_fenceandunderpass_platform_left;
         darkbrick_fenceandunderpass_platform_left;
     }
@@ -892,7 +1129,17 @@ item(FEAT_STATIONS, darkbrick_fenceandunderpass_platform_left_station) {
 
 /** PLATFORM RIGHT **/
 
-spriteset (darkbrick_fenceandunderpass_platform_right, "src/stations_darkbrick.png") {
+spriteset (darkbrick_fenceandunderpass_platform_right, "src/graphics/stations_darkbrick_empty.png") {
+    [  430, 360, 64, 64, -31, -32 ]
+    [  500, 360, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_fenceandunderpass_platform_right_half, "src/graphics/stations_darkbrick_half.png") {
+    [  430, 360, 64, 64, -31, -32 ]
+    [  500, 360, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_fenceandunderpass_platform_right_full, "src/graphics/stations_darkbrick_full.png") {
     [  430, 360, 64, 64, -31, -32 ]
     [  500, 360, 64, 64, -31, -32 ]
 }
@@ -931,17 +1178,23 @@ spritelayout darkbrick_fenceandunderpass_platform_right_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_fenceandunderpass_platform_right {
+    little: [darkbrick_fenceandunderpass_platform_right, darkbrick_fenceandunderpass_platform_right_half];
+    lots:   darkbrick_fenceandunderpass_platform_right_full;
+}
+
 item(FEAT_STATIONS, darkbrick_fenceandunderpass_platform_right_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_UNDERPASS);
-        cargo_threshold:        240;
+        cargo_threshold:        param_set_cargo_threshold*160;
     }
     graphics {
         sprite_layouts: [darkbrick_fenceandunderpass_platform_right_sw_ne(0), darkbrick_fenceandunderpass_platform_right_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_fenceandunderpass_platform_right;
         purchase: darkbrick_fenceandunderpass_platform_right;
         darkbrick_fenceandunderpass_platform_right;
     }
@@ -953,7 +1206,17 @@ item(FEAT_STATIONS, darkbrick_fenceandunderpass_platform_right_station) {
 
 /** PLATFORM LEFT **/
 
-spriteset (darkbrick_shelter_platform_left, "src/stations_darkbrick.png") {
+spriteset (darkbrick_shelter_platform_left, "src/graphics/stations_darkbrick_empty.png") {
+    [  570, 150, 64, 64, -31, -32 ]
+    [  640, 150, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_shelter_platform_left_half, "src/graphics/stations_darkbrick_half.png") {
+    [  570, 150, 64, 64, -31, -32 ]
+    [  640, 150, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_shelter_platform_left_full, "src/graphics/stations_darkbrick_full.png") {
     [  570, 150, 64, 64, -31, -32 ]
     [  640, 150, 64, 64, -31, -32 ]
 }
@@ -992,17 +1255,23 @@ spritelayout darkbrick_shelter_platform_left_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_shelter_left {
+    little: [darkbrick_shelter_platform_left, darkbrick_shelter_platform_left_half];
+    lots:   darkbrick_shelter_platform_left_full;
+}
+
 item(FEAT_STATIONS, darkbrick_shelter_platform_left_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SHELTER);
-        cargo_threshold:        160;
+        cargo_threshold:        param_set_cargo_threshold*130;
     }
     graphics {
         sprite_layouts: [darkbrick_shelter_platform_left_sw_ne(0), darkbrick_shelter_platform_left_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_shelter_left;
         purchase: darkbrick_shelter_platform_left;
         darkbrick_shelter_platform_left;
     }
@@ -1011,7 +1280,17 @@ item(FEAT_STATIONS, darkbrick_shelter_platform_left_station) {
 
 /** PLATFORM RIGHT **/
 
-spriteset (darkbrick_shelter_platform_right, "src/stations_darkbrick.png") {
+spriteset (darkbrick_shelter_platform_right, "src/graphics/stations_darkbrick_empty.png") {
+    [  710, 150, 64, 64, -31, -32 ]
+    [  780, 150, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_shelter_platform_right_half, "src/graphics/stations_darkbrick_half.png") {
+    [  710, 150, 64, 64, -31, -32 ]
+    [  780, 150, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_shelter_platform_right_full, "src/graphics/stations_darkbrick_full.png") {
     [  710, 150, 64, 64, -31, -32 ]
     [  780, 150, 64, 64, -31, -32 ]
 }
@@ -1050,17 +1329,23 @@ spritelayout darkbrick_shelter_platform_right_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_shelter_right {
+    little: [darkbrick_shelter_platform_right, darkbrick_shelter_platform_right_half];
+    lots:   darkbrick_shelter_platform_right_full;
+}
+
 item(FEAT_STATIONS, darkbrick_shelter_platform_right_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SHELTER);
-        cargo_threshold:        160;
+        cargo_threshold:        param_set_cargo_threshold*130;
     }
     graphics {
         sprite_layouts: [darkbrick_shelter_platform_right_sw_ne(0), darkbrick_shelter_platform_right_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_shelter_right;
         purchase: darkbrick_shelter_platform_right;
         darkbrick_shelter_platform_right;
     }
@@ -1072,7 +1357,17 @@ item(FEAT_STATIONS, darkbrick_shelter_platform_right_station) {
 
 /** PLATFORM LEFT **/
 
-spriteset (darkbrick_fenceandshelter_platform_left, "src/stations_darkbrick.png") {
+spriteset (darkbrick_fenceandshelter_platform_left, "src/graphics/stations_darkbrick_empty.png") {
+    [  570, 220, 64, 64, -31, -32 ]
+    [  640, 220, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_fenceandshelter_platform_left_half, "src/graphics/stations_darkbrick_half.png") {
+    [  570, 220, 64, 64, -31, -32 ]
+    [  640, 220, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_fenceandshelter_platform_left_full, "src/graphics/stations_darkbrick_full.png") {
     [  570, 220, 64, 64, -31, -32 ]
     [  640, 220, 64, 64, -31, -32 ]
 }
@@ -1111,17 +1406,23 @@ spritelayout darkbrick_fenceandshelter_platform_left_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_fenceandshelter_left {
+    little: [darkbrick_fenceandshelter_platform_left, darkbrick_fenceandshelter_platform_left_half];
+    lots:   darkbrick_fenceandshelter_platform_left_full;
+}
+
 item(FEAT_STATIONS, darkbrick_fenceandshelter_platform_left_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SHELTER);
-        cargo_threshold:        160;
+        cargo_threshold:        param_set_cargo_threshold*130;
     }
     graphics {
         sprite_layouts: [darkbrick_fenceandshelter_platform_left_sw_ne(0), darkbrick_fenceandshelter_platform_left_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_fenceandshelter_left;
         purchase: darkbrick_fenceandshelter_platform_left;
         darkbrick_fenceandshelter_platform_left;
     }
@@ -1130,7 +1431,17 @@ item(FEAT_STATIONS, darkbrick_fenceandshelter_platform_left_station) {
 
 /** PLATFORM RIGHT **/
 
-spriteset (darkbrick_fenceandshelter_platform_right, "src/stations_darkbrick.png") {
+spriteset (darkbrick_fenceandshelter_platform_right, "src/graphics/stations_darkbrick_empty.png") {
+    [  710, 220, 64, 64, -31, -32 ]
+    [  780, 220, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_fenceandshelter_platform_right_half, "src/graphics/stations_darkbrick_half.png") {
+    [  710, 220, 64, 64, -31, -32 ]
+    [  780, 220, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_fenceandshelter_platform_right_full, "src/graphics/stations_darkbrick_full.png") {
     [  710, 220, 64, 64, -31, -32 ]
     [  780, 220, 64, 64, -31, -32 ]
 }
@@ -1169,17 +1480,23 @@ spritelayout darkbrick_fenceandshelter_platform_right_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_fenceandshelter_right {
+    little: [darkbrick_fenceandshelter_platform_right, darkbrick_fenceandshelter_platform_right_half];
+    lots:   darkbrick_fenceandshelter_platform_right_full;
+}
+
 item(FEAT_STATIONS, darkbrick_fenceandshelter_platform_right_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SHELTER);
-        cargo_threshold:        160;
+        cargo_threshold:        param_set_cargo_threshold*130;
     }
     graphics {
         sprite_layouts: [darkbrick_fenceandshelter_platform_right_sw_ne(0), darkbrick_fenceandshelter_platform_right_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_fenceandshelter_right;
         purchase: darkbrick_fenceandshelter_platform_right;
         darkbrick_fenceandshelter_platform_right;
     }
@@ -1191,7 +1508,17 @@ item(FEAT_STATIONS, darkbrick_fenceandshelter_platform_right_station) {
 
 /** PLATFORM LEFT **/
 
-spriteset (darkbrick_shelteralt_platform_left, "src/stations_darkbrick.png") {
+spriteset (darkbrick_shelteralt_platform_left, "src/graphics/stations_darkbrick_empty.png") {
+    [  570, 290, 64, 64, -31, -32 ]
+    [  640, 290, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_shelteralt_platform_left_half, "src/graphics/stations_darkbrick_half.png") {
+    [  570, 290, 64, 64, -31, -32 ]
+    [  640, 290, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_shelteralt_platform_left_full, "src/graphics/stations_darkbrick_full.png") {
     [  570, 290, 64, 64, -31, -32 ]
     [  640, 290, 64, 64, -31, -32 ]
 }
@@ -1230,17 +1557,23 @@ spritelayout darkbrick_shelteralt_platform_left_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_shelteralt_left {
+    little: [darkbrick_shelteralt_platform_left, darkbrick_shelteralt_platform_left_half];
+    lots:   darkbrick_shelteralt_platform_left_full;
+}
+
 item(FEAT_STATIONS, darkbrick_shelteralt_platform_left_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SHELTERALT);
-        cargo_threshold:        160;
+        cargo_threshold:        param_set_cargo_threshold*130;
     }
     graphics {
         sprite_layouts: [darkbrick_shelteralt_platform_left_sw_ne(0), darkbrick_shelteralt_platform_left_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_shelteralt_left;
         purchase: darkbrick_shelteralt_platform_left;
         darkbrick_shelteralt_platform_left;
     }
@@ -1248,7 +1581,17 @@ item(FEAT_STATIONS, darkbrick_shelteralt_platform_left_station) {
 
 /** PLATFORM RIGHT **/
 
-spriteset (darkbrick_shelteralt_platform_right, "src/stations_darkbrick.png") {
+spriteset (darkbrick_shelteralt_platform_right, "src/graphics/stations_darkbrick_empty.png") {
+    [  710, 290, 64, 64, -31, -32 ]
+    [  780, 290, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_shelteralt_platform_right_half, "src/graphics/stations_darkbrick_half.png") {
+    [  710, 290, 64, 64, -31, -32 ]
+    [  780, 290, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_shelteralt_platform_right_full, "src/graphics/stations_darkbrick_full.png") {
     [  710, 290, 64, 64, -31, -32 ]
     [  780, 290, 64, 64, -31, -32 ]
 }
@@ -1287,17 +1630,23 @@ spritelayout darkbrick_shelteralt_platform_right_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_shelteralt_right {
+    little: [darkbrick_shelteralt_platform_right, darkbrick_shelteralt_platform_right_half];
+    lots:   darkbrick_shelteralt_platform_right_full;
+}
+
 item(FEAT_STATIONS, darkbrick_shelteralt_platform_right_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SHELTERALT);
-        cargo_threshold:        160;
+        cargo_threshold:        param_set_cargo_threshold*130;
     }
     graphics {
         sprite_layouts: [darkbrick_shelteralt_platform_right_sw_ne(0), darkbrick_shelteralt_platform_right_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_shelteralt_right;
         purchase: darkbrick_shelteralt_platform_right;
         darkbrick_shelteralt_platform_right;
     }
@@ -1309,7 +1658,17 @@ item(FEAT_STATIONS, darkbrick_shelteralt_platform_right_station) {
 
 /** PLATFORM LEFT **/
 
-spriteset (darkbrick_shelteralt_wall_platform_left, "src/stations_darkbrick.png") {
+spriteset (darkbrick_shelteralt_wall_platform_left, "src/graphics/stations_darkbrick_empty.png") {
+    [  570, 360, 64, 64, -31, -32 ]
+    [  640, 360, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_shelteralt_wall_platform_left_half, "src/graphics/stations_darkbrick_half.png") {
+    [  570, 360, 64, 64, -31, -32 ]
+    [  640, 360, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_shelteralt_wall_platform_left_full, "src/graphics/stations_darkbrick_full.png") {
     [  570, 360, 64, 64, -31, -32 ]
     [  640, 360, 64, 64, -31, -32 ]
 }
@@ -1348,17 +1707,23 @@ spritelayout darkbrick_shelteralt_wall_platform_left_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_shelteralt_wall_left {
+    little: [darkbrick_shelteralt_wall_platform_left, darkbrick_shelteralt_wall_platform_left_half];
+    lots:   darkbrick_shelteralt_wall_platform_left_full;
+}
+
 item(FEAT_STATIONS, darkbrick_shelteralt_wall_platform_left_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SHELTERALT);
-        cargo_threshold:        160;
+        cargo_threshold:        param_set_cargo_threshold*130;
     }
     graphics {
         sprite_layouts: [darkbrick_shelteralt_wall_platform_left_sw_ne(0), darkbrick_shelteralt_wall_platform_left_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_shelteralt_wall_left;
         purchase: darkbrick_shelteralt_wall_platform_left;
         darkbrick_shelteralt_wall_platform_left;
     }
@@ -1367,7 +1732,17 @@ item(FEAT_STATIONS, darkbrick_shelteralt_wall_platform_left_station) {
 
 /** PLATFORM RIGHT **/
 
-spriteset (darkbrick_shelteralt_wall_platform_right, "src/stations_darkbrick.png") {
+spriteset (darkbrick_shelteralt_wall_platform_right, "src/graphics/stations_darkbrick_empty.png") {
+    [  710, 360, 64, 64, -31, -32 ]
+    [  780, 360, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_shelteralt_wall_platform_right_half, "src/graphics/stations_darkbrick_half.png") {
+    [  710, 360, 64, 64, -31, -32 ]
+    [  780, 360, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_shelteralt_wall_platform_right_full, "src/graphics/stations_darkbrick_full.png") {
     [  710, 360, 64, 64, -31, -32 ]
     [  780, 360, 64, 64, -31, -32 ]
 }
@@ -1406,17 +1781,23 @@ spritelayout darkbrick_shelteralt_wall_platform_right_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_shelteralt_wall_right {
+    little: [darkbrick_shelteralt_wall_platform_right, darkbrick_shelteralt_wall_platform_right_half];
+    lots:   darkbrick_shelteralt_wall_platform_right_full;
+}
+
 item(FEAT_STATIONS, darkbrick_shelteralt_wall_platform_right_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_SHELTERALT);
-        cargo_threshold:        160;
+        cargo_threshold:        param_set_cargo_threshold*130;
     }
     graphics {
         sprite_layouts: [darkbrick_shelteralt_wall_platform_right_sw_ne(0), darkbrick_shelteralt_wall_platform_right_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_shelteralt_wall_right;
         purchase: darkbrick_shelteralt_wall_platform_right;
         darkbrick_shelteralt_wall_platform_right;
     }
@@ -1430,7 +1811,17 @@ item(FEAT_STATIONS, darkbrick_shelteralt_wall_platform_right_station) {
 
 /***** PLATFORM SOUTH END LEFT *****/
 
-spriteset (darkbrick_plain_south_end_left, "src/stations_darkbrick.png") {
+spriteset (darkbrick_plain_south_end_left, "src/graphics/stations_darkbrick_empty.png") {
+    [  290, 10, 64, 64, -31, -32 ]
+    [  360, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_plain_south_end_left_half, "src/graphics/stations_darkbrick_half.png") {
+    [  290, 10, 64, 64, -31, -32 ]
+    [  360, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_plain_south_end_left_full, "src/graphics/stations_darkbrick_full.png") {
     [  290, 10, 64, 64, -31, -32 ]
     [  360, 10, 64, 64, -31, -32 ]
 }
@@ -1469,16 +1860,23 @@ spritelayout darkbrick_plain_south_end_left_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_plain_south_end_left {
+    little: [darkbrick_plain_south_end_left, darkbrick_plain_south_end_left_half];
+    lots:   darkbrick_plain_south_end_left_full;
+}
+
 item(FEAT_STATIONS, darkbrick_plain_south_end_left_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_END);
+        cargo_threshold:        param_set_cargo_threshold*190;
     }
     graphics {
         sprite_layouts: [darkbrick_plain_south_end_left_sw_ne(0), darkbrick_plain_south_end_left_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_plain_south_end_left;
         purchase: darkbrick_plain_south_end_left;
         darkbrick_plain_south_end_left;
     }
@@ -1487,7 +1885,17 @@ item(FEAT_STATIONS, darkbrick_plain_south_end_left_station) {
 
 /***** PLATFORM SOUTH END RIGHT *****/
 
-spriteset (darkbrick_plain_south_end_right, "src/stations_darkbrick.png") {
+spriteset (darkbrick_plain_south_end_right, "src/graphics/stations_darkbrick_empty.png") {
+    [  430, 10, 64, 64, -31, -32 ]
+    [  500, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_plain_south_end_right_half, "src/graphics/stations_darkbrick_half.png") {
+    [  430, 10, 64, 64, -31, -32 ]
+    [  500, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_plain_south_end_right_full, "src/graphics/stations_darkbrick_full.png") {
     [  430, 10, 64, 64, -31, -32 ]
     [  500, 10, 64, 64, -31, -32 ]
 }
@@ -1526,16 +1934,23 @@ spritelayout darkbrick_plain_south_end_right_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_plain_south_end_right {
+    little: [darkbrick_plain_south_end_right, darkbrick_plain_south_end_right_half];
+    lots:   darkbrick_plain_south_end_right_full;
+}
+
 item(FEAT_STATIONS, darkbrick_plain_south_end_right_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_END);
+        cargo_threshold:        param_set_cargo_threshold*190;
     }
     graphics {
         sprite_layouts: [darkbrick_plain_south_end_right_sw_ne(0), darkbrick_plain_south_end_right_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_plain_south_end_right;
         purchase: darkbrick_plain_south_end_right;
         darkbrick_plain_south_end_right;
     }
@@ -1544,7 +1959,17 @@ item(FEAT_STATIONS, darkbrick_plain_south_end_right_station) {
 
 /***** PLATFORM NORTH END LEFT *****/
 
-spriteset (darkbrick_plain_north_end_left, "src/stations_darkbrick.png") {
+spriteset (darkbrick_plain_north_end_left, "src/graphics/stations_darkbrick_empty.png") {
+    [  570, 10, 64, 64, -31, -32 ]
+    [  640, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_plain_north_end_left_half, "src/graphics/stations_darkbrick_half.png") {
+    [  570, 10, 64, 64, -31, -32 ]
+    [  640, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_plain_north_end_left_full, "src/graphics/stations_darkbrick_full.png") {
     [  570, 10, 64, 64, -31, -32 ]
     [  640, 10, 64, 64, -31, -32 ]
 }
@@ -1583,16 +2008,23 @@ spritelayout darkbrick_plain_north_end_left_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_plain_north_end_left {
+    little: [darkbrick_plain_north_end_left, darkbrick_plain_north_end_left_half];
+    lots:   darkbrick_plain_north_end_left_full;
+}
+
 item(FEAT_STATIONS, darkbrick_plain_north_end_left_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_END);
+        cargo_threshold:        param_set_cargo_threshold*190;
     }
     graphics {
         sprite_layouts: [darkbrick_plain_north_end_left_sw_ne(0), darkbrick_plain_north_end_left_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_plain_north_end_left;
         purchase: darkbrick_plain_north_end_left;
         darkbrick_plain_north_end_left;
     }
@@ -1601,7 +2033,17 @@ item(FEAT_STATIONS, darkbrick_plain_north_end_left_station) {
 
 /***** PLATFORM NORTH END RIGHT *****/
 
-spriteset (darkbrick_plain_north_end_right, "src/stations_darkbrick.png") {
+spriteset (darkbrick_plain_north_end_right, "src/graphics/stations_darkbrick_empty.png") {
+    [  710, 10, 64, 64, -31, -32 ]
+    [  780, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_plain_north_end_right_half, "src/graphics/stations_darkbrick_half.png") {
+    [  710, 10, 64, 64, -31, -32 ]
+    [  780, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_plain_north_end_right_full, "src/graphics/stations_darkbrick_full.png") {
     [  710, 10, 64, 64, -31, -32 ]
     [  780, 10, 64, 64, -31, -32 ]
 }
@@ -1640,16 +2082,23 @@ spritelayout darkbrick_plain_north_end_right_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_plain_north_end_right {
+    little: [darkbrick_plain_north_end_right, darkbrick_plain_north_end_right_half];
+    lots:   darkbrick_plain_north_end_right_full;
+}
+
 item(FEAT_STATIONS, darkbrick_plain_north_end_right_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_END);
+        cargo_threshold:        param_set_cargo_threshold*190;
     }
     graphics {
         sprite_layouts: [darkbrick_plain_north_end_right_sw_ne(0), darkbrick_plain_north_end_right_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_plain_north_end_right;
         purchase: darkbrick_plain_north_end_right;
         darkbrick_plain_north_end_right;
     }
@@ -1658,7 +2107,17 @@ item(FEAT_STATIONS, darkbrick_plain_north_end_right_station) {
 
 /***** PLATFORM SOUTH END LEFT *****/
 
-spriteset (darkbrick_fence_south_end_left, "src/stations_darkbrick.png") {
+spriteset (darkbrick_fence_south_end_left, "src/graphics/stations_darkbrick_empty.png") {
+    [  290, 80, 64, 64, -31, -32 ]
+    [  360, 80, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_fence_south_end_left_half, "src/graphics/stations_darkbrick_half.png") {
+    [  290, 80, 64, 64, -31, -32 ]
+    [  360, 80, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_fence_south_end_left_full, "src/graphics/stations_darkbrick_full.png") {
     [  290, 80, 64, 64, -31, -32 ]
     [  360, 80, 64, 64, -31, -32 ]
 }
@@ -1697,16 +2156,23 @@ spritelayout darkbrick_fence_south_end_left_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_fence_south_end_left {
+    little: [darkbrick_fence_south_end_left, darkbrick_fence_south_end_left_half];
+    lots:   darkbrick_fence_south_end_left_full;
+}
+
 item(FEAT_STATIONS, darkbrick_fence_south_end_left_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_END);
+        cargo_threshold:        param_set_cargo_threshold*190;
     }
     graphics {
         sprite_layouts: [darkbrick_fence_south_end_left_sw_ne(0), darkbrick_fence_south_end_left_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_fence_south_end_left;
         purchase: darkbrick_fence_south_end_left;
         darkbrick_fence_south_end_left;
     }
@@ -1715,7 +2181,17 @@ item(FEAT_STATIONS, darkbrick_fence_south_end_left_station) {
 
 /***** PLATFORM SOUTH END RIGHT *****/
 
-spriteset (darkbrick_fence_south_end_right, "src/stations_darkbrick.png") {
+spriteset (darkbrick_fence_south_end_right, "src/graphics/stations_darkbrick_empty.png") {
+    [  430, 80, 64, 64, -31, -32 ]
+    [  500, 80, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_fence_south_end_right_half, "src/graphics/stations_darkbrick_half.png") {
+    [  430, 80, 64, 64, -31, -32 ]
+    [  500, 80, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_fence_south_end_right_full, "src/graphics/stations_darkbrick_full.png") {
     [  430, 80, 64, 64, -31, -32 ]
     [  500, 80, 64, 64, -31, -32 ]
 }
@@ -1754,16 +2230,23 @@ spritelayout darkbrick_fence_south_end_right_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_fence_south_end_right {
+    little: [darkbrick_fence_south_end_right, darkbrick_fence_south_end_right_half];
+    lots:   darkbrick_fence_south_end_right_full;
+}
+
 item(FEAT_STATIONS, darkbrick_fence_south_end_right_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_END);
+        cargo_threshold:        param_set_cargo_threshold*190;
     }
     graphics {
         sprite_layouts: [darkbrick_fence_south_end_right_sw_ne(0), darkbrick_fence_south_end_right_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_fence_south_end_right;
         purchase: darkbrick_fence_south_end_right;
         darkbrick_fence_south_end_right;
     }
@@ -1772,7 +2255,17 @@ item(FEAT_STATIONS, darkbrick_fence_south_end_right_station) {
 
 /***** PLATFORM NORTH END LEFT *****/
 
-spriteset (darkbrick_fence_north_end_left, "src/stations_darkbrick.png") {
+spriteset (darkbrick_fence_north_end_left, "src/graphics/stations_darkbrick_empty.png") {
+    [  570, 80, 64, 64, -31, -32 ]
+    [  640, 80, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_fence_north_end_left_half, "src/graphics/stations_darkbrick_half.png") {
+    [  570, 80, 64, 64, -31, -32 ]
+    [  640, 80, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_fence_north_end_left_full, "src/graphics/stations_darkbrick_full.png") {
     [  570, 80, 64, 64, -31, -32 ]
     [  640, 80, 64, 64, -31, -32 ]
 }
@@ -1811,16 +2304,23 @@ spritelayout darkbrick_fence_north_end_left_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_fence_north_end_left {
+    little: [darkbrick_fence_north_end_left, darkbrick_fence_north_end_left_half];
+    lots:   darkbrick_fence_north_end_left_full;
+}
+
 item(FEAT_STATIONS, darkbrick_fence_north_end_left_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_END);
+        cargo_threshold:        param_set_cargo_threshold*190;
     }
     graphics {
         sprite_layouts: [darkbrick_fence_north_end_left_sw_ne(0), darkbrick_fence_north_end_left_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_fence_north_end_left;
         purchase: darkbrick_fence_north_end_left;
         darkbrick_fence_north_end_left;
     }
@@ -1829,7 +2329,17 @@ item(FEAT_STATIONS, darkbrick_fence_north_end_left_station) {
 
 /***** PLATFORM NORTH END RIGHT *****/
 
-spriteset (darkbrick_fence_north_end_right, "src/stations_darkbrick.png") {
+spriteset (darkbrick_fence_north_end_right, "src/graphics/stations_darkbrick_empty.png") {
+    [  710, 80, 64, 64, -31, -32 ]
+    [  780, 80, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_fence_north_end_right_half, "src/graphics/stations_darkbrick_half.png") {
+    [  710, 80, 64, 64, -31, -32 ]
+    [  780, 80, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_fence_north_end_right_full, "src/graphics/stations_darkbrick_full.png") {
     [  710, 80, 64, 64, -31, -32 ]
     [  780, 80, 64, 64, -31, -32 ]
 }
@@ -1868,16 +2378,23 @@ spritelayout darkbrick_fence_north_end_right_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_fence_north_end_right {
+    little: [darkbrick_fence_north_end_right, darkbrick_fence_north_end_right_half];
+    lots:   darkbrick_fence_north_end_right_full;
+}
+
 item(FEAT_STATIONS, darkbrick_fence_north_end_right_station) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_END);
+        cargo_threshold:        param_set_cargo_threshold*190;
     }
     graphics {
         sprite_layouts: [darkbrick_fence_north_end_right_sw_ne(0), darkbrick_fence_north_end_right_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_fence_north_end_right;
         purchase: darkbrick_fence_north_end_right;
         darkbrick_fence_north_end_right;
     }
@@ -1887,7 +2404,17 @@ item(FEAT_STATIONS, darkbrick_fence_north_end_right_station) {
 /***** PLATFORM NORTH BUFFER BUILDING **********/
 /***********************************************/
 
-spriteset (darkbrick_buffer_north_building_left, "src/stations_darkbrick.png") {
+spriteset (darkbrick_buffer_north_building_left, "src/graphics/stations_darkbrick_empty.png") {
+    [  290, 430, 64, 64, -31, -32 ]
+    [  360, 430, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_buffer_north_building_left_half, "src/graphics/stations_darkbrick_half.png") {
+    [  290, 430, 64, 64, -31, -32 ]
+    [  360, 430, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_buffer_north_building_left_full, "src/graphics/stations_darkbrick_full.png") {
     [  290, 430, 64, 64, -31, -32 ]
     [  360, 430, 64, 64, -31, -32 ]
 }
@@ -1926,6 +2453,11 @@ spritelayout darkbrick_buffer_north_building_left_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_buffer_north_building_left {
+    little: [darkbrick_buffer_north_building_left, darkbrick_buffer_north_building_left_half];
+    lots:   darkbrick_buffer_north_building_left_full;
+}
+
 item(FEAT_STATIONS, darkbrick_buffer_north_building_left_station) {
     property {
         class:                  "_DRK";
@@ -1935,18 +2467,30 @@ item(FEAT_STATIONS, darkbrick_buffer_north_building_left_station) {
             bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE),
             bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE)
         ];
+        cargo_threshold:        param_set_cargo_threshold*190;
     }
     graphics {
         sprite_layouts: [darkbrick_buffer_north_building_left_sw_ne(0), darkbrick_buffer_north_building_left_se_nw(0)];
         select_tile_type: 1;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_buffer_north_building_left;
         purchase: darkbrick_buffer_north_building_left;
         darkbrick_buffer_north_building_left;
     }
 }
 
 
-spriteset (darkbrick_buffer_north_building_right, "src/stations_darkbrick.png") {
+spriteset (darkbrick_buffer_north_building_right, "src/graphics/stations_darkbrick_empty.png") {
+    [  430, 430, 64, 64, -31, -32 ]
+    [  500, 430, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_buffer_north_building_right_half, "src/graphics/stations_darkbrick_half.png") {
+    [  430, 430, 64, 64, -31, -32 ]
+    [  500, 430, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_buffer_north_building_right_full, "src/graphics/stations_darkbrick_full.png") {
     [  430, 430, 64, 64, -31, -32 ]
     [  500, 430, 64, 64, -31, -32 ]
 }
@@ -1985,6 +2529,11 @@ spritelayout darkbrick_buffer_north_building_right_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_buffer_north_building_right {
+    little: [darkbrick_buffer_north_building_right, darkbrick_buffer_north_building_right_half];
+    lots:   darkbrick_buffer_north_building_right_full;
+}
+
 item(FEAT_STATIONS, darkbrick_buffer_north_building_right_station) {
     property {
         class:                  "_DRK";
@@ -1994,11 +2543,13 @@ item(FEAT_STATIONS, darkbrick_buffer_north_building_right_station) {
             bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE),
             bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE)
         ];
+        cargo_threshold:        param_set_cargo_threshold*190;
     }
     graphics {
         sprite_layouts: [darkbrick_buffer_north_building_right_sw_ne(0), darkbrick_buffer_north_building_right_se_nw(0)];
         select_tile_type: 1;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_buffer_north_building_right;
         purchase: darkbrick_buffer_north_building_right;
         darkbrick_buffer_north_building_right;
     }
@@ -2009,7 +2560,17 @@ item(FEAT_STATIONS, darkbrick_buffer_north_building_right_station) {
 /***** PLATFORM SOUTH BUFFER BUILDING **********/
 /***********************************************/
 
-spriteset (darkbrick_buffer_south_building_left, "src/stations_darkbrick.png") {
+spriteset (darkbrick_buffer_south_building_left, "src/graphics/stations_darkbrick_empty.png") {
+    [  570, 430, 64, 64, -31, -32 ]
+    [  640, 430, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_buffer_south_building_left_half, "src/graphics/stations_darkbrick_half.png") {
+    [  570, 430, 64, 64, -31, -32 ]
+    [  640, 430, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_buffer_south_building_left_full, "src/graphics/stations_darkbrick_full.png") {
     [  570, 430, 64, 64, -31, -32 ]
     [  640, 430, 64, 64, -31, -32 ]
 }
@@ -2048,6 +2609,11 @@ spritelayout darkbrick_buffer_south_building_left_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_buffer_south_building_left {
+    little: [darkbrick_buffer_south_building_left, darkbrick_buffer_south_building_left_half];
+    lots:   darkbrick_buffer_south_building_left_full;
+}
+
 item(FEAT_STATIONS, darkbrick_buffer_south_building_left_station) {
     property {
         class:                  "_DRK";
@@ -2057,17 +2623,29 @@ item(FEAT_STATIONS, darkbrick_buffer_south_building_left_station) {
             bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE),
             bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE)
         ];
+        cargo_threshold:        param_set_cargo_threshold*190;
     }
     graphics {
         sprite_layouts: [darkbrick_buffer_south_building_left_sw_ne(0), darkbrick_buffer_south_building_left_se_nw(0)];
         select_tile_type: 1;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_buffer_south_building_left;
         purchase: darkbrick_buffer_south_building_left;
         darkbrick_buffer_south_building_left;
     }
 }
 
-spriteset (darkbrick_buffer_south_building_right, "src/stations_darkbrick.png") {
+spriteset (darkbrick_buffer_south_building_right, "src/graphics/stations_darkbrick_empty.png") {
+    [  710, 430, 64, 64, -31, -32 ]
+    [  780, 430, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_buffer_south_building_right_half, "src/graphics/stations_darkbrick_half.png") {
+    [  710, 430, 64, 64, -31, -32 ]
+    [  780, 430, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_buffer_south_building_right_full, "src/graphics/stations_darkbrick_full.png") {
     [  710, 430, 64, 64, -31, -32 ]
     [  780, 430, 64, 64, -31, -32 ]
 }
@@ -2106,6 +2684,11 @@ spritelayout darkbrick_buffer_south_building_right_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_buffer_south_building_right {
+    little: [darkbrick_buffer_south_building_right, darkbrick_buffer_south_building_right_half];
+    lots:   darkbrick_buffer_south_building_right_full;
+}
+
 item(FEAT_STATIONS, darkbrick_buffer_south_building_right_station) {
     property {
         class:                  "_DRK";
@@ -2115,11 +2698,13 @@ item(FEAT_STATIONS, darkbrick_buffer_south_building_right_station) {
             bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE),
             bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE)
         ];
+        cargo_threshold:        param_set_cargo_threshold*190;
     }
     graphics {
         sprite_layouts: [darkbrick_buffer_south_building_right_sw_ne(0), darkbrick_buffer_south_building_right_se_nw(0)];
         select_tile_type: 1;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_buffer_south_building_right;
         purchase: darkbrick_buffer_south_building_right;
         darkbrick_buffer_south_building_right;
     }
@@ -2131,10 +2716,19 @@ item(FEAT_STATIONS, darkbrick_buffer_south_building_right_station) {
 
 /***** FOOTBRIDGE LEFT *****/
 
-spriteset (darkbrick_overbridge_left, "src/stations_darkbrick.png") {
-    [  10, 10, 64, 64, -31, -32 ]
-    [  80, 10, 64, 64, -31, -32 ]
+spriteset (darkbrick_overbridge_left, "src/graphics/stations_darkbrick_empty.png") {
+    [  10, 500, 64, 64, -31, -32 ]
+    [  80, 500, 64, 64, -31, -32 ]
+    [  150, 500, 64, 64, -31, -32 ]
+}
 
+spriteset (darkbrick_overbridge_left_half, "src/graphics/stations_darkbrick_half.png") {
+    [  10, 500, 64, 64, -31, -32 ]
+    [  80, 500, 64, 64, -31, -32 ]
+    [  150, 500, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_overbridge_left_full, "src/graphics/stations_darkbrick_full.png") {
     [  10, 500, 64, 64, -31, -32 ]
     [  80, 500, 64, 64, -31, -32 ]
     [  150, 500, 64, 64, -31, -32 ]
@@ -2156,18 +2750,7 @@ spritelayout darkbrick_overbridge_left_sw_ne(a) {
         palette:        PALETTE_USE_DEFAULT;
     }
     building {
-        sprite:         DEFAULT(2);
-        xoffset:        0;
-        yoffset:        0;
-        zoffset:        0;
-        xextent:        16;
-        yextent:        5;
-        zextent:        32;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-    building {
-        sprite:         DEFAULT(3);
+        sprite:         DEFAULT(1);
         xoffset:        0;
         yoffset:        0;
         zoffset:        0;
@@ -2184,18 +2767,7 @@ spritelayout darkbrick_overbridge_left_se_nw(a) {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
     building {
-        sprite:         DEFAULT(1);
-        xoffset:        11;
-        yoffset:        0;
-        zoffset:        0;
-        xextent:        5;
-        yextent:        16;
-        zextent:        32;
-        recolour_mode:  RECOLOUR_REMAP;
-        palette:        PALETTE_USE_DEFAULT;
-    }
-    building {
-        sprite:         DEFAULT(4);
+        sprite:         DEFAULT(2);
         xoffset:        0;
         yoffset:        0;
         zoffset:        0;
@@ -2207,16 +2779,23 @@ spritelayout darkbrick_overbridge_left_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_overbridge_left {
+    little: [darkbrick_overbridge_left, darkbrick_overbridge_left_half];
+    lots:   darkbrick_overbridge_left_full;
+}
+
 item(FEAT_STATIONS, darkbrick_left_overbridge) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
+        cargo_threshold:        param_set_cargo_threshold*160;
     }
     graphics {
         sprite_layouts: [darkbrick_overbridge_left_sw_ne(0), darkbrick_overbridge_left_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_overbridge_left;
         purchase: darkbrick_overbridge_left;
         darkbrick_overbridge_left;
     }
@@ -2225,7 +2804,19 @@ item(FEAT_STATIONS, darkbrick_left_overbridge) {
 
 /***** FOOTBRIDGE RIGHT *****/
 
-spriteset (darkbrick_overbridge_right, "src/stations_darkbrick.png") {
+spriteset (darkbrick_overbridge_right, "src/graphics/stations_darkbrick_empty.png") {
+    [  220, 500, 64, 64, -31, -32 ]
+    [  290, 500, 64, 64, -31, -32 ]
+    [  360, 500, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_overbridge_right_half, "src/graphics/stations_darkbrick_half.png") {
+    [  220, 500, 64, 64, -31, -32 ]
+    [  290, 500, 64, 64, -31, -32 ]
+    [  360, 500, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_overbridge_right_full, "src/graphics/stations_darkbrick_full.png") {
     [  220, 500, 64, 64, -31, -32 ]
     [  290, 500, 64, 64, -31, -32 ]
     [  360, 500, 64, 64, -31, -32 ]
@@ -2276,16 +2867,23 @@ spritelayout darkbrick_overbridge_right_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_overbridge_right {
+    little: [darkbrick_overbridge_right, darkbrick_overbridge_right_half];
+    lots:   darkbrick_overbridge_right_full;
+}
+
 item(FEAT_STATIONS, darkbrick_right_overbridge) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
+        cargo_threshold:        param_set_cargo_threshold*160;
     }
     graphics {
         sprite_layouts: [darkbrick_overbridge_right_sw_ne(0), darkbrick_overbridge_right_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_overbridge_right;
         purchase: darkbrick_overbridge_right;
         darkbrick_overbridge_right;
     }
@@ -2298,7 +2896,19 @@ item(FEAT_STATIONS, darkbrick_right_overbridge) {
 
 /***** FOOTBRIDGE LEFT *****/
 
-spriteset (darkbrick_overbridge_fences_left, "src/stations_darkbrick.png") {
+spriteset (darkbrick_overbridge_fences_left, "src/graphics/stations_darkbrick_empty.png") {
+    [  10, 570, 64, 64, -31, -32 ]
+    [  80, 570, 64, 64, -31, -32 ]
+    [  150, 570, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_overbridge_fences_left_half, "src/graphics/stations_darkbrick_half.png") {
+    [  10, 570, 64, 64, -31, -32 ]
+    [  80, 570, 64, 64, -31, -32 ]
+    [  150, 570, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_overbridge_fences_left_full, "src/graphics/stations_darkbrick_full.png") {
     [  10, 570, 64, 64, -31, -32 ]
     [  80, 570, 64, 64, -31, -32 ]
     [  150, 570, 64, 64, -31, -32 ]
@@ -2349,16 +2959,23 @@ spritelayout darkbrick_overbridge_fences_left_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_overbridge_fences_left {
+    little: [darkbrick_overbridge_fences_left, darkbrick_overbridge_fences_left_half];
+    lots:   darkbrick_overbridge_fences_left_full;
+}
+
 item(FEAT_STATIONS, darkbrick_left_overbridge_fences) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
+        cargo_threshold:        param_set_cargo_threshold*160;
     }
     graphics {
         sprite_layouts: [darkbrick_overbridge_fences_left_sw_ne(0), darkbrick_overbridge_fences_left_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_overbridge_fences_left;
         purchase: darkbrick_overbridge_fences_left;
         darkbrick_overbridge_fences_left;
     }
@@ -2367,7 +2984,19 @@ item(FEAT_STATIONS, darkbrick_left_overbridge_fences) {
 
 /***** FOOTBRIDGE RIGHT *****/
 
-spriteset (darkbrick_overbridge_fences_right, "src/stations_darkbrick.png") {
+spriteset (darkbrick_overbridge_fences_right, "src/graphics/stations_darkbrick_empty.png") {
+    [  220, 570, 64, 64, -31, -32 ]
+    [  290, 570, 64, 64, -31, -32 ]
+    [  360, 570, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_overbridge_fences_right_half, "src/graphics/stations_darkbrick_half.png") {
+    [  220, 570, 64, 64, -31, -32 ]
+    [  290, 570, 64, 64, -31, -32 ]
+    [  360, 570, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_overbridge_fences_right_full, "src/graphics/stations_darkbrick_full.png") {
     [  220, 570, 64, 64, -31, -32 ]
     [  290, 570, 64, 64, -31, -32 ]
     [  360, 570, 64, 64, -31, -32 ]
@@ -2418,27 +3047,47 @@ spritelayout darkbrick_overbridge_fences_right_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_overbridge_fences_right {
+    little: [darkbrick_overbridge_fences_right, darkbrick_overbridge_fences_right_half];
+    lots:   darkbrick_overbridge_fences_right_full;
+}
+
 item(FEAT_STATIONS, darkbrick_right_overbridge_fences) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
+        cargo_threshold:        param_set_cargo_threshold*160;
     }
     graphics {
         sprite_layouts: [darkbrick_overbridge_fences_right_sw_ne(0), darkbrick_overbridge_fences_right_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_overbridge_fences_right;
         purchase: darkbrick_overbridge_fences_right;
         darkbrick_overbridge_fences_right;
     }
 }
+
 /***********************************/
-/********* BRIDGE OVERPASS *********/
+/********* OVERPASS ****************/
 /***********************************/
 
 /***** OVERPASS LEFT *****/
 
-spriteset (darkbrick_overpass_left, "src/stations_darkbrick.png") {
+spriteset (darkbrick_overpass_left, "src/graphics/stations_darkbrick_empty.png") {
+    [  10, 640, 64, 64, -31, -32 ]
+    [  80, 640, 64, 64, -31, -32 ]
+    [  150, 640, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_overpass_left_half, "src/graphics/stations_darkbrick_half.png") {
+    [  10, 640, 64, 64, -31, -32 ]
+    [  80, 640, 64, 64, -31, -32 ]
+    [  150, 640, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_overpass_left_full, "src/graphics/stations_darkbrick_full.png") {
     [  10, 640, 64, 64, -31, -32 ]
     [  80, 640, 64, 64, -31, -32 ]
     [  150, 640, 64, 64, -31, -32 ]
@@ -2489,16 +3138,23 @@ spritelayout darkbrick_overpass_left_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_overpass_left {
+    little: [darkbrick_overpass_left, darkbrick_overpass_left_half];
+    lots:   darkbrick_overpass_left_full;
+}
+
 item(FEAT_STATIONS, darkbrick_left_overpass) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
+        cargo_threshold:        param_set_cargo_threshold*120;
     }
     graphics {
         sprite_layouts: [darkbrick_overpass_left_sw_ne(0), darkbrick_overpass_left_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_overpass_left;
         purchase: darkbrick_overpass_left;
         darkbrick_overpass_left;
     }
@@ -2507,7 +3163,19 @@ item(FEAT_STATIONS, darkbrick_left_overpass) {
 
 /***** OVERPASS RIGHT *****/
 
-spriteset (darkbrick_overpass_right, "src/stations_darkbrick.png") {
+spriteset (darkbrick_overpass_right, "src/graphics/stations_darkbrick_empty.png") {
+    [  220, 640, 64, 64, -31, -32 ]
+    [  290, 640, 64, 64, -31, -32 ]
+    [  360, 640, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_overpass_right_half, "src/graphics/stations_darkbrick_half.png") {
+    [  220, 640, 64, 64, -31, -32 ]
+    [  290, 640, 64, 64, -31, -32 ]
+    [  360, 640, 64, 64, -31, -32 ]
+}
+
+spriteset (darkbrick_overpass_right_full, "src/graphics/stations_darkbrick_full.png") {
     [  220, 640, 64, 64, -31, -32 ]
     [  290, 640, 64, 64, -31, -32 ]
     [  360, 640, 64, 64, -31, -32 ]
@@ -2558,16 +3226,23 @@ spritelayout darkbrick_overpass_right_se_nw(a) {
     }
 }
 
+spritegroup group_darkbrick_overpass_right {
+    little: [darkbrick_overpass_right, darkbrick_overpass_right_half];
+    lots:   darkbrick_overpass_right_full;
+}
+
 item(FEAT_STATIONS, darkbrick_right_overpass) {
     property {
         class:                  "_DRK";
         classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
+        cargo_threshold:        param_set_cargo_threshold*120;
     }
     graphics {
         sprite_layouts: [darkbrick_overpass_right_sw_ne(0), darkbrick_overpass_right_se_nw(0)];
         select_tile_type: 2;
         availability: switch_intro_year_darkbrick;
+        PASS: group_darkbrick_overpass_right;
         purchase: darkbrick_overpass_right;
         darkbrick_overpass_right;
     }
@@ -2578,7 +3253,7 @@ item(FEAT_STATIONS, darkbrick_right_overpass) {
 /****************************************/
 
 
-spriteset (darkbrick_terminus_left, "src/stations_darkbrick.png") {
+spriteset (darkbrick_terminus_left, "src/graphics/stations_darkbrick_half.png") {
     [  10, 850, 64, 64, -31, -32 ]
     [  80, 850, 64, 64, -31, -32 ]
 
@@ -2586,7 +3261,7 @@ spriteset (darkbrick_terminus_left, "src/stations_darkbrick.png") {
     [  290, 850, 64, 64, -31, -32 ]
 }
 
-spriteset (darkbrick_terminus_right, "src/stations_darkbrick.png") {
+spriteset (darkbrick_terminus_right, "src/graphics/stations_darkbrick_half.png") {
     [  10, 920, 64, 64, -31, -32 ]
     [  80, 920, 64, 64, -31, -32 ]
 
@@ -2679,7 +3354,7 @@ item(FEAT_STATIONS, darkbrick_terminus) {
 /******************************/
 
 
-spriteset (darkbrick_building_1a, "src/stations_buildings_1.png") {
+spriteset (darkbrick_building_1a, "src/graphics/stations_buildings_1_empty.png") {
     [ 10, 570, 64, 64, -32, -32 ]
     [ 80, 570, 64, 64, -32, -32 ]
 }
@@ -2739,7 +3414,7 @@ item(FEAT_STATIONS, darkbrick_station_building_1a) {
     }
 }
 
-spriteset (darkbrick_building_1b, "src/stations_buildings_1.png") {
+spriteset (darkbrick_building_1b, "src/graphics/stations_buildings_1_empty.png") {
     [ 150, 570, 64, 64, -32, -32 ]
     [ 220, 570, 64, 64, -32, -32 ]
 }
@@ -2799,7 +3474,7 @@ item(FEAT_STATIONS, darkbrick_station_building_1b) {
     }
 }
 
-spriteset (darkbrick_building_2a, "src/stations_buildings_1.png") {
+spriteset (darkbrick_building_2a, "src/graphics/stations_buildings_1_empty.png") {
     [ 290, 570, 64, 64, -32, -32 ]
     [ 360, 570, 64, 64, -32, -32 ]
 }
@@ -2859,7 +3534,7 @@ item(FEAT_STATIONS, darkbrick_station_building_2a) {
     }
 }
 
-spriteset (darkbrick_building_2b, "src/stations_buildings_1.png") {
+spriteset (darkbrick_building_2b, "src/graphics/stations_buildings_1_empty.png") {
     [ 430, 570, 64, 64, -32, -32 ]
     [ 500, 570, 64, 64, -32, -32 ]
 }
@@ -2919,7 +3594,7 @@ item(FEAT_STATIONS, darkbrick_station_building_2b) {
     }
 }
 
-spriteset (darkbrick_building_3a, "src/stations_buildings_1.png") {
+spriteset (darkbrick_building_3a, "src/graphics/stations_buildings_1_empty.png") {
     [ 570, 570, 64, 64, -32, -32 ]
     [ 640, 570, 64, 64, -32, -32 ]
 }
@@ -2979,7 +3654,7 @@ item(FEAT_STATIONS, darkbrick_station_building_3a) {
     }
 }
 
-spriteset (darkbrick_building_3b, "src/stations_buildings_1.png") {
+spriteset (darkbrick_building_3b, "src/graphics/stations_buildings_1_empty.png") {
     [ 710, 570, 64, 64, -32, -32 ]
     [ 780, 570, 64, 64, -32, -32 ]
 }
@@ -3040,7 +3715,7 @@ item(FEAT_STATIONS, darkbrick_station_building_3b) {
 }
 
 
-spriteset (darkbrick_building_4a, "src/stations_buildings_1.png") {
+spriteset (darkbrick_building_4a, "src/graphics/stations_buildings_1_empty.png") {
     [ 10, 640, 64, 64, -32, -32 ]
     [ 80, 640, 64, 64, -32, -32 ]
 }
@@ -3100,7 +3775,7 @@ item(FEAT_STATIONS, darkbrick_station_building_4a) {
     }
 }
 
-spriteset (darkbrick_building_4b, "src/stations_buildings_1.png") {
+spriteset (darkbrick_building_4b, "src/graphics/stations_buildings_1_empty.png") {
     [ 150, 640, 64, 64, -32, -32 ]
     [ 220, 640, 64, 64, -32, -32 ]
 }
@@ -3166,7 +3841,7 @@ item(FEAT_STATIONS, darkbrick_station_building_4b) {
 
 /***** SIGNALBOX WAYPOINT 1A *****/
 
-spriteset (darkbrick_signalbox_waypoint_1a, "src/stations_waypoints.png") {
+spriteset (darkbrick_signalbox_waypoint_1a, "src/graphics/stations_waypoints.png") {
     [  10, 570, 64, 64, -31, -32 ]
     [  220, 570, 64, 64, -31, -32 ]
 
@@ -3224,7 +3899,7 @@ item(FEAT_STATIONS, darkbrick_signalbox_1a_waypoint) {
 
 /***** SIGNALBOX WAYPOINT 1B *****/
 
-spriteset (darkbrick_signalbox_waypoint_1b, "src/stations_waypoints.png") {
+spriteset (darkbrick_signalbox_waypoint_1b, "src/graphics/stations_waypoints.png") {
     [  150, 570, 64, 64, -31, -32 ]
     [  80, 570, 64, 64, -31, -32 ]
 
@@ -3281,7 +3956,7 @@ item(FEAT_STATIONS, darkbrick_signalbox_1b_waypoint) {
 
 /***** SIGNALBOX WAYPOINT 2A *****/
 
-spriteset (darkbrick_signalbox_waypoint_2a, "src/stations_waypoints.png") {
+spriteset (darkbrick_signalbox_waypoint_2a, "src/graphics/stations_waypoints.png") {
     [  290, 570, 64, 64, -31, -32 ]
     [  500, 570, 64, 64, -31, -32 ]
 
@@ -3339,7 +4014,7 @@ item(FEAT_STATIONS, darkbrick_signalbox_2a_waypoint) {
 
 /***** SIGNALBOX WAYPOINT 2B *****/
 
-spriteset (darkbrick_signalbox_waypoint_2b, "src/stations_waypoints.png") {
+spriteset (darkbrick_signalbox_waypoint_2b, "src/graphics/stations_waypoints.png") {
     [  430, 570, 64, 64, -31, -32 ]
     [  360, 570, 64, 64, -31, -32 ]
 
