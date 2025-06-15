@@ -3408,6 +3408,16 @@ spriteset (city_building_1a, "src/graphics/stations_buildings_2_empty.png") {
     [ 80, 150, 64, 64, -32, -32 ]
 }
 
+spriteset (city_building_1a_half, "src/graphics/stations_buildings_2_half.png") {
+    [ 10, 150, 64, 64, -32, -32 ]
+    [ 80, 150, 64, 64, -32, -32 ]
+}
+
+spriteset (city_building_1a_full, "src/graphics/stations_buildings_2_full.png") {
+    [ 10, 150, 64, 64, -32, -32 ]
+    [ 80, 150, 64, 64, -32, -32 ]
+}
+
 spritelayout city_building_1a_nw(a) {
     ground {
         sprite: GROUNDSPRITE_CONCRETE;
@@ -3442,6 +3452,11 @@ spritelayout city_building_1a_ne(a) {
     }
 }
 
+spritegroup group_city_building_1a {
+    little: [city_building_1a, city_building_1a_half];
+    lots:   city_building_1a_full;
+}
+
 item(FEAT_STATIONS, city_station_building_1a) {
     property {
         class:                  "_BLD";
@@ -3453,17 +3468,29 @@ item(FEAT_STATIONS, city_station_building_1a) {
         ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
+        cargo_threshold:        param_set_cargo_threshold*120;
     }
     graphics {
         sprite_layouts:         [city_building_1a_nw(0), city_building_1a_ne(0)];
         select_tile_type:       0;
         availability:           switch_intro_year_city;
+        PASS:                   group_city_building_1a;
         purchase:               city_building_1a;
         city_building_1a;
     }
 }
 
 spriteset (city_building_1b, "src/graphics/stations_buildings_2_empty.png") {
+    [ 150, 150, 64, 64, -32, -32 ]
+    [ 220, 150, 64, 64, -32, -32 ]
+}
+
+spriteset (city_building_1b_half, "src/graphics/stations_buildings_2_half.png") {
+    [ 150, 150, 64, 64, -32, -32 ]
+    [ 220, 150, 64, 64, -32, -32 ]
+}
+
+spriteset (city_building_1b_full, "src/graphics/stations_buildings_2_full.png") {
     [ 150, 150, 64, 64, -32, -32 ]
     [ 220, 150, 64, 64, -32, -32 ]
 }
@@ -3502,6 +3529,11 @@ spritelayout city_building_1b_sw(a) {
     }
 }
 
+spritegroup group_city_building_1b {
+    little: [city_building_1b, city_building_1b_half];
+    lots:   city_building_1b_full;
+}
+
 item(FEAT_STATIONS, city_station_building_1b) {
     property {
         class:                  "_BLD";
@@ -3513,17 +3545,29 @@ item(FEAT_STATIONS, city_station_building_1b) {
         ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
+        cargo_threshold:        param_set_cargo_threshold*120;
     }
     graphics {
         sprite_layouts:         [city_building_1b_se(0), city_building_1b_sw(0)];
         select_tile_type:       0;
         availability:           switch_intro_year_city;
+        PASS:                   group_city_building_1b;
         purchase:               city_building_1b;
         city_building_1b;
     }
 }
 
 spriteset (city_building_2a, "src/graphics/stations_buildings_2_empty.png") {
+    [ 290, 150, 64, 64, -32, -32 ]
+    [ 360, 150, 64, 64, -32, -32 ]
+}
+
+spriteset (city_building_2a_half, "src/graphics/stations_buildings_2_half.png") {
+    [ 290, 150, 64, 64, -32, -32 ]
+    [ 360, 150, 64, 64, -32, -32 ]
+}
+
+spriteset (city_building_2a_full, "src/graphics/stations_buildings_2_full.png") {
     [ 290, 150, 64, 64, -32, -32 ]
     [ 360, 150, 64, 64, -32, -32 ]
 }
@@ -3562,6 +3606,11 @@ spritelayout city_building_2a_ne(a) {
     }
 }
 
+spritegroup group_city_building_2a {
+    little: [city_building_2a, city_building_2a_half];
+    lots:   city_building_2a_full;
+}
+
 item(FEAT_STATIONS, city_station_building_2a) {
     property {
         class:                  "_BLD";
@@ -3573,17 +3622,29 @@ item(FEAT_STATIONS, city_station_building_2a) {
         ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
+        cargo_threshold:        param_set_cargo_threshold*120;
     }
     graphics {
         sprite_layouts:         [city_building_2a_nw(0), city_building_2a_ne(0)];
         select_tile_type:       0;
         availability:           switch_intro_year_city;
+        PASS:                   group_city_building_2a;
         purchase:               city_building_2a;
         city_building_2a;
     }
 }
 
 spriteset (city_building_2b, "src/graphics/stations_buildings_2_empty.png") {
+    [ 430, 150, 64, 64, -32, -32 ]
+    [ 500, 150, 64, 64, -32, -32 ]
+}
+
+spriteset (city_building_2b_half, "src/graphics/stations_buildings_2_half.png") {
+    [ 430, 150, 64, 64, -32, -32 ]
+    [ 500, 150, 64, 64, -32, -32 ]
+}
+
+spriteset (city_building_2b_full, "src/graphics/stations_buildings_2_full.png") {
     [ 430, 150, 64, 64, -32, -32 ]
     [ 500, 150, 64, 64, -32, -32 ]
 }
@@ -3622,6 +3683,11 @@ spritelayout city_building_2b_sw(a) {
     }
 }
 
+spritegroup group_city_building_2b {
+    little: [city_building_2b, city_building_2b_half];
+    lots:   city_building_2b_full;
+}
+
 item(FEAT_STATIONS, city_station_building_2b) {
     property {
         class:                  "_BLD";
@@ -3633,11 +3699,13 @@ item(FEAT_STATIONS, city_station_building_2b) {
         ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
+        cargo_threshold:        param_set_cargo_threshold*120;
     }
     graphics {
         sprite_layouts:         [city_building_2b_se(0), city_building_2b_sw(0)];
         select_tile_type:       0;
         availability:           switch_intro_year_city;
+        PASS:                   group_city_building_2b;
         purchase:               city_building_2b;
         city_building_2b;
     }

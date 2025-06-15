@@ -3360,6 +3360,16 @@ spriteset (modern_building_1a, "src/graphics/stations_buildings_1_empty.png") {
     [ 80, 710, 64, 64, -32, -32 ]
 }
 
+spriteset (modern_building_1a_half, "src/graphics/stations_buildings_1_half.png") {
+    [ 10, 710, 64, 64, -32, -32 ]
+    [ 80, 710, 64, 64, -32, -32 ]
+}
+
+spriteset (modern_building_1a_full, "src/graphics/stations_buildings_1_full.png") {
+    [ 10, 710, 64, 64, -32, -32 ]
+    [ 80, 710, 64, 64, -32, -32 ]
+}
+
 spritelayout modern_building_1a_nw(a) {
     ground {
         sprite: GROUNDSPRITE_CONCRETE;
@@ -3394,6 +3404,11 @@ spritelayout modern_building_1a_ne(a) {
     }
 }
 
+spritegroup group_modern_building_1a {
+    little: [modern_building_1a, modern_building_1a_half];
+    lots:   modern_building_1a_full;
+}
+
 item(FEAT_STATIONS, modern_station_building_1a) {
     property {
         class:                  "_BLD";
@@ -3405,17 +3420,29 @@ item(FEAT_STATIONS, modern_station_building_1a) {
         ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
+        cargo_threshold:        param_set_cargo_threshold*120;
     }
     graphics {
         sprite_layouts:         [modern_building_1a_nw(0), modern_building_1a_ne(0)];
         select_tile_type:       0;
         availability:           switch_intro_year_modern;
+        PASS:                   group_modern_building_1a;
         purchase:               modern_building_1a;
         modern_building_1a;
     }
 }
 
 spriteset (modern_building_1b, "src/graphics/stations_buildings_1_empty.png") {
+    [ 150, 710, 64, 64, -32, -32 ]
+    [ 220, 710, 64, 64, -32, -32 ]
+}
+
+spriteset (modern_building_1b_half, "src/graphics/stations_buildings_1_half.png") {
+    [ 150, 710, 64, 64, -32, -32 ]
+    [ 220, 710, 64, 64, -32, -32 ]
+}
+
+spriteset (modern_building_1b_full, "src/graphics/stations_buildings_1_full.png") {
     [ 150, 710, 64, 64, -32, -32 ]
     [ 220, 710, 64, 64, -32, -32 ]
 }
@@ -3454,6 +3481,11 @@ spritelayout modern_building_1b_sw(a) {
     }
 }
 
+spritegroup group_modern_building_1b {
+    little: [modern_building_1b, modern_building_1b_half];
+    lots:   modern_building_1b_full;
+}
+
 item(FEAT_STATIONS, modern_station_building_1b) {
     property {
         class:                  "_BLD";
@@ -3465,17 +3497,29 @@ item(FEAT_STATIONS, modern_station_building_1b) {
         ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
+        cargo_threshold:        param_set_cargo_threshold*120;
     }
     graphics {
         sprite_layouts:         [modern_building_1b_se(0), modern_building_1b_sw(0)];
         select_tile_type:       0;
         availability:           switch_intro_year_modern;
+        PASS:                   group_modern_building_1b;
         purchase:               modern_building_1b;
         modern_building_1b;
     }
 }
 
 spriteset (modern_building_2a, "src/graphics/stations_buildings_1_empty.png") {
+    [ 290, 710, 64, 64, -32, -32 ]
+    [ 360, 710, 64, 64, -32, -32 ]
+}
+
+spriteset (modern_building_2a_half, "src/graphics/stations_buildings_1_half.png") {
+    [ 290, 710, 64, 64, -32, -32 ]
+    [ 360, 710, 64, 64, -32, -32 ]
+}
+
+spriteset (modern_building_2a_full, "src/graphics/stations_buildings_1_full.png") {
     [ 290, 710, 64, 64, -32, -32 ]
     [ 360, 710, 64, 64, -32, -32 ]
 }
@@ -3514,6 +3558,11 @@ spritelayout modern_building_2a_ne(a) {
     }
 }
 
+spritegroup group_modern_building_2a {
+    little: [modern_building_2a, modern_building_2a_half];
+    lots:   modern_building_2a_full;
+}
+
 item(FEAT_STATIONS, modern_station_building_2a) {
     property {
         class:                  "_BLD";
@@ -3525,17 +3574,29 @@ item(FEAT_STATIONS, modern_station_building_2a) {
         ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
+        cargo_threshold:        param_set_cargo_threshold*120;
     }
     graphics {
         sprite_layouts:         [modern_building_2a_nw(0), modern_building_2a_ne(0)];
         select_tile_type:       0;
         availability:           switch_intro_year_modern;
+        PASS:                   group_modern_building_2a;
         purchase:               modern_building_2a;
         modern_building_2a;
     }
 }
 
 spriteset (modern_building_2b, "src/graphics/stations_buildings_1_empty.png") {
+    [ 430, 710, 64, 64, -32, -32 ]
+    [ 500, 710, 64, 64, -32, -32 ]
+}
+
+spriteset (modern_building_2b_half, "src/graphics/stations_buildings_1_half.png") {
+    [ 430, 710, 64, 64, -32, -32 ]
+    [ 500, 710, 64, 64, -32, -32 ]
+}
+
+spriteset (modern_building_2b_full, "src/graphics/stations_buildings_1_full.png") {
     [ 430, 710, 64, 64, -32, -32 ]
     [ 500, 710, 64, 64, -32, -32 ]
 }
@@ -3574,6 +3635,11 @@ spritelayout modern_building_2b_sw(a) {
     }
 }
 
+spritegroup group_modern_building_2b {
+    little: [modern_building_2b, modern_building_2b_half];
+    lots:   modern_building_2b_full;
+}
+
 item(FEAT_STATIONS, modern_station_building_2b) {
     property {
         class:                  "_BLD";
@@ -3585,17 +3651,29 @@ item(FEAT_STATIONS, modern_station_building_2b) {
         ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
+        cargo_threshold:        param_set_cargo_threshold*120;
     }
     graphics {
         sprite_layouts:         [modern_building_2b_se(0), modern_building_2b_sw(0)];
         select_tile_type:       0;
         availability:           switch_intro_year_modern;
+        PASS:                   group_modern_building_2b;
         purchase:               modern_building_2b;
         modern_building_2b;
     }
 }
 
 spriteset (modern_building_3a, "src/graphics/stations_buildings_1_empty.png") {
+    [ 570, 710, 64, 64, -32, -32 ]
+    [ 640, 710, 64, 64, -32, -32 ]
+}
+
+spriteset (modern_building_3a_half, "src/graphics/stations_buildings_1_half.png") {
+    [ 570, 710, 64, 64, -32, -32 ]
+    [ 640, 710, 64, 64, -32, -32 ]
+}
+
+spriteset (modern_building_3a_full, "src/graphics/stations_buildings_1_full.png") {
     [ 570, 710, 64, 64, -32, -32 ]
     [ 640, 710, 64, 64, -32, -32 ]
 }
@@ -3634,6 +3712,11 @@ spritelayout modern_building_3a_ne(a) {
     }
 }
 
+spritegroup group_modern_building_3a {
+    little: [modern_building_3a, modern_building_3a_half];
+    lots:   modern_building_3a_full;
+}
+
 item(FEAT_STATIONS, modern_station_building_3a) {
     property {
         class:                  "_BLD";
@@ -3645,17 +3728,29 @@ item(FEAT_STATIONS, modern_station_building_3a) {
         ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
+        cargo_threshold:        param_set_cargo_threshold*120;
     }
     graphics {
         sprite_layouts:         [modern_building_3a_nw(0), modern_building_3a_ne(0)];
         select_tile_type:       0;
         availability:           switch_intro_year_modern;
+        PASS:                   group_modern_building_3a;
         purchase:               modern_building_3a;
         modern_building_3a;
     }
 }
 
 spriteset (modern_building_3b, "src/graphics/stations_buildings_1_empty.png") {
+    [ 710, 710, 64, 64, -32, -32 ]
+    [ 780, 710, 64, 64, -32, -32 ]
+}
+
+spriteset (modern_building_3b_half, "src/graphics/stations_buildings_1_half.png") {
+    [ 710, 710, 64, 64, -32, -32 ]
+    [ 780, 710, 64, 64, -32, -32 ]
+}
+
+spriteset (modern_building_3b_full, "src/graphics/stations_buildings_1_full.png") {
     [ 710, 710, 64, 64, -32, -32 ]
     [ 780, 710, 64, 64, -32, -32 ]
 }
@@ -3694,6 +3789,11 @@ spritelayout modern_building_3b_sw(a) {
     }
 }
 
+spritegroup group_modern_building_3b {
+    little: [modern_building_3b, modern_building_3b_half];
+    lots:   modern_building_3b_full;
+}
+
 item(FEAT_STATIONS, modern_station_building_3b) {
     property {
         class:                  "_BLD";
@@ -3705,11 +3805,13 @@ item(FEAT_STATIONS, modern_station_building_3b) {
         ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
+        cargo_threshold:        param_set_cargo_threshold*120;
     }
     graphics {
         sprite_layouts:         [modern_building_3b_se(0), modern_building_3b_sw(0)];
         select_tile_type:       0;
         availability:           switch_intro_year_modern;
+        PASS:                   group_modern_building_3b;
         purchase:               modern_building_3b;
         modern_building_3b;
     }
@@ -3717,6 +3819,16 @@ item(FEAT_STATIONS, modern_station_building_3b) {
 
 
 spriteset (modern_building_4a, "src/graphics/stations_buildings_1_empty.png") {
+    [ 10, 780, 64, 64, -32, -32 ]
+    [ 80, 780, 64, 64, -32, -32 ]
+}
+
+spriteset (modern_building_4a_half, "src/graphics/stations_buildings_1_half.png") {
+    [ 10, 780, 64, 64, -32, -32 ]
+    [ 80, 780, 64, 64, -32, -32 ]
+}
+
+spriteset (modern_building_4a_full, "src/graphics/stations_buildings_1_full.png") {
     [ 10, 780, 64, 64, -32, -32 ]
     [ 80, 780, 64, 64, -32, -32 ]
 }
@@ -3755,6 +3867,11 @@ spritelayout modern_building_4a_ne(a) {
     }
 }
 
+spritegroup group_modern_building_4a {
+    little: [modern_building_4a, modern_building_4a_half];
+    lots:   modern_building_4a_full;
+}
+
 item(FEAT_STATIONS, modern_station_building_4a) {
     property {
         class:                  "_BLD";
@@ -3766,11 +3883,13 @@ item(FEAT_STATIONS, modern_station_building_4a) {
         ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
+        cargo_threshold:        param_set_cargo_threshold*120;
     }
     graphics {
         sprite_layouts:         [modern_building_4a_nw(0), modern_building_4a_ne(0)];
         select_tile_type:       0;
         availability:           switch_intro_year_modern;
+        PASS:                   group_modern_building_4a;
         purchase:               modern_building_4a;
         modern_building_4a;
     }
@@ -3781,12 +3900,12 @@ item(FEAT_STATIONS, modern_station_building_4a) {
 /***********************************/
 
 
-spriteset (modern_building_5a, "src/graphics/stations_buildings_1_empty.png") {
+spriteset (modern_building_5a, "src/graphics/stations_buildings_1_half.png") {
     [ 500, 780, 64, 64, -32, -32 ]
     [ 360, 780, 64, 64, -32, -32 ]
 }
 
-spriteset (modern_building_5b, "src/graphics/stations_buildings_1_empty.png") {
+spriteset (modern_building_5b, "src/graphics/stations_buildings_1_half.png") {
     [ 430, 780, 64, 64, -32, -32 ]
     [ 290, 780, 64, 64, -32, -32 ]
 }
@@ -3856,17 +3975,17 @@ item(FEAT_STATIONS, modern_station_building_5a) {
 /****************************************/
 
 
-spriteset (modern_feature_building_tile_0, "src/graphics/stations_buildings_2_empty.png") {
+spriteset (modern_feature_building_tile_0, "src/graphics/stations_buildings_2_half.png") {
     [  570, 690, 64, 96, -31, -64 ]
     [  640, 690, 64, 96, -31, -64 ]
 }
 
-spriteset (modern_feature_building_tile_1, "src/graphics/stations_buildings_2_empty.png") {
+spriteset (modern_feature_building_tile_1, "src/graphics/stations_buildings_2_half.png") {
     [  500, 690, 64, 96, -31, -64 ]
     [  710, 690, 64, 96, -31, -64 ]
 }
 
-spriteset (modern_feature_building_tile_2, "src/graphics/stations_buildings_2_empty.png") {
+spriteset (modern_feature_building_tile_2, "src/graphics/stations_buildings_2_half.png") {
     [  430, 690, 64, 96, -31, -64 ]
     [  780, 690, 64, 96, -31, -64 ]
 }

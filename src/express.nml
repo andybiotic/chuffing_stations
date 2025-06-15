@@ -3259,6 +3259,16 @@ spriteset (express_building_1a, "src/graphics/stations_buildings_2_empty.png") {
     [ 80, 10, 64, 64, -32, -32 ]
 }
 
+spriteset (express_building_1a_half, "src/graphics/stations_buildings_2_half.png") {
+    [ 10, 10, 64, 64, -32, -32 ]
+    [ 80, 10, 64, 64, -32, -32 ]
+}
+
+spriteset (express_building_1a_full, "src/graphics/stations_buildings_2_full.png") {
+    [ 10, 10, 64, 64, -32, -32 ]
+    [ 80, 10, 64, 64, -32, -32 ]
+}
+
 spritelayout express_building_1a_nw(a) {
     ground {
         sprite: GROUNDSPRITE_CONCRETE;
@@ -3293,6 +3303,11 @@ spritelayout express_building_1a_ne(a) {
     }
 }
 
+spritegroup group_express_building_1a {
+    little: [express_building_1a, express_building_1a_half];
+    lots:   express_building_1a_full;
+}
+
 item(FEAT_STATIONS, express_station_building_1a) {
     property {
         class:                  "_BLD";
@@ -3304,17 +3319,29 @@ item(FEAT_STATIONS, express_station_building_1a) {
         ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
+        cargo_threshold:        param_set_cargo_threshold*120;
     }
     graphics {
         sprite_layouts:         [express_building_1a_nw(0), express_building_1a_ne(0)];
         select_tile_type:       0;
         availability:           switch_intro_year_express;
+        PASS:                   group_express_building_1a;
         purchase:               express_building_1a;
         express_building_1a;
     }
 }
 
 spriteset (express_building_1b, "src/graphics/stations_buildings_2_empty.png") {
+    [ 150, 10, 64, 64, -32, -32 ]
+    [ 220, 10, 64, 64, -32, -32 ]
+}
+
+spriteset (express_building_1b_half, "src/graphics/stations_buildings_2_half.png") {
+    [ 150, 10, 64, 64, -32, -32 ]
+    [ 220, 10, 64, 64, -32, -32 ]
+}
+
+spriteset (express_building_1b_full, "src/graphics/stations_buildings_2_full.png") {
     [ 150, 10, 64, 64, -32, -32 ]
     [ 220, 10, 64, 64, -32, -32 ]
 }
@@ -3353,6 +3380,11 @@ spritelayout express_building_1b_sw(a) {
     }
 }
 
+spritegroup group_express_building_1b {
+    little: [express_building_1b, express_building_1b_half];
+    lots:   express_building_1b_full;
+}
+
 item(FEAT_STATIONS, express_station_building_1b) {
     property {
         class:                  "_BLD";
@@ -3364,17 +3396,29 @@ item(FEAT_STATIONS, express_station_building_1b) {
         ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
+        cargo_threshold:        param_set_cargo_threshold*120;
     }
     graphics {
         sprite_layouts:         [express_building_1b_se(0), express_building_1b_sw(0)];
         select_tile_type:       0;
         availability:           switch_intro_year_express;
+        PASS:                   group_express_building_1b;
         purchase:               express_building_1b;
         express_building_1b;
     }
 }
 
 spriteset (express_building_2a, "src/graphics/stations_buildings_2_empty.png") {
+    [ 290, 10, 64, 64, -32, -32 ]
+    [ 360, 10, 64, 64, -32, -32 ]
+}
+
+spriteset (express_building_2a_half, "src/graphics/stations_buildings_2_half.png") {
+    [ 290, 10, 64, 64, -32, -32 ]
+    [ 360, 10, 64, 64, -32, -32 ]
+}
+
+spriteset (express_building_2a_full, "src/graphics/stations_buildings_2_full.png") {
     [ 290, 10, 64, 64, -32, -32 ]
     [ 360, 10, 64, 64, -32, -32 ]
 }
@@ -3413,6 +3457,11 @@ spritelayout express_building_2a_ne(a) {
     }
 }
 
+spritegroup group_express_building_2a {
+    little: [express_building_2a, express_building_2a_half];
+    lots:   express_building_2a_full;
+}
+
 item(FEAT_STATIONS, express_station_building_2a) {
     property {
         class:                  "_BLD";
@@ -3424,17 +3473,29 @@ item(FEAT_STATIONS, express_station_building_2a) {
         ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
+        cargo_threshold:        param_set_cargo_threshold*120;
     }
     graphics {
         sprite_layouts:         [express_building_2a_nw(0), express_building_2a_ne(0)];
         select_tile_type:       0;
         availability:           switch_intro_year_express;
+        PASS:                   group_express_building_2a;
         purchase:               express_building_2a;
         express_building_2a;
     }
 }
 
 spriteset (express_building_2b, "src/graphics/stations_buildings_2_empty.png") {
+    [ 430, 10, 64, 64, -32, -32 ]
+    [ 500, 10, 64, 64, -32, -32 ]
+}
+
+spriteset (express_building_2b_half, "src/graphics/stations_buildings_2_half.png") {
+    [ 430, 10, 64, 64, -32, -32 ]
+    [ 500, 10, 64, 64, -32, -32 ]
+}
+
+spriteset (express_building_2b_full, "src/graphics/stations_buildings_2_full.png") {
     [ 430, 10, 64, 64, -32, -32 ]
     [ 500, 10, 64, 64, -32, -32 ]
 }
@@ -3473,6 +3534,11 @@ spritelayout express_building_2b_sw(a) {
     }
 }
 
+spritegroup group_express_building_2b {
+    little: [express_building_2b, express_building_2b_half];
+    lots:   express_building_2b_full;
+}
+
 item(FEAT_STATIONS, express_station_building_2b) {
     property {
         class:                  "_BLD";
@@ -3484,17 +3550,29 @@ item(FEAT_STATIONS, express_station_building_2b) {
         ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
+        cargo_threshold:        param_set_cargo_threshold*120;
     }
     graphics {
         sprite_layouts:         [express_building_2b_se(0), express_building_2b_sw(0)];
         select_tile_type:       0;
         availability:           switch_intro_year_express;
+        PASS:                   group_express_building_2b;
         purchase:               express_building_2b;
         express_building_2b;
     }
 }
 
 spriteset (express_building_3a, "src/graphics/stations_buildings_2_empty.png") {
+    [ 570, 10, 64, 64, -32, -32 ]
+    [ 640, 10, 64, 64, -32, -32 ]
+}
+
+spriteset (express_building_3a_half, "src/graphics/stations_buildings_2_half.png") {
+    [ 570, 10, 64, 64, -32, -32 ]
+    [ 640, 10, 64, 64, -32, -32 ]
+}
+
+spriteset (express_building_3a_full, "src/graphics/stations_buildings_2_full.png") {
     [ 570, 10, 64, 64, -32, -32 ]
     [ 640, 10, 64, 64, -32, -32 ]
 }
@@ -3533,6 +3611,11 @@ spritelayout express_building_3a_ne(a) {
     }
 }
 
+spritegroup group_express_building_3a {
+    little: [express_building_3a, express_building_3a_half];
+    lots:   express_building_3a_full;
+}
+
 item(FEAT_STATIONS, express_station_building_3a) {
     property {
         class:                  "_BLD";
@@ -3544,17 +3627,29 @@ item(FEAT_STATIONS, express_station_building_3a) {
         ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
+        cargo_threshold:        param_set_cargo_threshold*120;
     }
     graphics {
         sprite_layouts:         [express_building_3a_nw(0), express_building_3a_ne(0)];
         select_tile_type:       0;
         availability:           switch_intro_year_express;
+        PASS:                   group_express_building_3a;
         purchase:               express_building_3a;
         express_building_3a;
     }
 }
 
 spriteset (express_building_3b, "src/graphics/stations_buildings_2_empty.png") {
+    [ 710, 10, 64, 64, -32, -32 ]
+    [ 780, 10, 64, 64, -32, -32 ]
+}
+
+spriteset (express_building_3b_half, "src/graphics/stations_buildings_2_half.png") {
+    [ 710, 10, 64, 64, -32, -32 ]
+    [ 780, 10, 64, 64, -32, -32 ]
+}
+
+spriteset (express_building_3b_full, "src/graphics/stations_buildings_2_full.png") {
     [ 710, 10, 64, 64, -32, -32 ]
     [ 780, 10, 64, 64, -32, -32 ]
 }
@@ -3593,6 +3688,11 @@ spritelayout express_building_3b_sw(a) {
     }
 }
 
+spritegroup group_express_building_3b {
+    little: [express_building_3b, express_building_3b_half];
+    lots:   express_building_3b_full;
+}
+
 item(FEAT_STATIONS, express_station_building_3b) {
     property {
         class:                  "_BLD";
@@ -3604,17 +3704,29 @@ item(FEAT_STATIONS, express_station_building_3b) {
         ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
+        cargo_threshold:        param_set_cargo_threshold*120;
     }
     graphics {
         sprite_layouts:         [express_building_3b_se(0), express_building_3b_sw(0)];
         select_tile_type:       0;
         availability:           switch_intro_year_express;
+        PASS:                   group_express_building_3b;
         purchase:               express_building_3b;
         express_building_3b;
     }
 }
 
 spriteset (express_building_4a, "src/graphics/stations_buildings_2_empty.png") {
+    [ 10, 80, 64, 64, -32, -32 ]
+    [ 80, 80, 64, 64, -32, -32 ]
+}
+
+spriteset (express_building_4a_half, "src/graphics/stations_buildings_2_half.png") {
+    [ 10, 80, 64, 64, -32, -32 ]
+    [ 80, 80, 64, 64, -32, -32 ]
+}
+
+spriteset (express_building_4a_full, "src/graphics/stations_buildings_2_full.png") {
     [ 10, 80, 64, 64, -32, -32 ]
     [ 80, 80, 64, 64, -32, -32 ]
 }
@@ -3653,6 +3765,11 @@ spritelayout express_building_4a_ne(a) {
     }
 }
 
+spritegroup group_express_building_4a {
+    little: [express_building_4a, express_building_4a_half];
+    lots:   express_building_4a_full;
+}
+
 item(FEAT_STATIONS, express_station_building_4a) {
     property {
         class:                  "_BLD";
@@ -3664,17 +3781,29 @@ item(FEAT_STATIONS, express_station_building_4a) {
         ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
+        cargo_threshold:        param_set_cargo_threshold*120;
     }
     graphics {
         sprite_layouts:         [express_building_4a_nw(0), express_building_4a_ne(0)];
         select_tile_type:       0;
         availability:           switch_intro_year_express;
+        PASS:                   group_express_building_4a;
         purchase:               express_building_4a;
         express_building_4a;
     }
 }
 
 spriteset (express_building_4b, "src/graphics/stations_buildings_2_empty.png") {
+    [ 150, 80, 64, 64, -32, -32 ]
+    [ 220, 80, 64, 64, -32, -32 ]
+}
+
+spriteset (express_building_4b_half, "src/graphics/stations_buildings_2_half.png") {
+    [ 150, 80, 64, 64, -32, -32 ]
+    [ 220, 80, 64, 64, -32, -32 ]
+}
+
+spriteset (express_building_4b_full, "src/graphics/stations_buildings_2_full.png") {
     [ 150, 80, 64, 64, -32, -32 ]
     [ 220, 80, 64, 64, -32, -32 ]
 }
@@ -3713,6 +3842,11 @@ spritelayout express_building_4b_sw(a) {
     }
 }
 
+spritegroup group_express_building_4b {
+    little: [express_building_4b, express_building_4b_half];
+    lots:   express_building_4b_full;
+}
+
 item(FEAT_STATIONS, express_station_building_4b) {
     property {
         class:                  "_BLD";
@@ -3724,11 +3858,13 @@ item(FEAT_STATIONS, express_station_building_4b) {
         ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
+        cargo_threshold:        param_set_cargo_threshold*120;
     }
     graphics {
         sprite_layouts:         [express_building_4b_se(0), express_building_4b_sw(0)];
         select_tile_type:       0;
         availability:           switch_intro_year_express;
+        PASS:                   group_express_building_4b;
         purchase:               express_building_4b;
         express_building_4b;
     }
@@ -3739,17 +3875,17 @@ item(FEAT_STATIONS, express_station_building_4b) {
 /****************************************/
 
 
-spriteset (express_feature_building_tile_0, "src/graphics/stations_buildings_2_empty.png") {
+spriteset (express_feature_building_tile_0, "src/graphics/stations_buildings_2_half.png") {
     [  150, 690, 64, 96, -31, -64 ]
     [  220, 690, 64, 96, -31, -64 ]
 }
 
-spriteset (express_feature_building_tile_1, "src/graphics/stations_buildings_2_empty.png") {
+spriteset (express_feature_building_tile_1, "src/graphics/stations_buildings_2_half.png") {
     [  80, 690, 64, 96, -31, -64 ]
     [  290, 690, 64, 96, -31, -64 ]
 }
 
-spriteset (express_feature_building_tile_2, "src/graphics/stations_buildings_2_empty.png") {
+spriteset (express_feature_building_tile_2, "src/graphics/stations_buildings_2_half.png") {
     [  10, 690, 64, 96, -31, -64 ]
     [  360, 690, 64, 96, -31, -64 ]
 }

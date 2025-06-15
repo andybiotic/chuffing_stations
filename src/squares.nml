@@ -12,6 +12,16 @@ spriteset (square_1_1, "src/graphics/stations_squares_empty.png") {
     [  80, 10, 64, 64, -31, -32 ]
 }
 
+spriteset (square_1_1_half, "src/graphics/stations_squares_half.png") {
+    [  10, 10, 64, 64, -31, -32 ]
+    [  80, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (square_1_1_full, "src/graphics/stations_squares_full.png") {
+    [  10, 10, 64, 64, -31, -32 ]
+    [  80, 10, 64, 64, -31, -32 ]
+}
+
 spritelayout square_1_1a(a) {
     ground {
         sprite: GROUNDSPRITE_CONCRETE;
@@ -46,6 +56,11 @@ spritelayout square_1_1b(a) {
     }
 }
 
+spritegroup group_square_1_1 {
+    little: [square_1_1, square_1_1_half];
+    lots:   square_1_1_full;
+}
+
 item(FEAT_STATIONS, station_square_1_1) {
     property {
         class:                  "_BLD";
@@ -55,16 +70,28 @@ item(FEAT_STATIONS, station_square_1_1) {
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
         ];
+        cargo_threshold:        param_set_cargo_threshold*140;
     }
     graphics {
         sprite_layouts: [square_1_1a(0), square_1_1b(0)];
         select_tile_type: 0;
+        PASS: group_square_1_1;
         purchase: square_1_1;
         square_1_1;
     }
 }
 
 spriteset (square_1_2, "src/graphics/stations_squares_empty.png") {
+    [  150, 10, 64, 64, -31, -32 ]
+    [  220, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (square_1_2_half, "src/graphics/stations_squares_half.png") {
+    [  150, 10, 64, 64, -31, -32 ]
+    [  220, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (square_1_2_full, "src/graphics/stations_squares_full.png") {
     [  150, 10, 64, 64, -31, -32 ]
     [  220, 10, 64, 64, -31, -32 ]
 }
@@ -103,6 +130,11 @@ spritelayout square_1_2b(a) {
     }
 }
 
+spritegroup group_square_1_2 {
+    little: [square_1_2, square_1_2_half];
+    lots:   square_1_2_full;
+}
+
 item(FEAT_STATIONS, station_square_1_2) {
     property {
         class:                  "_BLD";
@@ -112,16 +144,28 @@ item(FEAT_STATIONS, station_square_1_2) {
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
         ];
+        cargo_threshold:        param_set_cargo_threshold*140;
     }
     graphics {
         sprite_layouts: [square_1_2a(0), square_1_2b(0)];
         select_tile_type: 0;
+        PASS: group_square_1_2;
         purchase: square_1_2;
         square_1_2;
     }
 }
 
 spriteset (square_1_3, "src/graphics/stations_squares_empty.png") {
+    [  290, 10, 64, 64, -31, -32, ANIM ]
+    [  360, 10, 64, 64, -31, -32, ANIM ]
+}
+
+spriteset (square_1_3_half, "src/graphics/stations_squares_half.png") {
+    [  290, 10, 64, 64, -31, -32, ANIM ]
+    [  360, 10, 64, 64, -31, -32, ANIM ]
+}
+
+spriteset (square_1_3_full, "src/graphics/stations_squares_full.png") {
     [  290, 10, 64, 64, -31, -32, ANIM ]
     [  360, 10, 64, 64, -31, -32, ANIM ]
 }
@@ -160,6 +204,11 @@ spritelayout square_1_3b(a) {
     }
 }
 
+spritegroup group_square_1_3 {
+    little: [square_1_3, square_1_3_half];
+    lots:   square_1_3_full;
+}
+
 item(FEAT_STATIONS, station_square_1_3) {
     property {
         class:                  "_BLD";
@@ -169,16 +218,28 @@ item(FEAT_STATIONS, station_square_1_3) {
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
         ];
+        cargo_threshold:        param_set_cargo_threshold*140;
     }
     graphics {
         sprite_layouts: [square_1_3a(0), square_1_3b(0)];
         select_tile_type: 0;
+        PASS: group_square_1_3;
         purchase: square_1_3;
         square_1_3;
     }
 }
 
 spriteset (square_1_4, "src/graphics/stations_squares_empty.png") {
+    [  430, 10, 64, 64, -31, -32 ]
+    [  500, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (square_1_4_half, "src/graphics/stations_squares_half.png") {
+    [  430, 10, 64, 64, -31, -32 ]
+    [  500, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (square_1_4_full, "src/graphics/stations_squares_full.png") {
     [  430, 10, 64, 64, -31, -32 ]
     [  500, 10, 64, 64, -31, -32 ]
 }
@@ -217,6 +278,11 @@ spritelayout square_1_4b(a) {
     }
 }
 
+spritegroup group_square_1_4 {
+    little: [square_1_4, square_1_4_half];
+    lots:   square_1_4_full;
+}
+
 item(FEAT_STATIONS, station_square_1_4) {
     property {
         class:                  "_BLD";
@@ -226,10 +292,12 @@ item(FEAT_STATIONS, station_square_1_4) {
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
         ];
+        cargo_threshold:        param_set_cargo_threshold*140;
     }
     graphics {
         sprite_layouts: [square_1_4a(0), square_1_4b(0)];
         select_tile_type: 0;
+        PASS: group_square_1_4;
         purchase: square_1_4;
         square_1_4;
     }
@@ -241,6 +309,16 @@ item(FEAT_STATIONS, station_square_1_4) {
 
 
 spriteset (square_2_1, "src/graphics/stations_squares_empty.png") {
+    [  10, 80, 64, 64, -31, -32 ]
+    [  80, 80, 64, 64, -31, -32 ]
+}
+
+spriteset (square_2_1_half, "src/graphics/stations_squares_half.png") {
+    [  10, 80, 64, 64, -31, -32 ]
+    [  80, 80, 64, 64, -31, -32 ]
+}
+
+spriteset (square_2_1_full, "src/graphics/stations_squares_full.png") {
     [  10, 80, 64, 64, -31, -32 ]
     [  80, 80, 64, 64, -31, -32 ]
 }
@@ -279,6 +357,11 @@ spritelayout square_2_1b(a) {
     }
 }
 
+spritegroup group_square_2_1 {
+    little: [square_2_1, square_2_1_half];
+    lots:   square_2_1_full;
+}
+
 item(FEAT_STATIONS, station_square_2_1) {
     property {
         class:                  "_BLD";
@@ -288,16 +371,28 @@ item(FEAT_STATIONS, station_square_2_1) {
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
         ];
+        cargo_threshold:        param_set_cargo_threshold*140;
     }
     graphics {
         sprite_layouts: [square_2_1a(0), square_2_1b(0)];
         select_tile_type: 0;
+        PASS: group_square_2_1;
         purchase: square_2_1;
         square_2_1;
     }
 }
 
 spriteset (square_2_2, "src/graphics/stations_squares_empty.png") {
+    [  150, 80, 64, 64, -31, -32 ]
+    [  220, 80, 64, 64, -31, -32 ]
+}
+
+spriteset (square_2_2_half, "src/graphics/stations_squares_half.png") {
+    [  150, 80, 64, 64, -31, -32 ]
+    [  220, 80, 64, 64, -31, -32 ]
+}
+
+spriteset (square_2_2_full, "src/graphics/stations_squares_full.png") {
     [  150, 80, 64, 64, -31, -32 ]
     [  220, 80, 64, 64, -31, -32 ]
 }
@@ -336,6 +431,11 @@ spritelayout square_2_2b(a) {
     }
 }
 
+spritegroup group_square_2_2 {
+    little: [square_2_2, square_2_2_half];
+    lots:   square_2_2_full;
+}
+
 item(FEAT_STATIONS, station_square_2_2) {
     property {
         class:                  "_BLD";
@@ -345,16 +445,28 @@ item(FEAT_STATIONS, station_square_2_2) {
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
         ];
+        cargo_threshold:        param_set_cargo_threshold*140;
     }
     graphics {
         sprite_layouts: [square_2_2a(0), square_2_2b(0)];
         select_tile_type: 0;
+        PASS: group_square_2_2;
         purchase: square_2_2;
         square_2_2;
     }
 }
 
 spriteset (square_2_3, "src/graphics/stations_squares_empty.png") {
+    [  290, 80, 64, 64, -31, -32 ]
+    [  360, 80, 64, 64, -31, -32 ]
+}
+
+spriteset (square_2_3_half, "src/graphics/stations_squares_half.png") {
+    [  290, 80, 64, 64, -31, -32 ]
+    [  360, 80, 64, 64, -31, -32 ]
+}
+
+spriteset (square_2_3_full, "src/graphics/stations_squares_full.png") {
     [  290, 80, 64, 64, -31, -32 ]
     [  360, 80, 64, 64, -31, -32 ]
 }
@@ -393,6 +505,11 @@ spritelayout square_2_3b(a) {
     }
 }
 
+spritegroup group_square_2_3 {
+    little: [square_2_3, square_2_3_half];
+    lots:   square_2_3_full;
+}
+
 item(FEAT_STATIONS, station_square_2_3) {
     property {
         class:                  "_BLD";
@@ -402,16 +519,28 @@ item(FEAT_STATIONS, station_square_2_3) {
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
         ];
+        cargo_threshold:        param_set_cargo_threshold*140;
     }
     graphics {
         sprite_layouts: [square_2_3a(0), square_2_3b(0)];
         select_tile_type: 0;
+        PASS: group_square_2_3;
         purchase: square_2_3;
         square_2_3;
     }
 }
 
 spriteset (square_2_4, "src/graphics/stations_squares_empty.png") {
+    [  430, 80, 64, 64, -31, -32 ]
+    [  500, 80, 64, 64, -31, -32 ]
+}
+
+spriteset (square_2_4_half, "src/graphics/stations_squares_half.png") {
+    [  430, 80, 64, 64, -31, -32 ]
+    [  500, 80, 64, 64, -31, -32 ]
+}
+
+spriteset (square_2_4_full, "src/graphics/stations_squares_full.png") {
     [  430, 80, 64, 64, -31, -32 ]
     [  500, 80, 64, 64, -31, -32 ]
 }
@@ -450,6 +579,11 @@ spritelayout square_2_4b(a) {
     }
 }
 
+spritegroup group_square_2_4 {
+    little: [square_2_4, square_2_4_half];
+    lots:   square_2_4_full;
+}
+
 item(FEAT_STATIONS, station_square_2_4) {
     property {
         class:                  "_BLD";
@@ -459,10 +593,12 @@ item(FEAT_STATIONS, station_square_2_4) {
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
         ];
+        cargo_threshold:        param_set_cargo_threshold*140;
     }
     graphics {
         sprite_layouts: [square_2_4a(0), square_2_4b(0)];
         select_tile_type: 0;
+        PASS: group_square_2_4;
         purchase: square_2_4;
         square_2_4;
     }
@@ -474,6 +610,16 @@ item(FEAT_STATIONS, station_square_2_4) {
 
 
 spriteset (square_3_1, "src/graphics/stations_squares_empty.png") {
+    [  10, 150, 64, 64, -31, -32 ]
+    [  80, 150, 64, 64, -31, -32 ]
+}
+
+spriteset (square_3_1_half, "src/graphics/stations_squares_half.png") {
+    [  10, 150, 64, 64, -31, -32 ]
+    [  80, 150, 64, 64, -31, -32 ]
+}
+
+spriteset (square_3_1_full, "src/graphics/stations_squares_full.png") {
     [  10, 150, 64, 64, -31, -32 ]
     [  80, 150, 64, 64, -31, -32 ]
 }
@@ -512,6 +658,11 @@ spritelayout square_3_1b(a) {
     }
 }
 
+spritegroup group_square_3_1 {
+    little: [square_3_1, square_3_1_half];
+    lots:   square_3_1_full;
+}
+
 item(FEAT_STATIONS, station_square_3_1) {
     property {
         class:                  "_BLD";
@@ -521,16 +672,28 @@ item(FEAT_STATIONS, station_square_3_1) {
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
         ];
+        cargo_threshold:        param_set_cargo_threshold*140;
     }
     graphics {
         sprite_layouts: [square_3_1a(0), square_3_1b(0)];
         select_tile_type: 0;
+        PASS: group_square_3_1;
         purchase: square_3_1;
         square_3_1;
     }
 }
 
 spriteset (square_3_2, "src/graphics/stations_squares_empty.png") {
+    [  150, 150, 64, 64, -31, -32 ]
+    [  220, 150, 64, 64, -31, -32 ]
+}
+
+spriteset (square_3_2_half, "src/graphics/stations_squares_half.png") {
+    [  150, 150, 64, 64, -31, -32 ]
+    [  220, 150, 64, 64, -31, -32 ]
+}
+
+spriteset (square_3_2_full, "src/graphics/stations_squares_full.png") {
     [  150, 150, 64, 64, -31, -32 ]
     [  220, 150, 64, 64, -31, -32 ]
 }
@@ -569,6 +732,11 @@ spritelayout square_3_2b(a) {
     }
 }
 
+spritegroup group_square_3_2 {
+    little: [square_3_2, square_3_2_half];
+    lots:   square_3_2_full;
+}
+
 item(FEAT_STATIONS, station_square_3_2) {
     property {
         class:                  "_BLD";
@@ -578,16 +746,28 @@ item(FEAT_STATIONS, station_square_3_2) {
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
         ];
+        cargo_threshold:        param_set_cargo_threshold*140;
     }
     graphics {
         sprite_layouts: [square_3_2a(0), square_3_2b(0)];
         select_tile_type: 0;
+        PASS: group_square_3_2;
         purchase: square_3_2;
         square_3_2;
     }
 }
 
 spriteset (square_3_3, "src/graphics/stations_squares_empty.png") {
+    [  290, 150, 64, 64, -31, -32 ]
+    [  360, 150, 64, 64, -31, -32 ]
+}
+
+spriteset (square_3_3_half, "src/graphics/stations_squares_half.png") {
+    [  290, 150, 64, 64, -31, -32 ]
+    [  360, 150, 64, 64, -31, -32 ]
+}
+
+spriteset (square_3_3_full, "src/graphics/stations_squares_full.png") {
     [  290, 150, 64, 64, -31, -32 ]
     [  360, 150, 64, 64, -31, -32 ]
 }
@@ -626,6 +806,11 @@ spritelayout square_3_3b(a) {
     }
 }
 
+spritegroup group_square_3_3 {
+    little: [square_3_3, square_3_3_half];
+    lots:   square_3_3_full;
+}
+
 item(FEAT_STATIONS, station_square_3_3) {
     property {
         class:                  "_BLD";
@@ -635,16 +820,28 @@ item(FEAT_STATIONS, station_square_3_3) {
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
         ];
+        cargo_threshold:        param_set_cargo_threshold*140;
     }
     graphics {
         sprite_layouts: [square_3_3a(0), square_3_3b(0)];
         select_tile_type: 0;
+        PASS: group_square_3_3;
         purchase: square_3_3;
         square_3_3;
     }
 }
 
 spriteset (square_3_4, "src/graphics/stations_squares_empty.png") {
+    [  430, 150, 64, 64, -31, -32 ]
+    [  500, 150, 64, 64, -31, -32 ]
+}
+
+spriteset (square_3_4_half, "src/graphics/stations_squares_half.png") {
+    [  430, 150, 64, 64, -31, -32 ]
+    [  500, 150, 64, 64, -31, -32 ]
+}
+
+spriteset (square_3_4_full, "src/graphics/stations_squares_full.png") {
     [  430, 150, 64, 64, -31, -32 ]
     [  500, 150, 64, 64, -31, -32 ]
 }
@@ -683,6 +880,11 @@ spritelayout square_3_4b(a) {
     }
 }
 
+spritegroup group_square_3_4 {
+    little: [square_3_4, square_3_4_half];
+    lots:   square_3_4_full;
+}
+
 item(FEAT_STATIONS, station_square_3_4) {
     property {
         class:                  "_BLD";
@@ -692,10 +894,12 @@ item(FEAT_STATIONS, station_square_3_4) {
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
         ];
+        cargo_threshold:        param_set_cargo_threshold*140;
     }
     graphics {
         sprite_layouts: [square_3_4a(0), square_3_4b(0)];
         select_tile_type: 0;
+        PASS: group_square_3_4;
         purchase: square_3_4;
         square_3_4;
     }
@@ -707,6 +911,16 @@ item(FEAT_STATIONS, station_square_3_4) {
 
 
 spriteset (square_4_1, "src/graphics/stations_squares_empty.png") {
+    [  10, 220, 64, 64, -31, -32 ]
+    [  80, 220, 64, 64, -31, -32 ]
+}
+
+spriteset (square_4_1_half, "src/graphics/stations_squares_half.png") {
+    [  10, 220, 64, 64, -31, -32 ]
+    [  80, 220, 64, 64, -31, -32 ]
+}
+
+spriteset (square_4_1_full, "src/graphics/stations_squares_full.png") {
     [  10, 220, 64, 64, -31, -32 ]
     [  80, 220, 64, 64, -31, -32 ]
 }
@@ -745,6 +959,11 @@ spritelayout square_4_1b(a) {
     }
 }
 
+spritegroup group_square_4_1 {
+    little: [square_4_1, square_4_1_half];
+    lots:   square_4_1_full;
+}
+
 item(FEAT_STATIONS, station_square_4_1) {
     property {
         class:                  "_BLD";
@@ -754,16 +973,28 @@ item(FEAT_STATIONS, station_square_4_1) {
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
         ];
+        cargo_threshold:        param_set_cargo_threshold*140;
     }
     graphics {
         sprite_layouts: [square_4_1a(0), square_4_1b(0)];
         select_tile_type: 0;
+        PASS: group_square_4_1;
         purchase: square_4_1;
         square_4_1;
     }
 }
 
 spriteset (square_4_2, "src/graphics/stations_squares_empty.png") {
+    [  150, 220, 64, 64, -31, -32 ]
+    [  220, 220, 64, 64, -31, -32 ]
+}
+
+spriteset (square_4_2_half, "src/graphics/stations_squares_half.png") {
+    [  150, 220, 64, 64, -31, -32 ]
+    [  220, 220, 64, 64, -31, -32 ]
+}
+
+spriteset (square_4_2_full, "src/graphics/stations_squares_full.png") {
     [  150, 220, 64, 64, -31, -32 ]
     [  220, 220, 64, 64, -31, -32 ]
 }
@@ -802,6 +1033,11 @@ spritelayout square_4_2b(a) {
     }
 }
 
+spritegroup group_square_4_2 {
+    little: [square_4_2, square_4_2_half];
+    lots:   square_4_2_full;
+}
+
 item(FEAT_STATIONS, station_square_4_2) {
     property {
         class:                  "_BLD";
@@ -811,16 +1047,28 @@ item(FEAT_STATIONS, station_square_4_2) {
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
         ];
+        cargo_threshold:        param_set_cargo_threshold*140;
     }
     graphics {
         sprite_layouts: [square_4_2a(0), square_4_2b(0)];
         select_tile_type: 0;
+        PASS: group_square_4_2;
         purchase: square_4_2;
         square_4_2;
     }
 }
 
 spriteset (square_4_3, "src/graphics/stations_squares_empty.png") {
+    [  290, 220, 64, 64, -31, -32 ]
+    [  360, 220, 64, 64, -31, -32 ]
+}
+
+spriteset (square_4_3_half, "src/graphics/stations_squares_half.png") {
+    [  290, 220, 64, 64, -31, -32 ]
+    [  360, 220, 64, 64, -31, -32 ]
+}
+
+spriteset (square_4_3_full, "src/graphics/stations_squares_full.png") {
     [  290, 220, 64, 64, -31, -32 ]
     [  360, 220, 64, 64, -31, -32 ]
 }
@@ -859,6 +1107,11 @@ spritelayout square_4_3b(a) {
     }
 }
 
+spritegroup group_square_4_3 {
+    little: [square_4_3, square_4_3_half];
+    lots:   square_4_3_full;
+}
+
 item(FEAT_STATIONS, station_square_4_3) {
     property {
         class:                  "_BLD";
@@ -868,16 +1121,28 @@ item(FEAT_STATIONS, station_square_4_3) {
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
         ];
+        cargo_threshold:        param_set_cargo_threshold*140;
     }
     graphics {
         sprite_layouts: [square_4_3a(0), square_4_3b(0)];
         select_tile_type: 0;
+        PASS: group_square_4_3;
         purchase: square_4_3;
         square_4_3;
     }
 }
 
 spriteset (square_4_4, "src/graphics/stations_squares_empty.png") {
+    [  430, 220, 64, 64, -31, -32 ]
+    [  500, 220, 64, 64, -31, -32 ]
+}
+
+spriteset (square_4_4_half, "src/graphics/stations_squares_half.png") {
+    [  430, 220, 64, 64, -31, -32 ]
+    [  500, 220, 64, 64, -31, -32 ]
+}
+
+spriteset (square_4_4_full, "src/graphics/stations_squares_full.png") {
     [  430, 220, 64, 64, -31, -32 ]
     [  500, 220, 64, 64, -31, -32 ]
 }
@@ -916,6 +1181,11 @@ spritelayout square_4_4b(a) {
     }
 }
 
+spritegroup group_square_4_4 {
+    little: [square_4_4, square_4_4_half];
+    lots:   square_4_4_full;
+}
+
 item(FEAT_STATIONS, station_square_4_4) {
     property {
         class:                  "_BLD";
@@ -925,10 +1195,12 @@ item(FEAT_STATIONS, station_square_4_4) {
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
         ];
+        cargo_threshold:        param_set_cargo_threshold*140;
     }
     graphics {
         sprite_layouts: [square_4_4a(0), square_4_4b(0)];
         select_tile_type: 0;
+        PASS: group_square_4_4;
         purchase: square_4_4;
         square_4_4;
     }

@@ -3260,6 +3260,16 @@ spriteset (suburban_building_1a, "src/graphics/stations_buildings_1_empty.png") 
     [ 80, 430, 64, 64, -32, -32 ]
 }
 
+spriteset (suburban_building_1a_half, "src/graphics/stations_buildings_1_half.png") {
+    [ 10, 430, 64, 64, -32, -32 ]
+    [ 80, 430, 64, 64, -32, -32 ]
+}
+
+spriteset (suburban_building_1a_full, "src/graphics/stations_buildings_1_full.png") {
+    [ 10, 430, 64, 64, -32, -32 ]
+    [ 80, 430, 64, 64, -32, -32 ]
+}
+
 spritelayout suburban_building_1a_nw(a) {
     ground {
         sprite: GROUNDSPRITE_CONCRETE;
@@ -3294,6 +3304,11 @@ spritelayout suburban_building_1a_ne(a) {
     }
 }
 
+spritegroup group_suburban_building_1a {
+    little: [suburban_building_1a, suburban_building_1a_half];
+    lots:   suburban_building_1a_full;
+}
+
 item(FEAT_STATIONS, suburban_station_building_1a) {
     property {
         class:                  "_BLD";
@@ -3305,17 +3320,29 @@ item(FEAT_STATIONS, suburban_station_building_1a) {
         ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
+        cargo_threshold:        param_set_cargo_threshold*120;
     }
     graphics {
         sprite_layouts:         [suburban_building_1a_nw(0), suburban_building_1a_ne(0)];
         select_tile_type:       0;
         availability:           switch_intro_year_suburban;
+        PASS:                   group_suburban_building_1a;
         purchase:               suburban_building_1a;
         suburban_building_1a;
     }
 }
 
 spriteset (suburban_building_1b, "src/graphics/stations_buildings_1_empty.png") {
+    [ 150, 430, 64, 64, -32, -32 ]
+    [ 220, 430, 64, 64, -32, -32 ]
+}
+
+spriteset (suburban_building_1b_half, "src/graphics/stations_buildings_1_half.png") {
+    [ 150, 430, 64, 64, -32, -32 ]
+    [ 220, 430, 64, 64, -32, -32 ]
+}
+
+spriteset (suburban_building_1b_full, "src/graphics/stations_buildings_1_full.png") {
     [ 150, 430, 64, 64, -32, -32 ]
     [ 220, 430, 64, 64, -32, -32 ]
 }
@@ -3354,6 +3381,11 @@ spritelayout suburban_building_1b_sw(a) {
     }
 }
 
+spritegroup group_suburban_building_1b {
+    little: [suburban_building_1b, suburban_building_1b_half];
+    lots:   suburban_building_1b_full;
+}
+
 item(FEAT_STATIONS, suburban_station_building_1b) {
     property {
         class:                  "_BLD";
@@ -3365,17 +3397,29 @@ item(FEAT_STATIONS, suburban_station_building_1b) {
         ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
+        cargo_threshold:        param_set_cargo_threshold*120;
     }
     graphics {
         sprite_layouts:         [suburban_building_1b_se(0), suburban_building_1b_sw(0)];
         select_tile_type:       0;
         availability:           switch_intro_year_suburban;
+        PASS:                   group_suburban_building_1b;
         purchase:               suburban_building_1b;
         suburban_building_1b;
     }
 }
 
 spriteset (suburban_building_2a, "src/graphics/stations_buildings_1_empty.png") {
+    [ 290, 430, 64, 64, -32, -32 ]
+    [ 360, 430, 64, 64, -32, -32 ]
+}
+
+spriteset (suburban_building_2a_half, "src/graphics/stations_buildings_1_half.png") {
+    [ 290, 430, 64, 64, -32, -32 ]
+    [ 360, 430, 64, 64, -32, -32 ]
+}
+
+spriteset (suburban_building_2a_full, "src/graphics/stations_buildings_1_full.png") {
     [ 290, 430, 64, 64, -32, -32 ]
     [ 360, 430, 64, 64, -32, -32 ]
 }
@@ -3414,6 +3458,11 @@ spritelayout suburban_building_2a_ne(a) {
     }
 }
 
+spritegroup group_suburban_building_2a {
+    little: [suburban_building_2a, suburban_building_2a_half];
+    lots:   suburban_building_2a_full;
+}
+
 item(FEAT_STATIONS, suburban_station_building_2a) {
     property {
         class:                  "_BLD";
@@ -3425,17 +3474,29 @@ item(FEAT_STATIONS, suburban_station_building_2a) {
         ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
+        cargo_threshold:        param_set_cargo_threshold*120;
     }
     graphics {
         sprite_layouts:         [suburban_building_2a_nw(0), suburban_building_2a_ne(0)];
         select_tile_type:       0;
         availability:           switch_intro_year_suburban;
+        PASS:                   group_suburban_building_2a;
         purchase:               suburban_building_2a;
         suburban_building_2a;
     }
 }
 
 spriteset (suburban_building_2b, "src/graphics/stations_buildings_1_empty.png") {
+    [ 430, 430, 64, 64, -32, -32 ]
+    [ 500, 430, 64, 64, -32, -32 ]
+}
+
+spriteset (suburban_building_2b_half, "src/graphics/stations_buildings_1_half.png") {
+    [ 430, 430, 64, 64, -32, -32 ]
+    [ 500, 430, 64, 64, -32, -32 ]
+}
+
+spriteset (suburban_building_2b_full, "src/graphics/stations_buildings_1_full.png") {
     [ 430, 430, 64, 64, -32, -32 ]
     [ 500, 430, 64, 64, -32, -32 ]
 }
@@ -3474,6 +3535,11 @@ spritelayout suburban_building_2b_sw(a) {
     }
 }
 
+spritegroup group_suburban_building_2b {
+    little: [suburban_building_2b, suburban_building_2b_half];
+    lots:   suburban_building_2b_full;
+}
+
 item(FEAT_STATIONS, suburban_station_building_2b) {
     property {
         class:                  "_BLD";
@@ -3485,17 +3551,29 @@ item(FEAT_STATIONS, suburban_station_building_2b) {
         ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
+        cargo_threshold:        param_set_cargo_threshold*120;
     }
     graphics {
         sprite_layouts:         [suburban_building_2b_se(0), suburban_building_2b_sw(0)];
         select_tile_type:       0;
         availability:           switch_intro_year_suburban;
+        PASS:                   group_suburban_building_2b;
         purchase:               suburban_building_2b;
         suburban_building_2b;
     }
 }
 
 spriteset (suburban_building_3a, "src/graphics/stations_buildings_1_empty.png") {
+    [ 570, 430, 64, 64, -32, -32 ]
+    [ 640, 430, 64, 64, -32, -32 ]
+}
+
+spriteset (suburban_building_3a_half, "src/graphics/stations_buildings_1_half.png") {
+    [ 570, 430, 64, 64, -32, -32 ]
+    [ 640, 430, 64, 64, -32, -32 ]
+}
+
+spriteset (suburban_building_3a_full, "src/graphics/stations_buildings_1_full.png") {
     [ 570, 430, 64, 64, -32, -32 ]
     [ 640, 430, 64, 64, -32, -32 ]
 }
@@ -3534,6 +3612,11 @@ spritelayout suburban_building_3a_ne(a) {
     }
 }
 
+spritegroup group_suburban_building_3a {
+    little: [suburban_building_3a, suburban_building_3a_half];
+    lots:   suburban_building_3a_full;
+}
+
 item(FEAT_STATIONS, suburban_station_building_3a) {
     property {
         class:                  "_BLD";
@@ -3545,17 +3628,29 @@ item(FEAT_STATIONS, suburban_station_building_3a) {
         ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
+        cargo_threshold:        param_set_cargo_threshold*120;
     }
     graphics {
         sprite_layouts:         [suburban_building_3a_nw(0), suburban_building_3a_ne(0)];
         select_tile_type:       0;
         availability:           switch_intro_year_suburban;
+        PASS:                   group_suburban_building_3a;
         purchase:               suburban_building_3a;
         suburban_building_3a;
     }
 }
 
 spriteset (suburban_building_3b, "src/graphics/stations_buildings_1_empty.png") {
+    [ 710, 430, 64, 64, -32, -32 ]
+    [ 780, 430, 64, 64, -32, -32 ]
+}
+
+spriteset (suburban_building_3b_half, "src/graphics/stations_buildings_1_half.png") {
+    [ 710, 430, 64, 64, -32, -32 ]
+    [ 780, 430, 64, 64, -32, -32 ]
+}
+
+spriteset (suburban_building_3b_full, "src/graphics/stations_buildings_1_full.png") {
     [ 710, 430, 64, 64, -32, -32 ]
     [ 780, 430, 64, 64, -32, -32 ]
 }
@@ -3594,6 +3689,11 @@ spritelayout suburban_building_3b_sw(a) {
     }
 }
 
+spritegroup group_suburban_building_3b {
+    little: [suburban_building_3b, suburban_building_3b_half];
+    lots:   suburban_building_3b_full;
+}
+
 item(FEAT_STATIONS, suburban_station_building_3b) {
     property {
         class:                  "_BLD";
@@ -3605,11 +3705,13 @@ item(FEAT_STATIONS, suburban_station_building_3b) {
         ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
+        cargo_threshold:        param_set_cargo_threshold*120;
     }
     graphics {
         sprite_layouts:         [suburban_building_3b_se(0), suburban_building_3b_sw(0)];
         select_tile_type:       0;
         availability:           switch_intro_year_suburban;
+        PASS:                   group_suburban_building_3b;
         purchase:               suburban_building_3b;
         suburban_building_3b;
     }
@@ -3617,6 +3719,16 @@ item(FEAT_STATIONS, suburban_station_building_3b) {
 
 
 spriteset (suburban_building_4a, "src/graphics/stations_buildings_1_empty.png") {
+    [ 10, 500, 64, 64, -32, -32 ]
+    [ 80, 500, 64, 64, -32, -32 ]
+}
+
+spriteset (suburban_building_4a_half, "src/graphics/stations_buildings_1_half.png") {
+    [ 10, 500, 64, 64, -32, -32 ]
+    [ 80, 500, 64, 64, -32, -32 ]
+}
+
+spriteset (suburban_building_4a_full, "src/graphics/stations_buildings_1_full.png") {
     [ 10, 500, 64, 64, -32, -32 ]
     [ 80, 500, 64, 64, -32, -32 ]
 }
@@ -3655,6 +3767,11 @@ spritelayout suburban_building_4a_ne(a) {
     }
 }
 
+spritegroup group_suburban_building_4a {
+    little: [suburban_building_4a, suburban_building_4a_half];
+    lots:   suburban_building_4a_full;
+}
+
 item(FEAT_STATIONS, suburban_station_building_4a) {
     property {
         class:                  "_BLD";
@@ -3666,17 +3783,29 @@ item(FEAT_STATIONS, suburban_station_building_4a) {
         ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
+        cargo_threshold:        param_set_cargo_threshold*120;
     }
     graphics {
         sprite_layouts:         [suburban_building_4a_nw(0), suburban_building_4a_ne(0)];
         select_tile_type:       0;
         availability:           switch_intro_year_suburban;
+        PASS:                   group_suburban_building_4a;
         purchase:               suburban_building_4a;
         suburban_building_4a;
     }
 }
 
 spriteset (suburban_building_4b, "src/graphics/stations_buildings_1_empty.png") {
+    [ 150, 500, 64, 64, -32, -32 ]
+    [ 220, 500, 64, 64, -32, -32 ]
+}
+
+spriteset (suburban_building_4b_half, "src/graphics/stations_buildings_1_half.png") {
+    [ 150, 500, 64, 64, -32, -32 ]
+    [ 220, 500, 64, 64, -32, -32 ]
+}
+
+spriteset (suburban_building_4b_full, "src/graphics/stations_buildings_1_full.png") {
     [ 150, 500, 64, 64, -32, -32 ]
     [ 220, 500, 64, 64, -32, -32 ]
 }
@@ -3715,6 +3844,11 @@ spritelayout suburban_building_4b_sw(a) {
     }
 }
 
+spritegroup group_suburban_building_4b {
+    little: [suburban_building_4b, suburban_building_4b_half];
+    lots:   suburban_building_4b_full;
+}
+
 item(FEAT_STATIONS, suburban_station_building_4b) {
     property {
         class:                  "_BLD";
@@ -3726,11 +3860,13 @@ item(FEAT_STATIONS, suburban_station_building_4b) {
         ];
         disabled_platforms:     bitmask(2,3,4,5,6,7,8);
         disabled_length:        bitmask(2,3,4,5,6,7,8);
+        cargo_threshold:        param_set_cargo_threshold*120;
     }
     graphics {
         sprite_layouts:         [suburban_building_4b_se(0), suburban_building_4b_sw(0)];
         select_tile_type:       0;
         availability:           switch_intro_year_suburban;
+        PASS:                   group_suburban_building_4b;
         purchase:               suburban_building_4b;
         suburban_building_4b;
     }

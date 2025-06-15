@@ -3452,6 +3452,7 @@ item(FEAT_STATIONS, redbrick_arched_end) {
     graphics {
         sprite_layouts: [redbrick_arched_end_sw_ne(0), redbrick_arched_end_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_redbrick;
         purchase: redbrick_arched_end_right;
         switch_redbrick_arched_end;
     }
@@ -3550,6 +3551,7 @@ item(FEAT_STATIONS, redbrick_arched_middle) {
     graphics {
         sprite_layouts: [redbrick_arched_middle_sw_ne(0), redbrick_arched_middle_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_redbrick;
         purchase: redbrick_arched_middle_right;
         switch_redbrick_arched_middle;
     }
