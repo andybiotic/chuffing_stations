@@ -32,6 +32,9 @@ Chuffing Stations contains some elements from [FIRS](https://github.com/andythen
 
 ### Changelog
 
+**2.0**
+- New tile types.
+
 **1.3**
 - Resolved health and safety issue with missing redbrick platform end walls. Passengers are no longer in danger.
 - Re-added cargo aware graphics, and added controlling parameter. Using the default (low) setting, ~70 passengers must be waiting for them to show on plaform tiles. Setting another value increases this threshold. Medium requires ~140 passengers, high is ~210 and very high requires ~280 waiting passengers before they will show. Not all tiles have the same value, so there will be some variation across your stations.
