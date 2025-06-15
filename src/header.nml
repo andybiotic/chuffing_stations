@@ -3,13 +3,29 @@ grf {
     name: string(STR_GRF_NAME);
     desc: string(STR_GRF_DESCRIPTION);
     url: string(STR_GRF_WEBSITE);
-    version: 12;
+    version: 13;
     min_compatible_version: 10;
     param 1 {
         param_disable_unlock_year {
             type: bool;
             name: string(STR_PARAM_DISABLE_UNLOCK_YEAR_NAME);
             desc: string(STR_PARAM_DISABLE_UNLOCK_YEAR_DESCRIPTION);
+        }
+    }
+    param 2 {
+        param_set_cargo_threshold {
+            type: int;
+            name: string(STR_PARAM_SET_CARGO_THRESHOLD_NAME);
+            desc: string(STR_PARAM_SET_CARGO_THRESHOLD_DESCRIPTION);
+            min_value: 1;
+ 			      max_value: 4;
+ 			      def_value: 1;
+ 			      names: {
+		            1: string(STR_PARAM_SET_CARGO_THRESHOLD_1);
+ 	              2: string(STR_PARAM_SET_CARGO_THRESHOLD_2);
+                3: string(STR_PARAM_SET_CARGO_THRESHOLD_3);
+                4: string(STR_PARAM_SET_CARGO_THRESHOLD_4);
+ 			      };
         }
     }
 }

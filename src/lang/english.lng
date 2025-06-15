@@ -7,6 +7,13 @@ STR_GRF_WEBSITE                                                 :{WEBSITE}
 STR_PARAM_DISABLE_UNLOCK_YEAR_NAME                              :Disable station introduction dates
 STR_PARAM_DISABLE_UNLOCK_YEAR_DESCRIPTION                       :Toggle whether all station types are available regardless of the in-game year.
 
+STR_PARAM_SET_CARGO_THRESHOLD_NAME                              :Passenger waiting threshold
+STR_PARAM_SET_CARGO_THRESHOLD_DESCRIPTION                       :The amount of passengers that must be waiting at the station before they are shown on the platforms.
+STR_PARAM_SET_CARGO_THRESHOLD_1                                 :Low (Recommended)
+STR_PARAM_SET_CARGO_THRESHOLD_2                                 :Medium
+STR_PARAM_SET_CARGO_THRESHOLD_3                                 :High
+STR_PARAM_SET_CARGO_THRESHOLD_4                                 :Very High
+
 STR_VERSION_22723                                               :1.2.0 (r22723)
 
 STR_NAME_STATCLASS                                              :Platforms
