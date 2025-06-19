@@ -2733,6 +2733,625 @@ item(FEAT_STATIONS, stone_right_overbridge_fences) {
     }
 }
 
+/***********************************************/
+/***** PLATFORM SQUARE *************************/
+/***********************************************/
+
+
+spriteset (stone_platform_square, "src/graphics/stations_stone_empty.png") {
+    [  430, 500, 64, 64, -31, -32 ]
+    [  500, 500, 64, 64, -31, -32 ]
+}
+
+spriteset (stone_platform_square_half, "src/graphics/stations_stone_half.png") {
+    [  430, 500, 64, 64, -31, -32 ]
+    [  500, 500, 64, 64, -31, -32 ]
+}
+
+spriteset (stone_platform_square_full, "src/graphics/stations_stone_full.png") {
+    [  430, 500, 64, 64, -31, -32 ]
+    [  500, 500, 64, 64, -31, -32 ]
+}
+
+spritelayout stone_platform_square_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_platform_square_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_stone_platform_square {
+    little: [stone_platform_square, stone_platform_square_half];
+    lots:   stone_platform_square_full;
+}
+
+item(FEAT_STATIONS, stone_platform_square_station) {
+    property {
+        class:                  "_STN";
+        classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_SQUARE);
+        tile_flags: [
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE)
+        ];
+        cargo_threshold:        param_set_cargo_threshold*190;
+    }
+    graphics {
+        sprite_layouts: [stone_platform_square_sw_ne(0), stone_platform_square_se_nw(0)];
+        select_tile_type: 1;
+        PASS: group_stone_platform_square;
+        purchase: stone_platform_square;
+        stone_platform_square;
+    }
+}
+
+/***********************************************/
+/***** COVERED PLATFORM SQUARE *****************/
+/***********************************************/
+
+spriteset (stone_platform_square_covered, "src/graphics/stations_stone_empty.png") {
+    [  430, 570, 64, 64, -31, -32 ]
+    [  500, 570, 64, 64, -31, -32 ]
+}
+
+spriteset (stone_platform_square_covered_half, "src/graphics/stations_stone_half.png") {
+    [  430, 570, 64, 64, -31, -32 ]
+    [  500, 570, 64, 64, -31, -32 ]
+}
+
+spriteset (stone_platform_square_covered_full, "src/graphics/stations_stone_full.png") {
+    [  430, 570, 64, 64, -31, -32 ]
+    [  500, 570, 64, 64, -31, -32 ]
+}
+
+spritelayout stone_platform_square_covered_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_platform_square_covered_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_stone_platform_square_covered {
+    little: [stone_platform_square_covered, stone_platform_square_covered_half];
+    lots:   stone_platform_square_covered_full;
+}
+
+item(FEAT_STATIONS, stone_platform_square_covered_station) {
+    property {
+        class:                  "_STN";
+        classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_SQUARE_COVERED);
+        tile_flags: [
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE)
+        ];
+        cargo_threshold:        param_set_cargo_threshold*190;
+    }
+    graphics {
+        sprite_layouts: [stone_platform_square_covered_sw_ne(0), stone_platform_square_covered_se_nw(0)];
+        select_tile_type: 1;
+        PASS: group_stone_platform_square_covered;
+        purchase: stone_platform_square_covered;
+        stone_platform_square_covered;
+    }
+}
+
+/***********************************************/
+/***** DOUBLE BUFFERS **************************/
+/***********************************************/
+
+
+spriteset (stone_buffer_north_building_double, "src/graphics/stations_stone_empty.png") {
+    [  570, 500, 64, 64, -31, -32 ]
+    [  640, 500, 64, 64, -31, -32 ]
+}
+
+spriteset (stone_buffer_north_building_double_half, "src/graphics/stations_stone_half.png") {
+    [  570, 500, 64, 64, -31, -32 ]
+    [  640, 500, 64, 64, -31, -32 ]
+}
+
+spriteset (stone_buffer_north_building_double_full, "src/graphics/stations_stone_full.png") {
+    [  570, 500, 64, 64, -31, -32 ]
+    [  640, 500, 64, 64, -31, -32 ]
+}
+
+spritelayout stone_buffer_north_building_double_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_buffer_north_building_double_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_stone_buffer_north_building_double {
+    little: [stone_buffer_north_building_double, stone_buffer_north_building_double_half];
+    lots:   stone_buffer_north_building_double_full;
+}
+
+item(FEAT_STATIONS, stone_buffer_north_building_double_station) {
+    property {
+        class:                  "_STN";
+        classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_BUFFER);
+        tile_flags: [
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE)
+        ];
+        cargo_threshold:        param_set_cargo_threshold*190;
+    }
+    graphics {
+        sprite_layouts: [stone_buffer_north_building_double_sw_ne(0), stone_buffer_north_building_double_se_nw(0)];
+        select_tile_type: 1;
+        PASS: group_stone_buffer_north_building_double;
+        purchase: stone_buffer_north_building_double;
+        stone_buffer_north_building_double;
+    }
+}
+
+spriteset (stone_buffer_south_building_double, "src/graphics/stations_stone_empty.png") {
+    [  710, 500, 64, 64, -31, -32 ]
+    [  780, 500, 64, 64, -31, -32 ]
+}
+
+spriteset (stone_buffer_south_building_double_half, "src/graphics/stations_stone_half.png") {
+    [  710, 500, 64, 64, -31, -32 ]
+    [  780, 500, 64, 64, -31, -32 ]
+}
+
+spriteset (stone_buffer_south_building_double_full, "src/graphics/stations_stone_full.png") {
+    [  710, 500, 64, 64, -31, -32 ]
+    [  780, 500, 64, 64, -31, -32 ]
+}
+
+spritelayout stone_buffer_south_building_double_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_buffer_south_building_double_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_stone_buffer_south_building_double {
+    little: [stone_buffer_south_building_double, stone_buffer_south_building_double_half];
+    lots:   stone_buffer_south_building_double_full;
+}
+
+item(FEAT_STATIONS, stone_buffer_south_building_double_station) {
+    property {
+        class:                  "_STN";
+        classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_BUFFER);
+        tile_flags: [
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE)
+        ];
+        cargo_threshold:        param_set_cargo_threshold*190;
+    }
+    graphics {
+        sprite_layouts: [stone_buffer_south_building_double_sw_ne(0), stone_buffer_south_building_double_se_nw(0)];
+        select_tile_type: 1;
+        PASS: group_stone_buffer_south_building_double;
+        purchase: stone_buffer_south_building_double;
+        stone_buffer_south_building_double;
+    }
+}
+
+/***************************************/
+/***** DOUBLE-SIDED PLATFORM ENDS ******/
+/***************************************/
+
+/** PLATFORM SOUTH **/
+
+spriteset (stone_ends_platform_south_double, "src/graphics/stations_stone_empty.png") {
+    [ 290, 10, 64, 64, -31, -32 ]
+    [ 360, 10, 64, 64, -31, -32 ]
+    [ 430, 10, 64, 64, -31, -32 ]
+    [ 500, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (stone_ends_platform_south_double_half, "src/graphics/stations_stone_half.png") {
+    [ 290, 10, 64, 64, -31, -32 ]
+    [ 360, 10, 64, 64, -31, -32 ]
+    [ 430, 10, 64, 64, -31, -32 ]
+    [ 500, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (stone_ends_platform_south_double_full, "src/graphics/stations_stone_full.png") {
+    [ 290, 10, 64, 64, -31, -32 ]
+    [ 360, 10, 64, 64, -31, -32 ]
+    [ 430, 10, 64, 64, -31, -32 ]
+    [ 500, 10, 64, 64, -31, -32 ]
+}
+
+spritelayout stone_ends_platform_double_sw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        11;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_ends_platform_double_se(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_stone_ends_platform_south_double {
+    little: [stone_ends_platform_south_double, stone_ends_platform_south_double_half];
+    lots:   stone_ends_platform_south_double_full;
+}
+
+item(FEAT_STATIONS, stone_lights_platform_double_south_station) {
+    property {
+        class:                  "_STN";
+        classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_END);
+        cargo_threshold:        param_set_cargo_threshold*160;
+    }
+    graphics {
+        sprite_layouts: [stone_ends_platform_double_sw(0), stone_ends_platform_double_se(0)];
+        select_tile_type: 2;
+        PASS: group_stone_ends_platform_south_double;
+        purchase: stone_ends_platform_south_double;
+        stone_ends_platform_south_double;
+    }
+}
+
+/** PLATFORM NORTH **/
+
+spriteset (stone_ends_platform_north_double, "src/graphics/stations_stone_empty.png") {
+    [ 570, 10, 64, 64, -31, -32 ]
+    [ 640, 10, 64, 64, -31, -32 ]
+    [ 710, 10, 64, 64, -31, -32 ]
+    [ 780, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (stone_ends_platform_north_double_half, "src/graphics/stations_stone_half.png") {
+    [ 570, 10, 64, 64, -31, -32 ]
+    [ 640, 10, 64, 64, -31, -32 ]
+    [ 710, 10, 64, 64, -31, -32 ]
+    [ 780, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (stone_ends_platform_north_double_full, "src/graphics/stations_stone_full.png") {
+    [ 570, 10, 64, 64, -31, -32 ]
+    [ 640, 10, 64, 64, -31, -32 ]
+    [ 710, 10, 64, 64, -31, -32 ]
+    [ 780, 10, 64, 64, -31, -32 ]
+}
+
+spritelayout stone_ends_platform_double_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        11;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_ends_platform_double_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_stone_ends_platform_north_double {
+    little: [stone_ends_platform_north_double, stone_ends_platform_north_double_half];
+    lots:   stone_ends_platform_north_double_full;
+}
+
+item(FEAT_STATIONS, stone_lights_platform_double_north_station) {
+    property {
+        class:                  "_STN";
+        classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_END);
+        cargo_threshold:        param_set_cargo_threshold*160;
+    }
+    graphics {
+        sprite_layouts: [stone_ends_platform_double_nw(0), stone_ends_platform_double_ne(0)];
+        select_tile_type: 2;
+        PASS: group_stone_ends_platform_north_double;
+        purchase: stone_ends_platform_north_double;
+        stone_ends_platform_north_double;
+    }
+}
+
+
+/***************************************/
+/***** DOUBLE-SIDED PLATFORM ***********/
+/***************************************/
+
+/** PLATFORM LEFT **/
+
+spriteset (stone_lights_platform_double, "src/graphics/stations_stone_empty.png") {
+    [  10, 150, 64, 64, -31, -32 ]
+    [  80, 150, 64, 64, -31, -32 ]
+    [ 150, 150, 64, 64, -31, -32 ]
+    [ 220, 150, 64, 64, -31, -32 ]
+}
+
+spriteset (stone_lights_platform_double_half, "src/graphics/stations_stone_half.png") {
+    [  10, 150, 64, 64, -31, -32 ]
+    [  80, 150, 64, 64, -31, -32 ]
+    [ 150, 150, 64, 64, -31, -32 ]
+    [ 220, 150, 64, 64, -31, -32 ]
+}
+
+spriteset (stone_lights_platform_double_full, "src/graphics/stations_stone_full.png") {
+    [  10, 150, 64, 64, -31, -32 ]
+    [  80, 150, 64, 64, -31, -32 ]
+    [ 150, 150, 64, 64, -31, -32 ]
+    [ 220, 150, 64, 64, -31, -32 ]
+}
+
+spritelayout stone_lights_platform_double_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        11;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_lights_platform_double_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_stone_double {
+    little: [stone_lights_platform_double, stone_lights_platform_double_half];
+    lots:   stone_lights_platform_double_full;
+}
+
+item(FEAT_STATIONS, stone_lights_platform_double_station) {
+    property {
+        class:                  "_STN";
+        classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_LAMPS);
+        cargo_threshold:        param_set_cargo_threshold*160;
+    }
+    graphics {
+        sprite_layouts: [stone_lights_platform_double_sw_ne(0), stone_lights_platform_double_se_nw(0)];
+        select_tile_type: 2;
+        PASS: group_stone_double;
+        purchase: stone_lights_platform_double;
+        stone_lights_platform_double;
+    }
+}
+
 /***********************************/
 /***** COVERED PLATFORMS ***********/
 /***********************************/
