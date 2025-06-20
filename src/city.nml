@@ -3851,3 +3851,57 @@ item(FEAT_STATIONS, city_right_overbridge_waypoint) {
         city_overbridge_waypoint_right;
     }
 }
+
+spriteset (city_overpass_waypoint, "src/graphics/stations_waypoints.png") {
+    [  710, 710, 64, 64, -31, -32 ]
+    [  780, 710, 64, 64, -31, -32 ]
+}
+
+spritelayout city_overpass_waypoint_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout city_overpass_waypoint_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, city_left_overpass_waypoint) {
+    property {
+        class:                  "WAYP";    
+        classname:              string(STR_NAME_STATCLASS_REDBRICK_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
+    }
+    graphics {
+        sprite_layouts: [city_overpass_waypoint_sw_ne(0), city_overpass_waypoint_se_nw(0)];
+        select_tile_type: 2;
+        availability: switch_intro_year_city;
+        purchase: city_overpass_waypoint;
+        city_overpass_waypoint;
+    }
+}

@@ -3776,6 +3776,107 @@ item(FEAT_STATIONS, stone_arched_middle) {
     }
 }
 
+/****************************************/
+/***** COVERED PLATFORMS ****************/
+/****************************************/
+
+
+spriteset (stone_covered_end_left, "src/graphics/stations_stone_empty.png") {
+    [ 430, 850, 64, 64, -31, -32 ]
+    [ 500, 850, 64, 64, -31, -32 ]
+    [ 640, 850, 64, 64, -31, -32 ]
+    [ 710, 850, 64, 64, -31, -32 ]
+}
+
+spriteset (stone_covered_end_right, "src/graphics/stations_stone_empty.png") {
+    [ 500, 920, 64, 64, -31, -32 ]
+    [ 430, 920, 64, 96, -31, -64 ]
+    [ 640, 920, 64, 64, -31, -32 ]
+    [ 710, 920, 64, 96, -31, -64 ]
+}
+
+spritelayout stone_covered_end_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_covered_end_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+switch (FEAT_STATIONS, SELF, switch_stone_covered_end, platform_number_from_start(PLATFORM_SAME_SECTION)) {
+    0: return stone_covered_end_left;
+    1: return stone_covered_end_right;
+}
+
+item(FEAT_STATIONS, stone_covered_end) {
+    property {
+        class:                  "_STN";
+        classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_MERSEY_ROAD);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE)
+        ];
+        disabled_platforms:     bitmask(1,3,4,5,6,7,8);
+    }
+    graphics {
+        sprite_layouts: [stone_covered_end_sw_ne(0), stone_covered_end_se_nw(0)];
+        select_tile_type: 2;
+        purchase: stone_covered_end_right;
+        switch_stone_covered_end;
+    }
+}
+
 
 /******************************/
 /***** BULDINGS ***************/
