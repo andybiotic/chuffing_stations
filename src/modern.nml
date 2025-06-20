@@ -4099,8 +4099,6 @@ item(FEAT_STATIONS, modern_feature_building) {
 /***** OVERPASS WAYPOINT ***********/
 /***********************************/
 
-/***** OVERPASS WAYPOINT ***********/
-
 spriteset (modern_overpass_waypoint, "src/graphics/stations_waypoints.png") {
     [  430, 710, 64, 64, -31, -32 ]
     [  500, 710, 64, 64, -31, -32 ]
