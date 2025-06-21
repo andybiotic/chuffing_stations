@@ -3461,7 +3461,7 @@ item(FEAT_STATIONS, city_station_building_1a) {
     property {
         class:                  "_BLD";
         classname:              string(STR_NAME_STATION_BUILDING);
-        name:                   string(STR_NAME_STATION_COLNE);
+        name:                   string(STR_NAME_STATION_WANSBECK);
         tile_flags: [
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
@@ -3538,7 +3538,7 @@ item(FEAT_STATIONS, city_station_building_1b) {
     property {
         class:                  "_BLD";
         classname:              string(STR_NAME_STATION_BUILDING);
-        name:                   string(STR_NAME_STATION_COLNE);
+        name:                   string(STR_NAME_STATION_WANSBECK);
         tile_flags: [
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
@@ -3615,7 +3615,7 @@ item(FEAT_STATIONS, city_station_building_2a) {
     property {
         class:                  "_BLD";
         classname:              string(STR_NAME_STATION_BUILDING);
-        name:                   string(STR_NAME_STATION_IRWELL);
+        name:                   string(STR_NAME_STATION_BLYTH);
         tile_flags: [
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
@@ -3692,7 +3692,7 @@ item(FEAT_STATIONS, city_station_building_2b) {
     property {
         class:                  "_BLD";
         classname:              string(STR_NAME_STATION_BUILDING);
-        name:                   string(STR_NAME_STATION_IRWELL);
+        name:                   string(STR_NAME_STATION_BLYTH);
         tile_flags: [
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
