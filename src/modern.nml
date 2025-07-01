@@ -4947,7 +4947,7 @@ item(FEAT_STATIONS, modern_left_overpass_waypoint) {
     property {
         class:                  "WAYP";    
         classname:              string(STR_NAME_STATCLASS_REDBRICK_PLATFORMS);
-        name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
+        name:                   string(STR_NAME_STATION_PLATFORM_OVERBRIDGE);
     }
     graphics {
         sprite_layouts: [modern_overpass_waypoint_sw_ne(0), modern_overpass_waypoint_se_nw(0)];
