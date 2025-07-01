@@ -3390,7 +3390,7 @@ item(FEAT_STATIONS, redbrick_platform_square_covered_station) {
     property {
         class:                  "_RBK";
         classname:              string(STR_NAME_STATCLASS_REDBRICK_PLATFORMS);
-        name:                   string(STR_NAME_STATION_PLATFORM_SQUARE_COVERED);
+        name:                   string(STR_NAME_STATION_PLATFORM_CENTRAL_BUILDING);
         tile_flags: [
             bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE),
             bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE)
@@ -3865,6 +3865,110 @@ item(FEAT_STATIONS, redbrick_lights_platform_double_station) {
         PASS: group_redbrick_double;
         purchase: redbrick_lights_platform_double;
         redbrick_lights_platform_double;
+    }
+}
+
+/****************************************/
+/***** BRIDGE BUILDING ******************/
+/****************************************/
+
+
+spriteset (redbrick_bridgebuilding_left, "src/graphics/stations_redbrick_half.png") {
+    [  570, 710, 64, 64, -31, -32 ]
+    [  640, 710, 64, 64, -31, -32 ]
+
+    [  710, 710, 64, 64, -31, -32 ]
+    [  780, 710, 64, 64, -31, -32 ]
+}
+
+spriteset (redbrick_bridgebuilding_right, "src/graphics/stations_redbrick_half.png") {
+    [  570, 780, 64, 64, -31, -32 ]
+    [  640, 780, 64, 64, -31, -32 ]
+
+    [  710, 780, 64, 64, -31, -32 ]
+    [  780, 780, 64, 64, -31, -32 ]
+}
+
+spritelayout redbrick_bridgebuilding_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout redbrick_bridgebuilding_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+switch (FEAT_STATIONS, SELF, switch_redbrick_bridgebuilding, platform_number_from_start(PLATFORM_SAME_SECTION)) {
+    0: return redbrick_bridgebuilding_left;
+    1: return redbrick_bridgebuilding_right;
+}
+
+item(FEAT_STATIONS, redbrick_bridgebuilding) {
+    property {
+        class:                  "_RBK";
+        classname:              string(STR_NAME_STATCLASS_REDBRICK_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_BRIDGEBUILDING);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE)
+        ];
+        disabled_platforms:     bitmask(1,3,4,5,6,7,8);
+    }
+    graphics {
+        sprite_layouts: [redbrick_bridgebuilding_sw_ne(0), redbrick_bridgebuilding_se_nw(0)];
+        select_tile_type: 2;
+        availability: switch_intro_year_redbrick;
+        purchase: redbrick_bridgebuilding_left;
+        switch_redbrick_bridgebuilding;
     }
 }
 

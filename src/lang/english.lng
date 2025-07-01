@@ -53,6 +53,9 @@ STR_NAME_STATION_PLATFORM_COVERED                               :Covered Platfor
 STR_NAME_STATION_PLATFORM_ARCHED                                :Arched Platforms
 STR_NAME_STATION_PLATFORM_SQUARE                                :Platform Square
 STR_NAME_STATION_PLATFORM_SQUARE_COVERED                        :Covered Platform Square
+STR_NAME_STATION_PLATFORM_BRIDGEBUILDING                        :Bridge Ticket Office
+STR_NAME_STATION_PLATFORM_CENTRAL_BUILDING                      :Central Building
+
 
 STR_NAME_STATION_PLATFORM_WAYPOINT_SIGN                         :Track Sign
 STR_NAME_STATION_PLATFORM_SIGNALBOX                             :Signal Box
