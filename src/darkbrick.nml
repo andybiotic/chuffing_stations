@@ -4591,6 +4591,126 @@ item(FEAT_STATIONS, darkbrick_station_building_4b) {
     }
 }
 
+spriteset (darkbrick_building_5a, "src/graphics/stations_buildings_1_empty.png") {
+    [ 290, 640, 64, 64, -32, -32 ]
+    [ 360, 640, 64, 64, -32, -32 ]
+}
+
+spritelayout darkbrick_building_5a_se(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        30;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout darkbrick_building_5a_sw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        30;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, darkbrick_station_building_5a) {
+    property {
+        class:                  "_BLD";
+        classname:              string(STR_NAME_STATION_BUILDING);
+        name:                   string(STR_NAME_STATION_ENGINESHED);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
+        disabled_platforms:     bitmask(2,3,4,5,6,7,8);
+        disabled_length:        bitmask(2,3,4,5,6,7,8);
+    }
+    graphics {
+        sprite_layouts:         [darkbrick_building_5a_se(0), darkbrick_building_5a_sw(0)];
+        select_tile_type:       0;
+        availability:           switch_intro_year_darkbrick;
+        purchase:               darkbrick_building_5a;
+        darkbrick_building_5a;
+    }
+}
+
+spriteset (darkbrick_building_5b, "src/graphics/stations_buildings_1_empty.png") {
+    [ 430, 640, 64, 64, -32, -32 ]
+    [ 500, 640, 64, 64, -32, -32 ]
+}
+
+spritelayout darkbrick_building_5b_se(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        30;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout darkbrick_building_5b_sw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        30;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, darkbrick_station_building_5b) {
+    property {
+        class:                  "_BLD";
+        classname:              string(STR_NAME_STATION_BUILDING);
+        name:                   string(STR_NAME_STATION_ENGINESHED);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
+        disabled_platforms:     bitmask(2,3,4,5,6,7,8);
+        disabled_length:        bitmask(2,3,4,5,6,7,8);
+    }
+    graphics {
+        sprite_layouts:         [darkbrick_building_5b_se(0), darkbrick_building_5b_sw(0)];
+        select_tile_type:       0;
+        availability:           switch_intro_year_darkbrick;
+        purchase:               darkbrick_building_5b;
+        darkbrick_building_5b;
+    }
+}
+
 /**************************************************************************/
 /***** NO FOOTBRIDGE WAYPOINT BECAUSE IT IS THE SAME AS ANOTHER TYPE ******/
 /**************************************************************************/

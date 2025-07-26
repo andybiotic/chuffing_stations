@@ -4914,7 +4914,7 @@ spritelayout redbrick_building_5a_se(a) {
     }
     building {
         sprite:         DEFAULT(0);
-        xoffset:        1;
+        xoffset:        0;
         yoffset:        0;
         zoffset:        0;
         xextent:        16;
@@ -4931,7 +4931,7 @@ spritelayout redbrick_building_5a_sw(a) {
     }
     building {
         sprite:         DEFAULT(1);
-        xoffset:        1;
+        xoffset:        0;
         yoffset:        0;
         zoffset:        0;
         xextent:        16;
@@ -4974,7 +4974,7 @@ spritelayout redbrick_building_5b_se(a) {
     }
     building {
         sprite:         DEFAULT(0);
-        xoffset:        1;
+        xoffset:        0;
         yoffset:        0;
         zoffset:        0;
         xextent:        16;
@@ -4991,7 +4991,7 @@ spritelayout redbrick_building_5b_sw(a) {
     }
     building {
         sprite:         DEFAULT(1);
-        xoffset:        1;
+        xoffset:        0;
         yoffset:        0;
         zoffset:        0;
         xextent:        16;
