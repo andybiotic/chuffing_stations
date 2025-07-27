@@ -36,6 +36,7 @@ STR_NAME_STATCLASS_CITY_BUILDINGS                               :City Buildings
 STR_NAME_STATCLASS_STATION_SQUARES                              :Station Squares
 
 STR_NAME_STATION_PLATFORM                                       :Platform
+STR_NAME_STATION_PLATFORM_BASIC                                 :Basic Platform
 STR_NAME_STATION_PLATFORM_END                                   :Platform End
 STR_NAME_STATION_PLATFORM_LAMPS                                 :Platform with Lamps
 STR_NAME_STATION_PLATFORM_SIGN                                  :Platform with Sign

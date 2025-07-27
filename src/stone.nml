@@ -2,6 +2,297 @@
 /********************* STONE PLATFORMS *************************************/
 /***************************************************************************/
 
+/*******************************************/
+/***** BASIC PLATFORM **********************/
+/*******************************************/
+
+/** PLATFORM LEFT **/
+
+spriteset (stone_basic_platform_left, "src/graphics/stations_stone_empty.png") {
+    [  10, 10, 64, 64, -31, -32 ]
+    [  80, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (stone_basic_platform_left_half, "src/graphics/stations_stone_half.png") {
+    [  10, 10, 64, 64, -31, -32 ]
+    [  80, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (stone_basic_platform_left_full, "src/graphics/stations_stone_full.png") {
+    [  10, 10, 64, 64, -31, -32 ]
+    [  80, 10, 64, 64, -31, -32 ]
+}
+
+spritelayout stone_basic_platform_left_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_basic_platform_left_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_stone_basic_left {
+    little: [stone_basic_platform_left, stone_basic_platform_left_half];
+    lots:   stone_basic_platform_left_full;
+}
+
+item(FEAT_STATIONS, stone_basic_platform_left_station) {
+    property {
+        class:                  "_STN";
+        classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_BASIC);
+        cargo_threshold:        param_set_cargo_threshold*160;
+    }
+    graphics {
+        sprite_layouts: [stone_basic_platform_left_sw_ne(0), stone_basic_platform_left_se_nw(0)];
+        select_tile_type: 2;
+        PASS: group_stone_basic_left;
+        purchase: stone_basic_platform_left;
+        stone_basic_platform_left;
+    }
+}
+
+/** PLATFORM RIGHT **/
+
+spriteset (stone_basic_platform_right, "src/graphics/stations_stone_empty.png") {
+    [  150, 10, 64, 64, -31, -32 ]
+    [  220, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (stone_basic_platform_right_half, "src/graphics/stations_stone_half.png") {
+    [  150, 10, 64, 64, -31, -32 ]
+    [  220, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (stone_basic_platform_right_full, "src/graphics/stations_stone_full.png") {
+    [  150, 10, 64, 64, -31, -32 ]
+    [  220, 10, 64, 64, -31, -32 ]
+}
+
+spritelayout stone_basic_platform_right_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        11;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_basic_platform_right_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        6;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_stone_basic_right {
+    little: [stone_basic_platform_right, stone_basic_platform_right_half];
+    lots:   stone_basic_platform_right_full;
+}
+
+item(FEAT_STATIONS, stone_basic_platform_right_station) {
+    property {
+        class:                  "_STN";
+        classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_BASIC);
+        cargo_threshold:        param_set_cargo_threshold*160;
+    }
+    graphics {
+        sprite_layouts: [stone_basic_platform_right_sw_ne(0), stone_basic_platform_right_se_nw(0)];
+        select_tile_type: 2;
+        PASS: group_stone_basic_right;
+        purchase: stone_basic_platform_right;
+        stone_basic_platform_right;
+    }
+}
+
+/*******************************************/
+/***** BASIC PLATFORM WITH FENCES **********/
+/*******************************************/
+
+/** PLATFORM LEFT **/
+
+spriteset (stone_basicfence_platform_left, "src/graphics/stations_stone_empty.png") {
+    [  10, 80, 64, 64, -31, -32 ]
+    [  80, 80, 64, 64, -31, -32 ]
+}
+spriteset (stone_basicfence_platform_left_half, "src/graphics/stations_stone_half.png") {
+    [  10, 80, 64, 64, -31, -32 ]
+    [  80, 80, 64, 64, -31, -32 ]
+}
+spriteset (stone_basicfence_platform_left_full, "src/graphics/stations_stone_full.png") {
+    [  10, 80, 64, 64, -31, -32 ]
+    [  80, 80, 64, 64, -31, -32 ]
+}
+
+spritelayout stone_basicfence_platform_left_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+        building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_basicfence_platform_left_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+        building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_stone_basicfence_left {
+    little: [stone_basicfence_platform_left, stone_basicfence_platform_left_half];
+    lots:   stone_basicfence_platform_left_full;
+}
+
+item(FEAT_STATIONS, stone_basicfence_platform_left_station) {
+    property {
+        class:                  "_STN";
+        classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_BASIC);
+        cargo_threshold:        param_set_cargo_threshold*160;
+    }
+    graphics {
+        sprite_layouts: [stone_basicfence_platform_left_sw_ne(0), stone_basicfence_platform_left_se_nw(0)];
+        select_tile_type: 2;
+        PASS: group_stone_basicfence_left;
+        purchase: stone_basicfence_platform_left;
+        stone_basicfence_platform_left;
+    }
+}
+
+/** PLATFORM RIGHT **/
+
+spriteset (stone_basicfence_platform_right, "src/graphics/stations_stone_empty.png") {
+    [  150, 80, 64, 64, -31, -32 ]
+    [  220, 80, 64, 64, -31, -32 ]
+}
+spriteset (stone_basicfence_platform_right_half, "src/graphics/stations_stone_half.png") {
+    [  150, 80, 64, 64, -31, -32 ]
+    [  220, 80, 64, 64, -31, -32 ]
+}
+spriteset (stone_basicfence_platform_right_full, "src/graphics/stations_stone_full.png") {
+    [  150, 80, 64, 64, -31, -32 ]
+    [  220, 80, 64, 64, -31, -32 ]
+}
+
+spritelayout stone_basicfence_platform_right_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        11;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_basicfence_platform_right_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_stone_basicfence_right {
+    little: [stone_basicfence_platform_right, stone_basicfence_platform_right_half];
+    lots:   stone_basicfence_platform_right_full;
+}
+
+item(FEAT_STATIONS, stone_basicfence_platform_right_station) {
+    property {
+        class:                  "_STN";
+        classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_BASIC);
+        cargo_threshold:        param_set_cargo_threshold*160;
+    }
+    graphics {
+        sprite_layouts: [stone_basicfence_platform_right_sw_ne(0), stone_basicfence_platform_right_se_nw(0)];
+        select_tile_type: 2;
+        PASS: group_stone_basicfence_right;
+        purchase: stone_basicfence_platform_right;
+        stone_basicfence_platform_right;
+    }
+}
 
 /***************************************/
 /***** PLATFORM WITH LIGHTS ************/
