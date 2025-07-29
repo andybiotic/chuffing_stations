@@ -5186,6 +5186,129 @@ item(FEAT_STATIONS, stone_feature_building_rear) {
 }
 
 /****************************************/
+/***** CLYDE BUILDING FRONT *************/
+/****************************************/
+
+
+spriteset (stone_clyde_building_tile_0, "src/graphics/stations_buildings_2_full.png") {
+    [  10, 800, 64, 96, -31, -64 ]
+    [  290, 800, 64, 96, -31, -64 ]
+}
+
+spriteset (stone_clyde_building_tile_1, "src/graphics/stations_buildings_2_full.png") {
+    [  80, 800, 64, 96, -31, -64 ]
+    [  360, 800, 64, 96, -31, -64 ]
+}
+
+spriteset (stone_clyde_building_tile_2, "src/graphics/stations_buildings_2_full.png") {
+    [  150, 800, 64, 96, -31, -64 ]
+    [  430, 800, 64, 96, -31, -64 ]
+}
+
+spriteset (stone_clyde_building_tile_3, "src/graphics/stations_buildings_2_full.png") {
+    [  220, 800, 64, 112, -31, -80 ]
+    [  500, 800, 64, 112, -31, -80 ]
+}
+
+spritelayout stone_clyde_building_0(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        64;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_clyde_building_1(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        64;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_clyde_building_2(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        64;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_clyde_building_3(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        96;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+switch (FEAT_STATIONS, SELF, switch_stone_clyde_building, platform_number_from_start(PLATFORM_SAME_SECTION)) {
+    0: return stone_clyde_building_tile_0;
+    1: return stone_clyde_building_tile_1;
+    2: return stone_clyde_building_tile_2;
+    3: return stone_clyde_building_tile_3;
+}
+
+item(FEAT_STATIONS, stone_clyde_building) {
+    property {
+        class:                  "_BLD";
+        classname:              string(STR_NAME_STATION_BUILDING);
+        name:                   string(STR_NAME_STATION_CLYDE);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
+        disabled_platforms:     bitmask(0,1,2,3,5,6,7,8);
+        disabled_length:        bitmask(2,3,4,5,6,7,8);
+
+    }
+    graphics {
+        sprite_layouts: [stone_clyde_building_0(0), stone_clyde_building_1(0), stone_clyde_building_2(0), stone_clyde_building_3(0)];
+        select_tile_type: 0;
+        purchase: stone_clyde_building_tile_2;
+        switch_stone_clyde_building;
+    }
+}
+
+/****************************************/
 /***** FEATURE HOTEL ********************/
 /****************************************/
 
