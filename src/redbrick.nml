@@ -5697,6 +5697,7 @@ item(FEAT_STATIONS, redbrick_signalbox_1a_waypoint) {
     graphics {
         sprite_layouts: [redbrick_signalbox_waypoint_1a_sw_ne(0), redbrick_signalbox_waypoint_1a_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_redbrick;
         purchase: redbrick_signalbox_waypoint_1a;
         redbrick_signalbox_waypoint_1a;
     }
@@ -5754,6 +5755,7 @@ item(FEAT_STATIONS, redbrick_signalbox_1b_waypoint) {
     graphics {
         sprite_layouts: [redbrick_signalbox_waypoint_1b_sw_ne(0), redbrick_signalbox_waypoint_1b_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_redbrick;
         purchase: redbrick_signalbox_waypoint_1b;
         redbrick_signalbox_waypoint_1b;
     }
@@ -5812,6 +5814,7 @@ item(FEAT_STATIONS, redbrick_signalbox_2a_waypoint) {
     graphics {
         sprite_layouts: [redbrick_signalbox_waypoint_2a_sw_ne(0), redbrick_signalbox_waypoint_2a_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_redbrick;
         purchase: redbrick_signalbox_waypoint_2a;
         redbrick_signalbox_waypoint_2a;
     }
@@ -5869,6 +5872,7 @@ item(FEAT_STATIONS, redbrick_signalbox_2b_waypoint) {
     graphics {
         sprite_layouts: [redbrick_signalbox_waypoint_2b_sw_ne(0), redbrick_signalbox_waypoint_2b_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_redbrick;
         purchase: redbrick_signalbox_waypoint_2b;
         redbrick_signalbox_waypoint_2b;
     }

@@ -5118,6 +5118,7 @@ item(FEAT_STATIONS, darkbrick_signalbox_1a_waypoint) {
     graphics {
         sprite_layouts: [darkbrick_signalbox_waypoint_1a_sw_ne(0), darkbrick_signalbox_waypoint_1a_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_darkbrick;
         purchase: darkbrick_signalbox_waypoint_1a;
         darkbrick_signalbox_waypoint_1a;
     }
@@ -5175,6 +5176,7 @@ item(FEAT_STATIONS, darkbrick_signalbox_1b_waypoint) {
     graphics {
         sprite_layouts: [darkbrick_signalbox_waypoint_1b_sw_ne(0), darkbrick_signalbox_waypoint_1b_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_darkbrick;
         purchase: darkbrick_signalbox_waypoint_1b;
         darkbrick_signalbox_waypoint_1b;
     }
@@ -5233,6 +5235,7 @@ item(FEAT_STATIONS, darkbrick_signalbox_2a_waypoint) {
     graphics {
         sprite_layouts: [darkbrick_signalbox_waypoint_2a_sw_ne(0), darkbrick_signalbox_waypoint_2a_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_darkbrick;
         purchase: darkbrick_signalbox_waypoint_2a;
         darkbrick_signalbox_waypoint_2a;
     }
@@ -5290,7 +5293,126 @@ item(FEAT_STATIONS, darkbrick_signalbox_2b_waypoint) {
     graphics {
         sprite_layouts: [darkbrick_signalbox_waypoint_2b_sw_ne(0), darkbrick_signalbox_waypoint_2b_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_darkbrick;
         purchase: darkbrick_signalbox_waypoint_2b;
         darkbrick_signalbox_waypoint_2b;
     }
 }
+
+/***** SUBSTATION WAYPOINT 3A *****/
+
+spriteset (darkbrick_substation_waypoint_3a, "src/graphics/stations_waypoints.png") {
+    [  570, 570, 64, 64, -31, -32 ]
+    [  780, 570, 64, 64, -31, -32 ]
+
+}
+
+spritelayout darkbrick_substation_waypoint_3a_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout darkbrick_substation_waypoint_3a_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, darkbrick_substation_3a_waypoint) {
+    property {
+        class:                  "WAYP";
+        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_SUBSTATION);
+
+
+    }
+    graphics {
+        sprite_layouts: [darkbrick_substation_waypoint_3a_sw_ne(0), darkbrick_substation_waypoint_3a_se_nw(0)];
+        select_tile_type: 2;
+        availability: switch_intro_year_darkbrick;
+        purchase: darkbrick_substation_waypoint_3a;
+        darkbrick_substation_waypoint_3a;
+    }
+}
+
+/***** SUBSTATION WAYPOINT 3B *****/
+
+spriteset (darkbrick_substation_waypoint_3b, "src/graphics/stations_waypoints.png") {
+    [  710, 570, 64, 64, -31, -32 ]
+    [  640, 570, 64, 64, -31, -32 ]
+
+}
+
+spritelayout darkbrick_substation_waypoint_3b_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        11;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout darkbrick_substation_waypoint_3b_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, darkbrick_substation_3b_waypoint) {
+    property {
+        class:                  "WAYP";
+        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_SUBSTATION);
+
+    }
+    graphics {
+        sprite_layouts: [darkbrick_substation_waypoint_3b_sw_ne(0), darkbrick_substation_waypoint_3b_se_nw(0)];
+        select_tile_type: 2;
+        availability: switch_intro_year_darkbrick;
+        purchase: darkbrick_substation_waypoint_3b;
+        darkbrick_substation_waypoint_3b;
+    }
+}
+

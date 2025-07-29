@@ -5304,6 +5304,7 @@ item(FEAT_STATIONS, modern_signalbox_1a_waypoint) {
     graphics {
         sprite_layouts: [modern_signalbox_waypoint_1a_sw_ne(0), modern_signalbox_waypoint_1a_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_modern;
         purchase: modern_signalbox_waypoint_1a;
         modern_signalbox_waypoint_1a;
     }
@@ -5361,6 +5362,7 @@ item(FEAT_STATIONS, modern_signalbox_1b_waypoint) {
     graphics {
         sprite_layouts: [modern_signalbox_waypoint_1b_sw_ne(0), modern_signalbox_waypoint_1b_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_modern;
         purchase: modern_signalbox_waypoint_1b;
         modern_signalbox_waypoint_1b;
     }

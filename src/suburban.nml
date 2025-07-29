@@ -5036,6 +5036,7 @@ item(FEAT_STATIONS, suburban_signalbox_1a_waypoint) {
     graphics {
         sprite_layouts: [suburban_signalbox_waypoint_1a_sw_ne(0), suburban_signalbox_waypoint_1a_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_suburban;
         purchase: suburban_signalbox_waypoint_1a;
         suburban_signalbox_waypoint_1a;
     }
@@ -5093,6 +5094,7 @@ item(FEAT_STATIONS, suburban_signalbox_1b_waypoint) {
     graphics {
         sprite_layouts: [suburban_signalbox_waypoint_1b_sw_ne(0), suburban_signalbox_waypoint_1b_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_suburban;
         purchase: suburban_signalbox_waypoint_1b;
         suburban_signalbox_waypoint_1b;
     }
@@ -5151,6 +5153,7 @@ item(FEAT_STATIONS, suburban_signalbox_2a_waypoint) {
     graphics {
         sprite_layouts: [suburban_signalbox_waypoint_2a_sw_ne(0), suburban_signalbox_waypoint_2a_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_suburban;
         purchase: suburban_signalbox_waypoint_2a;
         suburban_signalbox_waypoint_2a;
     }
@@ -5208,6 +5211,7 @@ item(FEAT_STATIONS, suburban_signalbox_2b_waypoint) {
     graphics {
         sprite_layouts: [suburban_signalbox_waypoint_2b_sw_ne(0), suburban_signalbox_waypoint_2b_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_suburban;
         purchase: suburban_signalbox_waypoint_2b;
         suburban_signalbox_waypoint_2b;
     }
@@ -5266,6 +5270,7 @@ item(FEAT_STATIONS, suburban_signalbox_3a_waypoint) {
     graphics {
         sprite_layouts: [suburban_signalbox_waypoint_3a_sw_ne(0), suburban_signalbox_waypoint_3a_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_suburban;
         purchase: suburban_signalbox_waypoint_3a;
         suburban_signalbox_waypoint_3a;
     }
@@ -5323,6 +5328,7 @@ item(FEAT_STATIONS, suburban_signalbox_3b_waypoint) {
     graphics {
         sprite_layouts: [suburban_signalbox_waypoint_3b_sw_ne(0), suburban_signalbox_waypoint_3b_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_suburban;
         purchase: suburban_signalbox_waypoint_3b;
         suburban_signalbox_waypoint_3b;
     }

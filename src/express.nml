@@ -5222,3 +5222,120 @@ item(FEAT_STATIONS, express_left_overpass_waypoint) {
         express_overpass_waypoint;
     }
 }
+
+/***** SUBSTATION WAYPOINT 2A *****/
+
+spriteset (express_substation_waypoint_2a, "src/graphics/stations_waypoints.png") {
+    [  290, 640, 64, 64, -31, -32 ]
+    [  500, 640, 64, 64, -31, -32 ]
+
+}
+
+spritelayout express_substation_waypoint_2a_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout express_substation_waypoint_2a_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, express_substation_2a_waypoint) {
+    property {
+        class:                  "WAYP";
+        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_SUBSTATION);
+
+
+    }
+    graphics {
+        sprite_layouts: [express_substation_waypoint_2a_sw_ne(0), express_substation_waypoint_2a_se_nw(0)];
+        select_tile_type: 2;
+        availability: switch_intro_year_express;
+        purchase: express_substation_waypoint_2a;
+        express_substation_waypoint_2a;
+    }
+}
+
+/***** SUBSTATION WAYPOINT 2B *****/
+
+spriteset (express_substation_waypoint_2b, "src/graphics/stations_waypoints.png") {
+    [  430, 640, 64, 64, -31, -32 ]
+    [  360, 640, 64, 64, -31, -32 ]
+
+}
+
+spritelayout express_substation_waypoint_2b_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        11;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout express_substation_waypoint_2b_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, express_substation_2b_waypoint) {
+    property {
+        class:                  "WAYP";
+        classname:              string(STR_NAME_STATCLASS_DARKBRICK_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_SUBSTATION);
+
+    }
+    graphics {
+        sprite_layouts: [express_substation_waypoint_2b_sw_ne(0), express_substation_waypoint_2b_se_nw(0)];
+        select_tile_type: 2;
+        availability: switch_intro_year_express;
+        purchase: express_substation_waypoint_2b;
+        express_substation_waypoint_2b;
+    }
+}
