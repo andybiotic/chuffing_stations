@@ -31,6 +31,15 @@ Many thanks to everyone who has contributed to maintaining and developing OpenTT
 Chuffing Stations contains some elements from [FIRS](https://github.com/andythenorth/firs) and [CHIPS](https://github.com/andythenorth/chips).
 
 ### Changelog
+**2.0**
+- Many new general tile types, including full platforms, double-sided platforms and buffers.
+- New overpass waypoints.
+- New Stone covered platform 'Mersey Road', based on London Liverpool Street.
+- New Redbrick ticket office, inspired by several London Midland Railway stations.
+- New Modern covered stations.
+- New engine sheds.
+- Many graphical improvements.
+- This version is not savegame compatible with version 1.
 
 **1.3**
 - Resolved health and safety issue with missing redbrick platform end walls. Passengers are no longer in danger.

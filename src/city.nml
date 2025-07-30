@@ -2,6 +2,298 @@
 /********************* CITY PLATFORMS **************************************/
 /***************************************************************************/
 
+/*******************************************/
+/***** BASIC PLATFORM **********************/
+/*******************************************/
+
+/** PLATFORM LEFT **/
+
+spriteset (city_basic_platform_left, "src/graphics/stations_city_empty.png") {
+    [  10, 10, 64, 64, -31, -32 ]
+    [  80, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (city_basic_platform_left_half, "src/graphics/stations_city_half.png") {
+    [  10, 10, 64, 64, -31, -32 ]
+    [  80, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (city_basic_platform_left_full, "src/graphics/stations_city_full.png") {
+    [  10, 10, 64, 64, -31, -32 ]
+    [  80, 10, 64, 64, -31, -32 ]
+}
+
+spritelayout city_basic_platform_left_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout city_basic_platform_left_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_city_basic_left {
+    little: [city_basic_platform_left, city_basic_platform_left_half];
+    lots:   city_basic_platform_left_full;
+}
+
+item(FEAT_STATIONS, city_basic_platform_left_station) {
+    property {
+        class:                  "_CTY";
+        classname:              string(STR_NAME_STATCLASS_CITY_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_BASIC);
+        cargo_threshold:        param_set_cargo_threshold*160;
+    }
+    graphics {
+        sprite_layouts: [city_basic_platform_left_sw_ne(0), city_basic_platform_left_se_nw(0)];
+        select_tile_type: 2;
+        PASS: group_city_basic_left;
+        purchase: city_basic_platform_left;
+        city_basic_platform_left;
+    }
+}
+
+/** PLATFORM RIGHT **/
+
+spriteset (city_basic_platform_right, "src/graphics/stations_city_empty.png") {
+    [  150, 10, 64, 64, -31, -32 ]
+    [  220, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (city_basic_platform_right_half, "src/graphics/stations_city_half.png") {
+    [  150, 10, 64, 64, -31, -32 ]
+    [  220, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (city_basic_platform_right_full, "src/graphics/stations_city_full.png") {
+    [  150, 10, 64, 64, -31, -32 ]
+    [  220, 10, 64, 64, -31, -32 ]
+}
+
+spritelayout city_basic_platform_right_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        11;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout city_basic_platform_right_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        6;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_city_basic_right {
+    little: [city_basic_platform_right, city_basic_platform_right_half];
+    lots:   city_basic_platform_right_full;
+}
+
+item(FEAT_STATIONS, city_basic_platform_right_station) {
+    property {
+        class:                  "_CTY";
+        classname:              string(STR_NAME_STATCLASS_CITY_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_BASIC);
+        cargo_threshold:        param_set_cargo_threshold*160;
+    }
+    graphics {
+        sprite_layouts: [city_basic_platform_right_sw_ne(0), city_basic_platform_right_se_nw(0)];
+        select_tile_type: 2;
+        PASS: group_city_basic_right;
+        purchase: city_basic_platform_right;
+        city_basic_platform_right;
+    }
+}
+
+/*******************************************/
+/***** BASIC PLATFORM WITH FENCES **********/
+/*******************************************/
+
+/** PLATFORM LEFT **/
+
+spriteset (city_basicfence_platform_left, "src/graphics/stations_city_empty.png") {
+    [  10, 80, 64, 64, -31, -32 ]
+    [  80, 80, 64, 64, -31, -32 ]
+}
+spriteset (city_basicfence_platform_left_half, "src/graphics/stations_city_half.png") {
+    [  10, 80, 64, 64, -31, -32 ]
+    [  80, 80, 64, 64, -31, -32 ]
+}
+spriteset (city_basicfence_platform_left_full, "src/graphics/stations_city_full.png") {
+    [  10, 80, 64, 64, -31, -32 ]
+    [  80, 80, 64, 64, -31, -32 ]
+}
+
+spritelayout city_basicfence_platform_left_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+        building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout city_basicfence_platform_left_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+        building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_city_basicfence_left {
+    little: [city_basicfence_platform_left, city_basicfence_platform_left_half];
+    lots:   city_basicfence_platform_left_full;
+}
+
+item(FEAT_STATIONS, city_basicfence_platform_left_station) {
+    property {
+        class:                  "_CTY";
+        classname:              string(STR_NAME_STATCLASS_CITY_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_BASIC);
+        cargo_threshold:        param_set_cargo_threshold*160;
+    }
+    graphics {
+        sprite_layouts: [city_basicfence_platform_left_sw_ne(0), city_basicfence_platform_left_se_nw(0)];
+        select_tile_type: 2;
+        PASS: group_city_basicfence_left;
+        purchase: city_basicfence_platform_left;
+        city_basicfence_platform_left;
+    }
+}
+
+/** PLATFORM RIGHT **/
+
+spriteset (city_basicfence_platform_right, "src/graphics/stations_city_empty.png") {
+    [  150, 80, 64, 64, -31, -32 ]
+    [  220, 80, 64, 64, -31, -32 ]
+}
+spriteset (city_basicfence_platform_right_half, "src/graphics/stations_city_half.png") {
+    [  150, 80, 64, 64, -31, -32 ]
+    [  220, 80, 64, 64, -31, -32 ]
+}
+spriteset (city_basicfence_platform_right_full, "src/graphics/stations_city_full.png") {
+    [  150, 80, 64, 64, -31, -32 ]
+    [  220, 80, 64, 64, -31, -32 ]
+}
+
+spritelayout city_basicfence_platform_right_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        11;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout city_basicfence_platform_right_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_city_basicfence_right {
+    little: [city_basicfence_platform_right, city_basicfence_platform_right_half];
+    lots:   city_basicfence_platform_right_full;
+}
+
+item(FEAT_STATIONS, city_basicfence_platform_right_station) {
+    property {
+        class:                  "_CTY";
+        classname:              string(STR_NAME_STATCLASS_CITY_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_BASIC);
+        cargo_threshold:        param_set_cargo_threshold*160;
+    }
+    graphics {
+        sprite_layouts: [city_basicfence_platform_right_sw_ne(0), city_basicfence_platform_right_se_nw(0)];
+        select_tile_type: 2;
+        PASS: group_city_basicfence_right;
+        purchase: city_basicfence_platform_right;
+        city_basicfence_platform_right;
+    }
+}
+
 /***************************************/
 /***** PLATFORM WITH LIGHTS ************/
 /***************************************/
@@ -3069,6 +3361,625 @@ item(FEAT_STATIONS, city_right_overbridge_fences) {
     }
 }
 
+/***********************************************/
+/***** PLATFORM SQUARE *************************/
+/***********************************************/
+
+
+spriteset (city_platform_square, "src/graphics/stations_city_empty.png") {
+    [  430, 500, 64, 64, -31, -32 ]
+    [  500, 500, 64, 64, -31, -32 ]
+}
+
+spriteset (city_platform_square_half, "src/graphics/stations_city_half.png") {
+    [  430, 500, 64, 64, -31, -32 ]
+    [  500, 500, 64, 64, -31, -32 ]
+}
+
+spriteset (city_platform_square_full, "src/graphics/stations_city_full.png") {
+    [  430, 500, 64, 64, -31, -32 ]
+    [  500, 500, 64, 64, -31, -32 ]
+}
+
+spritelayout city_platform_square_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout city_platform_square_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_city_platform_square {
+    little: [city_platform_square, city_platform_square_half];
+    lots:   city_platform_square_full;
+}
+
+item(FEAT_STATIONS, city_platform_square_station) {
+    property {
+        class:                  "_CTY";
+        classname:              string(STR_NAME_STATCLASS_CITY_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_SQUARE);
+        tile_flags: [
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE)
+        ];
+        cargo_threshold:        param_set_cargo_threshold*190;
+    }
+    graphics {
+        sprite_layouts: [city_platform_square_sw_ne(0), city_platform_square_se_nw(0)];
+        select_tile_type: 1;
+        PASS: group_city_platform_square;
+        purchase: city_platform_square;
+        city_platform_square;
+    }
+}
+
+/***********************************************/
+/***** COVERED PLATFORM SQUARE *****************/
+/***********************************************/
+
+spriteset (city_platform_square_covered, "src/graphics/stations_city_empty.png") {
+    [  430, 570, 64, 64, -31, -32 ]
+    [  500, 570, 64, 64, -31, -32 ]
+}
+
+spriteset (city_platform_square_covered_half, "src/graphics/stations_city_half.png") {
+    [  430, 570, 64, 64, -31, -32 ]
+    [  500, 570, 64, 64, -31, -32 ]
+}
+
+spriteset (city_platform_square_covered_full, "src/graphics/stations_city_full.png") {
+    [  430, 570, 64, 64, -31, -32 ]
+    [  500, 570, 64, 64, -31, -32 ]
+}
+
+spritelayout city_platform_square_covered_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout city_platform_square_covered_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_city_platform_square_covered {
+    little: [city_platform_square_covered, city_platform_square_covered_half];
+    lots:   city_platform_square_covered_full;
+}
+
+item(FEAT_STATIONS, city_platform_square_covered_station) {
+    property {
+        class:                  "_CTY";
+        classname:              string(STR_NAME_STATCLASS_CITY_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_SQUARE_COVERED);
+        tile_flags: [
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE)
+        ];
+        cargo_threshold:        param_set_cargo_threshold*190;
+    }
+    graphics {
+        sprite_layouts: [city_platform_square_covered_sw_ne(0), city_platform_square_covered_se_nw(0)];
+        select_tile_type: 1;
+        PASS: group_city_platform_square_covered;
+        purchase: city_platform_square_covered;
+        city_platform_square_covered;
+    }
+}
+
+/***********************************************/
+/***** DOUBLE BUFFERS **************************/
+/***********************************************/
+
+
+spriteset (city_buffer_north_building_double, "src/graphics/stations_city_empty.png") {
+    [  570, 500, 64, 64, -31, -32 ]
+    [  640, 500, 64, 64, -31, -32 ]
+}
+
+spriteset (city_buffer_north_building_double_half, "src/graphics/stations_city_half.png") {
+    [  570, 500, 64, 64, -31, -32 ]
+    [  640, 500, 64, 64, -31, -32 ]
+}
+
+spriteset (city_buffer_north_building_double_full, "src/graphics/stations_city_full.png") {
+    [  570, 500, 64, 64, -31, -32 ]
+    [  640, 500, 64, 64, -31, -32 ]
+}
+
+spritelayout city_buffer_north_building_double_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout city_buffer_north_building_double_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_city_buffer_north_building_double {
+    little: [city_buffer_north_building_double, city_buffer_north_building_double_half];
+    lots:   city_buffer_north_building_double_full;
+}
+
+item(FEAT_STATIONS, city_buffer_north_building_double_station) {
+    property {
+        class:                  "_CTY";
+        classname:              string(STR_NAME_STATCLASS_CITY_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_BUFFER);
+        tile_flags: [
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE)
+        ];
+        cargo_threshold:        param_set_cargo_threshold*190;
+    }
+    graphics {
+        sprite_layouts: [city_buffer_north_building_double_sw_ne(0), city_buffer_north_building_double_se_nw(0)];
+        select_tile_type: 1;
+        PASS: group_city_buffer_north_building_double;
+        purchase: city_buffer_north_building_double;
+        city_buffer_north_building_double;
+    }
+}
+
+spriteset (city_buffer_south_building_double, "src/graphics/stations_city_empty.png") {
+    [  710, 500, 64, 64, -31, -32 ]
+    [  780, 500, 64, 64, -31, -32 ]
+}
+
+spriteset (city_buffer_south_building_double_half, "src/graphics/stations_city_half.png") {
+    [  710, 500, 64, 64, -31, -32 ]
+    [  780, 500, 64, 64, -31, -32 ]
+}
+
+spriteset (city_buffer_south_building_double_full, "src/graphics/stations_city_full.png") {
+    [  710, 500, 64, 64, -31, -32 ]
+    [  780, 500, 64, 64, -31, -32 ]
+}
+
+spritelayout city_buffer_south_building_double_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout city_buffer_south_building_double_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_city_buffer_south_building_double {
+    little: [city_buffer_south_building_double, city_buffer_south_building_double_half];
+    lots:   city_buffer_south_building_double_full;
+}
+
+item(FEAT_STATIONS, city_buffer_south_building_double_station) {
+    property {
+        class:                  "_CTY";
+        classname:              string(STR_NAME_STATCLASS_CITY_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_BUFFER);
+        tile_flags: [
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE)
+        ];
+        cargo_threshold:        param_set_cargo_threshold*190;
+    }
+    graphics {
+        sprite_layouts: [city_buffer_south_building_double_sw_ne(0), city_buffer_south_building_double_se_nw(0)];
+        select_tile_type: 1;
+        PASS: group_city_buffer_south_building_double;
+        purchase: city_buffer_south_building_double;
+        city_buffer_south_building_double;
+    }
+}
+
+/***************************************/
+/***** DOUBLE-SIDED PLATFORM ENDS ******/
+/***************************************/
+
+/** PLATFORM SOUTH **/
+
+spriteset (city_ends_platform_south_double, "src/graphics/stations_city_empty.png") {
+    [ 290, 10, 64, 64, -31, -32 ]
+    [ 360, 10, 64, 64, -31, -32 ]
+    [ 430, 10, 64, 64, -31, -32 ]
+    [ 500, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (city_ends_platform_south_double_half, "src/graphics/stations_city_half.png") {
+    [ 290, 10, 64, 64, -31, -32 ]
+    [ 360, 10, 64, 64, -31, -32 ]
+    [ 430, 10, 64, 64, -31, -32 ]
+    [ 500, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (city_ends_platform_south_double_full, "src/graphics/stations_city_full.png") {
+    [ 290, 10, 64, 64, -31, -32 ]
+    [ 360, 10, 64, 64, -31, -32 ]
+    [ 430, 10, 64, 64, -31, -32 ]
+    [ 500, 10, 64, 64, -31, -32 ]
+}
+
+spritelayout city_ends_platform_double_sw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        11;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout city_ends_platform_double_se(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_city_ends_platform_south_double {
+    little: [city_ends_platform_south_double, city_ends_platform_south_double_half];
+    lots:   city_ends_platform_south_double_full;
+}
+
+item(FEAT_STATIONS, city_lights_platform_double_south_station) {
+    property {
+        class:                  "_CTY";
+        classname:              string(STR_NAME_STATCLASS_CITY_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_END);
+        cargo_threshold:        param_set_cargo_threshold*160;
+    }
+    graphics {
+        sprite_layouts: [city_ends_platform_double_sw(0), city_ends_platform_double_se(0)];
+        select_tile_type: 2;
+        PASS: group_city_ends_platform_south_double;
+        purchase: city_ends_platform_south_double;
+        city_ends_platform_south_double;
+    }
+}
+
+/** PLATFORM NORTH **/
+
+spriteset (city_ends_platform_north_double, "src/graphics/stations_city_empty.png") {
+    [ 570, 10, 64, 64, -31, -32 ]
+    [ 640, 10, 64, 64, -31, -32 ]
+    [ 710, 10, 64, 64, -31, -32 ]
+    [ 780, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (city_ends_platform_north_double_half, "src/graphics/stations_city_half.png") {
+    [ 570, 10, 64, 64, -31, -32 ]
+    [ 640, 10, 64, 64, -31, -32 ]
+    [ 710, 10, 64, 64, -31, -32 ]
+    [ 780, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (city_ends_platform_north_double_full, "src/graphics/stations_city_full.png") {
+    [ 570, 10, 64, 64, -31, -32 ]
+    [ 640, 10, 64, 64, -31, -32 ]
+    [ 710, 10, 64, 64, -31, -32 ]
+    [ 780, 10, 64, 64, -31, -32 ]
+}
+
+spritelayout city_ends_platform_double_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        11;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout city_ends_platform_double_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_city_ends_platform_north_double {
+    little: [city_ends_platform_north_double, city_ends_platform_north_double_half];
+    lots:   city_ends_platform_north_double_full;
+}
+
+item(FEAT_STATIONS, city_lights_platform_double_north_station) {
+    property {
+        class:                  "_CTY";
+        classname:              string(STR_NAME_STATCLASS_CITY_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_END);
+        cargo_threshold:        param_set_cargo_threshold*160;
+    }
+    graphics {
+        sprite_layouts: [city_ends_platform_double_nw(0), city_ends_platform_double_ne(0)];
+        select_tile_type: 2;
+        PASS: group_city_ends_platform_north_double;
+        purchase: city_ends_platform_north_double;
+        city_ends_platform_north_double;
+    }
+}
+
+
+/***************************************/
+/***** DOUBLE-SIDED PLATFORM ***********/
+/***************************************/
+
+/** PLATFORM LEFT **/
+
+spriteset (city_lights_platform_double, "src/graphics/stations_city_empty.png") {
+    [  10, 150, 64, 64, -31, -32 ]
+    [  80, 150, 64, 64, -31, -32 ]
+    [ 150, 150, 64, 64, -31, -32 ]
+    [ 220, 150, 64, 64, -31, -32 ]
+}
+
+spriteset (city_lights_platform_double_half, "src/graphics/stations_city_half.png") {
+    [  10, 150, 64, 64, -31, -32 ]
+    [  80, 150, 64, 64, -31, -32 ]
+    [ 150, 150, 64, 64, -31, -32 ]
+    [ 220, 150, 64, 64, -31, -32 ]
+}
+
+spriteset (city_lights_platform_double_full, "src/graphics/stations_city_full.png") {
+    [  10, 150, 64, 64, -31, -32 ]
+    [  80, 150, 64, 64, -31, -32 ]
+    [ 150, 150, 64, 64, -31, -32 ]
+    [ 220, 150, 64, 64, -31, -32 ]
+}
+
+spritelayout city_lights_platform_double_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        11;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout city_lights_platform_double_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_city_double {
+    little: [city_lights_platform_double, city_lights_platform_double_half];
+    lots:   city_lights_platform_double_full;
+}
+
+item(FEAT_STATIONS, city_lights_platform_double_station) {
+    property {
+        class:                  "_CTY";
+        classname:              string(STR_NAME_STATCLASS_CITY_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_LAMPS);
+        cargo_threshold:        param_set_cargo_threshold*160;
+    }
+    graphics {
+        sprite_layouts: [city_lights_platform_double_sw_ne(0), city_lights_platform_double_se_nw(0)];
+        select_tile_type: 2;
+        PASS: group_city_double;
+        purchase: city_lights_platform_double;
+        city_lights_platform_double;
+    }
+}
+
 /***********************************/
 /********* OVERPASS ****************/
 /***********************************/
@@ -3148,6 +4059,12 @@ item(FEAT_STATIONS, city_left_overpass) {
         class:                  "_CTY";
         classname:              string(STR_NAME_STATCLASS_CITY_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE)
+        ];
         cargo_threshold:        param_set_cargo_threshold*140;
     }
     graphics {
@@ -3236,6 +4153,12 @@ item(FEAT_STATIONS, city_right_overpass) {
         class:                  "_CTY";
         classname:              string(STR_NAME_STATCLASS_CITY_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE)
+        ];
         cargo_threshold:        param_set_cargo_threshold*140;
     }
     graphics {
@@ -3461,7 +4384,7 @@ item(FEAT_STATIONS, city_station_building_1a) {
     property {
         class:                  "_BLD";
         classname:              string(STR_NAME_STATION_BUILDING);
-        name:                   string(STR_NAME_STATION_COLNE);
+        name:                   string(STR_NAME_STATION_WANSBECK);
         tile_flags: [
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
@@ -3538,7 +4461,7 @@ item(FEAT_STATIONS, city_station_building_1b) {
     property {
         class:                  "_BLD";
         classname:              string(STR_NAME_STATION_BUILDING);
-        name:                   string(STR_NAME_STATION_COLNE);
+        name:                   string(STR_NAME_STATION_WANSBECK);
         tile_flags: [
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
@@ -3615,7 +4538,7 @@ item(FEAT_STATIONS, city_station_building_2a) {
     property {
         class:                  "_BLD";
         classname:              string(STR_NAME_STATION_BUILDING);
-        name:                   string(STR_NAME_STATION_IRWELL);
+        name:                   string(STR_NAME_STATION_BLYTH);
         tile_flags: [
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
@@ -3692,7 +4615,7 @@ item(FEAT_STATIONS, city_station_building_2b) {
     property {
         class:                  "_BLD";
         classname:              string(STR_NAME_STATION_BUILDING);
-        name:                   string(STR_NAME_STATION_IRWELL);
+        name:                   string(STR_NAME_STATION_BLYTH);
         tile_flags: [
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
             bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
@@ -3708,6 +4631,126 @@ item(FEAT_STATIONS, city_station_building_2b) {
         PASS:                   group_city_building_2b;
         purchase:               city_building_2b;
         city_building_2b;
+    }
+}
+
+spriteset (city_building_5a, "src/graphics/stations_buildings_2_empty.png") {
+    [ 290, 220, 64, 64, -32, -32 ]
+    [ 360, 220, 64, 64, -32, -32 ]
+}
+
+spritelayout city_building_5a_se(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        30;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout city_building_5a_sw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        30;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, city_station_building_5a) {
+    property {
+        class:                  "_BLD";
+        classname:              string(STR_NAME_STATION_BUILDING);
+        name:                   string(STR_NAME_STATION_ENGINESHED);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
+        disabled_platforms:     bitmask(2,3,4,5,6,7,8);
+        disabled_length:        bitmask(2,3,4,5,6,7,8);
+    }
+    graphics {
+        sprite_layouts:         [city_building_5a_se(0), city_building_5a_sw(0)];
+        select_tile_type:       0;
+        availability:           switch_intro_year_city;
+        purchase:               city_building_5a;
+        city_building_5a;
+    }
+}
+
+spriteset (city_building_5b, "src/graphics/stations_buildings_2_empty.png") {
+    [ 430, 220, 64, 64, -32, -32 ]
+    [ 500, 220, 64, 64, -32, -32 ]
+}
+
+spritelayout city_building_5b_se(a) {
+    ground {
+        sprite: GROUNDSPRITE_CONCRETE;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        30;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout city_building_5b_sw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        30;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, city_station_building_5b) {
+    property {
+        class:                  "_BLD";
+        classname:              string(STR_NAME_STATION_BUILDING);
+        name:                   string(STR_NAME_STATION_ENGINESHED);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED),
+            bitmask(STAT_TILE_NOWIRE, STAT_TILE_BLOCKED)
+        ];
+        disabled_platforms:     bitmask(2,3,4,5,6,7,8);
+        disabled_length:        bitmask(2,3,4,5,6,7,8);
+    }
+    graphics {
+        sprite_layouts:         [city_building_5b_se(0), city_building_5b_sw(0)];
+        select_tile_type:       0;
+        availability:           switch_intro_year_city;
+        purchase:               city_building_5b;
+        city_building_5b;
     }
 }
 
@@ -3849,5 +4892,59 @@ item(FEAT_STATIONS, city_right_overbridge_waypoint) {
         availability: switch_intro_year_city;
         purchase: city_overbridge_waypoint_right;
         city_overbridge_waypoint_right;
+    }
+}
+
+spriteset (city_overpass_waypoint, "src/graphics/stations_waypoints.png") {
+    [  710, 710, 64, 64, -31, -32 ]
+    [  780, 710, 64, 64, -31, -32 ]
+}
+
+spritelayout city_overpass_waypoint_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout city_overpass_waypoint_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, city_left_overpass_waypoint) {
+    property {
+        class:                  "WAYP";    
+        classname:              string(STR_NAME_STATCLASS_REDBRICK_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_OVERBRIDGE);
+    }
+    graphics {
+        sprite_layouts: [city_overpass_waypoint_sw_ne(0), city_overpass_waypoint_se_nw(0)];
+        select_tile_type: 2;
+        availability: switch_intro_year_city;
+        purchase: city_overpass_waypoint;
+        city_overpass_waypoint;
     }
 }

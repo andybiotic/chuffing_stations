@@ -36,21 +36,27 @@ STR_NAME_STATCLASS_CITY_BUILDINGS                               :City Buildings
 STR_NAME_STATCLASS_STATION_SQUARES                              :Station Squares
 
 STR_NAME_STATION_PLATFORM                                       :Platform
+STR_NAME_STATION_PLATFORM_BASIC                                 :Basic Platform
 STR_NAME_STATION_PLATFORM_END                                   :Platform End
-STR_NAME_STATION_PLATFORM_LAMPS                                 :Platform With Lamps
-STR_NAME_STATION_PLATFORM_SIGN                                  :Platform With Sign
+STR_NAME_STATION_PLATFORM_LAMPS                                 :Platform with Lamps
+STR_NAME_STATION_PLATFORM_SIGN                                  :Platform with Sign
 STR_NAME_STATION_PLATFORM_SHELTER                               :Shelter
 STR_NAME_STATION_PLATFORM_SHELTERALT                            :Shelter (Alternative)
-STR_NAME_STATION_PLATFORM_BENCH                                 :Platform With Bench
-STR_NAME_STATION_PLATFORM_ADVERT                                :Platform With Advertisement
+STR_NAME_STATION_PLATFORM_BENCH                                 :Platform with Bench
+STR_NAME_STATION_PLATFORM_ADVERT                                :Platform with Advertisement
 STR_NAME_STATION_PLATFORM_UNDERPASS                             :Underpass
 STR_NAME_STATION_PLATFORM_OVERBRIDGE                            :Overbridge
 STR_NAME_STATION_PLATFORM_FOOTBRIDGE                            :Footbridge
-STR_NAME_STATION_PLATFORM_DISPLAYS                              :Platform With Digital Displays
+STR_NAME_STATION_PLATFORM_DISPLAYS                              :Platform with Digital Displays
 STR_NAME_STATION_PLATFORM_BUFFER                                :Buffer
 STR_NAME_STATION_PLATFORM_STAIRS                                :Shelter with Stairs
-STR_NAME_STATION_PLATFORM_COVERED                               :Covered platforms
-STR_NAME_STATION_PLATFORM_ARCHED                                :Arched platforms
+STR_NAME_STATION_PLATFORM_COVERED                               :Covered Platforms
+STR_NAME_STATION_PLATFORM_ARCHED                                :Arched Platforms
+STR_NAME_STATION_PLATFORM_SQUARE                                :Platform Square
+STR_NAME_STATION_PLATFORM_SQUARE_COVERED                        :Covered Platform Square
+STR_NAME_STATION_PLATFORM_BRIDGEBUILDING                        :Bridge Ticket Office
+STR_NAME_STATION_PLATFORM_CENTRAL_BUILDING                      :Central Building
+
 
 STR_NAME_STATION_PLATFORM_WAYPOINT_SIGN                         :Track Sign
 STR_NAME_STATION_PLATFORM_SIGNALBOX                             :Signal Box
@@ -78,6 +84,7 @@ STR_NAME_STATION_THESADDLETANK                                  :The Saddle Tank
 STR_NAME_STATION_ENGINESHED                                     :Engine Shed
 STR_NAME_STATION_HOTEL                                          :Station Hotel
 STR_NAME_STATION_GOODS_SHED                                     :Goods Shed
+STR_NAME_STATION_PLATFORM_MERSEY_ROAD                           :Mersey Road Platforms
 
 STR_NAME_STATION_WEAVER                                         :Weaver Ticket Office
 STR_NAME_STATION_CHURNET                                        :Churnet Ticket Office
@@ -120,6 +127,7 @@ STR_NAME_STATION_CAMDEN_FRONT                                   :Camden Station 
 STR_NAME_STATION_CAMDEN_REAR                                    :Camden Station Hall (Rear)
 STR_NAME_STATION_ITCHEN                                         :Itchen Station Building
 STR_NAME_STATION_TRENT                                          :Trent Station Hall
+STR_NAME_STATION_CLYDE                                          :Clyde Station Hall
 
 STR_NAME_STATION_PLACEHOLDER                                    :PLACEHOLDER
 

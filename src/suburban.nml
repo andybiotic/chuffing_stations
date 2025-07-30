@@ -2,6 +2,297 @@
 /********************* SUBURBAN PLATFORMS **********************************/
 /***************************************************************************/
 
+/*******************************************/
+/***** BASIC PLATFORM **********************/
+/*******************************************/
+
+/** PLATFORM LEFT **/
+
+spriteset (suburban_basic_platform_left, "src/graphics/stations_suburban_empty.png") {
+    [  10, 10, 64, 64, -31, -32 ]
+    [  80, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (suburban_basic_platform_left_half, "src/graphics/stations_suburban_half.png") {
+    [  10, 10, 64, 64, -31, -32 ]
+    [  80, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (suburban_basic_platform_left_full, "src/graphics/stations_suburban_full.png") {
+    [  10, 10, 64, 64, -31, -32 ]
+    [  80, 10, 64, 64, -31, -32 ]
+}
+
+spritelayout suburban_basic_platform_left_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout suburban_basic_platform_left_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_suburban_basic_left {
+    little: [suburban_basic_platform_left, suburban_basic_platform_left_half];
+    lots:   suburban_basic_platform_left_full;
+}
+
+item(FEAT_STATIONS, suburban_basic_platform_left_station) {
+    property {
+        class:                  "_SBR";
+        classname:              string(STR_NAME_STATCLASS_SUBURBAN_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_BASIC);
+        cargo_threshold:        param_set_cargo_threshold*160;
+    }
+    graphics {
+        sprite_layouts: [suburban_basic_platform_left_sw_ne(0), suburban_basic_platform_left_se_nw(0)];
+        select_tile_type: 2;
+        PASS: group_suburban_basic_left;
+        purchase: suburban_basic_platform_left;
+        suburban_basic_platform_left;
+    }
+}
+
+/** PLATFORM RIGHT **/
+
+spriteset (suburban_basic_platform_right, "src/graphics/stations_suburban_empty.png") {
+    [  150, 10, 64, 64, -31, -32 ]
+    [  220, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (suburban_basic_platform_right_half, "src/graphics/stations_suburban_half.png") {
+    [  150, 10, 64, 64, -31, -32 ]
+    [  220, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (suburban_basic_platform_right_full, "src/graphics/stations_suburban_full.png") {
+    [  150, 10, 64, 64, -31, -32 ]
+    [  220, 10, 64, 64, -31, -32 ]
+}
+
+spritelayout suburban_basic_platform_right_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        11;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout suburban_basic_platform_right_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        6;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_suburban_basic_right {
+    little: [suburban_basic_platform_right, suburban_basic_platform_right_half];
+    lots:   suburban_basic_platform_right_full;
+}
+
+item(FEAT_STATIONS, suburban_basic_platform_right_station) {
+    property {
+        class:                  "_SBR";
+        classname:              string(STR_NAME_STATCLASS_SUBURBAN_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_BASIC);
+        cargo_threshold:        param_set_cargo_threshold*160;
+    }
+    graphics {
+        sprite_layouts: [suburban_basic_platform_right_sw_ne(0), suburban_basic_platform_right_se_nw(0)];
+        select_tile_type: 2;
+        PASS: group_suburban_basic_right;
+        purchase: suburban_basic_platform_right;
+        suburban_basic_platform_right;
+    }
+}
+
+/*******************************************/
+/***** BASIC PLATFORM WITH FENCES **********/
+/*******************************************/
+
+/** PLATFORM LEFT **/
+
+spriteset (suburban_basicfence_platform_left, "src/graphics/stations_suburban_empty.png") {
+    [  10, 80, 64, 64, -31, -32 ]
+    [  80, 80, 64, 64, -31, -32 ]
+}
+spriteset (suburban_basicfence_platform_left_half, "src/graphics/stations_suburban_half.png") {
+    [  10, 80, 64, 64, -31, -32 ]
+    [  80, 80, 64, 64, -31, -32 ]
+}
+spriteset (suburban_basicfence_platform_left_full, "src/graphics/stations_suburban_full.png") {
+    [  10, 80, 64, 64, -31, -32 ]
+    [  80, 80, 64, 64, -31, -32 ]
+}
+
+spritelayout suburban_basicfence_platform_left_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+        building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout suburban_basicfence_platform_left_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+        building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_suburban_basicfence_left {
+    little: [suburban_basicfence_platform_left, suburban_basicfence_platform_left_half];
+    lots:   suburban_basicfence_platform_left_full;
+}
+
+item(FEAT_STATIONS, suburban_basicfence_platform_left_station) {
+    property {
+        class:                  "_SBR";
+        classname:              string(STR_NAME_STATCLASS_SUBURBAN_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_BASIC);
+        cargo_threshold:        param_set_cargo_threshold*160;
+    }
+    graphics {
+        sprite_layouts: [suburban_basicfence_platform_left_sw_ne(0), suburban_basicfence_platform_left_se_nw(0)];
+        select_tile_type: 2;
+        PASS: group_suburban_basicfence_left;
+        purchase: suburban_basicfence_platform_left;
+        suburban_basicfence_platform_left;
+    }
+}
+
+/** PLATFORM RIGHT **/
+
+spriteset (suburban_basicfence_platform_right, "src/graphics/stations_suburban_empty.png") {
+    [  150, 80, 64, 64, -31, -32 ]
+    [  220, 80, 64, 64, -31, -32 ]
+}
+spriteset (suburban_basicfence_platform_right_half, "src/graphics/stations_suburban_half.png") {
+    [  150, 80, 64, 64, -31, -32 ]
+    [  220, 80, 64, 64, -31, -32 ]
+}
+spriteset (suburban_basicfence_platform_right_full, "src/graphics/stations_suburban_full.png") {
+    [  150, 80, 64, 64, -31, -32 ]
+    [  220, 80, 64, 64, -31, -32 ]
+}
+
+spritelayout suburban_basicfence_platform_right_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        11;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout suburban_basicfence_platform_right_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_suburban_basicfence_right {
+    little: [suburban_basicfence_platform_right, suburban_basicfence_platform_right_half];
+    lots:   suburban_basicfence_platform_right_full;
+}
+
+item(FEAT_STATIONS, suburban_basicfence_platform_right_station) {
+    property {
+        class:                  "_SBR";
+        classname:              string(STR_NAME_STATCLASS_SUBURBAN_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_BASIC);
+        cargo_threshold:        param_set_cargo_threshold*160;
+    }
+    graphics {
+        sprite_layouts: [suburban_basicfence_platform_right_sw_ne(0), suburban_basicfence_platform_right_se_nw(0)];
+        select_tile_type: 2;
+        PASS: group_suburban_basicfence_right;
+        purchase: suburban_basicfence_platform_right;
+        suburban_basicfence_platform_right;
+    }
+}
 
 /***************************************/
 /***** PLATFORM WITH LIGHTS ************/
@@ -3249,6 +3540,625 @@ item(FEAT_STATIONS, suburban_right_overpass) {
     }
 }
 
+/***********************************************/
+/***** PLATFORM SQUARE *************************/
+/***********************************************/
+
+
+spriteset (suburban_platform_square, "src/graphics/stations_suburban_empty.png") {
+    [  430, 500, 64, 64, -31, -32 ]
+    [  500, 500, 64, 64, -31, -32 ]
+}
+
+spriteset (suburban_platform_square_half, "src/graphics/stations_suburban_half.png") {
+    [  430, 500, 64, 64, -31, -32 ]
+    [  500, 500, 64, 64, -31, -32 ]
+}
+
+spriteset (suburban_platform_square_full, "src/graphics/stations_suburban_full.png") {
+    [  430, 500, 64, 64, -31, -32 ]
+    [  500, 500, 64, 64, -31, -32 ]
+}
+
+spritelayout suburban_platform_square_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout suburban_platform_square_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_suburban_platform_square {
+    little: [suburban_platform_square, suburban_platform_square_half];
+    lots:   suburban_platform_square_full;
+}
+
+item(FEAT_STATIONS, suburban_platform_square_station) {
+    property {
+        class:                  "_SBR";
+        classname:              string(STR_NAME_STATCLASS_SUBURBAN_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_SQUARE);
+        tile_flags: [
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE)
+        ];
+        cargo_threshold:        param_set_cargo_threshold*190;
+    }
+    graphics {
+        sprite_layouts: [suburban_platform_square_sw_ne(0), suburban_platform_square_se_nw(0)];
+        select_tile_type: 1;
+        PASS: group_suburban_platform_square;
+        purchase: suburban_platform_square;
+        suburban_platform_square;
+    }
+}
+
+/***********************************************/
+/***** COVERED PLATFORM SQUARE *****************/
+/***********************************************/
+
+spriteset (suburban_platform_square_covered, "src/graphics/stations_suburban_empty.png") {
+    [  430, 570, 64, 64, -31, -32 ]
+    [  500, 570, 64, 64, -31, -32 ]
+}
+
+spriteset (suburban_platform_square_covered_half, "src/graphics/stations_suburban_half.png") {
+    [  430, 570, 64, 64, -31, -32 ]
+    [  500, 570, 64, 64, -31, -32 ]
+}
+
+spriteset (suburban_platform_square_covered_full, "src/graphics/stations_suburban_full.png") {
+    [  430, 570, 64, 64, -31, -32 ]
+    [  500, 570, 64, 64, -31, -32 ]
+}
+
+spritelayout suburban_platform_square_covered_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout suburban_platform_square_covered_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_suburban_platform_square_covered {
+    little: [suburban_platform_square_covered, suburban_platform_square_covered_half];
+    lots:   suburban_platform_square_covered_full;
+}
+
+item(FEAT_STATIONS, suburban_platform_square_covered_station) {
+    property {
+        class:                  "_SBR";
+        classname:              string(STR_NAME_STATCLASS_SUBURBAN_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_SQUARE_COVERED);
+        tile_flags: [
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE)
+        ];
+        cargo_threshold:        param_set_cargo_threshold*190;
+    }
+    graphics {
+        sprite_layouts: [suburban_platform_square_covered_sw_ne(0), suburban_platform_square_covered_se_nw(0)];
+        select_tile_type: 1;
+        PASS: group_suburban_platform_square_covered;
+        purchase: suburban_platform_square_covered;
+        suburban_platform_square_covered;
+    }
+}
+
+/***********************************************/
+/***** DOUBLE BUFFERS **************************/
+/***********************************************/
+
+
+spriteset (suburban_buffer_north_building_double, "src/graphics/stations_suburban_empty.png") {
+    [  570, 500, 64, 64, -31, -32 ]
+    [  640, 500, 64, 64, -31, -32 ]
+}
+
+spriteset (suburban_buffer_north_building_double_half, "src/graphics/stations_suburban_half.png") {
+    [  570, 500, 64, 64, -31, -32 ]
+    [  640, 500, 64, 64, -31, -32 ]
+}
+
+spriteset (suburban_buffer_north_building_double_full, "src/graphics/stations_suburban_full.png") {
+    [  570, 500, 64, 64, -31, -32 ]
+    [  640, 500, 64, 64, -31, -32 ]
+}
+
+spritelayout suburban_buffer_north_building_double_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout suburban_buffer_north_building_double_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_suburban_buffer_north_building_double {
+    little: [suburban_buffer_north_building_double, suburban_buffer_north_building_double_half];
+    lots:   suburban_buffer_north_building_double_full;
+}
+
+item(FEAT_STATIONS, suburban_buffer_north_building_double_station) {
+    property {
+        class:                  "_SBR";
+        classname:              string(STR_NAME_STATCLASS_SUBURBAN_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_BUFFER);
+        tile_flags: [
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE)
+        ];
+        cargo_threshold:        param_set_cargo_threshold*190;
+    }
+    graphics {
+        sprite_layouts: [suburban_buffer_north_building_double_sw_ne(0), suburban_buffer_north_building_double_se_nw(0)];
+        select_tile_type: 1;
+        PASS: group_suburban_buffer_north_building_double;
+        purchase: suburban_buffer_north_building_double;
+        suburban_buffer_north_building_double;
+    }
+}
+
+spriteset (suburban_buffer_south_building_double, "src/graphics/stations_suburban_empty.png") {
+    [  710, 500, 64, 64, -31, -32 ]
+    [  780, 500, 64, 64, -31, -32 ]
+}
+
+spriteset (suburban_buffer_south_building_double_half, "src/graphics/stations_suburban_half.png") {
+    [  710, 500, 64, 64, -31, -32 ]
+    [  780, 500, 64, 64, -31, -32 ]
+}
+
+spriteset (suburban_buffer_south_building_double_full, "src/graphics/stations_suburban_full.png") {
+    [  710, 500, 64, 64, -31, -32 ]
+    [  780, 500, 64, 64, -31, -32 ]
+}
+
+spritelayout suburban_buffer_south_building_double_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout suburban_buffer_south_building_double_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_suburban_buffer_south_building_double {
+    little: [suburban_buffer_south_building_double, suburban_buffer_south_building_double_half];
+    lots:   suburban_buffer_south_building_double_full;
+}
+
+item(FEAT_STATIONS, suburban_buffer_south_building_double_station) {
+    property {
+        class:                  "_SBR";
+        classname:              string(STR_NAME_STATCLASS_SUBURBAN_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_BUFFER);
+        tile_flags: [
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE)
+        ];
+        cargo_threshold:        param_set_cargo_threshold*190;
+    }
+    graphics {
+        sprite_layouts: [suburban_buffer_south_building_double_sw_ne(0), suburban_buffer_south_building_double_se_nw(0)];
+        select_tile_type: 1;
+        PASS: group_suburban_buffer_south_building_double;
+        purchase: suburban_buffer_south_building_double;
+        suburban_buffer_south_building_double;
+    }
+}
+
+/***************************************/
+/***** DOUBLE-SIDED PLATFORM ENDS ******/
+/***************************************/
+
+/** PLATFORM SOUTH **/
+
+spriteset (suburban_ends_platform_south_double, "src/graphics/stations_suburban_empty.png") {
+    [ 290, 10, 64, 64, -31, -32 ]
+    [ 360, 10, 64, 64, -31, -32 ]
+    [ 430, 10, 64, 64, -31, -32 ]
+    [ 500, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (suburban_ends_platform_south_double_half, "src/graphics/stations_suburban_half.png") {
+    [ 290, 10, 64, 64, -31, -32 ]
+    [ 360, 10, 64, 64, -31, -32 ]
+    [ 430, 10, 64, 64, -31, -32 ]
+    [ 500, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (suburban_ends_platform_south_double_full, "src/graphics/stations_suburban_full.png") {
+    [ 290, 10, 64, 64, -31, -32 ]
+    [ 360, 10, 64, 64, -31, -32 ]
+    [ 430, 10, 64, 64, -31, -32 ]
+    [ 500, 10, 64, 64, -31, -32 ]
+}
+
+spritelayout suburban_ends_platform_double_sw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        11;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout suburban_ends_platform_double_se(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_suburban_ends_platform_south_double {
+    little: [suburban_ends_platform_south_double, suburban_ends_platform_south_double_half];
+    lots:   suburban_ends_platform_south_double_full;
+}
+
+item(FEAT_STATIONS, suburban_lights_platform_double_south_station) {
+    property {
+        class:                  "_SBR";
+        classname:              string(STR_NAME_STATCLASS_SUBURBAN_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_END);
+        cargo_threshold:        param_set_cargo_threshold*160;
+    }
+    graphics {
+        sprite_layouts: [suburban_ends_platform_double_sw(0), suburban_ends_platform_double_se(0)];
+        select_tile_type: 2;
+        PASS: group_suburban_ends_platform_south_double;
+        purchase: suburban_ends_platform_south_double;
+        suburban_ends_platform_south_double;
+    }
+}
+
+/** PLATFORM NORTH **/
+
+spriteset (suburban_ends_platform_north_double, "src/graphics/stations_suburban_empty.png") {
+    [ 570, 10, 64, 64, -31, -32 ]
+    [ 640, 10, 64, 64, -31, -32 ]
+    [ 710, 10, 64, 64, -31, -32 ]
+    [ 780, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (suburban_ends_platform_north_double_half, "src/graphics/stations_suburban_half.png") {
+    [ 570, 10, 64, 64, -31, -32 ]
+    [ 640, 10, 64, 64, -31, -32 ]
+    [ 710, 10, 64, 64, -31, -32 ]
+    [ 780, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (suburban_ends_platform_north_double_full, "src/graphics/stations_suburban_full.png") {
+    [ 570, 10, 64, 64, -31, -32 ]
+    [ 640, 10, 64, 64, -31, -32 ]
+    [ 710, 10, 64, 64, -31, -32 ]
+    [ 780, 10, 64, 64, -31, -32 ]
+}
+
+spritelayout suburban_ends_platform_double_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        11;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout suburban_ends_platform_double_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_suburban_ends_platform_north_double {
+    little: [suburban_ends_platform_north_double, suburban_ends_platform_north_double_half];
+    lots:   suburban_ends_platform_north_double_full;
+}
+
+item(FEAT_STATIONS, suburban_lights_platform_double_north_station) {
+    property {
+        class:                  "_SBR";
+        classname:              string(STR_NAME_STATCLASS_SUBURBAN_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_END);
+        cargo_threshold:        param_set_cargo_threshold*160;
+    }
+    graphics {
+        sprite_layouts: [suburban_ends_platform_double_nw(0), suburban_ends_platform_double_ne(0)];
+        select_tile_type: 2;
+        PASS: group_suburban_ends_platform_north_double;
+        purchase: suburban_ends_platform_north_double;
+        suburban_ends_platform_north_double;
+    }
+}
+
+
+/***************************************/
+/***** DOUBLE-SIDED PLATFORM ***********/
+/***************************************/
+
+/** PLATFORM LEFT **/
+
+spriteset (suburban_lights_platform_double, "src/graphics/stations_suburban_empty.png") {
+    [  10, 150, 64, 64, -31, -32 ]
+    [  80, 150, 64, 64, -31, -32 ]
+    [ 150, 150, 64, 64, -31, -32 ]
+    [ 220, 150, 64, 64, -31, -32 ]
+}
+
+spriteset (suburban_lights_platform_double_half, "src/graphics/stations_suburban_half.png") {
+    [  10, 150, 64, 64, -31, -32 ]
+    [  80, 150, 64, 64, -31, -32 ]
+    [ 150, 150, 64, 64, -31, -32 ]
+    [ 220, 150, 64, 64, -31, -32 ]
+}
+
+spriteset (suburban_lights_platform_double_full, "src/graphics/stations_suburban_full.png") {
+    [  10, 150, 64, 64, -31, -32 ]
+    [  80, 150, 64, 64, -31, -32 ]
+    [ 150, 150, 64, 64, -31, -32 ]
+    [ 220, 150, 64, 64, -31, -32 ]
+}
+
+spritelayout suburban_lights_platform_double_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        11;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout suburban_lights_platform_double_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_suburban_double {
+    little: [suburban_lights_platform_double, suburban_lights_platform_double_half];
+    lots:   suburban_lights_platform_double_full;
+}
+
+item(FEAT_STATIONS, suburban_lights_platform_double_station) {
+    property {
+        class:                  "_SBR";
+        classname:              string(STR_NAME_STATCLASS_SUBURBAN_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_LAMPS);
+        cargo_threshold:        param_set_cargo_threshold*160;
+    }
+    graphics {
+        sprite_layouts: [suburban_lights_platform_double_sw_ne(0), suburban_lights_platform_double_se_nw(0)];
+        select_tile_type: 2;
+        PASS: group_suburban_double;
+        purchase: suburban_lights_platform_double;
+        suburban_lights_platform_double;
+    }
+}
+
 
 /******************************/
 /***** BULDINGS ***************/
@@ -4013,6 +4923,66 @@ item(FEAT_STATIONS, suburban_right_overbridge_waypoint) {
     }
 }
 
+/***********************************/
+/***** OVERPASS WAYPOINT ***********/
+/***********************************/
+
+/***** OVERPASS WAYPOINT ***********/
+
+spriteset (suburban_overpass_waypoint, "src/graphics/stations_waypoints.png") {
+    [  150, 710, 64, 64, -31, -32 ]
+    [  220, 710, 64, 64, -31, -32 ]
+}
+
+spritelayout suburban_overpass_waypoint_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout suburban_overpass_waypoint_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, suburban_left_overpass_waypoint) {
+    property {
+        class:                  "WAYP";    
+        classname:              string(STR_NAME_STATCLASS_SUBURBAN_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_OVERBRIDGE);
+    }
+    graphics {
+        sprite_layouts: [suburban_overpass_waypoint_sw_ne(0), suburban_overpass_waypoint_se_nw(0)];
+        select_tile_type: 2;
+        availability: switch_intro_year_suburban;
+        purchase: suburban_overpass_waypoint;
+        suburban_overpass_waypoint;
+    }
+}
+
 /***** SIGNALBOX WAYPOINT 1A *****/
 
 spriteset (suburban_signalbox_waypoint_1a, "src/graphics/stations_waypoints.png") {
@@ -4066,6 +5036,7 @@ item(FEAT_STATIONS, suburban_signalbox_1a_waypoint) {
     graphics {
         sprite_layouts: [suburban_signalbox_waypoint_1a_sw_ne(0), suburban_signalbox_waypoint_1a_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_suburban;
         purchase: suburban_signalbox_waypoint_1a;
         suburban_signalbox_waypoint_1a;
     }
@@ -4123,6 +5094,7 @@ item(FEAT_STATIONS, suburban_signalbox_1b_waypoint) {
     graphics {
         sprite_layouts: [suburban_signalbox_waypoint_1b_sw_ne(0), suburban_signalbox_waypoint_1b_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_suburban;
         purchase: suburban_signalbox_waypoint_1b;
         suburban_signalbox_waypoint_1b;
     }
@@ -4181,6 +5153,7 @@ item(FEAT_STATIONS, suburban_signalbox_2a_waypoint) {
     graphics {
         sprite_layouts: [suburban_signalbox_waypoint_2a_sw_ne(0), suburban_signalbox_waypoint_2a_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_suburban;
         purchase: suburban_signalbox_waypoint_2a;
         suburban_signalbox_waypoint_2a;
     }
@@ -4238,6 +5211,7 @@ item(FEAT_STATIONS, suburban_signalbox_2b_waypoint) {
     graphics {
         sprite_layouts: [suburban_signalbox_waypoint_2b_sw_ne(0), suburban_signalbox_waypoint_2b_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_suburban;
         purchase: suburban_signalbox_waypoint_2b;
         suburban_signalbox_waypoint_2b;
     }
@@ -4296,6 +5270,7 @@ item(FEAT_STATIONS, suburban_signalbox_3a_waypoint) {
     graphics {
         sprite_layouts: [suburban_signalbox_waypoint_3a_sw_ne(0), suburban_signalbox_waypoint_3a_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_suburban;
         purchase: suburban_signalbox_waypoint_3a;
         suburban_signalbox_waypoint_3a;
     }
@@ -4353,6 +5328,7 @@ item(FEAT_STATIONS, suburban_signalbox_3b_waypoint) {
     graphics {
         sprite_layouts: [suburban_signalbox_waypoint_3b_sw_ne(0), suburban_signalbox_waypoint_3b_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_suburban;
         purchase: suburban_signalbox_waypoint_3b;
         suburban_signalbox_waypoint_3b;
     }

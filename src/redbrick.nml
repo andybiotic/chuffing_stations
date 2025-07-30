@@ -2,6 +2,297 @@
 /********************* RED BRICK PLATFORMS *********************************/
 /***************************************************************************/
 
+/*******************************************/
+/***** BASIC PLATFORM **********************/
+/*******************************************/
+
+/** PLATFORM LEFT **/
+
+spriteset (redbrick_basic_platform_left, "src/graphics/stations_redbrick_empty.png") {
+    [  10, 10, 64, 64, -31, -32 ]
+    [  80, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (redbrick_basic_platform_left_half, "src/graphics/stations_redbrick_half.png") {
+    [  10, 10, 64, 64, -31, -32 ]
+    [  80, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (redbrick_basic_platform_left_full, "src/graphics/stations_redbrick_full.png") {
+    [  10, 10, 64, 64, -31, -32 ]
+    [  80, 10, 64, 64, -31, -32 ]
+}
+
+spritelayout redbrick_basic_platform_left_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout redbrick_basic_platform_left_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_redbrick_basic_left {
+    little: [redbrick_basic_platform_left, redbrick_basic_platform_left_half];
+    lots:   redbrick_basic_platform_left_full;
+}
+
+item(FEAT_STATIONS, redbrick_basic_platform_left_station) {
+    property {
+        class:                  "_RBK";
+        classname:              string(STR_NAME_STATCLASS_REDBRICK_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_BASIC);
+        cargo_threshold:        param_set_cargo_threshold*160;
+    }
+    graphics {
+        sprite_layouts: [redbrick_basic_platform_left_sw_ne(0), redbrick_basic_platform_left_se_nw(0)];
+        select_tile_type: 2;
+        PASS: group_redbrick_basic_left;
+        purchase: redbrick_basic_platform_left;
+        redbrick_basic_platform_left;
+    }
+}
+
+/** PLATFORM RIGHT **/
+
+spriteset (redbrick_basic_platform_right, "src/graphics/stations_redbrick_empty.png") {
+    [  150, 10, 64, 64, -31, -32 ]
+    [  220, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (redbrick_basic_platform_right_half, "src/graphics/stations_redbrick_half.png") {
+    [  150, 10, 64, 64, -31, -32 ]
+    [  220, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (redbrick_basic_platform_right_full, "src/graphics/stations_redbrick_full.png") {
+    [  150, 10, 64, 64, -31, -32 ]
+    [  220, 10, 64, 64, -31, -32 ]
+}
+
+spritelayout redbrick_basic_platform_right_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        11;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout redbrick_basic_platform_right_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        6;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_redbrick_basic_right {
+    little: [redbrick_basic_platform_right, redbrick_basic_platform_right_half];
+    lots:   redbrick_basic_platform_right_full;
+}
+
+item(FEAT_STATIONS, redbrick_basic_platform_right_station) {
+    property {
+        class:                  "_RBK";
+        classname:              string(STR_NAME_STATCLASS_REDBRICK_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_BASIC);
+        cargo_threshold:        param_set_cargo_threshold*160;
+    }
+    graphics {
+        sprite_layouts: [redbrick_basic_platform_right_sw_ne(0), redbrick_basic_platform_right_se_nw(0)];
+        select_tile_type: 2;
+        PASS: group_redbrick_basic_right;
+        purchase: redbrick_basic_platform_right;
+        redbrick_basic_platform_right;
+    }
+}
+
+/*******************************************/
+/***** BASIC PLATFORM WITH FENCES **********/
+/*******************************************/
+
+/** PLATFORM LEFT **/
+
+spriteset (redbrick_basicfence_platform_left, "src/graphics/stations_redbrick_empty.png") {
+    [  10, 80, 64, 64, -31, -32 ]
+    [  80, 80, 64, 64, -31, -32 ]
+}
+spriteset (redbrick_basicfence_platform_left_half, "src/graphics/stations_redbrick_half.png") {
+    [  10, 80, 64, 64, -31, -32 ]
+    [  80, 80, 64, 64, -31, -32 ]
+}
+spriteset (redbrick_basicfence_platform_left_full, "src/graphics/stations_redbrick_full.png") {
+    [  10, 80, 64, 64, -31, -32 ]
+    [  80, 80, 64, 64, -31, -32 ]
+}
+
+spritelayout redbrick_basicfence_platform_left_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+        building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout redbrick_basicfence_platform_left_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+        building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_redbrick_basicfence_left {
+    little: [redbrick_basicfence_platform_left, redbrick_basicfence_platform_left_half];
+    lots:   redbrick_basicfence_platform_left_full;
+}
+
+item(FEAT_STATIONS, redbrick_basicfence_platform_left_station) {
+    property {
+        class:                  "_RBK";
+        classname:              string(STR_NAME_STATCLASS_REDBRICK_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_BASIC);
+        cargo_threshold:        param_set_cargo_threshold*160;
+    }
+    graphics {
+        sprite_layouts: [redbrick_basicfence_platform_left_sw_ne(0), redbrick_basicfence_platform_left_se_nw(0)];
+        select_tile_type: 2;
+        PASS: group_redbrick_basicfence_left;
+        purchase: redbrick_basicfence_platform_left;
+        redbrick_basicfence_platform_left;
+    }
+}
+
+/** PLATFORM RIGHT **/
+
+spriteset (redbrick_basicfence_platform_right, "src/graphics/stations_redbrick_empty.png") {
+    [  150, 80, 64, 64, -31, -32 ]
+    [  220, 80, 64, 64, -31, -32 ]
+}
+spriteset (redbrick_basicfence_platform_right_half, "src/graphics/stations_redbrick_half.png") {
+    [  150, 80, 64, 64, -31, -32 ]
+    [  220, 80, 64, 64, -31, -32 ]
+}
+spriteset (redbrick_basicfence_platform_right_full, "src/graphics/stations_redbrick_full.png") {
+    [  150, 80, 64, 64, -31, -32 ]
+    [  220, 80, 64, 64, -31, -32 ]
+}
+
+spritelayout redbrick_basicfence_platform_right_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        11;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout redbrick_basicfence_platform_right_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_redbrick_basicfence_right {
+    little: [redbrick_basicfence_platform_right, redbrick_basicfence_platform_right_half];
+    lots:   redbrick_basicfence_platform_right_full;
+}
+
+item(FEAT_STATIONS, redbrick_basicfence_platform_right_station) {
+    property {
+        class:                  "_RBK";
+        classname:              string(STR_NAME_STATCLASS_REDBRICK_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_BASIC);
+        cargo_threshold:        param_set_cargo_threshold*160;
+    }
+    graphics {
+        sprite_layouts: [redbrick_basicfence_platform_right_sw_ne(0), redbrick_basicfence_platform_right_se_nw(0)];
+        select_tile_type: 2;
+        PASS: group_redbrick_basicfence_right;
+        purchase: redbrick_basicfence_platform_right;
+        redbrick_basicfence_platform_right;
+    }
+}
 
 /***************************************/
 /***** PLATFORM WITH LIGHTS ************/
@@ -3249,6 +3540,729 @@ item(FEAT_STATIONS, redbrick_right_overpass) {
     }
 }
 
+/***********************************************/
+/***** PLATFORM SQUARE *************************/
+/***********************************************/
+
+
+spriteset (redbrick_platform_square, "src/graphics/stations_redbrick_empty.png") {
+    [  430, 500, 64, 64, -31, -32 ]
+    [  500, 500, 64, 64, -31, -32 ]
+}
+
+spriteset (redbrick_platform_square_half, "src/graphics/stations_redbrick_half.png") {
+    [  430, 500, 64, 64, -31, -32 ]
+    [  500, 500, 64, 64, -31, -32 ]
+}
+
+spriteset (redbrick_platform_square_full, "src/graphics/stations_redbrick_full.png") {
+    [  430, 500, 64, 64, -31, -32 ]
+    [  500, 500, 64, 64, -31, -32 ]
+}
+
+spritelayout redbrick_platform_square_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout redbrick_platform_square_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_redbrick_platform_square {
+    little: [redbrick_platform_square, redbrick_platform_square_half];
+    lots:   redbrick_platform_square_full;
+}
+
+item(FEAT_STATIONS, redbrick_platform_square_station) {
+    property {
+        class:                  "_RBK";
+        classname:              string(STR_NAME_STATCLASS_REDBRICK_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_SQUARE);
+        tile_flags: [
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE)
+        ];
+        cargo_threshold:        param_set_cargo_threshold*190;
+    }
+    graphics {
+        sprite_layouts: [redbrick_platform_square_sw_ne(0), redbrick_platform_square_se_nw(0)];
+        select_tile_type: 1;
+        PASS: group_redbrick_platform_square;
+        purchase: redbrick_platform_square;
+        redbrick_platform_square;
+    }
+}
+
+/***********************************************/
+/***** COVERED PLATFORM SQUARE *****************/
+/***********************************************/
+
+spriteset (redbrick_platform_square_covered, "src/graphics/stations_redbrick_empty.png") {
+    [  430, 570, 64, 64, -31, -32 ]
+    [  500, 570, 64, 64, -31, -32 ]
+}
+
+spriteset (redbrick_platform_square_covered_half, "src/graphics/stations_redbrick_half.png") {
+    [  430, 570, 64, 64, -31, -32 ]
+    [  500, 570, 64, 64, -31, -32 ]
+}
+
+spriteset (redbrick_platform_square_covered_full, "src/graphics/stations_redbrick_full.png") {
+    [  430, 570, 64, 64, -31, -32 ]
+    [  500, 570, 64, 64, -31, -32 ]
+}
+
+spritelayout redbrick_platform_square_covered_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout redbrick_platform_square_covered_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_redbrick_platform_square_covered {
+    little: [redbrick_platform_square_covered, redbrick_platform_square_covered_half];
+    lots:   redbrick_platform_square_covered_full;
+}
+
+item(FEAT_STATIONS, redbrick_platform_square_covered_station) {
+    property {
+        class:                  "_RBK";
+        classname:              string(STR_NAME_STATCLASS_REDBRICK_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_CENTRAL_BUILDING);
+        tile_flags: [
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE)
+        ];
+        cargo_threshold:        param_set_cargo_threshold*190;
+    }
+    graphics {
+        sprite_layouts: [redbrick_platform_square_covered_sw_ne(0), redbrick_platform_square_covered_se_nw(0)];
+        select_tile_type: 1;
+        PASS: group_redbrick_platform_square_covered;
+        purchase: redbrick_platform_square_covered;
+        redbrick_platform_square_covered;
+    }
+}
+
+/***********************************************/
+/***** DOUBLE BUFFERS **************************/
+/***********************************************/
+
+
+spriteset (redbrick_buffer_north_building_double, "src/graphics/stations_redbrick_empty.png") {
+    [  570, 500, 64, 64, -31, -32 ]
+    [  640, 500, 64, 64, -31, -32 ]
+}
+
+spriteset (redbrick_buffer_north_building_double_half, "src/graphics/stations_redbrick_half.png") {
+    [  570, 500, 64, 64, -31, -32 ]
+    [  640, 500, 64, 64, -31, -32 ]
+}
+
+spriteset (redbrick_buffer_north_building_double_full, "src/graphics/stations_redbrick_full.png") {
+    [  570, 500, 64, 64, -31, -32 ]
+    [  640, 500, 64, 64, -31, -32 ]
+}
+
+spritelayout redbrick_buffer_north_building_double_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout redbrick_buffer_north_building_double_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_redbrick_buffer_north_building_double {
+    little: [redbrick_buffer_north_building_double, redbrick_buffer_north_building_double_half];
+    lots:   redbrick_buffer_north_building_double_full;
+}
+
+item(FEAT_STATIONS, redbrick_buffer_north_building_double_station) {
+    property {
+        class:                  "_RBK";
+        classname:              string(STR_NAME_STATCLASS_REDBRICK_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_BUFFER);
+        tile_flags: [
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE)
+        ];
+        cargo_threshold:        param_set_cargo_threshold*190;
+    }
+    graphics {
+        sprite_layouts: [redbrick_buffer_north_building_double_sw_ne(0), redbrick_buffer_north_building_double_se_nw(0)];
+        select_tile_type: 1;
+        PASS: group_redbrick_buffer_north_building_double;
+        purchase: redbrick_buffer_north_building_double;
+        redbrick_buffer_north_building_double;
+    }
+}
+
+spriteset (redbrick_buffer_south_building_double, "src/graphics/stations_redbrick_empty.png") {
+    [  710, 500, 64, 64, -31, -32 ]
+    [  780, 500, 64, 64, -31, -32 ]
+}
+
+spriteset (redbrick_buffer_south_building_double_half, "src/graphics/stations_redbrick_half.png") {
+    [  710, 500, 64, 64, -31, -32 ]
+    [  780, 500, 64, 64, -31, -32 ]
+}
+
+spriteset (redbrick_buffer_south_building_double_full, "src/graphics/stations_redbrick_full.png") {
+    [  710, 500, 64, 64, -31, -32 ]
+    [  780, 500, 64, 64, -31, -32 ]
+}
+
+spritelayout redbrick_buffer_south_building_double_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout redbrick_buffer_south_building_double_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        20;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_redbrick_buffer_south_building_double {
+    little: [redbrick_buffer_south_building_double, redbrick_buffer_south_building_double_half];
+    lots:   redbrick_buffer_south_building_double_full;
+}
+
+item(FEAT_STATIONS, redbrick_buffer_south_building_double_station) {
+    property {
+        class:                  "_RBK";
+        classname:              string(STR_NAME_STATCLASS_REDBRICK_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_BUFFER);
+        tile_flags: [
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_BLOCKED, STAT_TILE_NOWIRE)
+        ];
+        cargo_threshold:        param_set_cargo_threshold*190;
+    }
+    graphics {
+        sprite_layouts: [redbrick_buffer_south_building_double_sw_ne(0), redbrick_buffer_south_building_double_se_nw(0)];
+        select_tile_type: 1;
+        PASS: group_redbrick_buffer_south_building_double;
+        purchase: redbrick_buffer_south_building_double;
+        redbrick_buffer_south_building_double;
+    }
+}
+
+/***************************************/
+/***** DOUBLE-SIDED PLATFORM ENDS ******/
+/***************************************/
+
+/** PLATFORM SOUTH **/
+
+spriteset (redbrick_ends_platform_south_double, "src/graphics/stations_redbrick_empty.png") {
+    [ 290, 10, 64, 64, -31, -32 ]
+    [ 360, 10, 64, 64, -31, -32 ]
+    [ 430, 10, 64, 64, -31, -32 ]
+    [ 500, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (redbrick_ends_platform_south_double_half, "src/graphics/stations_redbrick_half.png") {
+    [ 290, 10, 64, 64, -31, -32 ]
+    [ 360, 10, 64, 64, -31, -32 ]
+    [ 430, 10, 64, 64, -31, -32 ]
+    [ 500, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (redbrick_ends_platform_south_double_full, "src/graphics/stations_redbrick_full.png") {
+    [ 290, 10, 64, 64, -31, -32 ]
+    [ 360, 10, 64, 64, -31, -32 ]
+    [ 430, 10, 64, 64, -31, -32 ]
+    [ 500, 10, 64, 64, -31, -32 ]
+}
+
+spritelayout redbrick_ends_platform_double_sw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        11;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout redbrick_ends_platform_double_se(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_redbrick_ends_platform_south_double {
+    little: [redbrick_ends_platform_south_double, redbrick_ends_platform_south_double_half];
+    lots:   redbrick_ends_platform_south_double_full;
+}
+
+item(FEAT_STATIONS, redbrick_lights_platform_double_south_station) {
+    property {
+        class:                  "_RBK";
+        classname:              string(STR_NAME_STATCLASS_REDBRICK_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_END);
+        cargo_threshold:        param_set_cargo_threshold*160;
+    }
+    graphics {
+        sprite_layouts: [redbrick_ends_platform_double_sw(0), redbrick_ends_platform_double_se(0)];
+        select_tile_type: 2;
+        PASS: group_redbrick_ends_platform_south_double;
+        purchase: redbrick_ends_platform_south_double;
+        redbrick_ends_platform_south_double;
+    }
+}
+
+/** PLATFORM NORTH **/
+
+spriteset (redbrick_ends_platform_north_double, "src/graphics/stations_redbrick_empty.png") {
+    [ 570, 10, 64, 64, -31, -32 ]
+    [ 640, 10, 64, 64, -31, -32 ]
+    [ 710, 10, 64, 64, -31, -32 ]
+    [ 780, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (redbrick_ends_platform_north_double_half, "src/graphics/stations_redbrick_half.png") {
+    [ 570, 10, 64, 64, -31, -32 ]
+    [ 640, 10, 64, 64, -31, -32 ]
+    [ 710, 10, 64, 64, -31, -32 ]
+    [ 780, 10, 64, 64, -31, -32 ]
+}
+
+spriteset (redbrick_ends_platform_north_double_full, "src/graphics/stations_redbrick_full.png") {
+    [ 570, 10, 64, 64, -31, -32 ]
+    [ 640, 10, 64, 64, -31, -32 ]
+    [ 710, 10, 64, 64, -31, -32 ]
+    [ 780, 10, 64, 64, -31, -32 ]
+}
+
+spritelayout redbrick_ends_platform_double_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        11;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout redbrick_ends_platform_double_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_redbrick_ends_platform_north_double {
+    little: [redbrick_ends_platform_north_double, redbrick_ends_platform_north_double_half];
+    lots:   redbrick_ends_platform_north_double_full;
+}
+
+item(FEAT_STATIONS, redbrick_lights_platform_double_north_station) {
+    property {
+        class:                  "_RBK";
+        classname:              string(STR_NAME_STATCLASS_REDBRICK_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_END);
+        cargo_threshold:        param_set_cargo_threshold*160;
+    }
+    graphics {
+        sprite_layouts: [redbrick_ends_platform_double_nw(0), redbrick_ends_platform_double_ne(0)];
+        select_tile_type: 2;
+        PASS: group_redbrick_ends_platform_north_double;
+        purchase: redbrick_ends_platform_north_double;
+        redbrick_ends_platform_north_double;
+    }
+}
+
+
+/***************************************/
+/***** DOUBLE-SIDED PLATFORM ***********/
+/***************************************/
+
+/** PLATFORM LEFT **/
+
+spriteset (redbrick_lights_platform_double, "src/graphics/stations_redbrick_empty.png") {
+    [  10, 150, 64, 64, -31, -32 ]
+    [  80, 150, 64, 64, -31, -32 ]
+    [ 150, 150, 64, 64, -31, -32 ]
+    [ 220, 150, 64, 64, -31, -32 ]
+}
+
+spriteset (redbrick_lights_platform_double_half, "src/graphics/stations_redbrick_half.png") {
+    [  10, 150, 64, 64, -31, -32 ]
+    [  80, 150, 64, 64, -31, -32 ]
+    [ 150, 150, 64, 64, -31, -32 ]
+    [ 220, 150, 64, 64, -31, -32 ]
+}
+
+spriteset (redbrick_lights_platform_double_full, "src/graphics/stations_redbrick_full.png") {
+    [  10, 150, 64, 64, -31, -32 ]
+    [  80, 150, 64, 64, -31, -32 ]
+    [ 150, 150, 64, 64, -31, -32 ]
+    [ 220, 150, 64, 64, -31, -32 ]
+}
+
+spritelayout redbrick_lights_platform_double_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        11;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout redbrick_lights_platform_double_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        11;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        16;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritegroup group_redbrick_double {
+    little: [redbrick_lights_platform_double, redbrick_lights_platform_double_half];
+    lots:   redbrick_lights_platform_double_full;
+}
+
+item(FEAT_STATIONS, redbrick_lights_platform_double_station) {
+    property {
+        class:                  "_RBK";
+        classname:              string(STR_NAME_STATCLASS_REDBRICK_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_LAMPS);
+        cargo_threshold:        param_set_cargo_threshold*160;
+    }
+    graphics {
+        sprite_layouts: [redbrick_lights_platform_double_sw_ne(0), redbrick_lights_platform_double_se_nw(0)];
+        select_tile_type: 2;
+        PASS: group_redbrick_double;
+        purchase: redbrick_lights_platform_double;
+        redbrick_lights_platform_double;
+    }
+}
+
+/****************************************/
+/***** BRIDGE BUILDING ******************/
+/****************************************/
+
+
+spriteset (redbrick_bridgebuilding_left, "src/graphics/stations_redbrick_half.png") {
+    [  570, 710, 64, 64, -31, -32 ]
+    [  640, 710, 64, 64, -31, -32 ]
+
+    [  710, 710, 64, 64, -31, -32 ]
+    [  780, 710, 64, 64, -31, -32 ]
+}
+
+spriteset (redbrick_bridgebuilding_right, "src/graphics/stations_redbrick_half.png") {
+    [  570, 780, 64, 64, -31, -32 ]
+    [  640, 780, 64, 64, -31, -32 ]
+
+    [  710, 780, 64, 64, -31, -32 ]
+    [  780, 780, 64, 64, -31, -32 ]
+}
+
+spritelayout redbrick_bridgebuilding_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout redbrick_bridgebuilding_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+switch (FEAT_STATIONS, SELF, switch_redbrick_bridgebuilding, platform_number_from_start(PLATFORM_SAME_SECTION)) {
+    0: return redbrick_bridgebuilding_left;
+    1: return redbrick_bridgebuilding_right;
+}
+
+item(FEAT_STATIONS, redbrick_bridgebuilding) {
+    property {
+        class:                  "_RBK";
+        classname:              string(STR_NAME_STATCLASS_REDBRICK_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_BRIDGEBUILDING);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE)
+        ];
+        disabled_platforms:     bitmask(1,3,4,5,6,7,8);
+    }
+    graphics {
+        sprite_layouts: [redbrick_bridgebuilding_sw_ne(0), redbrick_bridgebuilding_se_nw(0)];
+        select_tile_type: 2;
+        availability: switch_intro_year_redbrick;
+        purchase: redbrick_bridgebuilding_left;
+        switch_redbrick_bridgebuilding;
+    }
+}
+
 /****************************************/
 /***** COVERED PLATFORMS ****************/
 /****************************************/
@@ -4191,7 +5205,7 @@ spritelayout redbrick_building_5a_se(a) {
     }
     building {
         sprite:         DEFAULT(0);
-        xoffset:        1;
+        xoffset:        0;
         yoffset:        0;
         zoffset:        0;
         xextent:        16;
@@ -4208,7 +5222,7 @@ spritelayout redbrick_building_5a_sw(a) {
     }
     building {
         sprite:         DEFAULT(1);
-        xoffset:        1;
+        xoffset:        0;
         yoffset:        0;
         zoffset:        0;
         xextent:        16;
@@ -4251,7 +5265,7 @@ spritelayout redbrick_building_5b_se(a) {
     }
     building {
         sprite:         DEFAULT(0);
-        xoffset:        1;
+        xoffset:        0;
         yoffset:        0;
         zoffset:        0;
         xextent:        16;
@@ -4268,7 +5282,7 @@ spritelayout redbrick_building_5b_sw(a) {
     }
     building {
         sprite:         DEFAULT(1);
-        xoffset:        1;
+        xoffset:        0;
         yoffset:        0;
         zoffset:        0;
         xextent:        16;
@@ -4570,6 +5584,66 @@ item(FEAT_STATIONS, redbrick_right_overbridge_waypoint) {
     }
 }
 
+/***********************************/
+/***** OVERPASS WAYPOINT ***********/
+/***********************************/
+
+/***** OVERPASS WAYPOINT ***********/
+
+spriteset (redbrick_overpass_waypoint, "src/graphics/stations_waypoints.png") {
+    [  10, 710, 64, 64, -31, -32 ]
+    [  80, 710, 64, 64, -31, -32 ]
+}
+
+spritelayout redbrick_overpass_waypoint_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout redbrick_overpass_waypoint_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+item(FEAT_STATIONS, redbrick_left_overpass_waypoint) {
+    property {
+        class:                  "WAYP";    
+        classname:              string(STR_NAME_STATCLASS_REDBRICK_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_OVERBRIDGE);
+    }
+    graphics {
+        sprite_layouts: [redbrick_overpass_waypoint_sw_ne(0), redbrick_overpass_waypoint_se_nw(0)];
+        select_tile_type: 2;
+        availability: switch_intro_year_redbrick;
+        purchase: redbrick_overpass_waypoint;
+        redbrick_overpass_waypoint;
+    }
+}
+
 /***** SIGNALBOX WAYPOINT 1A *****/
 
 spriteset (redbrick_signalbox_waypoint_1a, "src/graphics/stations_waypoints.png") {
@@ -4623,6 +5697,7 @@ item(FEAT_STATIONS, redbrick_signalbox_1a_waypoint) {
     graphics {
         sprite_layouts: [redbrick_signalbox_waypoint_1a_sw_ne(0), redbrick_signalbox_waypoint_1a_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_redbrick;
         purchase: redbrick_signalbox_waypoint_1a;
         redbrick_signalbox_waypoint_1a;
     }
@@ -4680,6 +5755,7 @@ item(FEAT_STATIONS, redbrick_signalbox_1b_waypoint) {
     graphics {
         sprite_layouts: [redbrick_signalbox_waypoint_1b_sw_ne(0), redbrick_signalbox_waypoint_1b_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_redbrick;
         purchase: redbrick_signalbox_waypoint_1b;
         redbrick_signalbox_waypoint_1b;
     }
@@ -4738,6 +5814,7 @@ item(FEAT_STATIONS, redbrick_signalbox_2a_waypoint) {
     graphics {
         sprite_layouts: [redbrick_signalbox_waypoint_2a_sw_ne(0), redbrick_signalbox_waypoint_2a_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_redbrick;
         purchase: redbrick_signalbox_waypoint_2a;
         redbrick_signalbox_waypoint_2a;
     }
@@ -4795,6 +5872,7 @@ item(FEAT_STATIONS, redbrick_signalbox_2b_waypoint) {
     graphics {
         sprite_layouts: [redbrick_signalbox_waypoint_2b_sw_ne(0), redbrick_signalbox_waypoint_2b_se_nw(0)];
         select_tile_type: 2;
+        availability: switch_intro_year_redbrick;
         purchase: redbrick_signalbox_waypoint_2b;
         redbrick_signalbox_waypoint_2b;
     }
