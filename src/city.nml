@@ -4059,6 +4059,12 @@ item(FEAT_STATIONS, city_left_overpass) {
         class:                  "_CTY";
         classname:              string(STR_NAME_STATCLASS_CITY_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE)
+        ];
         cargo_threshold:        param_set_cargo_threshold*140;
     }
     graphics {
@@ -4147,6 +4153,12 @@ item(FEAT_STATIONS, city_right_overpass) {
         class:                  "_CTY";
         classname:              string(STR_NAME_STATCLASS_CITY_PLATFORMS);
         name:                   string(STR_NAME_STATION_PLATFORM_FOOTBRIDGE);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE)
+        ];
         cargo_threshold:        param_set_cargo_threshold*140;
     }
     graphics {
