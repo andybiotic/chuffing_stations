@@ -3644,12 +3644,12 @@ item(FEAT_STATIONS, stone_lights_platform_double_station) {
 }
 
 /***********************************/
-/***** COVERED PLATFORMS ***********/
+/***** PITCHED ROOF PLATFORMS ******/
 /***********************************/
 
-/***** COVERED PLATFORMS LEFT *****/
+/*** PITCHED ROOF PLATFORMS LEFT ***/
 
-spriteset (stone_covered_platforms_left, "src/graphics/stations_stone_empty.png") {
+spriteset (stone_pitched_platforms_left, "src/graphics/stations_stone_empty.png") {
     [  10, 710, 64, 64, -31, -32 ]
     [  10, 780, 64, 64, -31, -32 ]
 
@@ -3657,7 +3657,7 @@ spriteset (stone_covered_platforms_left, "src/graphics/stations_stone_empty.png"
     [  80, 780, 64, 64, -31, -32 ]
 }
 
-spriteset (stone_covered_platforms_left_half, "src/graphics/stations_stone_half.png") {
+spriteset (stone_pitched_platforms_left_half, "src/graphics/stations_stone_half.png") {
     [  10, 710, 64, 64, -31, -32 ]
     [  10, 780, 64, 64, -31, -32 ]
 
@@ -3665,7 +3665,7 @@ spriteset (stone_covered_platforms_left_half, "src/graphics/stations_stone_half.
     [  80, 780, 64, 64, -31, -32 ]
 }
 
-spriteset (stone_covered_platforms_left_full, "src/graphics/stations_stone_full.png") {
+spriteset (stone_pitched_platforms_left_full, "src/graphics/stations_stone_full.png") {
     [  10, 710, 64, 64, -31, -32 ]
     [  10, 780, 64, 64, -31, -32 ]
 
@@ -3673,7 +3673,7 @@ spriteset (stone_covered_platforms_left_full, "src/graphics/stations_stone_full.
     [  80, 780, 64, 64, -31, -32 ]
 }
 
-spritelayout stone_covered_platforms_left_sw_ne(a) {
+spritelayout stone_pitched_platforms_left_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -3701,7 +3701,7 @@ spritelayout stone_covered_platforms_left_sw_ne(a) {
     }
 }
 
-spritelayout stone_covered_platforms_left_se_nw(a) {
+spritelayout stone_pitched_platforms_left_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -3729,12 +3729,12 @@ spritelayout stone_covered_platforms_left_se_nw(a) {
     }
 }
 
-spritegroup group_stone_covered_platforms_left {
-    little: [stone_covered_platforms_left, stone_covered_platforms_left_half];
-    lots:   stone_covered_platforms_left_full;
+spritegroup group_stone_pitched_platforms_left {
+    little: [stone_pitched_platforms_left, stone_pitched_platforms_left_half];
+    lots:   stone_pitched_platforms_left_full;
 }
 
-item(FEAT_STATIONS, left_stone_covered_platforms) {
+item(FEAT_STATIONS, left_stone_pitched_platforms) {
     property {
         class:                  "_STN";
         classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
@@ -3748,17 +3748,17 @@ item(FEAT_STATIONS, left_stone_covered_platforms) {
         cargo_threshold:        param_set_cargo_threshold*130;
     }
     graphics {
-        sprite_layouts: [stone_covered_platforms_left_sw_ne(0), stone_covered_platforms_left_se_nw(0)];
+        sprite_layouts: [stone_pitched_platforms_left_sw_ne(0), stone_pitched_platforms_left_se_nw(0)];
         select_tile_type: 2;
-        PASS: group_stone_covered_platforms_left;
-        purchase: stone_covered_platforms_left;
-        stone_covered_platforms_left;
+        PASS: group_stone_pitched_platforms_left;
+        purchase: stone_pitched_platforms_left;
+        stone_pitched_platforms_left;
     }
 }
 
 /***** COVERED PLATFORMS RIGHT *****/
 
-spriteset (stone_covered_platforms_right, "src/graphics/stations_stone_empty.png") {
+spriteset (stone_pitched_platforms_right, "src/graphics/stations_stone_empty.png") {
     [  150, 710, 64, 64, -31, -32 ]
     [  150, 780, 64, 64, -31, -32 ]
 
@@ -3766,7 +3766,7 @@ spriteset (stone_covered_platforms_right, "src/graphics/stations_stone_empty.png
     [  220, 780, 64, 64, -31, -32 ]
 }
 
-spriteset (stone_covered_platforms_right_half, "src/graphics/stations_stone_half.png") {
+spriteset (stone_pitched_platforms_right_half, "src/graphics/stations_stone_half.png") {
     [  150, 710, 64, 64, -31, -32 ]
     [  150, 780, 64, 64, -31, -32 ]
 
@@ -3774,7 +3774,7 @@ spriteset (stone_covered_platforms_right_half, "src/graphics/stations_stone_half
     [  220, 780, 64, 64, -31, -32 ]
 }
 
-spriteset (stone_covered_platforms_right_full, "src/graphics/stations_stone_full.png") {
+spriteset (stone_pitched_platforms_right_full, "src/graphics/stations_stone_full.png") {
     [  150, 710, 64, 64, -31, -32 ]
     [  150, 780, 64, 64, -31, -32 ]
 
@@ -3782,7 +3782,7 @@ spriteset (stone_covered_platforms_right_full, "src/graphics/stations_stone_full
     [  220, 780, 64, 64, -31, -32 ]
 }
 
-spritelayout stone_covered_platforms_right_sw_ne(a) {
+spritelayout stone_pitched_platforms_right_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -3810,7 +3810,7 @@ spritelayout stone_covered_platforms_right_sw_ne(a) {
     }
 }
 
-spritelayout stone_covered_platforms_right_se_nw(a) {
+spritelayout stone_pitched_platforms_right_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -3838,12 +3838,12 @@ spritelayout stone_covered_platforms_right_se_nw(a) {
     }
 }
 
-spritegroup group_stone_covered_platforms_right {
-    little: [stone_covered_platforms_right, stone_covered_platforms_right_half];
-    lots:   stone_covered_platforms_right_full;
+spritegroup group_stone_pitched_platforms_right {
+    little: [stone_pitched_platforms_right, stone_pitched_platforms_right_half];
+    lots:   stone_pitched_platforms_right_full;
 }
 
-item(FEAT_STATIONS, right_stone_covered_platforms) {
+item(FEAT_STATIONS, right_stone_pitched_platforms) {
     property {
         class:                  "_STN";
         classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
@@ -3857,11 +3857,11 @@ item(FEAT_STATIONS, right_stone_covered_platforms) {
         cargo_threshold:        param_set_cargo_threshold*130;
     }
     graphics {
-        sprite_layouts: [stone_covered_platforms_right_sw_ne(0), stone_covered_platforms_right_se_nw(0)];
+        sprite_layouts: [stone_pitched_platforms_right_sw_ne(0), stone_pitched_platforms_right_se_nw(0)];
         select_tile_type: 2;
-        PASS: group_stone_covered_platforms_right;
-        purchase: stone_covered_platforms_right;
-        stone_covered_platforms_right;
+        PASS: group_stone_pitched_platforms_right;
+        purchase: stone_pitched_platforms_right;
+        stone_pitched_platforms_right;
     }
 }
 
@@ -4068,25 +4068,25 @@ item(FEAT_STATIONS, stone_arched_middle) {
 }
 
 /****************************************/
-/***** COVERED PLATFORMS ****************/
+/***** MERSEY ROAD SHED *****x***********/
 /****************************************/
 
 
-spriteset (stone_covered_end_left, "src/graphics/stations_stone_empty.png") {
+spriteset (stone_shed_end_left, "src/graphics/stations_stone_empty.png") {
     [ 430, 850, 64, 64, -31, -32 ]
     [ 500, 850, 64, 64, -31, -32 ]
     [ 640, 850, 64, 64, -31, -32 ]
     [ 710, 850, 64, 64, -31, -32 ]
 }
 
-spriteset (stone_covered_end_right, "src/graphics/stations_stone_empty.png") {
+spriteset (stone_shed_end_right, "src/graphics/stations_stone_empty.png") {
     [ 500, 920, 64, 64, -31, -32 ]
     [ 430, 920, 64, 96, -31, -64 ]
     [ 640, 920, 64, 64, -31, -32 ]
     [ 710, 920, 64, 96, -31, -64 ]
 }
 
-spritelayout stone_covered_end_sw_ne(a) {
+spritelayout stone_shed_end_sw_ne(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_X;
     }
@@ -4114,7 +4114,7 @@ spritelayout stone_covered_end_sw_ne(a) {
     }
 }
 
-spritelayout stone_covered_end_se_nw(a) {
+spritelayout stone_shed_end_se_nw(a) {
     ground {
         sprite: GROUNDSPRITE_RAIL_Y;
     }
@@ -4142,12 +4142,12 @@ spritelayout stone_covered_end_se_nw(a) {
     }
 }
 
-switch (FEAT_STATIONS, SELF, switch_stone_covered_end, platform_number_from_start(PLATFORM_SAME_SECTION)) {
-    0: return stone_covered_end_left;
-    1: return stone_covered_end_right;
+switch (FEAT_STATIONS, SELF, switch_stone_shed_end, platform_number_from_start(PLATFORM_SAME_SECTION)) {
+    0: return stone_shed_end_left;
+    1: return stone_shed_end_right;
 }
 
-item(FEAT_STATIONS, stone_covered_end) {
+item(FEAT_STATIONS, stone_shed_end) {
     property {
         class:                  "_STN";
         classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
@@ -4161,10 +4161,113 @@ item(FEAT_STATIONS, stone_covered_end) {
         disabled_platforms:     bitmask(1,3,4,5,6,7,8);
     }
     graphics {
-        sprite_layouts: [stone_covered_end_sw_ne(0), stone_covered_end_se_nw(0)];
+        sprite_layouts: [stone_shed_end_sw_ne(0), stone_shed_end_se_nw(0)];
         select_tile_type: 2;
-        purchase: stone_covered_end_right;
-        switch_stone_covered_end;
+        purchase: stone_shed_end_right;
+        switch_stone_shed_end;
+    }
+}
+
+/****************************************/
+/***** COVERED PLATFORMS ****************/
+/****************************************/
+
+
+spriteset (stone_covered_left, "src/graphics/stations_stone_half.png") {
+    [  570, 710, 64, 64, -31, -32 ]
+    [  640, 710, 64, 64, -31, -32 ]
+
+    [  710, 710, 64, 64, -31, -32 ]
+    [  780, 710, 64, 64, -31, -32 ]
+}
+
+spriteset (stone_covered_right, "src/graphics/stations_stone_half.png") {
+    [  570, 780, 64, 64, -31, -32 ]
+    [  640, 780, 64, 64, -31, -32 ]
+
+    [  710, 780, 64, 64, -31, -32 ]
+    [  780, 780, 64, 64, -31, -32 ]
+}
+
+spritelayout stone_covered_sw_ne(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_X;
+    }
+    building {
+        sprite:         DEFAULT(0);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        5;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(1);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+spritelayout stone_covered_se_nw(a) {
+    ground {
+        sprite: GROUNDSPRITE_RAIL_Y;
+    }
+    building {
+        sprite:         DEFAULT(2);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        5;
+        yextent:        16;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+    building {
+        sprite:         DEFAULT(3);
+        xoffset:        0;
+        yoffset:        0;
+        zoffset:        0;
+        xextent:        16;
+        yextent:        16;
+        zextent:        48;
+        recolour_mode:  RECOLOUR_REMAP;
+        palette:        PALETTE_USE_DEFAULT;
+    }
+}
+
+switch (FEAT_STATIONS, SELF, switch_stone_covered_platform, platform_number_from_start(PLATFORM_SAME_SECTION)) {
+    0: return stone_covered_left;
+    1: return stone_covered_right;
+}
+
+item(FEAT_STATIONS, stone_covered) {
+    property {
+        class:                  "_STN";
+        classname:              string(STR_NAME_STATCLASS_STONE_PLATFORMS);
+        name:                   string(STR_NAME_STATION_PLATFORM_COVERED);
+        tile_flags: [
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE),
+            bitmask(STAT_TILE_NOWIRE)
+        ];
+        disabled_platforms:     bitmask(1,3,4,5,6,7,8);
+    }
+    graphics {
+        sprite_layouts: [stone_covered_sw_ne(0), stone_covered_se_nw(0)];
+        select_tile_type: 2;
+        purchase: stone_covered_left;
+        switch_stone_covered_platform;
     }
 }
 
